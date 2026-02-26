@@ -294,6 +294,11 @@ body {
     border-bottom: 1px solid rgba(201, 149, 42, 0.2);
 }
 
+/* Hidden Section (About) */
+.hidden-section {
+    display: none;
+}
+
 /* Buttons & Links */
 .cta-button {
     display: inline-block;
