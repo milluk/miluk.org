@@ -411,6 +411,14 @@ givebutter-widget {
     object-position: center;
 }
 
+.wordlist-image {
+    display: block;
+    max-height: 120px;
+    width: auto;
+    margin: 0 auto 1rem auto;
+    object-fit: contain;
+}
+
 /* Audio Embed */
 .audio-embed {
     margin: 1.5rem 0;
