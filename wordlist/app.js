@@ -5,6 +5,8 @@ let currentMode = 'english';
 let currentFilter = 'all';
 let searchQuery = '';
 let activeLetters = new Set();
+let entryIdMap = new Map(); // Maps word index to unique ID
+let observer = null; // IntersectionObserver for hash updates
 
 // Helper: Clean text for display (fix diacritics)
 function cleanForDisplay(str) {
@@ -33,6 +35,55 @@ function getFirstLetter(str) {
     return cleaned.charAt(0).toUpperCase();
 }
 
+// Helper: Generate URL-safe ID from headword
+function headwordToId(headword) {
+    return headword
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, '-')
+        .replace(/[^a-z0-9\-]/g, '');
+}
+
+// Build ID map with deduplication
+function buildIdMap(words) {
+    entryIdMap.clear();
+    const idCounts = new Map();
+
+    // First pass: count occurrences of each base ID
+    words.forEach(word => {
+        const baseId = headwordToId(word.headword);
+        idCounts.set(baseId, (idCounts.get(baseId) || 0) + 1);
+    });
+
+    // Second pass: assign unique IDs
+    const idAssigned = new Map();
+    words.forEach((word, index) => {
+        const baseId = headwordToId(word.headword);
+        const count = idCounts.get(baseId);
+
+        if (count === 1) {
+            // Unique headword, use as-is
+            entryIdMap.set(index, baseId);
+        } else {
+            // Duplicate headword, assign suffix
+            const assignedCount = idAssigned.get(baseId) || 0;
+            if (assignedCount === 0) {
+                // First occurrence: no suffix
+                entryIdMap.set(index, baseId);
+            } else {
+                // Subsequent occurrences: add suffix
+                entryIdMap.set(index, `${baseId}-${assignedCount}`);
+            }
+            idAssigned.set(baseId, assignedCount + 1);
+        }
+    });
+}
+
+// Get entry ID for a word at given index
+function getEntryId(index) {
+    return entryIdMap.get(index) || '';
+}
+
 // DOM elements
 const wordlistEl = document.getElementById('wordlist');
 const searchEl = document.getElementById('search');
@@ -45,7 +96,98 @@ document.addEventListener('DOMContentLoaded', () => {
     setupFilters();
     setupSearch();
     render();
+    handleInitialHash();
 });
+
+// Handle initial URL hash on page load
+function handleInitialHash() {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+        setTimeout(() => {
+            scrollToEntry(hash);
+        }, 100);
+    }
+}
+
+// Scroll to entry by ID and expand it
+function scrollToEntry(id) {
+    const entry = document.getElementById(id);
+    if (entry) {
+        entry.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Expand all expandable sections in this entry
+        entry.querySelectorAll('.expand-toggle').forEach(toggle => {
+            toggle.classList.add('open');
+            toggle.nextElementSibling.classList.add('open');
+        });
+        // Briefly highlight the entry
+        entry.classList.add('highlighted');
+        setTimeout(() => entry.classList.remove('highlighted'), 2000);
+    }
+}
+
+// Setup IntersectionObserver to update hash on scroll
+function setupScrollObserver() {
+    // Disconnect previous observer if exists
+    if (observer) {
+        observer.disconnect();
+    }
+
+    const cards = document.querySelectorAll('.word-card[id]');
+    if (cards.length === 0) return;
+
+    let isUserScrolling = true;
+    let scrollTimeout;
+
+    observer = new IntersectionObserver((entries) => {
+        if (!isUserScrolling) return;
+
+        // Find the most visible entry
+        let mostVisible = null;
+        let maxRatio = 0;
+
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
+                maxRatio = entry.intersectionRatio;
+                mostVisible = entry.target;
+            }
+        });
+
+        if (mostVisible && mostVisible.id) {
+            // Update URL hash without triggering scroll
+            const newHash = '#' + mostVisible.id;
+            if (window.location.hash !== newHash) {
+                history.replaceState(null, '', newHash);
+            }
+        }
+    }, {
+        root: null,
+        rootMargin: '-20% 0px -60% 0px',
+        threshold: [0, 0.25, 0.5, 0.75, 1]
+    });
+
+    cards.forEach(card => observer.observe(card));
+}
+
+// Copy entry URL to clipboard
+function copyEntryUrl(id, btn) {
+    const url = window.location.origin + window.location.pathname + '#' + id;
+    navigator.clipboard.writeText(url).then(() => {
+        // Show feedback
+        const originalText = btn.textContent;
+        btn.textContent = '✓';
+        btn.classList.add('copied');
+        setTimeout(() => {
+            btn.textContent = originalText;
+            btn.classList.remove('copied');
+        }, 1500);
+    }).catch(() => {
+        // Fallback: select the URL
+        prompt('Copy this URL:', url);
+    });
+}
+
+// Expose to global scope for onclick
+window.copyEntryUrl = copyEntryUrl;
 
 // Setup mode tabs
 function setupModeTabs() {
@@ -265,14 +407,15 @@ function renderAudio(word) {
 }
 
 // Render a single card
-function renderCard(word) {
+function renderCard(word, index) {
     const milukForm = getMilukForm(word);
     const isAmpOnly = !hasLHM(word) && hasAMP(word);
     const table = word.pronunciation_table || {};
     const instant = table.instant_phonetic_englishization || '';
     const notes = word.linguistics_notes || '';
+    const entryId = getEntryId(index);
 
-    let html = `<article class="word-card ${isAmpOnly ? 'amp-only' : ''}" data-headword="${escapeHtml(word.headword)}">`;
+    let html = `<article class="word-card ${isAmpOnly ? 'amp-only' : ''}" id="${entryId}" data-headword="${escapeHtml(word.headword)}">`;
 
     // Header - different layout for each mode
     html += '<header class="card-header">';
@@ -289,6 +432,8 @@ function renderCard(word) {
             html += `<div class="miluk-form">${escapeHtml(milukForm)}</div>`;
         }
     }
+    // Anchor link button
+    html += `<button class="entry-anchor" onclick="copyEntryUrl('${entryId}', this)" title="Copy link to this entry">¶</button>`;
     if (isAmpOnly) {
         html += '<div class="amp-only-label">Jacobs texts only — no Lolly recording</div>';
     }
@@ -332,6 +477,9 @@ function renderCard(word) {
 // Main render function
 function render() {
     const filtered = filterWords();
+
+    // Build ID map for filtered words
+    buildIdMap(filtered);
     buildAlphaIndex(filtered);
 
     // Update entry count
@@ -345,7 +493,7 @@ function render() {
     let html = '';
     let currentLetter = '';
 
-    filtered.forEach(word => {
+    filtered.forEach((word, index) => {
         const sortKey = currentMode === 'english'
             ? word.headword
             : getMilukForm(word);
@@ -363,10 +511,13 @@ function render() {
             html += `<div class="letter-divider" data-letter-section="${letter}">${displayLetter}</div>`;
         }
 
-        html += renderCard(word);
+        html += renderCard(word, index);
     });
 
     wordlistEl.innerHTML = html;
+
+    // Setup scroll observer after rendering
+    setupScrollObserver();
 }
 
 // Toggle expandable sections

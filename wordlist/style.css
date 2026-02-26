@@ -264,8 +264,45 @@ body {
     border-left: 3px solid var(--gold);
 }
 
+.word-card.highlighted {
+    animation: highlight-fade 2s ease-out;
+}
+
+@keyframes highlight-fade {
+    0% { background-color: rgba(201, 149, 42, 0.2); }
+    100% { background-color: var(--bg-card); }
+}
+
 .card-header {
     margin-bottom: 1rem;
+    position: relative;
+}
+
+.entry-anchor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    color: var(--border);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.word-card:hover .entry-anchor {
+    opacity: 1;
+}
+
+.entry-anchor:hover {
+    color: var(--gold);
+}
+
+.entry-anchor.copied {
+    color: var(--gold);
+    opacity: 1;
 }
 
 .headword {
