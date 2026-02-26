@@ -386,11 +386,33 @@ givebutter-widget {
     margin-bottom: 1rem;
 }
 
-.about-subheading {
-    font-size: 1rem;
+.about-credit {
+    font-size: 0.9rem;
     font-style: italic;
     color: var(--gray);
     margin-bottom: 1.5rem;
+}
+
+.about-credit a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.about-credit a:hover {
+    color: var(--gold-light);
+}
+
+/* Audio Embed */
+.audio-embed {
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.audio-embed iframe {
+    display: block;
+    width: 100%;
+    border: none;
 }
 
 /* Footer */
