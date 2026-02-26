@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miluk — A Language of the Oregon Coast</title>
+<meta name="description" content="Miluk is an endangered language of the Oregon Coast. Troy Anderson, Coquille tribal member, has worked to document, teach, and revive Miluk for nearly 40 years.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --earth-dark: #2C1810;
+    --earth-brown: #5C3D2E;
+    --earth-warm: #8B6914;
+    --earth-gold: #C4922A;
+    --earth-light: #D4A843;
+    --sand: #E8D5B7;
+    --sand-light: #F2E8D5;
+    --cream: #FAF6EE;
+    --forest: #2D4A3E;
+    --forest-light: #3D6B5A;
+    --ocean: #3A5F7A;
+    --ocean-light: #5A8FA8;
+    --text: #2C1810;
+    --text-light: #6B5B4E;
+    --text-muted: #9A8B7A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', Georgia, serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.7;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== BILINGUAL CAROUSEL (reusable) ===== */
+  .bi-carousel {
+    position: relative;
+  }
+
+  .bi-slide {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 1.2s ease-in-out, visibility 0s 1.2s;
+    pointer-events: none;
+  }
+
+  .bi-slide.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    transition: opacity 1.2s ease-in-out, visibility 0s 0s;
+    pointer-events: auto;
+  }
+
+  .bi-slide img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .bi-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .bi-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  .bi-dot:hover { opacity: 0.8; }
+
+  .bi-dot.active { transform: scale(1.3); }
+
+  /* Dot colors per context */
+  .hero .bi-dot { background: var(--sand); opacity: 0.3; }
+  .hero .bi-dot.active { opacity: 0.8; }
+
+  .bi-dot--dark { background: var(--earth-warm); opacity: 0.3; }
+  .bi-dot--dark.active { opacity: 0.8; }
+
+  .bi-dot--light { background: var(--sand); opacity: 0.3; }
+  .bi-dot--light.active { opacity: 0.8; }
+
+  /* ===== HERO ===== */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(175deg, var(--earth-dark) 0%, var(--earth-brown) 30%, var(--forest) 60%, var(--ocean) 100%);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 80%, rgba(196, 146, 42, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(58, 95, 122, 0.2) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    animation: fadeUp 1.2s ease-out;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero .bi-carousel { min-height: 250px; }
+
+  .hero-font-img img {
+    max-width: 550px;
+    width: 80%;
+    opacity: 0.9;
+  }
+
+  .hero-lang {
+    font-family: 'Charis SIL', Georgia, serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    color: var(--earth-gold);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 700;
+    color: var(--sand-light);
+    line-height: 1.05;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
+    color: var(--sand);
+    font-style: italic;
+    font-weight: 400;
+    opacity: 0.85;
+  }
+
+  .hero-line {
+    width: 80px;
+    height: 2px;
+    background: var(--earth-gold);
+    margin: 2rem auto;
+    opacity: 0.6;
+  }
+
+  .hero-scroll {
+    display: inline-block;
+    color: var(--sand);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  .hero-scroll:hover { opacity: 0.9; }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.7; }
+  }
+
+  .hero-scroll span {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+  }
+
+  /* ===== SECTIONS ===== */
+  section { padding: 5rem 2rem; }
+
+  .container { max-width: 780px; margin: 0 auto; }
+
+  .section-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--earth-warm);
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 700;
+    color: var(--earth-dark);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--earth-brown);
+    margin-bottom: 0.75rem;
+    margin-top: 2.5rem;
+  }
+
+  p { margin-bottom: 1.2rem; }
+
+  a {
+    color: var(--ocean);
+    text-decoration-color: var(--ocean-light);
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+  }
+
+  a:hover { color: var(--ocean-light); }
+
+  /* ===== ABOUT SECTION ===== */
+  .about {
+    background: var(--cream);
+    border-bottom: 1px solid var(--sand);
+  }
+
+  .about .bi-carousel { min-height: 200px; }
+
+  .about-miluk-img {
+    text-align: center;
+  }
+
+  .about-miluk-img img {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+  }
+
+  .credential-list {
+    list-style: none;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .credential-list li {
+    padding: 0.3rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-light);
+    font-size: 0.95rem;
+  }
+
+  .credential-list li::before {
+    content: '\2014';
+    position: absolute;
+    left: 0;
+    color: var(--earth-gold);
+  }
+
+  /* ===== LANGUAGE SECTION ===== */
+  .language { background: var(--sand-light); }
+
+  .language .bi-carousel { min-height: 200px; }
+
+  .language-miluk-img {
+    text-align: center;
+  }
+
+  .language-miluk-img img {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+  }
+
+  .quote-block {
+    border-left: 3px solid var(--earth-gold);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    background: rgba(196, 146, 42, 0.06);
+    border-radius: 0 6px 6px 0;
+  }
+
+  .quote-block p {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--earth-brown);
+    margin-bottom: 0.5rem;
+  }
+
+  .quote-block cite {
+    font-family: 'Source Sans 3', sans-serif;
+    font-style: normal;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  /* ===== WORK SECTION ===== */
+  .work {
+    background: var(--cream);
+    border-top: 1px solid var(--sand);
+  }
+
+  .work-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--sand);
+  }
+
+  .work-item:last-child { border-bottom: none; }
+
+  .work-year {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--earth-warm);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .work-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--earth-dark);
+    margin-bottom: 0.3rem;
+  }
+
+  .work-desc {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 0;
+  }
+
+  /* ===== ARCHIVE SECTION ===== */
+  .archive {
+    background: var(--forest);
+    color: var(--sand-light);
+  }
+
+  .archive h2 { color: var(--sand-light); }
+  .archive .section-label { color: var(--earth-light); }
+  .archive p { color: var(--sand); }
+
+  .archive-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding: 0.9rem 1.8rem;
+    background: rgba(196, 146, 42, 0.15);
+    border: 1px solid var(--earth-gold);
+    border-radius: 6px;
+    color: var(--earth-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+  }
+
+  .archive-link:hover {
+    background: rgba(196, 146, 42, 0.25);
+    color: var(--sand-light);
+    transform: translateY(-1px);
+  }
+
+  /* ===== SUPPORT SECTION ===== */
+  .support {
+    background: var(--sand-light);
+    text-align: center;
+  }
+
+  .support-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding: 1rem 2.5rem;
+    background: var(--earth-brown);
+    color: var(--sand-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: all 0.3s;
+    letter-spacing: 0.02em;
+  }
+
+  .support-cta:hover {
+    background: var(--earth-dark);
+    color: var(--sand-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(44, 24, 16, 0.2);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--earth-dark);
+    color: var(--text-muted);
+    padding: 3rem 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  footer a {
+    color: var(--earth-gold);
+    text-decoration: none;
+  }
+
+  footer a:hover { color: var(--earth-light); }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-sep {
+    width: 40px;
+    height: 1px;
+    background: var(--earth-brown);
+    margin: 0 auto 1.5rem;
+  }
+
+  /* ===== PLACEHOLDER for Miluk font images not yet created ===== */
+  .miluk-img-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    border: 2px dashed var(--earth-gold);
+    border-radius: 8px;
+    color: var(--earth-warm);
+    font-size: 0.9rem;
+    font-style: italic;
+    opacity: 0.6;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 640px) {
+    section { padding: 3.5rem 1.5rem; }
+    .hero .bi-carousel { min-height: 180px; }
+  }
+
+  /* ===== FADE IN ON SCROLL ===== */
+  .fade-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Sticky nav */
+  .site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(26, 22, 18, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(189, 163, 116, 0.15);
+    padding: 0.6rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Source Sans 3', sans-serif;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
+  .site-nav.visible {
+    transform: translateY(0);
+  }
+  .site-nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+  }
+  .site-nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .site-nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+  .site-nav-links a:hover {
+    color: var(--accent);
+  }
+  @media (max-width: 480px) {
+    .site-nav { padding: 0.5rem 1rem; }
+    .site-nav-links { gap: 1rem; }
+    .site-nav-links a { font-size: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== STICKY NAV ===== -->
+<nav class="site-nav" id="siteNav">
+  <a href="#top" class="site-nav-brand">miluk.org</a>
+  <div class="site-nav-links">
+    <a href="#wordlist">Wordlist</a>
+    <a href="#font">The Font</a>
+    <a href="#support">Support</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="hero-content">
+    <div class="bi-carousel" data-interval="5000">
+      <div class="bi-slide active">
+        <div class="hero-font-img"><img src="miluk-font-hero.png" alt="Miluk script: greeting, name, and subtitle"></div>
+      </div>
+      <div class="bi-slide">
+        <div class="hero-lang">h&#xE1;&#xB7;wau t&#x142;&#x259;-w&#x25B;&#x301;&#xB7;n</div>
+        <h1>Miluk</h1>
+        <p class="hero-subtitle">A Language of the Oregon Coast</p>
+      </div>
+    </div>
+    <div class="bi-dots">
+      <button class="bi-dot active" aria-label="Miluk script"></button>
+      <button class="bi-dot" aria-label="Latin transliteration"></button>
+    </div>
+    <div class="hero-line"></div>
+    <a href="#language" class="hero-scroll">
+      Explore
+      <span>&#8595;</span>
+    </a>
+  </div>
+</section>
+
+<!-- ===== THE LANGUAGE ===== -->
+<section class="language fade-section" id="language">
+  <div class="container">
+    <div class="bi-carousel" data-interval="7000">
+      <!-- Slide 1: Miluk font image -->
+      <div class="bi-slide active">
+        <div class="language-miluk-img">
+          <img src="language-miluk.png" alt="What is Miluk in Miluk script">
+        </div>
+      </div>
+      <!-- Slide 2: English -->
+      <div class="bi-slide">
+        <div class="section-label">The Language</div>
+        <h2>What is Miluk?</h2>
+        <p>Miluk is one of the ancestral languages of the Coquille people of the Oregon coast.</p>
+
+        <p>Spoken since time immemorial, ancestors of the Coquille, Confederated Tribes of Coos, Lower Umpqua, and Siuslaw, and other tribes&#8217; people have been hard at work to revive Miluk use in our communities.</p>
+
+        <p>Inside this site you can explore the words and stories of our Miluk ancestry.</p>
+
+        <p>Miluk is not merely a subject of academic study, it is a living connection to the land, our ancestors, and our spiritual lessons passed down to us. Every word recovered and spoken is an act of cultural survival.</p>
+      </div>
+    </div>
+    <div class="bi-dots">
+      <button class="bi-dot bi-dot--dark active" aria-label="Miluk script"></button>
+      <button class="bi-dot bi-dot--dark" aria-label="English"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORDLIST ===== -->
+<section class="work fade-section" id="wordlist">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <img src="wordlist-miluk.png" alt="Laura Hodgkiss Metcalf Wordlist in Miluk script" style="max-width: 600px; width: 90%; height: auto; opacity: 0.85;">
+    </div>
+    <div class="section-label">Audio Archive</div>
+    <h2>Laura Hodgkiss Metcalf Wordlist</h2>
+    <p>Laura Hodgkiss Metcalf recordings by Dr. Morris Swadesh, with transcriptions with linguistics notes from Dr. Lawrence Morgan.</p>
+    <a href="https://sites.google.com/a/miluk.org/milluk/" class="archive-link" style="display: inline-flex; align-items: center; gap: 0.75rem; margin-top: 1.5rem; padding: 0.9rem 1.8rem; background: rgba(139, 105, 20, 0.1); border: 1px solid var(--earth-gold); border-radius: 6px; color: var(--earth-warm); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.3s;">
+      Enter the Wordlist &#8594;
+    </a>
+  </div>
+</section>
+
+<!-- ===== MILUK FONT ===== -->
+<section class="language fade-section" id="font">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <img src="miluk-font-section.png" alt="The Miluk Font section header in Miluk script" style="max-width: 600px; width: 90%; height: auto; opacity: 0.85;">
+    </div>
+    <div class="section-label">The Writing System</div>
+    <h2>The Miluk Font</h2>
+
+    <p>Miluk has historically been transcribed using Western alphabets and systems, and hardly any two systems across a century used the same Western transcription method. A mess.</p>
+
+    <p>Today, indigenous communities around the world and in the United States employ Western alphabets and notation as the primary way to represent their indigenous languages. While some communities have resisted this, like Sequoyah&#8217;s Cherokee syllabary, I still wanted a script that was indigenous-first, not Western-based.</p>
+
+    <p>The Miluk font, in this regard, is most like Hangul, the Korean writing system, in that it attempts to represent how the sounds appear using linguistic ideas of point of articulation and method of articulation.</p>
+
+    <h3>How it works</h3>
+
+    <p>The environment for point and method of articulation is represented best by the /h/ sound in the Miluk font. The Miluk &#8220;h&#8221; is the shape of the mouth facing to the right, without other baggage. It is the most open, most basic sound the mouth makes, and the glyph reflects that.</p>
+
+    <p>To make a /b/ or a /p/ sound, you add lips to the mouth, because the lips come together. The only difference between the two is that /p/ has a dot above and /b/ has a dot below. In linguistic terms, a dot above means unvoiced. A dot below means voiced, since the voicing comes from the throat, below.</p>
+
+    <p>Every character in the Miluk font follows this logic. The glyphs are not arbitrary symbols assigned to sounds. They are pictures of what the mouth is doing, organized by a consistent system of dots and strokes that encode voicing, aspiration, and manner of articulation.</p>
+
+    <p>The font is currently used in image form on this site. A full Unicode conversion is planned, which will allow Miluk to be typed, searched, and shared digitally, a step toward the language living not only in speech but in text.</p>
+  </div>
+</section>
+
+<!-- ===== SUPPORT ===== -->
+<section class="support fade-section" id="support">
+  <div class="container">
+    <div class="section-label">Support</div>
+    <h2>Help Keep Miluk Alive</h2>
+    <p>Language revitalization requires sustained effort &#8212; recording elders, training teachers, creating learning materials, and building community. Your support helps ensure Miluk endures for future generations of Coquille people.</p>
+    <p style="font-size: 0.95rem; color: var(--text-light);">Donations are tax-deductible through Tlheka, a 501(c)(3) nonprofit organization dedicated to studying, documenting, educating, and reviving the languages of the Southwest Oregon Coast.</p>
+    <a href="https://tlheka.org" class="support-cta">
+      Donate at tlheka.org &#8594;
+    </a>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about fade-section" id="about">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <img src="about-miluk.png" alt="About section header in Miluk script" style="max-width: 600px; width: 90%; height: auto; opacity: 0.85;">
+    </div>
+    <div class="section-label">About</div>
+    <h2>Troy Anderson</h2>
+    <ul class="credential-list">
+      <li>40 years of Miluk language revitalization</li>
+      <li>Native American Languages Act testifier before the U.S. Senate 1992</li>
+      <li>Miluk language teacher off and on for decades</li>
+      <li>Created the Miluk font (1995)</li>
+      <li>BA, Linguistics (with honors), Stanford University</li>
+      <li>MA, Anthropology, Stanford University</li>
+      <li>Insei (game of Go professional student), Nihon Ki-In</li>
+      <li>MBA, Kellogg School of Management, Northwestern University</li>
+    </ul>
+    <p style="font-size: 0.9rem; color: var(--text-muted);">
+      <a href="https://linkedin.com/in/milluk">LinkedIn</a>
+    </p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-links">
+    <a href="https://linkedin.com/in/milluk">LinkedIn</a>
+    <a href="https://skwedge.org">skwedge.org</a>
+    <a href="https://sites.google.com/a/miluk.org/milluk/">Wordlist</a>
+    <a href="https://tlheka.org">tlheka.org</a>
+  </div>
+  <div class="footer-sep"></div>
+  <p>&#169; 2026 Troy Anderson &#183; Coquille Indian Tribe<br>
+  <span style="font-size: 0.8rem; opacity: 0.6;">tsu tsi wes, hwaeldi yunyesa</span></p>
+</footer>
+
+<script>
+// Fade in on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.fade-section').forEach(el => observer.observe(el));
+
+// Bilingual carousels - each .bi-carousel is independent
+document.querySelectorAll('.bi-carousel').forEach(carousel => {
+  const slides = carousel.querySelectorAll('.bi-slide');
+  const dotsContainer = carousel.parentElement.querySelector('.bi-dots') || carousel.closest('div').querySelector('.bi-dots');
+  if (!dotsContainer) return;
+  const dots = dotsContainer.querySelectorAll('.bi-dot');
+  const interval = parseInt(carousel.dataset.interval) || 5000;
+  let current = 0;
+  let timer;
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = index;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() {
+    goTo((current + 1) % slides.length);
+  }
+
+  function startTimer() {
+    timer = setInterval(next, interval);
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    startTimer();
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      goTo(i);
+      resetTimer();
+    });
+  });
+
+  startTimer();
+});
+</script>
+
+</body>
+</html>
