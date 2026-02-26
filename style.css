@@ -299,6 +299,14 @@ body {
     display: none;
 }
 
+/* Givebutter Widget */
+givebutter-widget {
+    --givebutter-background: #0a0a0a;
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 /* Buttons & Links */
 .cta-button {
     display: inline-block;
