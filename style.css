@@ -201,6 +201,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    scroll-margin-top: 70px;
 }
 
 .section .carousel {
