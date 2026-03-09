@@ -530,6 +530,15 @@ givebutter-widget {
     color: var(--gray);
 }
 
+/* Storybook Image */
+.storybook-image {
+    display: block;
+    max-width: 600px;
+    width: 100%;
+    margin: 1.5rem auto 2rem;
+    border-radius: 8px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     body {
