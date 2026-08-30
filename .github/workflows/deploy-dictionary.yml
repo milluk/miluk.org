@@ -1,5 +1,6 @@
-# One-shot: fetches the verified dictionary build from a single-use link,
-# commits it, then removes itself. Checksum-pinned to the reviewed build.
+# One-shot: fetches the verified dictionary build from a single-use link and commits it.
+# Checksum-pinned to the reviewed build. Dormant after success (triggers only on changes
+# to this file); removed in a follow-up commit from the session.
 name: Deploy dictionary (one-shot)
 on:
   push:
@@ -14,25 +15,13 @@ jobs:
       - uses: actions/checkout@v4
       - name: Fetch, verify, unpack
         run: |
-          curl -fL -o /tmp/site.zip "https://ucc0db88a579fe5c0fd4da7761ac.dl.dropboxusercontent.com/cd/0/get/DHJBw7-ar4dX1Cbc9Foq4TUe6HW7oCtMrHhpkFeSu17jv5Q26tFJRltbr0FuRORoTEHdwoDIltut-JN6-3YWt729vkWOBMf1tsOSy70esaQ8ZYOzCr63ZG3leAE30ir8ipbemXl0FirSSbHiYtTgym6HB5W2PA_BXRWCQ-bZ1oR2cg/file?c_luid=db3f3ff0"
+          curl -fSL --retry 2 -o /tmp/site.zip "https://uc1d61bad4ca347208a9e5fd00cc.dl.dropboxusercontent.com/cd/0/get/DHLdvZs8Y4N5zx9VFYIWOEVEzwcMeMPjhJsVH6LQnyYrhjoDNdT2u8tonBpTX_CiSWlI_4myWYrH4jNPCnp7fHUXfgAwRuJkuu4xRrXmxH3WJRjq0uaohO6Gs2m--Xqs9PCN6qEEkgVWexV1t2GzAahKZd8p5CWIh8I11ooj-MgDhA/file?c_luid=db3f3ff0"
           echo "57f501aa944f7789effb667faf81f072649ae873ad5edcf73163d1e7aab3f435  /tmp/site.zip" | sha256sum -c -
-          unzip -o /tmp/site.zip -d .
+          unzip -oq /tmp/site.zip -d .
       - name: Commit the site
         run: |
           git config user.name "Claude"
           git config user.email "noreply@anthropic.com"
           git add dictionary tools index.html
-          git rm -q .github/workflows/deploy-dictionary.yml
-          git commit -m "Add A Miluk Dictionary (1990, restored): 1,111 entries, 111 texts, searchable, interlinear
-
-- /dictionary/: generated static sub-site - entry pages, story pages with
-  interlinear/Miluk/English modes and word-level links, Miluk A-Z, English
-  finder, client-side diacritic-blind search, About (foreword + 1990 intro)
-- /dictionary/data/: the corpus and dictionary as open JSON
-- /tools/dictionary/: generator + build tests
-- homepage: Dictionary tab, section, footer link
-
-Build verified: 55,278 internal links, attestation-contains-headword checks,
-adversarial review. Deployed via one-shot workflow from the archived build
-(sha256 57f501aa944f7789effb667faf81f072649ae873ad5edcf73163d1e7aab3f435)."
+          git commit -m "Add A Miluk Dictionary (1990, restored): 1,111 entries, 111 texts, searchable, interlinear" -m "- /dictionary/: generated static sub-site - entry pages, story pages with interlinear/Miluk/English modes and word-level links, Miluk A-Z, English finder, client-side diacritic-blind search, About (foreword + 1990 intro)" -m "- /dictionary/data/: the corpus and dictionary as open JSON" -m "- /tools/dictionary/: generator + build tests" -m "- homepage: Dictionary tab, section, footer link" -m "Build verified: 55,278 internal links, attestation-contains-headword checks, adversarial review. Deployed from the archived build (sha256 57f501aa944f7789effb667faf81f072649ae873ad5edcf73163d1e7aab3f435)."
           git push
