@@ -2,7 +2,7 @@
 """miluk.org /dictionary/ — static site generator.
 Reads corpus.json + dictionary.json (the 1990 dictionary, restored 2026)
 and emits the dictionary sub-site. Everything is generated; nothing hand-edited."""
-import argparse, json, os, re, html, unicodedata, collections
+import argparse, json, os, re, html, unicodedata, collections, sys
 from pathlib import Path
 
 TOOL_DIR = Path(__file__).resolve().parent
@@ -16,6 +16,27 @@ parser.add_argument('--out', type=Path, default=REPO_ROOT / 'dictionary',
 args = parser.parse_args()
 DATA = args.data.resolve()
 OUT = args.out.resolve()
+PIPELINE = TOOL_DIR / 'pipeline'
+sys.path.insert(0, str(PIPELINE))
+from build_complete_dictionary import build as build_complete_dictionary
+from jacobs_alphabet import ORDER as JACOBS_ORDER, category as jacobs_category, initial_for_entry
+
+# dictionary.json is generated data. Rebuild it from the frozen D-Z checkpoint
+# and the byte-preserved A-C tables before rendering the site.
+if DATA == (REPO_ROOT / 'dictionary' / 'data').resolve():
+    rebuilt, recovered_records = build_complete_dictionary(
+        TOOL_DIR / 'archive' / 'restoration-checkpoint' / 'dictionary-dz-1111.json',
+        TOOL_DIR / 'archive' / '1990-abc')
+    dictionary_bytes = (json.dumps(rebuilt, ensure_ascii=False, indent=1) + '\n').encode()
+    dictionary_path = DATA / 'dictionary.json'
+    if not dictionary_path.exists() or dictionary_path.read_bytes() != dictionary_bytes:
+        dictionary_path.write_bytes(dictionary_bytes)
+    receipt = {'schema': 'miluk-1990-recovered-records/1',
+               'record_count': len(recovered_records), 'records': recovered_records}
+    receipt_bytes = (json.dumps(receipt, ensure_ascii=False, indent=1) + '\n').encode()
+    receipt_path = TOOL_DIR / 'provenance' / 'recovered-records.json'
+    if not receipt_path.exists() or receipt_path.read_bytes() != receipt_bytes:
+        receipt_path.write_bytes(receipt_bytes)
 C = json.loads((DATA / 'corpus.json').read_text(encoding='utf-8'))
 D = json.loads((DATA / 'dictionary.json').read_text(encoding='utf-8'))
 ENTRIES = D['entries']; STORIES = C['stories']
@@ -157,15 +178,22 @@ BADGE = {'corpus':       ('badge-corpus', 'attested verbatim in the corpus'),
          'unverified':   ('badge-unv',    'not found in the digitized corpus — needs review')}
 
 def letter_of(e):
-    k = fold(plain_hw(e))
-    return k[:1] or '#'
+    return initial_for_entry(e)
 
 # section label letters (majority real initial per folded letter)
 groups = collections.defaultdict(list)
 for e in ENTRIES: groups[letter_of(e)].append(e)
-label_for = {}
-for k, es in groups.items():
-    label_for[k] = collections.Counter(x['headword'][:1] for x in es).most_common(1)[0][0].upper()
+label_for = {k: jacobs_category(k)['display'] for k in groups}
+attested_inventory = {
+    'schema': 'miluk-attested-initial-index/1',
+    'rule': 'Only attested word-initial Jacobs units are emitted; the sole documentary exception is separately scoped.',
+    'categories': [dict(jacobs_category(k), count=len(groups[k]))
+                   for k in sorted(groups, key=JACOBS_ORDER.__getitem__)],
+}
+attested_bytes = (json.dumps(attested_inventory, ensure_ascii=False, indent=2) + '\n').encode()
+attested_path = TOOL_DIR / 'provenance' / 'attested-index-inventory.json'
+if not attested_path.exists() or attested_path.read_bytes() != attested_bytes:
+    attested_path.write_bytes(attested_bytes)
 
 MAX_FULL = 8
 for e in ENTRIES:
@@ -185,6 +213,18 @@ for e in ENTRIES:
                     {'corpus':'corpus','corroborated':'corroborated','unverified':'unverified'}[f['evidence']]))
     if e['forms']:
         b.append('</ul></section>')
+    if e.get('extensions') or e.get('citation_summary') or e.get('record_notes') or e.get('raw_source_lines'):
+        b.append('<section class="record1990"><h2>1990 record</h2>')
+        if e.get('extensions'):
+            b.append('<p><strong>Extensions:</strong> %s</p>' % E('; '.join(e['extensions'])))
+        if e.get('citation_summary'):
+            b.append('<p><strong>Source citation:</strong> %s</p>' % E(e['citation_summary']))
+        for note in e.get('record_notes', []):
+            b.append('<p>%s</p>' % E(note))
+        if e.get('raw_source_lines'):
+            b.append('<details class="source-record"><summary>Complete 1990 source record</summary><pre>%s</pre></details>' %
+                     E('\n'.join(e['raw_source_lines'])))
+        b.append('</section>')
     # cross references
     if e.get('cross_references'):
         xs = []
@@ -279,13 +319,14 @@ for e in ENTRIES:
                 desc='Miluk dictionary entry: %s — %s' % (plain_hw(e), e['gloss'] or 'Miluk word')))
 
 # ---------------- words index (Miluk A–Z) ----------------
-order = sorted(groups.keys())
+order = sorted(groups.keys(), key=JACOBS_ORDER.__getitem__)
+anchor_for = {key: 's-%02d' % JACOBS_ORDER[key] for key in order}
 b = ['<h1>Miluk words</h1>',
      '<p class="lead">%d entries from the 1990 dictionary. Diacritics are ignored in the index order.</p>' % len(ENTRIES),
      '<div class="search-box"><input id="q" type="search" placeholder="Search Miluk or English…" autocomplete="off"><div id="results"></div></div>',
-     '<p class="alpha">%s</p>' % ' '.join('<a href="#s-%s">%s</a>' % (k, E(label_for[k])) for k in order)]
+     '<p class="alpha">%s</p>' % ' '.join('<a href="#%s">%s</a>' % (anchor_for[k], E(label_for[k])) for k in order)]
 for k in order:
-    b.append('<h2 id="s-%s">%s</h2><ul class="entryindex">' % (k, E(label_for[k])))
+    b.append('<h2 id="%s">%s</h2><ul class="entryindex">' % (anchor_for[k], E(label_for[k])))
     for e in sorted(groups[k], key=lambda x: (fold(plain_hw(x)), x['headword'])):
         b.append('<li><a href="%s.html" class="mk">%s</a><span class="g">%s</span></li>'
                  % (e['entry_id'], E(e['headword']), E(e['gloss'] or '')))
@@ -358,9 +399,16 @@ write('stories/index.html', shell('The texts', '\n'.join(b), '../', active='stor
                                   desc='The Miluk texts of Annie Miner Peterson, readable interlinearly.'))
 
 # ---------------- search index ----------------
+def search_aliases(e):
+    raw = e.get('headword_ascii') or ''
+    key = letter_of(e)
+    remainder = raw[len(key):] if raw.lower().startswith(key) else raw
+    return [alias + remainder for alias in jacobs_category(key)['search_aliases']]
+
 idx = {'entries': [{'i': e['entry_id'], 'h': e['headword'],
                     'k': fold(plain_hw(e)) or '',
-                    'kk': sorted({fold(f['form']) for f in e['forms'] if fold(f['form'])}),
+                    'kk': sorted({fold(f['form']) for f in e['forms'] if fold(f['form'])} |
+                                 {fold(a) for a in search_aliases(e) if fold(a)}),
                     'g': (e['gloss'] or '')} for e in ENTRIES],
        'stories': [{'i': s['story_id'], 't': s['title']} for s in live]}
 write('search-index.json', json.dumps(idx, ensure_ascii=False, separators=(',', ':')))

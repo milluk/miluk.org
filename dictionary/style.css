@@ -150,3 +150,7 @@ input[type="search"]:focus { outline: none; border-color: var(--gold); }
 @media (max-width: 640px) { .line, .dict-main h2[id], [id^="s-"] { scroll-margin-top: 7.5rem; } }
 .code1990 { font-family: ui-monospace, Menlo, monospace; font-size: .85em; color: var(--gray);
             background: var(--panel); border: 1px solid var(--line); border-radius: .3rem; padding: .05rem .35rem; }
+.source-record { margin-top: 1rem; }
+.source-record summary { cursor: pointer; color: var(--gray); font-family: var(--font-sans); }
+.source-record pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: .8rem;
+  background: var(--panel); border-radius: .35rem; font-size: .82rem; }

@@ -11,6 +11,7 @@ import re
 import subprocess
 import sys
 import tempfile
+from collections import Counter
 
 TOOL_DIR = Path(__file__).resolve().parent
 REPO_ROOT = TOOL_DIR.parents[1]
@@ -40,6 +41,16 @@ COLLATION = load(DATA / 'correction-ledger.json')
 V2 = load(PROV / 'v2-effective-diff.json')
 FIN_MANIFEST = load(PROV / 'fin-source-manifest.json')
 PUBLICATION = load(PROV / 'publication-inventory.json')
+AUTHORITY = load(PROV / 'authoritative-directory-inventory.json')
+RECOVERED_MANIFEST = load(PROV / 'recovered-source-manifest.json')
+RECOVERED_RECORDS = load(PROV / 'recovered-records.json')
+JACOBS = load(PROV / 'jacobs-alphabet.json')
+ATTESTED_INDEX = load(PROV / 'attested-index-inventory.json')
+DZ_CHECKPOINT = load(TOOL_DIR / 'archive' / 'restoration-checkpoint' / 'dictionary-dz-1111.json')
+sys.path.insert(0, str(TOOL_DIR / 'pipeline'))
+from jacobs_alphabet import (DOCUMENTARY_EXCEPTIONS, JACOBS_ALPHABET,
+                             ORDER as JACOBS_ORDER, initial_for_entry, initial_key)
+from parse_byn import parse_byn
 fails = []
 
 
@@ -68,7 +79,17 @@ check(OUTSIDE['story_count'] == 35 and OUTSIDE['line_count'] == 574,
       'outside-edition archive must preserve 35 slip records / 574 lines')
 check(CONTAINERS['story_count'] == 8 and CONTAINERS['line_count'] == 0,
       'working-container archive must preserve eight empty containers')
-check(D['entry_count'] == len(D['entries']) == 1111, 'dictionary entry count')
+check(D['entry_count'] == len(D['entries']) == 1275, 'complete dictionary entry count')
+check(D['entries'][:1111] == DZ_CHECKPOINT['entries'],
+      'existing D-Z entry content and identifiers must remain unchanged')
+check(D['entries'][1110] == DZ_CHECKPOINT['entries'][1110] and
+      D['entries'][1110]['entry_id'] == 'e1111-z',
+      'documentary Z source entry must remain exactly unchanged')
+check(D.get('recovery', {}).get('baseline_entry_count') == 1111 and
+      D.get('recovery', {}).get('recovered_source_record_count') == 165 and
+      D.get('recovery', {}).get('recovered_entry_count') == 164 and
+      D.get('recovery', {}).get('documented_exclusion_count') == 1,
+      'dictionary recovery counts')
 for story in C['stories']:
     check(story['lines'], f"empty public story: {story['story_id']}")
     check(story.get('source', {}).get('layer') == 'uwpa-recovered-record',
@@ -99,6 +120,122 @@ for record in FIN_MANIFEST['files']:
         check(source.stat().st_size == record['size'], f"archival FIN size mismatch: {record['path']}")
         check(hashlib.sha256(source.read_bytes()).hexdigest() == record['sha256'],
               f"archival FIN hash mismatch: {record['path']}")
+
+# 1b. Exhaustive authority inventory and byte-preserved A-C sources/support.
+check(AUTHORITY['totals']['regular_files'] == len(AUTHORITY['files']) == 2118,
+      'authority inventory must cover all 2,118 regular files')
+check(all(item.get('pipeline_disposition') for item in AUTHORITY['files']),
+      'every authoritative file must have an explicit pipeline disposition')
+check(AUTHORITY['totals']['admitted_existing_fin_sources'] == 684 and
+      AUTHORITY['totals']['admitted_recovered_sources'] == 5 and
+      AUTHORITY['totals']['recovered_records'] == 165,
+      'authority admitted source counts')
+check(AUTHORITY['comparison']['old_archive_matches_authoritative_root_fin'] is True,
+      'old 684-file archive must match the authoritative root FIN set')
+check(set(AUTHORITY['comparison']['omitted_admitted_sources']) ==
+      {'ABC/DICT#.BYN', 'ABC/DICT%.BYN', 'ABC/DICTA.BYN', 'ABC/DICTB.BYN', 'ABC/DICTC.BYN'},
+      'exact old-discovery omissions')
+check(RECOVERED_MANIFEST['file_count'] == len(RECOVERED_MANIFEST['files']) == 91,
+      'recovered archive manifest count')
+for item in RECOVERED_MANIFEST['files']:
+    source = TOOL_DIR / item['archive_path']
+    check(source.exists(), f"recovered archive file missing: {item['archive_path']}")
+    if source.exists():
+        check(source.stat().st_size == item['byte_length'],
+              f"recovered archive size mismatch: {item['archive_path']}")
+        check(hashlib.sha256(source.read_bytes()).hexdigest() == item['sha256'],
+              f"recovered archive hash mismatch: {item['archive_path']}")
+expected_byn_counts = {'DICT#.BYN': 58, 'DICT%.BYN': 8, 'DICTA.BYN': 35,
+                       'DICTB.BYN': 40, 'DICTC.BYN': 24}
+for name, count in expected_byn_counts.items():
+    parsed = parse_byn(TOOL_DIR / 'archive' / '1990-abc' / name)
+    check(parsed['record_count'] == count, f'{name}: admitted record count')
+check(RECOVERED_RECORDS['record_count'] == len(RECOVERED_RECORDS['records']) == 165,
+      'recovered record receipt count')
+source_record_ids = [item['source_record'] for item in RECOVERED_RECORDS['records']]
+check(len(source_record_ids) == len(set(source_record_ids)), 'duplicate recovered source record')
+recovered_entries = D['entries'][1111:]
+admitted_record_ids = {item['source_record'] for item in RECOVERED_RECORDS['records']
+                       if item['disposition'] == 'admitted'}
+excluded_records = [item for item in RECOVERED_RECORDS['records']
+                    if item['disposition'] != 'admitted']
+check({e.get('source_record') for e in recovered_entries} == admitted_record_ids,
+      'every admitted recovered source record must reach exactly one dictionary entry')
+check(len(excluded_records) == 1 and excluded_records[0]['source_record'] == 'DICT#.BYN:27' and
+      excluded_records[0]['duplicate_of'] == 'DICT#.BYN:28',
+      'the strict-superset source duplicate must be the sole documented exclusion')
+duplicate = D['recovery']['duplicate_relationships'][0]
+check(duplicate['relationship'] == 'strict-documentary-superset' and
+      duplicate['excluded_source_record'] == 'DICT#.BYN:27' and
+      duplicate['retained_source_record'] == 'DICT#.BYN:28' and
+      duplicate['retained_additions']['extensions'] == ['-t'] and
+      duplicate['retained_additions']['alternate_forms_ascii'] == ["#dje`"],
+      'DICT#.BYN row 28 strict-superset relationship changed')
+retained_duplicate = next(e for e in recovered_entries if e.get('source_record') == 'DICT#.BYN:28')
+check(retained_duplicate.get('source_records') == ['DICT#.BYN:28', 'DICT#.BYN:27'],
+      'retained #dja entry must trace to both source rows')
+for entry in recovered_entries:
+    page = (OUT / 'words' / (entry['entry_id'] + '.html')).read_text(encoding='utf-8')
+    for source_line in entry.get('raw_source_lines', []):
+        if source_line:
+            check(html.escape(source_line, quote=True) in page,
+                  f"complete 1990 source line not rendered: {entry['source_record']}")
+check({e['entry_id'] for e in recovered_entries} ==
+      {item['entry_id'] for item in RECOVERED_RECORDS['records'] if item['entry_id']},
+      'recovered record-to-entry trace is not bijective')
+fin_names = {item['path'] for item in FIN_MANIFEST['files']}
+for entry in D['entries'][:1111]:
+    check((entry['source_file'] + '.FIN') in fin_names,
+          f"baseline entry lacks archived source trace: {entry['entry_id']}")
+
+# Jacobs inventory and exact-one, longest-match initial classification.
+check(JACOBS['authority']['sha256'] ==
+      'de8f1cd6abfb4a19088cc87e2fab564ac081b87d6de34f3596283a6ec9ab050f',
+      'Jacobs phonetic authority hash')
+check(JACOBS['historical_mapping']['sha256'] ==
+      'bdc74baa66c467d731f8ab9c9a44f93ca4e2bd4704d3cb45bc2605c718d31ba2',
+      'historical Anderson-to-Jacobs mapping hash')
+check(JACOBS['phonetic_unit_count'] == len(JACOBS['phonetic_inventory']) == 68 and
+      JACOBS['documentary_exception_count'] == 1,
+      'complete Jacobs inventory/documentary exception counts')
+classified_initials = [initial_for_entry(e) for e in D['entries']]
+check(len(classified_initials) == len(D['entries']), 'every headword receives one Jacobs-aware category')
+attested_initials = sorted(set(classified_initials), key=JACOBS_ORDER.__getitem__)
+check({'#', '%', 'c', 'tc', "t'c", 'z-exception'} <= set(attested_initials),
+      'focused Jacobs initial categories are missing')
+check(initial_key("t'ca") == "t'c" and initial_key('tca') == 'tc' and
+      initial_key("t'#a") == "t'#" and initial_key('t#a') == 't#',
+      'longest valid initial must precede its prefix')
+longest_cases = {"dja": "dj", "dza": "dz", "tsa": "ts", "t'sa": "t's",
+                 "gwa": "gw", "kwa": "kw", "k!wa": "k!w", "xwa": "xw",
+                 "g;wa": "g;w", "qwa": "qw", "q!wa": "q!w",
+                 "%;wa": "%;w", "x;wa": "x;w", "dla": "dl"}
+for sample, expected in longest_cases.items():
+    check(initial_key(sample) == expected, f'longest-match failure: {sample} -> {expected}')
+check(all(row['key'] != 'z' and row['display'] != 'Z' for row in JACOBS_ALPHABET),
+      'independent z must not enter the Jacobs phonetic inventory')
+check(DOCUMENTARY_EXCEPTIONS == [JACOBS['documentary_index_exceptions'][0]] and
+      DOCUMENTARY_EXCEPTIONS[0]['entry_id'] == 'e1111-z' and
+      DOCUMENTARY_EXCEPTIONS[0]['source_file'] == 'Z',
+      'documentary Z exception scope changed')
+try:
+    initial_key('Z')
+except ValueError:
+    pass
+else:
+    check(False, 'independent z classified without documentary authorization')
+check(initial_key('Z', entry_id='e1111-z', source_file='Z') == 'z-exception',
+      'authorized documentary Z entry did not classify')
+check([e['entry_id'] for e in D['entries'] if
+       (e.get('headword_ascii') or '').lower().startswith('z')] == ['e1111-z'],
+      'additional independent-z initial requires separate authorization')
+attested_counts = Counter(classified_initials)
+check([row['key'] for row in ATTESTED_INDEX['categories']] == attested_initials,
+      'attested index receipt category order')
+check({row['key']: row['count'] for row in ATTESTED_INDEX['categories']} == dict(attested_counts),
+      'attested index receipt counts')
+check(all(row['count'] > 0 for row in ATTESTED_INDEX['categories']),
+      'attested index receipt contains an empty category')
 
 # 2. Unique identities and bidirectional data references.
 entry_ids = [entry['entry_id'] for entry in D['entries']]
@@ -341,6 +478,23 @@ check(len(index['entries']) == len(D['entries']), 'search index entry count')
 check(len(index['stories']) == len(C['stories']), 'search index story count')
 check({item['i'] for item in index['entries']} == entry_id_set, 'search index entry identities')
 check({item['i'] for item in index['stories']} == public_ids, 'search index story identities')
+words_index = (OUT / 'words' / 'index.html').read_text(encoding='utf-8')
+tab_labels = [html.unescape(value) for value in
+              re.findall(r'<a href="#s-\d+">([^<]+)</a>', words_index)]
+expected_labels = [next(row['display'] for row in
+                        JACOBS['phonetic_inventory'] + JACOBS['documentary_index_exceptions']
+                        if row['key'] == key) for key in attested_initials]
+check(tab_labels == expected_labels,
+      'emitted index tabs must equal attested initial categories in Jacobs order')
+search_by_id = {item['i']: item for item in index['entries']}
+check(search_by_id['e1111-z']['k'] == 'z', 'documentary Z entry literal search key changed')
+for key, alias in (('c', 'sh'), ('tc', 'ch'), ("t'c", "ch'")):
+    example = next(e for e in D['entries'] if initial_for_entry(e) == key)
+    check(any(value.startswith(re.sub(r'[^a-z0-9]', '', alias))
+              for value in search_by_id[example['entry_id']]['kk']),
+          f'search alias missing for {key}: {alias}')
+    check(initial_for_entry(example) == key,
+          f'search alias changed canonical category: {key}')
 spot = (OUT / 'stories' / 't003-a-deserted-poor-woman-was-given-food-by-shag.html').read_text(encoding='utf-8')
 check('hú·mis' in spot, 'Jacobs correction hú·mis not present')
 
@@ -361,6 +515,18 @@ for later_source in ('anthony p. grant', 'john milhau', 'milhau 1856', 'harringt
 intro_hash = hashlib.sha256((TOOL_DIR / 'intro1990.html').read_bytes()).hexdigest()
 check(intro_hash == 'e70fe33a1a25824897bbce08d138d4bc713f36b1d4e6ab7ca883effd795386de',
       'the historical 1990 introduction changed')
+check(hashlib.sha256((DATA / 'corpus.json').read_bytes()).hexdigest() ==
+      '0183a6305d0dc0a9737cad10eebaf47cd881ba12575f4cb47702fd3b0001f854',
+      'public corpus bytes changed')
+hold_hashes = {
+    REPO_ROOT / '_config.yml': '64f01ca1d2469737772c9ffb809999d07fc804ce36584f22811fc6e94c5eff7b',
+    REPO_ROOT / 'robots.txt': '78d87696b39031b60cd896b1ce0538a68f1612311e358dab0a38120918329f11',
+    TOOL_DIR / 'PUBLICATION_HOLD.md': '64a87de56cddd8e166d5b42d5a2d68b3b552fc0b2c018575ae897b663ce9f14f',
+    REPO_ROOT / 'index.html': 'e86763ce492fd0a4be1e48b299af262cf2ba476828b26d84307236d5754da719',
+}
+for path, expected_hash in hold_hashes.items():
+    check(hashlib.sha256(path.read_bytes()).hexdigest() == expected_hash,
+          f'publication hold changed: {path.relative_to(REPO_ROOT)}')
 
 # 7. The committed public/archival split reproduces from the preserved checkpoint.
 subprocess_env = dict(os.environ, PYTHONDONTWRITEBYTECODE='1')

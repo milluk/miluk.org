@@ -1,0 +1,735 @@
+{
+  "schema": "miluk-recovered-source-manifest/1",
+  "file_count": 91,
+  "files": [
+    {
+      "original_relative_path": "ABC/#",
+      "archive_path": "archive/1990-abc/#",
+      "filename": "#",
+      "byte_length": 555,
+      "sha256": "ecc3855a8c793e9a73d41bf1f206b1aac7543e598878ab715bb3651a61dc7ace",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#1",
+      "archive_path": "archive/1990-abc/#1",
+      "filename": "#1",
+      "byte_length": 1091,
+      "sha256": "bb61e2f0803e92d8177f40d568513f391f11cbf6d20a969bf521025cc52857ec",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#A",
+      "archive_path": "archive/1990-abc/#A",
+      "filename": "#A",
+      "byte_length": 1939,
+      "sha256": "3e6144704b9dd0a321be1f23ca215221e92722ac381fbb130815e56d654913e0",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#A#I",
+      "archive_path": "archive/1990-abc/#A#I",
+      "filename": "#A#I",
+      "byte_length": 112,
+      "sha256": "db0931b6ca52e0e9ed3cb40f520a12b2d54a52cc11ac14a547b8bd8c75aa2b7b",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#A#XWEN",
+      "archive_path": "archive/1990-abc/#A#XWEN",
+      "filename": "#A#XWEN",
+      "byte_length": 138,
+      "sha256": "b19d496149acf5a3a9fb58141a8b7495900b894ddc3dc7dd86d811c0173d9bcd",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#AGAWIYA",
+      "archive_path": "archive/1990-abc/#AGAWIYA",
+      "filename": "#AGAWIYA",
+      "byte_length": 175,
+      "sha256": "077e421cc9b7e42f22893ff41f441bb9a4441688c3155d4ffe4a9a225d95c218",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#AI",
+      "archive_path": "archive/1990-abc/#AI",
+      "filename": "#AI",
+      "byte_length": 1254,
+      "sha256": "26bba1e7c53f4f2db74e8dcdaa2d366f9ef877fa0624d0f8d1de3d07b742dc35",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#AQAQ",
+      "archive_path": "archive/1990-abc/#AQAQ",
+      "filename": "#AQAQ",
+      "byte_length": 145,
+      "sha256": "845e6ab685da6a66ee954a83163113ab930612005cb6bcc75b69fc246ce6e7ce",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#AYAQAI",
+      "archive_path": "archive/1990-abc/#AYAQAI",
+      "filename": "#AYAQAI",
+      "byte_length": 304,
+      "sha256": "d1f03beea9ed868bf9214573504ee895de7d53cad3f0cb2b84ec586d605e77bd",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#DJA",
+      "archive_path": "archive/1990-abc/#DJA",
+      "filename": "#DJA",
+      "byte_length": 373,
+      "sha256": "30026e57656b74c54ee72b657cba29b8b0ae82c9715aeecffd5e94a8164744ae",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#DJEL",
+      "archive_path": "archive/1990-abc/#DJEL",
+      "filename": "#DJEL",
+      "byte_length": 188,
+      "sha256": "34d50b5c52c8db01f6cf5ae8eaad2d269a9369148de1392ebdee2d4efd9158f9",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#E#",
+      "archive_path": "archive/1990-abc/#E#",
+      "filename": "#E#",
+      "byte_length": 200,
+      "sha256": "e001fe6fd51dc0544a4b73c61057e3743b3c99461329db34fdce267312257633",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#GEN",
+      "archive_path": "archive/1990-abc/#GEN",
+      "filename": "#GEN",
+      "byte_length": 283,
+      "sha256": "43904d2d18d1c9857bc1ffd583bf215874500a575416f888f4db0974638f3c72",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#HA",
+      "archive_path": "archive/1990-abc/#HA",
+      "filename": "#HA",
+      "byte_length": 313,
+      "sha256": "e3cd8f5ce5c51001f7fd912f395763e096d8984127bd3d562ddbd7d4faaabb5c",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#HAI",
+      "archive_path": "archive/1990-abc/#HAI",
+      "filename": "#HAI",
+      "byte_length": 108,
+      "sha256": "4094725d3abda41df75331b1109530fa2e2c8c62dfb74a288b6845aeee81a65f",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#HETEM",
+      "archive_path": "archive/1990-abc/#HETEM",
+      "filename": "#HETEM",
+      "byte_length": 152,
+      "sha256": "e32245b56e5a7d3357f8b851a7ac4f2d11b087db68bed8633350b28cea3386c1",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#IMDAWA",
+      "archive_path": "archive/1990-abc/#IMDAWA",
+      "filename": "#IMDAWA",
+      "byte_length": 537,
+      "sha256": "0db0be22685dca44568b2e03b9f4f17f2312d390de0026941d9b3971301df76e",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#INIK",
+      "archive_path": "archive/1990-abc/#INIK",
+      "filename": "#INIK",
+      "byte_length": 290,
+      "sha256": "2dd34ce0480f442eec7e832c5520a49a95a0cdc421cffde37aa83af5bfec7cd8",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#ITCIT",
+      "archive_path": "archive/1990-abc/#ITCIT",
+      "filename": "#ITCIT",
+      "byte_length": 153,
+      "sha256": "dabc334d8da534f335567cb9769d120a2efb6f67df5720d7deb9dad9175081db",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#QU",
+      "archive_path": "archive/1990-abc/#QU",
+      "filename": "#QU",
+      "byte_length": 205,
+      "sha256": "6ad186b375a108a0352940767784d46d756d600cb43c80db28ba572acd607adc",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#QWA",
+      "archive_path": "archive/1990-abc/#QWA",
+      "filename": "#QWA",
+      "byte_length": 148,
+      "sha256": "d5330b1d40637265599487e21ed37c7e52021a3829ac9581f798f47533fd3ab1",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#QWIL",
+      "archive_path": "archive/1990-abc/#QWIL",
+      "filename": "#QWIL",
+      "byte_length": 155,
+      "sha256": "bc169a2cd5c84c700c5dec4b352e8b8e9022fa138054cf4989396ddcf3fd42df",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#TAYAU",
+      "archive_path": "archive/1990-abc/#TAYAU",
+      "filename": "#TAYAU",
+      "byte_length": 178,
+      "sha256": "582a89f503bdbb2cf9a37619692c82a4948ca6b320169c3ce48033b04f2f8857",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#U",
+      "archive_path": "archive/1990-abc/#U",
+      "filename": "#U",
+      "byte_length": 677,
+      "sha256": "cd4ac88a8908b9208358e6f14da195b100a01469e307bbc54226c915e5288134",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#UDADAYA",
+      "archive_path": "archive/1990-abc/#UDADAYA",
+      "filename": "#UDADAYA",
+      "byte_length": 766,
+      "sha256": "1fe64ebecc96cc8c23c4124a105a035b93f0f0eafbe3e3f9f42cc4bf08144c6c",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#UNWI",
+      "archive_path": "archive/1990-abc/#UNWI",
+      "filename": "#UNWI",
+      "byte_length": 308,
+      "sha256": "012e538cf5219ab4ef2cbb105e6d359b2e2f25eec31d6f268373a65fc15caef4",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#XALAL",
+      "archive_path": "archive/1990-abc/#XALAL",
+      "filename": "#XALAL",
+      "byte_length": 122,
+      "sha256": "ef9231fc632479d9ce4f8a6b089bb82004ab597148d907818b1a408feb889bde",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/#YULIYAM",
+      "archive_path": "archive/1990-abc/#YULIYAM",
+      "filename": "#YULIYAM",
+      "byte_length": 159,
+      "sha256": "b83db2e4112867488392260c5cde4ddcb37d8159cd8322b8350811e8893e542d",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/%",
+      "archive_path": "archive/1990-abc/%",
+      "filename": "%",
+      "byte_length": 214,
+      "sha256": "5e0ece7ad4c8ef8a2be38e3686b1ea3324b9486864157d9a852aba10528e6095",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/%ALA",
+      "archive_path": "archive/1990-abc/%ALA",
+      "filename": "%ALA",
+      "byte_length": 428,
+      "sha256": "0de39e022d3ae05d3c1dcb95c19bd8378d1422e4ec3137204710db23d8221140",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/%AYA#",
+      "archive_path": "archive/1990-abc/%AYA#",
+      "filename": "%AYA#",
+      "byte_length": 122,
+      "sha256": "4b76352610ac51edb54a3be25c6e63b5ac3ab049423067142ec79512224df075",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/%EYENE",
+      "archive_path": "archive/1990-abc/%EYENE",
+      "filename": "%EYENE",
+      "byte_length": 198,
+      "sha256": "ecf0b256b2a373119cdeb6be5d38912b0d200eaea03a0c4221c14d2229037fd5",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/A",
+      "archive_path": "archive/1990-abc/A",
+      "filename": "A",
+      "byte_length": 658,
+      "sha256": "6d2ffacb78823b3a59bb218cde94c8a540b86ad24c497dd14abecebec0aeb9f5",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/A#",
+      "archive_path": "archive/1990-abc/A#",
+      "filename": "A#",
+      "byte_length": 198,
+      "sha256": "c6bd1f5ed62d32caefe190704797cfa5304089c165eb3055cc5fb772716ff2db",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/ADLAQ",
+      "archive_path": "archive/1990-abc/ADLAQ",
+      "filename": "ADLAQ",
+      "byte_length": 108,
+      "sha256": "7a301651294d11fe0b54e35b1b4beb9733a65ac86cf327ad81cc4911b4cde9d8",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/ADZU",
+      "archive_path": "archive/1990-abc/ADZU",
+      "filename": "ADZU",
+      "byte_length": 268,
+      "sha256": "7633068ee979788cf7ff6d152b2ffdd19e0e4c374a674962bf6571d57bea852e",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/AGANAYA",
+      "archive_path": "archive/1990-abc/AGANAYA",
+      "filename": "AGANAYA",
+      "byte_length": 142,
+      "sha256": "a6859c39f122449823014e6beae6a2885640d4d76942e768428b8e4d1f1f1881",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/AIWA",
+      "archive_path": "archive/1990-abc/AIWA",
+      "filename": "AIWA",
+      "byte_length": 391,
+      "sha256": "15cb7e4eae5584822f3b2876c8b77bde434dff9f5f614742a83a69c2e791b63d",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/AKAL",
+      "archive_path": "archive/1990-abc/AKAL",
+      "filename": "AKAL",
+      "byte_length": 290,
+      "sha256": "1c0ce5fee27dcd37eb298935ed70d7f1e06c2d235c5a34e344c6f770ef819712",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/ALICA",
+      "archive_path": "archive/1990-abc/ALICA",
+      "filename": "ALICA",
+      "byte_length": 833,
+      "sha256": "57e15b648c1288635ac389c34b7b397cb54458533222de5bff3c4f332f61ea2b",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/ALQSA",
+      "archive_path": "archive/1990-abc/ALQSA",
+      "filename": "ALQSA",
+      "byte_length": 413,
+      "sha256": "7273581d5f7e6ffa14a5491865ccfe4a3a4327b064edb79f5ba409d1b5b59617",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/ALSI",
+      "archive_path": "archive/1990-abc/ALSI",
+      "filename": "ALSI",
+      "byte_length": 132,
+      "sha256": "19bd026025c49fed17f38364135dce7a296339fe3247d40715da1806b3a7dfd0",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/AMA",
+      "archive_path": "archive/1990-abc/AMA",
+      "filename": "AMA",
+      "byte_length": 249,
+      "sha256": "dadf79d14bfe0462850da1420de7a2a75361afcd94d53504cb103548129206c1",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/AMI",
+      "archive_path": "archive/1990-abc/AMI",
+      "filename": "AMI",
+      "byte_length": 731,
+      "sha256": "e5f19faf7a93fb0580e9737445e70c7ba2d2349cd7f0b38c363d752af8d51762",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/ASDA",
+      "archive_path": "archive/1990-abc/ASDA",
+      "filename": "ASDA",
+      "byte_length": 204,
+      "sha256": "872a4a96f1016c62c101f1ebe5144d0904ac35251fcaa0b1e51902dd278fad50",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/ASU",
+      "archive_path": "archive/1990-abc/ASU",
+      "filename": "ASU",
+      "byte_length": 240,
+      "sha256": "2f27d4873a65acca7206e3b46070d18104baaf5eb830359b7e40c33395227a8c",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/ATADA",
+      "archive_path": "archive/1990-abc/ATADA",
+      "filename": "ATADA",
+      "byte_length": 192,
+      "sha256": "65659b8e4a417276e6c83dc0cd057ba48ba8b8e64a39d3147f75c0734f6ff8d0",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/ATADI",
+      "archive_path": "archive/1990-abc/ATADI",
+      "filename": "ATADI",
+      "byte_length": 152,
+      "sha256": "3afb4482fcfc78ea09ee40aac9ccaa5a6550ae89f09788a053e9132638d297b3",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/AUCT",
+      "archive_path": "archive/1990-abc/AUCT",
+      "filename": "AUCT",
+      "byte_length": 127,
+      "sha256": "be744899cd61b4f9d77593de5609310d90b0908a4b50059a8397dbe8eae8eedf",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/AUCTT",
+      "archive_path": "archive/1990-abc/AUCTT",
+      "filename": "AUCTT",
+      "byte_length": 108,
+      "sha256": "3793d53d4e33175c410b37959b88d57b77524df43474cc6d75eca580e6360e00",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/AXATS",
+      "archive_path": "archive/1990-abc/AXATS",
+      "filename": "AXATS",
+      "byte_length": 272,
+      "sha256": "47ded16b694dd2f7a1d17bdd749dd9022e44872c574de78873077f95ff4ea571",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/AXAXITC",
+      "archive_path": "archive/1990-abc/AXAXITC",
+      "filename": "AXAXITC",
+      "byte_length": 280,
+      "sha256": "f617778531a49e88308184ae6ea917f871cd5fcb36d609f02026a9bed05838db",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/AXTLE",
+      "archive_path": "archive/1990-abc/AXTLE",
+      "filename": "AXTLE",
+      "byte_length": 193,
+      "sha256": "443f36d81ecb4b3dce1df15df4916bd5d1f24d5090fee47403ceaec6947dcf38",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/AYADJA",
+      "archive_path": "archive/1990-abc/AYADJA",
+      "filename": "AYADJA",
+      "byte_length": 117,
+      "sha256": "f61fcb54bad097a4d49f6dabced4a2119c57b6b37011908053e368ab3ae619d1",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/AYATSAM",
+      "archive_path": "archive/1990-abc/AYATSAM",
+      "filename": "AYATSAM",
+      "byte_length": 202,
+      "sha256": "aee8ae5b0d3ab195fe9a58a023b2e44dfd7cf6b9f27038665a6857bd9058d183",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/AYU",
+      "archive_path": "archive/1990-abc/AYU",
+      "filename": "AYU",
+      "byte_length": 319,
+      "sha256": "2ee8ebd679f84de3bde9575f7a0f0accb8518184d981c7c262f59f628e4d389c",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/B",
+      "archive_path": "archive/1990-abc/B",
+      "filename": "B",
+      "byte_length": 714,
+      "sha256": "5293fd924b938ed71250ef89633cad6a58d8ed9eb161269480bf539c4ffbf863",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/BAHANAYA",
+      "archive_path": "archive/1990-abc/BAHANAYA",
+      "filename": "BAHANAYA",
+      "byte_length": 245,
+      "sha256": "717e8de6dec3b1bd7c49f914995aac1d6d08541ade20d27bfa9d7a94918655a4",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/BALDIYA",
+      "archive_path": "archive/1990-abc/BALDIYA",
+      "filename": "BALDIYA",
+      "byte_length": 943,
+      "sha256": "c4c28f67b994bb3af064ee89cf1ccb41357c8aefbd9a3402fe34322db4cad6e8",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/BAMIS",
+      "archive_path": "archive/1990-abc/BAMIS",
+      "filename": "BAMIS",
+      "byte_length": 114,
+      "sha256": "07a92885814ba3718eea43a8897cdb8e1fdec264fcd359474ea391ffdd2ff47d",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/BASAQ",
+      "archive_path": "archive/1990-abc/BASAQ",
+      "filename": "BASAQ",
+      "byte_length": 255,
+      "sha256": "97d8d96778f61b83dd5990a7486ec703ec78f78f7af964bf9edaf25a1f2cd5df",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/BASTANI",
+      "archive_path": "archive/1990-abc/BASTANI",
+      "filename": "BASTANI",
+      "byte_length": 129,
+      "sha256": "d1729b5b146f700883cdeeabc25d36e7dc59f40774d933797efb12cb1fb0362c",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/BATGI",
+      "archive_path": "archive/1990-abc/BATGI",
+      "filename": "BATGI",
+      "byte_length": 128,
+      "sha256": "c2b46831738d17aa60b09234b4c0fb3675d827a93da5ddbe0396fb1f1fdca2b7",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/BEI",
+      "archive_path": "archive/1990-abc/BEI",
+      "filename": "BEI",
+      "byte_length": 256,
+      "sha256": "1f9cbe0a31827743dd26d05206630c89a2f6b899aebe929f9a79be7ad2cf790d",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/BELDJI",
+      "archive_path": "archive/1990-abc/BELDJI",
+      "filename": "BELDJI",
+      "byte_length": 1582,
+      "sha256": "87365cdf65613ce5384e72c4dd84969086c2503df2bc5048e601a929c3612c93",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/BELXSIM",
+      "archive_path": "archive/1990-abc/BELXSIM",
+      "filename": "BELXSIM",
+      "byte_length": 415,
+      "sha256": "645c7c2102e5be1496e5978b30110a6400b132689fcc356d730dbf4e8cfc9be9",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/BI#",
+      "archive_path": "archive/1990-abc/BI#",
+      "filename": "BI#",
+      "byte_length": 146,
+      "sha256": "5882456a97e328fe86c0a4601f9ced77acffd2c7c61c98f21c6284d846fda5cd",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/BILGWATC",
+      "archive_path": "archive/1990-abc/BILGWATC",
+      "filename": "BILGWATC",
+      "byte_length": 149,
+      "sha256": "bab0c1d4132f0e463174d728fbc253fabf66676ba266fd09b3018aa2a3f04bd9",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/BINATS",
+      "archive_path": "archive/1990-abc/BINATS",
+      "filename": "BINATS",
+      "byte_length": 346,
+      "sha256": "986c85f6b385eeb79b1535bdbfe30fcaf5ec849ac3a88954d4d5dcec7634a984",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/BINDJ",
+      "archive_path": "archive/1990-abc/BINDJ",
+      "filename": "BINDJ",
+      "byte_length": 302,
+      "sha256": "02e0f09d4b94aa8e1ba2438d1c0d301d224b32594e83f79baba66fb1a9a03a2d",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/BITBIL",
+      "archive_path": "archive/1990-abc/BITBIL",
+      "filename": "BITBIL",
+      "byte_length": 201,
+      "sha256": "447873b45f0286e156417ffde27c2cfcd51f98b649c1cb9b6eb01cf2c0c1156f",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/BIYA",
+      "archive_path": "archive/1990-abc/BIYA",
+      "filename": "BIYA",
+      "byte_length": 166,
+      "sha256": "4aeaa5ee17093d9d2327d290c0e1c77a9990615f7ce8ca7db8e9339eb6120b8a",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/BUGWI",
+      "archive_path": "archive/1990-abc/BUGWI",
+      "filename": "BUGWI",
+      "byte_length": 134,
+      "sha256": "c982161ecff598132c25cdff6a57f5ca3301751564467c842a29abed4a6e41ee",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/BULAK",
+      "archive_path": "archive/1990-abc/BULAK",
+      "filename": "BULAK",
+      "byte_length": 179,
+      "sha256": "1877a454c9fc1f0f42fb7219edf356d9c7a2692fe9be1a68691703b7985ad374",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/C",
+      "archive_path": "archive/1990-abc/C",
+      "filename": "C",
+      "byte_length": 580,
+      "sha256": "175f541b6199569e17366370dd579b7c407511925dbefb191bc0ba7794707494",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/CDJITAS",
+      "archive_path": "archive/1990-abc/CDJITAS",
+      "filename": "CDJITAS",
+      "byte_length": 129,
+      "sha256": "e529e3d5ede37c42aa5a0a1a20c043e29f98403dc222683c30c03ba05fb11f0c",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/CEYUCTLE",
+      "archive_path": "archive/1990-abc/CEYUCTLE",
+      "filename": "CEYUCTLE",
+      "byte_length": 433,
+      "sha256": "f922064ad806ba8b0fbf8c3ee9fb4f5a9b78c3a23a20ff4637fc476a2e63e721",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/CITCDI",
+      "archive_path": "archive/1990-abc/CITCDI",
+      "filename": "CITCDI",
+      "byte_length": 127,
+      "sha256": "a308ca5ab86f281322d27ff09cf21ae8489744b3bf4e40199b625e48af9fd5bd",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/CTCAI",
+      "archive_path": "archive/1990-abc/CTCAI",
+      "filename": "CTCAI",
+      "byte_length": 108,
+      "sha256": "5370b2e7cc5d39f612ff36d8874e0231f3630029725a12dfb55126d5ce35bbcb",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/CTCIL",
+      "archive_path": "archive/1990-abc/CTCIL",
+      "filename": "CTCIL",
+      "byte_length": 127,
+      "sha256": "40a421c2d93ff564f4240dd6ba77ebdddc10a8bc239e3342ef9853650cdb9d4e",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/CYUTC",
+      "archive_path": "archive/1990-abc/CYUTC",
+      "filename": "CYUTC",
+      "byte_length": 313,
+      "sha256": "6131fee2ba6861114321ef3b106fede436021f4077850663fcfefd4cb53ae653",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "ABC/DICT#.BYN",
+      "archive_path": "archive/1990-abc/DICT#.BYN",
+      "filename": "DICT#.BYN",
+      "byte_length": 8352,
+      "sha256": "f170a116e25e0b2d05e8cdfefb133f1096d843963bc2e13f2dcf564225cbdf1c",
+      "classification": "final-entry source"
+    },
+    {
+      "original_relative_path": "ABC/DICT%.BYN",
+      "archive_path": "archive/1990-abc/DICT%.BYN",
+      "filename": "DICT%.BYN",
+      "byte_length": 755,
+      "sha256": "c73463cfdaf49d12b13db46b09d4b4f289e8db5328eb991d25c7e633177e312c",
+      "classification": "final-entry source"
+    },
+    {
+      "original_relative_path": "ABC/DICTA.BYN",
+      "archive_path": "archive/1990-abc/DICTA.BYN",
+      "filename": "DICTA.BYN",
+      "byte_length": 4472,
+      "sha256": "239dd33ef1741292befe30e084ca8842fd44dac94791c50ee8c55abc39ae2ea0",
+      "classification": "final-entry source"
+    },
+    {
+      "original_relative_path": "ABC/DICTB.BYN",
+      "archive_path": "archive/1990-abc/DICTB.BYN",
+      "filename": "DICTB.BYN",
+      "byte_length": 4159,
+      "sha256": "fb9ff1e571092d736a2d244b0fdfa0014770fcf7c4afacb7e25a2649b6b7482d",
+      "classification": "final-entry source"
+    },
+    {
+      "original_relative_path": "ABC/DICTC.BYN",
+      "archive_path": "archive/1990-abc/DICTC.BYN",
+      "filename": "DICTC.BYN",
+      "byte_length": 1745,
+      "sha256": "3be526780158750551f1f53e81c8c8887a8f469df7e968e091676879a74a030e",
+      "classification": "final-entry source"
+    },
+    {
+      "original_relative_path": "#",
+      "archive_path": "archive/1990-root-support/#",
+      "filename": "#",
+      "byte_length": 555,
+      "sha256": "ecc3855a8c793e9a73d41bf1f206b1aac7543e598878ab715bb3651a61dc7ace",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "%",
+      "archive_path": "archive/1990-root-support/%",
+      "filename": "%",
+      "byte_length": 214,
+      "sha256": "5e0ece7ad4c8ef8a2be38e3686b1ea3324b9486864157d9a852aba10528e6095",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "A",
+      "archive_path": "archive/1990-root-support/A",
+      "filename": "A",
+      "byte_length": 658,
+      "sha256": "6d2ffacb78823b3a59bb218cde94c8a540b86ad24c497dd14abecebec0aeb9f5",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "B",
+      "archive_path": "archive/1990-root-support/B",
+      "filename": "B",
+      "byte_length": 714,
+      "sha256": "5293fd924b938ed71250ef89633cad6a58d8ed9eb161269480bf539c4ffbf863",
+      "classification": "final-entry support file"
+    },
+    {
+      "original_relative_path": "C",
+      "archive_path": "archive/1990-root-support/C",
+      "filename": "C",
+      "byte_length": 580,
+      "sha256": "175f541b6199569e17366370dd579b7c407511925dbefb191bc0ba7794707494",
+      "classification": "final-entry support file"
+    }
+  ],
+  "root_support_note": "The five root support files are byte-identical to ABC copies and are archived separately to preserve their exact original paths."
+}

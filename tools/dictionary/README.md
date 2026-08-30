@@ -66,7 +66,9 @@ verification but cannot generate public story pages or corpus attestations.
 ## Restoration pipeline
 
 The repository copy under `pipeline/` is canonical; the Dropbox directory is an
-archive/mirror. Stages are intentionally separate:
+archive/mirror. Generation rebuilds the complete dictionary from the frozen
+1,111-entry D-Z checkpoint plus the byte-preserved A-C final-entry tables.
+Stages are intentionally separate:
 
 1. `convert_fin.py` converts the 684 preserved `.FIN` sources to UTF-8 text.
 2. `parse_dictionary.py` parses documentary entry blocks without changing their
@@ -81,26 +83,28 @@ archive/mirror. Stages are intentionally separate:
    emit deterministic public and archival JSON.
 7. `import_collation.py`, `build_v2_receipt.py`, and `hash_manifest.py` emit the
    correction and custody records.
+8. `parse_byn.py` retains all 165 numbered A-C table rows, including E~/A~
+   continuations and raw line spans; `build_complete_dictionary.py` admits 164
+   final entries after proving the sole `#dja` duplicate is a strict superset.
+9. `jacobs_alphabet.py` classifies initials by longest Jacobs unit and separately
+   scopes the founder-authorized documentary Z exception to `e1111-z`/`Z.FIN`.
 
 All JSON emission is UTF-8, sorted by stable source order, indented two spaces,
 and terminated by one newline.
 
-### Archival completeness status
+### Complete 1990 source recovery
 
-The repository can reproducibly build and verify the committed public site and
-can deterministically re-derive the public corpus from the preserved post-repair
-working checkpoint. The 684 `.FIN` sources also convert and parse to 684 source
-records with repository code.
+`provenance/authoritative-directory-inventory.json` accounts for all 2,118
+regular files in the authoritative directory. The old root-only `*.FIN` glob
+admitted 684 D-Z sources but missed five consolidated A-C BYN tables containing
+165 rows. One repeated `#dja` row is a verified strict subset of its adjacent
+successor, so the complete build admits 164 recovered entries and publishes
+1,275 entries without changing IDs `e0001` through `e1111`.
 
-The complete `.FIN`-to-1,111-entry derivation is **not yet fidelity-verified**.
-The restoration archive does not contain the exact LibreOffice UTF-8 conversion
-output, `lexicon.json`, `corpus_index.pkl`, the pre-restructure intermediates, or
-the original repair/verification logs. The recovered scripts referenced those
-files outside the restoration directory. The repository therefore does not
-claim that its new converter reproduces the original conversion byte for byte,
-and does not claim that 1,111 entries reproduce from the archival `.FIN` files.
-The exact missing-artifact list and discovered hashes are in
-`provenance/source-inventory.json`.
+The 1990 index contains only attested Jacobs initials, in Jacobs order, plus one
+separately labeled documentary exception: the unchanged `e1111-z` entry from
+`Z.FIN`. The visible Z category preserves a literal 1990 source form and does
+not assert independent phonemic status for `z`.
 
 ## Provenance and corrections
 
