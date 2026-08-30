@@ -2,12 +2,22 @@
 """miluk.org /dictionary/ — static site generator.
 Reads corpus.json + dictionary.json (the 1990 dictionary, restored 2026)
 and emits the dictionary sub-site. Everything is generated; nothing hand-edited."""
-import json, os, re, html, unicodedata, collections
+import argparse, json, os, re, html, unicodedata, collections
+from pathlib import Path
 
-SRC = os.path.dirname(os.path.abspath(__file__))
-OUT = '/home/claude/site-repo/dictionary'
-C = json.load(open(os.path.join(SRC, 'corpus.json')))
-D = json.load(open(os.path.join(SRC, 'dictionary.json')))
+TOOL_DIR = Path(__file__).resolve().parent
+REPO_ROOT = TOOL_DIR.parents[1]
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--data', type=Path, default=REPO_ROOT / 'dictionary' / 'data',
+                    help='input directory containing corpus.json and dictionary.json')
+parser.add_argument('--out', type=Path, default=REPO_ROOT / 'dictionary',
+                    help='generated dictionary site directory')
+args = parser.parse_args()
+DATA = args.data.resolve()
+OUT = args.out.resolve()
+C = json.loads((DATA / 'corpus.json').read_text(encoding='utf-8'))
+D = json.loads((DATA / 'dictionary.json').read_text(encoding='utf-8'))
 ENTRIES = D['entries']; STORIES = C['stories']
 
 # ---------------- fold (identical in app.js) ----------------
@@ -41,8 +51,7 @@ for e in ENTRIES:
                 key=len, reverse=True)
     entry_keys[e['entry_id']] = ks
 
-SLIP = re.compile(r'-(f\d+|slipfile|slip-file|jacobs-slip)', re.I)
-live = [s for s in STORIES if s['lines'] and not SLIP.search(s['story_id'])]
+live = [s for s in STORIES if s.get('source', {}).get('layer') == 'uwpa-published']
 live_ids = {s['story_id'] for s in live}
 HOM = re.compile(r'[¹²³⁴⁵]+$')
 def plain_hw(e): return HOM.sub('', e['headword'])
@@ -131,9 +140,16 @@ def shell(title, body, root, desc='', active=''):
               root, root, root, nav, body, root, root)
 
 def write(path, text):
-    p = os.path.join(OUT, path)
-    os.makedirs(os.path.dirname(p), exist_ok=True)
-    open(p, 'w', encoding='utf-8').write(text)
+    p = OUT / path
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(text, encoding='utf-8')
+
+# Remove only generator-owned pages. This prevents stale entry or story pages from
+# surviving a boundary correction while leaving data and static assets untouched.
+for owned_dir in (OUT / 'words', OUT / 'stories'):
+    if owned_dir.exists():
+        for owned_page in owned_dir.glob('*.html'):
+            owned_page.unlink()
 
 # ---------------- entry pages ----------------
 BADGE = {'corpus':       ('badge-corpus', 'attested verbatim in the corpus'),
@@ -350,8 +366,8 @@ idx = {'entries': [{'i': e['entry_id'], 'h': e['headword'],
 write('search-index.json', json.dumps(idx, ensure_ascii=False, separators=(',', ':')))
 
 # ---------------- about ----------------
-FOREWORD = open(os.path.join(SRC, 'foreword.html'), encoding='utf-8').read()
-INTRO = open(os.path.join(SRC, 'intro1990.html'), encoding='utf-8').read()
+FOREWORD = (TOOL_DIR / 'foreword.html').read_text(encoding='utf-8')
+INTRO = (TOOL_DIR / 'intro1990.html').read_text(encoding='utf-8')
 b = ['<h1>About the dictionary</h1>', FOREWORD, '<hr class="rule">',
      '<h1>Introduction (1990)</h1>', INTRO]
 write('about.html', shell('About', '\n'.join(b), './', active='about',
