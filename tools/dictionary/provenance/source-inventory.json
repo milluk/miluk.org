@@ -32,7 +32,7 @@
       "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/MILUK/Dictionary/Rebuild 2026-08-27/Jacobs collation - corrections to the 1990 transcription.xlsx",
       "sha256": "b86ab30a2ded33853328ecab88b0c348ed32c2317a85712fde7b363282e2fc3d",
       "size": 71632,
-      "repository_derivative": "tools/dictionary/provenance/correction-ledger.json"
+      "repository_derivative": "dictionary/data/correction-ledger.json"
     },
     {
       "identity": "post-repair working corpus JSON used for v2",
