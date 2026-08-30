@@ -7806,7 +7806,7 @@
      "story_id": "t055-the-trickster-person-who-made-the-country",
      "title": "The trickster person who made the country",
      "line": 219,
-     "verified": true
+     "verified": false
     },
     {
      "story_id": "t055-the-trickster-person-who-made-the-country",
@@ -35804,7 +35804,7 @@
    "entry_id": "e0336-ha-wahdit",
    "headword": "ha'wáʰdit",
    "headword_ascii": "ha'wáʰdit",
-   "gloss": "with #anwi it is an intensifier; LNOHY.BYB",
+   "gloss": "with #anwi it is an intensifier",
    "source_file": "H1",
    "forms": [
     {
@@ -36406,7 +36406,7 @@
      "story_id": "t003-a-deserted-poor-woman-was-given-food-by-shag",
      "title": "A deserted poor woman was given food by shags",
      "line": 21,
-     "verified": false
+     "verified": true
     },
     {
      "story_id": "t003-a-deserted-poor-woman-was-given-food-by-shag",
@@ -52936,7 +52936,7 @@
      "story_id": "t039-black-bear-and-pack-basket-bear-grizzly",
      "title": "Black bear and pack basket bear (grizzly)",
      "line": 86,
-     "verified": true
+     "verified": false
     },
     {
      "story_id": "t041-the-girl-who-had-a-dog-husband",
@@ -64070,7 +64070,7 @@
      "story_id": "t052-myth-of-blue-jay",
      "title": "Myth of blue jay",
      "line": 17,
-     "verified": false
+     "verified": true
     },
     {
      "story_id": "t052-myth-of-blue-jay",

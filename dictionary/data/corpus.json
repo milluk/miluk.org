@@ -782,9 +782,9 @@
     },
     {
      "line": 21,
-     "english": "ha<lkvwdi-mtciL",
-     "miluk_ascii": "Leave me something (Dump something out of the boat for me!)",
-     "miluk": "ʟɛaᵉ mɛ somɛthing (Dump somɛthing out of thɛ boat for mɛ̓)",
+     "english": "Leave me something (Dump something out of the boat for me!)",
+     "miluk_ascii": "ha<lkvwdi-mtciL",
+     "miluk": "hálkʷdi-mtciʟ",
      "entries": [
       "e0345-halkwdi"
      ]
@@ -2231,7 +2231,7 @@
    "lines": [
     {
      "line": 1,
-     "english": "After they had moved the people to Ya<hatc,",
+     "english": "After they had moved the people to Yáhatc,",
      "miluk_ascii": "t#i-ya:<x;adja djinya<-d@k!a,",
      "miluk": "tłi-yá·x̣adja djinyá-dək̓a,",
      "entries": [
@@ -2269,7 +2269,7 @@
     },
     {
      "line": 5,
-     "english": "Tî<iâel purchased hadji/yasa (Fanny) in marriage then,",
+     "english": "Tî́iâɛl purchased hadji/yasa (Fanny) in marriage then,",
      "miluk_ascii": "wi:<-kwi:-t#a:<wi t#e-x;-t#e<i%@l t#@-hadji<yasa,",
      "miluk": "wí·-kwi·-tłá·wi tłɛ-x̣-tłɛ́iɣəl tłə-hadjíyasa,",
      "entries": [
@@ -2300,7 +2300,7 @@
     },
     {
      "line": 8,
-     "english": "(m.tî<iâel bought hadji<yasa who was just a girl who had recently menstruated for the first time.",
+     "english": "(m.tî́iâɛl bought hadjíyasa who was just a girl who had recently menstruated for the first time.",
      "miluk_ascii": "kwi:-t#a:<wi t#e-x;-t#e<i%@l t#a-a<iwa tit'se:<w@s t#@-hadji<yasa.",
      "miluk": "kwi·-tłá·wi tłɛ-x̣-tłɛ́iɣəl tła-áiwa tit'sɛ́·wəs tłə-hadjíyasa.",
      "entries": [
@@ -2311,7 +2311,7 @@
     },
     {
      "line": 9,
-     "english": "Then tî<iâel purchased hadji<yasa.",
+     "english": "Then tî́iâɛl purchased hadjíyasa.",
      "miluk_ascii": "wi:<-kwi:-t#a:<wi t#e-x;-t#e<i%@l t#@-hadji<yasa.",
      "miluk": "wí·-kwi·-tłá·wi tłɛ-x̣-tłɛ́iɣəl tłə-hadjíyasa.",
      "entries": [
@@ -2398,7 +2398,7 @@
     },
     {
      "line": 18,
-     "english": "tî<iâel caught the horse,",
+     "english": "tî́iâɛl caught the horse,",
      "miluk_ascii": "wi:<-g;ala<m t#e-x;-t#e<i%@l t#@-k:u:<tan,",
      "miluk": "wí·-g̣alám tłɛ-x̣-tłɛ́iɣəl tłə-k·ú·tan,",
      "entries": [
@@ -2470,7 +2470,7 @@
     },
     {
      "line": 25,
-     "english": "Now tî<iâel's daughter got married.",
+     "english": "Now tî́iâɛl's daughter got married.",
      "miluk_ascii": "tsu:<-de<m#ts@m t#@-d@gwa:<ya t#@-t#e<i%@l.",
      "miluk": "tsú·-dɛ́młtsəm tłə-dəgwá·ya tłə-tłɛ́iɣəl.",
      "entries": [
@@ -2491,7 +2491,7 @@
     },
     {
      "line": 27,
-     "english": "the first wife of tî<iâel said to her daughter,",
+     "english": "the first wife of tî́iâɛl said to her daughter,",
      "miluk_ascii": "we<n-i<ldvnwa t#@-d@gwa:<ya t#e-x;-t#e<i%@l-d@he<lu-hu:<mis,",
      "miluk": "wɛ́n-íldⁿwa tłə-dəgwá·ya tłɛ-x̣-tłɛ́iɣəl-dəhɛ́lu-hú·mis,",
      "entries": [
@@ -2502,7 +2502,7 @@
     },
     {
      "line": 28,
-     "english": "You should flirt with him (with djaq!u:<ni, Frank).",
+     "english": "You should flirt with him (with djaq̓ú·ni, Frank).",
      "miluk_ascii": "kwi:-na<nt# a<n:hu-t'suwa.",
      "miluk": "kwi·-nántł án·hu-t'suwa.",
      "entries": [
@@ -2661,7 +2661,7 @@
     },
     {
      "line": 44,
-     "english": "while the man djaq!u:<ni went out.",
+     "english": "while the man djaq̓ú·ni went out.",
      "miluk_ascii": "tsu<-t!@-ma-si<lt! t#@-de:<mi#-djaq!u:<ni.",
      "miluk": "tsú-t̓ə-ma-sílt̓ tłə-dɛ́·mił-djaq̓ú·ni.",
      "entries": [
@@ -2718,7 +2718,7 @@
     },
     {
      "line": 50,
-     "english": "He went to see his father-in-law (tî<iâel).",
+     "english": "He went to see his father-in-law (tî́iâɛl).",
      "miluk_ascii": "wa<lwi t#@-d@ya:<k:da.",
      "miluk": "wálwi tłə-dəyá·k·da.",
      "entries": [
@@ -2857,7 +2857,7 @@
     },
     {
      "line": 64,
-     "english": "tî<iâel had no money,",
+     "english": "tî́iâɛl had no money,",
      "miluk_ascii": "a<mi-hada<i'mis t#e-t#e<i%@l,",
      "miluk": "ámi-hadái'mis tłɛ-tłɛ́iɣəl,",
      "entries": [
@@ -2885,7 +2885,7 @@
     },
     {
      "line": 67,
-     "english": "tî<iâel had nothing.",
+     "english": "tî́iâɛl had nothing.",
      "miluk_ascii": "wi<-a<mi:-dite t#e-t#e<i%@l:",
      "miluk": "wí-ámi·-ditɛ tłɛ-tłɛ́iɣəl·",
      "entries": []
@@ -3232,7 +3232,7 @@
     },
     {
      "line": 20,
-     "english": "You are to pick and gather (M.) e<n:ik! weeds,",
+     "english": "You are to pick and gather (M.) ɛ́n·ik! weeds,",
      "miluk_ascii": "kwi:<-na<nt#-yu<qvwda kwi<tc-kwi:-#@<n:ik!:,",
      "miluk": "kwí·-nántł-yúqʷda kwítc-kwi·-łə́n·ik̓·,",
      "entries": [
@@ -11121,7 +11121,7 @@
     },
     {
      "line": 10,
-     "english": "at'si:<x&:is (Marshfield village) children.",
+     "english": "at'sí·x̯·is (Marshfield village) children.",
      "miluk_ascii": "at'si:<xis:@<miya-hi:<me.",
      "miluk": "at'sí·xis·ə́miya-hí·mɛ.",
      "entries": [
@@ -11216,7 +11216,7 @@
     },
     {
      "line": 19,
-     "english": "You will go down the bay to la:<xai",
+     "english": "You will go down the bay to lá·xai",
      "miluk_ascii": "la:<xaidja`-nant#-#a<.",
      "miluk": "lá·xaidjaʻ-nantł-łá.",
      "entries": [
@@ -11304,7 +11304,7 @@
     },
     {
      "line": 28,
-     "english": "You better go there to la:<xai.",
+     "english": "You better go there to lá·xai.",
      "miluk_ascii": "da:< la:<xaidja g;e<`-nant#-#a<.",
      "miluk": "dá· lá·xaidja g̣ɛ́ʻ-nantł-łá.",
      "entries": [
@@ -12057,7 +12057,7 @@
     },
     {
      "line": 111,
-     "english": "My grandfather (mi<nkws) saw one of the old women (survivors) who had been left alive.",
+     "english": "My grandfather (mínkws) saw one of the old women (survivors) who had been left alive.",
      "miluk_ascii": "wi<-t#@-'n@x;-tsqu<#q!vwtc wi:<-hit'ci<-hama<q! t#@-t@<m:-a-d#e-<we hu:<mik!&.",
      "miluk": "wí-tłə-'nəx̣-tsqúłq̓ʷtc wí·-hit'cí-hamáq̓ tłə-tə́m·-a-dłɛ́-wɛ hú·mi̯k̓.",
      "entries": []
@@ -12121,7 +12121,7 @@
    "lines": [
     {
      "line": 1,
-     "english": "The se<ganda:<s people",
+     "english": "The sɛ́gandá·s people",
      "miluk_ascii": "t#@-s@<ganda:<s-k!a<`",
      "miluk": "tłə-sə́gandá·s-k̓áʻ",
      "entries": [
@@ -12150,7 +12150,7 @@
     },
     {
      "line": 4,
-     "english": "The mother of that (se<ganda:<s) boy came from ( Crescent ) Crescent City.",
+     "english": "The mother of that (sɛ́gandá·s) boy came from ( Crescent ) Crescent City.",
      "miluk_ascii": "wi<-ge<'-gadi<ya-d@'e<ne t#i<tc-gwa-di:<#u<# t#@-<Cr@sc@nt City>'i<dje.",
      "miluk": "wí-gɛ́'-gadíya-də'ɛ́nɛ tłítc-gwa-dí·łúł tłə́-Crəscənt City>'ídjɛ.",
      "entries": [
@@ -12882,7 +12882,7 @@
     },
     {
      "line": 78,
-     "english": "this se<ganda:<s man (there) spoke in Miluk to him.",
+     "english": "this sɛ́gandá·s man (there) spoke in Miluk to him.",
      "miluk_ascii": "wi:<-x;-mi<l:ugwi-kwi:<-k!&xidi<ya'yeis t#e-x-s@'ganda:<s.",
      "miluk": "wí·-x̣-míl·ugwi-kw̯í·-k̓xidíya'yɛis tłɛ-x-sə'gandá·s.",
      "entries": [
@@ -12910,7 +12910,7 @@
     },
     {
      "line": 81,
-     "english": "I was the child of the se<ganda:<s.",
+     "english": "I was the child of the sɛ́gandá·s.",
      "miluk_ascii": "t#@-kwi<-yim#-hi:<me t#@-sa<ganda:<s.",
      "miluk": "tłə-kwí-yimł-hí·mɛ tłə-ságandá·s.",
      "entries": [
@@ -12921,7 +12921,7 @@
     },
     {
      "line": 82,
-     "english": "That is what that se<ganda:<s said to him.",
+     "english": "That is what that sɛ́gandá·s said to him.",
      "miluk_ascii": "x;-we:<n-g;w@sg;wa<i t#e-x;-s@<ganda:<s.",
      "miluk": "x̣-wɛ́·n-g̣wəsg̣wái tłɛ-x̣-sə́gandá·s.",
      "entries": [
@@ -12930,7 +12930,7 @@
     },
     {
      "line": 83,
-     "english": "That is why they know that the se<ganda:<s stopped there in the country of the braided hair people.",
+     "english": "That is why they know that the sɛ́gandá·s stopped there in the country of the braided hair people.",
      "miluk_ascii": "wi:<-we:<n-ditc t#@-gwi<-k!wa:-'nvi<yada t#i-i#-g;e<`-yu:<yu t#@-s@<ganda:<s t#@-n0t'cba<ya-k!a< t#@-d@t'#da<ya:s@dj@.",
      "miluk": "wí·-wɛ́·n-ditc tłə-gwí-k̓wá·-'nⁱyada tłi-ił-g̣ɛ́ʻ-yú·yu tłə-sə́gandá·s tłə-n̥t'cbáya-k̓á tłə-dət'łdáya·sədjə.",
      "entries": [
@@ -12941,7 +12941,7 @@
     },
     {
      "line": 84,
-     "english": "The aged se<ganda:<s man told the ( Indian everything) Indian everything.",
+     "english": "The aged sɛ́gandá·s man told the ( Indian everything) Indian everything.",
      "miluk_ascii": "gu:<s-kwi-g;w@sg;wa<i t#@-k!a<` t#@-s@<ganda:<s tu:<'m@t'# #@<n:wi tu:<'m@t'#.",
      "miluk": "gú·s-kwi-g̣wəsg̣wái tłə-k̓áʻ tłə-sə́gandá·s tú·'mət'ł łə́n·wi tú·'mət'ł.",
      "entries": [
@@ -13048,7 +13048,7 @@
     },
     {
      "line": 95,
-     "english": "That is what the se<ganda:<s told the Indian.",
+     "english": "That is what the sɛ́gandá·s told the Indian.",
      "miluk_ascii": "x;-we:<n g;w@sg;wa<i-t#e-x;-s@<ganda:<s t#@-k!a<`.",
      "miluk": "x̣-wɛ́·n g̣wəsg̣wái-tłɛ-x̣-sə́gandá·s tłə-k̓áʻ.",
      "entries": [
@@ -14688,7 +14688,7 @@
     },
     {
      "line": 47,
-     "english": "Havn< how could they have gone through it?",
+     "english": "Háⁿ how could they have gone through it?",
      "miluk_ascii": "ha'-< dji<-g&e kwi:<-t#hi<npya",
      "miluk": "há'- djí-g̯ɛ kwí·-tłhínpya",
      "entries": [
@@ -14813,7 +14813,7 @@
     },
     {
      "line": 61,
-     "english": "avn< that man is fine looking.",
+     "english": "áⁿ that man is fine looking.",
      "miluk_ascii": "'avn:< nehe:<w@dz@n kw@-de:<mi#.",
      "miluk": "'áⁿ· nɛhɛ́·wədzən kwə-dɛ́·mił.",
      "entries": [
@@ -16246,7 +16246,7 @@
     },
     {
      "line": 14,
-     "english": "@@/@ (yes). My uncle (mother's brother) lives here.",
+     "english": "əə/ə (yes). My uncle (mother's brother) lives here.",
      "miluk_ascii": "@:<:. ax&i<yax&i-tcin di<u-dlu:<g;wa",
      "miluk": "ə́··. ax̯íyax̯i-tcin díu-dlú·g̣wa",
      "entries": [
@@ -16267,7 +16267,7 @@
     },
     {
      "line": 16,
-     "english": "@/ he does not look at all like a person.",
+     "english": "ə/ he does not look at all like a person.",
      "miluk_ascii": "@< ma:<:-gwa-a<n-k!a<`",
      "miluk": "ə́ má··-gwa-án-k̓áʻ",
      "entries": [
@@ -16306,7 +16306,7 @@
     },
     {
      "line": 20,
-     "english": "avn<a (yes) there is some water.",
+     "english": "áⁿa (yes) there is some water.",
      "miluk_ascii": "avn:<:! n@ha:<p!a<'yukvw.",
      "miluk": "áⁿ··̓ nəhá·p̓á'yukʷ.",
      "entries": []
@@ -16526,7 +16526,7 @@
     },
     {
      "line": 42,
-     "english": "and just xuu/n@s grass lay on top of them,",
+     "english": "and just xuu/nəs grass lay on top of them,",
      "miluk_ascii": "we<n-ma:<tsi-xu:<n@s-x&ini:<m,",
      "miluk": "wɛ́n-má·tsi-xú·nəs-x̯iní·m,",
      "entries": [
@@ -16590,7 +16590,7 @@
     },
     {
      "line": 48,
-     "english": "and he brought back the xuu/n@s grass and the little willow limbs.",
+     "english": "and he brought back the xuu/nəs grass and the little willow limbs.",
      "miluk_ascii": "he<i-ma:<tsi-kwi:-wa:<sd@dza:t!a t#@#-t#@-xu:<n@s we<n-t#@-e<k!vwli-kwsi< t#@-t#gwi<-d@<kwsi.",
      "miluk": "hɛ́i-má·tsi-kwi·-wá·sdədza·t̓a tłəł-tłə-xú·nəs wɛ́n-tłə-ɛ́k̓ʷli-kwsí tłə-tłgwí-də́kwsi.",
      "entries": [
@@ -16606,7 +16606,7 @@
     },
     {
      "line": 49,
-     "english": "H@/ that is my food and I get fat on it.",
+     "english": "Hə/ that is my food and I get fat on it.",
      "miluk_ascii": "h@< kwi-<-'n@q!w@ni<yau wi<-mi<ts'u.",
      "miluk": "hə́ kwí--'nəq̓wəníyau wí-míts'u.",
      "entries": [
@@ -16837,7 +16837,7 @@
     },
     {
      "line": 74,
-     "english": "aa/aa h@@/@@ I do not believe that that's his older brother.",
+     "english": "aa/aa həə/əə I do not believe that that's his older brother.",
      "miluk_ascii": "a^:<:: h@:<:: an-wu<t#q!a:<ya ku<-kwi<-het'#e:<d@.",
      "miluk": "á^··· hə́··· an-wútłq̓á·ya kú-kwí-hɛt'łɛ́·də.",
      "entries": [
@@ -16896,7 +16896,7 @@
     },
     {
      "line": 80,
-     "english": "He is packing his (grass, m@ qmi) house back of there",
+     "english": "He is packing his (grass, mə qmi) house back of there",
      "miluk_ascii": "t'ce<` t!a:<m-t#@-d@'ye:<ts",
      "miluk": "t'cɛ́ʻ t̓á·m-tłə-də'yɛ́·ts",
      "entries": [
@@ -16905,7 +16905,7 @@
     },
     {
      "line": 81,
-     "english": "H@ look at him",
+     "english": "Hə look at him",
      "miluk_ascii": "h@< k&#e:<wi",
      "miluk": "hə́ k̯łɛ́·wi",
      "entries": [
@@ -17301,7 +17301,7 @@
     },
     {
      "line": 123,
-     "english": "But if you smell xuu n@s grass,",
+     "english": "But if you smell xuu nəs grass,",
      "miluk_ascii": "wi<-i-tcil-ha<nt# xu:<n@s si:tdza:<t!a,",
      "miluk": "wí-i-tcil-hántł xú·nəs si·tdzá·t̓a,",
      "entries": [
@@ -18122,7 +18122,7 @@
     },
     {
      "line": 2,
-     "english": "e:<e I suppose I will be traveling around now.",
+     "english": "ɛ́·ɛ I suppose I will be traveling around now.",
      "miluk_ascii": "@:<: ha<ma-wa<nt#-yuxvwu<m-e.",
      "miluk": "ə́·· háma-wántł-yuxʷúm-ɛ.",
      "entries": []
@@ -19293,7 +19293,7 @@
     },
     {
      "line": 60,
-     "english": "@@/@@ popped-out-of-fire",
+     "english": "əə/əə popped-out-of-fire",
      "miluk_ascii": "@:<-: t#a<w@x;tiyat!a-<m@s",
      "miluk": "ə́·-· tłáwəx̣tiyat̓á-məs",
      "entries": [
@@ -20199,9 +20199,9 @@
     },
     {
      "line": 76,
-     "english": "H@'@@/@@ he@/@@ h@@/@h@h@@@",
-     "miluk_ascii": "h@'@:<:: he:<:. h@:<:h@h@:: t#@-'n@hi:<me,",
-     "miluk": "hə'ə́··· hɛ́··. hə́··həhə·· tłə-'nəhí·mɛ,",
+     "english": "hə'ə́··· hɛ́··. hə́··həhə·· tłə-'nəhí·mɛ,",
+     "miluk_ascii": "H@'@@/@@ he@/@@ h@@/@h@h@@@",
+     "miluk": "Hə'əə/əə hɛə/əə həə/əhəhəəə",
      "entries": []
     },
     {
@@ -20285,9 +20285,9 @@
     },
     {
      "line": 86,
-     "english": "H@@@@@u where are you?",
-     "miluk_ascii": "h@:<:::u idja<u-is",
-     "miluk": "hə́····u idjáu-is",
+     "english": "hə́····u idjáu-is",
+     "miluk_ascii": "H@@@@@u where are you?",
+     "miluk": "Həəəəəu whɛrɛ arɛ you?",
      "entries": [
       "e0469-idje-"
      ]
@@ -21681,7 +21681,7 @@
     },
     {
      "line": 79,
-     "english": "u@uu what could you do?",
+     "english": "uəuu what could you do?",
      "miluk_ascii": "u^: di<tc-na<nt#-aya:dja",
      "miluk": "u^· dítc-nántł-aya·dja",
      "entries": []
@@ -22655,7 +22655,7 @@
     },
     {
      "line": 43,
-     "english": "@@ do not go",
+     "english": "əə do not go",
      "miluk_ascii": "@:< an:a<nt#-#a",
      "miluk": "ə́· an·ántł-ła",
      "entries": []
@@ -23697,7 +23697,7 @@
     },
     {
      "line": 148,
-     "english": "H@. /. there is a (fine big) log beached.",
+     "english": "Hə. /. there is a (fine big) log beached.",
      "miluk_ascii": "h@:<: nik!&i<n-da<'na`.",
      "miluk": "hə́·· ni̯k̓ín-dá'naʻ.",
      "entries": [
@@ -27348,7 +27348,7 @@
     },
     {
      "line": 61,
-     "english": "you will speak of me by my own name you will name me gwa:gwa/s@.",
+     "english": "you will speak of me by my own name you will name me gwa·gwa/sə.",
      "miluk_ascii": "wi:-s@<n:a'na-na<nt# kw@-'n@'sa<N, we<-nantl-s@<n:d@sa<i gwa:s@gwa<s@.",
      "miluk": "wi·-sə́n·a'na-nántł kwə-'nə'sáɴ, wɛ́-nantl-sə́n·dəsái gwa·səgwásə.",
      "entries": [
@@ -27565,7 +27565,7 @@
     },
     {
      "line": 4,
-     "english": "@@@ I wish I could sleep with the sister of yipyibu/'lai!",
+     "english": "əəə I wish I could sleep with the sister of yipyibu/'lai!",
      "miluk_ascii": "@vn:<: yip-yihu<'lai d@kwe:<net'# g;e:<-utsa-<u",
      "miluk": "ə́ⁿ·· yip-yihú'lai dəkwɛ́·nɛt'ł g̣ɛ́·-utsá-u",
      "entries": []
@@ -27601,7 +27601,7 @@
     },
     {
      "line": 8,
-     "english": "@@/ I heard you say something!",
+     "english": "əə/ I heard you say something!",
      "miluk_ascii": "@:<: qa<'u'wi<mda<mi dji<-net#i<",
      "miluk": "ə́·· qá'u'wímdámi djí-nɛtłí",
      "entries": [
@@ -27678,7 +27678,7 @@
     },
     {
      "line": 16,
-     "english": "@@@@ I know it.",
+     "english": "əəəə I know it.",
      "miluk_ascii": "@:<:: k!wa:<ni'ya'da:<'u.",
      "miluk": "ə́··· k̓wá·ni'ya'dá·'u.",
      "entries": []
@@ -28051,7 +28051,7 @@
     },
     {
      "line": 6,
-     "english": "@! (very well!) grandson!",
+     "english": "ə! (very well!) grandson!",
      "miluk_ascii": "@<! di<m:si",
      "miluk": "ə́̓ dím·si",
      "entries": [
@@ -28092,7 +28092,7 @@
     },
     {
      "line": 11,
-     "english": "@@@! (indeed!) grandson!",
+     "english": "əəə! (indeed!) grandson!",
      "miluk_ascii": "@:<:! di<m:isi",
      "miluk": "ə́··̓ dím·isi",
      "entries": [
@@ -28174,7 +28174,7 @@
     },
     {
      "line": 20,
-     "english": "(she said) @/! grandson!",
+     "english": "(she said) ə/! grandson!",
      "miluk_ascii": "@<! di<m:si",
      "miluk": "ə́̓ dím·si",
      "entries": [
@@ -28231,7 +28231,7 @@
     },
     {
      "line": 26,
-     "english": "H@@/@ what did you say,",
+     "english": "Həə/ə what did you say,",
      "miluk_ascii": "h@:<. dji<`-di-nit#i<,",
      "miluk": "hə́·. djíʻ-di-nitłí,",
      "entries": [
@@ -28310,7 +28310,7 @@
     },
     {
      "line": 34,
-     "english": "@/@@@ grandson!",
+     "english": "ə/əəə grandson!",
      "miluk_ascii": "@:<: di<m:i<si",
      "miluk": "ə́·· dím·ísi",
      "entries": [
@@ -28394,7 +28394,7 @@
     },
     {
      "line": 42,
-     "english": "hi/ssdz@tssla/wi hi/s-dz@ts-la/wi.",
+     "english": "hi/ssdzətssla/wi hi/s-dzəts-la/wi.",
      "miluk_ascii": "hi<s-dz@ts-la<wi hi<s-dz@ts-la<wi.",
      "miluk": "hís-dzəts-láwi hís-dzəts-láwi.",
      "entries": [
@@ -28908,7 +28908,7 @@
     },
     {
      "line": 40,
-     "english": "@@/ my younger brother must have found people.",
+     "english": "əə/ my younger brother must have found people.",
      "miluk_ascii": "@:< k!a<` dax&-k!&i<#:dvuwa t#@'n@mit#gw@<la",
      "miluk": "ə́· k̓áʻ da̯x̯-k̓íł·dᵘwa tłə'nəmitłgwə́la",
      "entries": [
@@ -30689,7 +30689,7 @@
     },
     {
      "line": 226,
-     "english": "H@<sn>s/ I will keep watch on them.",
+     "english": "Hə́sn>s/ I will keep watch on them.",
      "miluk_ascii": "h@vu< #u:<dada:ya-want#.",
      "miluk": "hə́ᵘ łú·dada·ya-wantł.",
      "entries": [
@@ -31644,9 +31644,9 @@
     },
     {
      "line": 17,
-     "english": "ku<wi",
-     "miluk_ascii": "that's it! that's it!",
-     "miluk": "that's it̓ that's it̓",
+     "english": "that's it! that's it!",
+     "miluk_ascii": "ku<wi",
+     "miluk": "kúwi",
      "entries": [
       "e0527-ku"
      ]
@@ -32013,7 +32013,7 @@
     },
     {
      "line": 14,
-     "english": "Ha<sn>sa/aa I would like what she is eating.",
+     "english": "Hásn>sa/aa I would like what she is eating.",
      "miluk_ascii": "havn:<:: du:<ha'ya:'u kw@tc-dla:<u.",
      "miluk": "háⁿ··· dú·ha'ya·'u kwətc-dlá·u.",
      "entries": [
@@ -32076,7 +32076,7 @@
     },
     {
      "line": 20,
-     "english": "H@@/@ he does seem to want the thing you are eating.",
+     "english": "Həə/ə he does seem to want the thing you are eating.",
      "miluk_ascii": "h@:<: ma:-du:<ha'ya kw@-n$-ditc-dla:<u.",
      "miluk": "hə́·· ma·-dú·ha'ya kwə-nð-ditc-dlá·u.",
      "entries": [
@@ -32537,7 +32537,7 @@
     },
     {
      "line": 19,
-     "english": "@/ (anger) that vagina thing!",
+     "english": "ə/ (anger) that vagina thing!",
      "miluk_ascii": "@< ma<-ix;vu-da<x,",
      "miluk": "ə́ má-ix̣ᵘ-dáx,",
      "entries": [
@@ -32656,7 +32656,7 @@
     },
     {
      "line": 31,
-     "english": "@@@ (Oh well) I will go get skunk cabbage.",
+     "english": "əəə (Oh well) I will go get skunk cabbage.",
      "miluk_ascii": "@:<. ha<ma-want# ki<me:t'#-d@d@<m:e:d@.",
      "miluk": "ə́·. háma-wantł kímɛ·t'ł-dədə́m·ɛ·də.",
      "entries": [
@@ -32928,7 +32928,7 @@
     },
     {
      "line": 59,
-     "english": "m@/mmmmm I do smell something.",
+     "english": "mə/mmmmm I do smell something.",
      "miluk_ascii": "m^:<::::. gwa-u-di<tc-si:tdza:<t!a.",
      "miluk": "m^·́····. gwa-u-dítc-si·tdzá·t̓a.",
      "entries": [
@@ -33811,7 +33811,7 @@
     },
     {
      "line": 149,
-     "english": "@@/@ maybe he did not die,",
+     "english": "əə/ə maybe he did not die,",
      "miluk_ascii": "@:<: an-da<-q!ayau,",
      "miluk": "ə́·· an-dá-q̓ayau,",
      "entries": [
@@ -34272,7 +34272,7 @@
     },
     {
      "line": 196,
-     "english": "H@!  you lie.",
+     "english": "Hə! you lie.",
      "miluk_ascii": "h@<! hewe:<s:e:<nu:n@.",
      "miluk": "h̓ə́ hɛwɛ́·s·ɛ́·nu·nə.",
      "entries": [
@@ -34496,23 +34496,23 @@
     },
     {
      "line": 218,
-     "english": "a@a/a!  That was the way he replied.",
+     "english": "aəa/a! That was the way he replied.",
      "miluk_ascii": "a=::! we<n-t#i",
      "miluk": "a̓=·· wɛ́n-tłi",
      "entries": []
     },
     {
      "line": 219,
-     "english": "H@@/@@u (oh very well), nephew.",
-     "miluk_ascii": "h@:<::u, de<u.",
-     "miluk": "hə́···u, dɛ́u.",
+     "english": "hə́···u, dɛ́u.",
+     "miluk_ascii": "H@@/@@u (oh very well), nephew.",
+     "miluk": "Həə/əəu (oh ᵉry wɛll), nɛphɛw.",
      "entries": [
       "e0116-deu"
      ]
     },
     {
      "line": 220,
-     "english": "@<sn>s@/@. I will go.",
+     "english": "ə́sn>sə/ə. I will go.",
      "miluk_ascii": "@vn:<:. #a-wa<nt#.",
      "miluk": "ə́ⁿ··. ła-wántł.",
      "entries": []
@@ -34557,7 +34557,7 @@
     },
     {
      "line": 225,
-     "english": "a<sn>sa/a, nephew.",
+     "english": "ásn>sa/a, nephew.",
      "miluk_ascii": "avn::, de<u.",
      "miluk": "aⁿ··, dɛ́u.",
      "entries": [
@@ -34729,7 +34729,7 @@
     },
     {
      "line": 244,
-     "english": "There was a torn (ka/w@1 type) basket in it,",
+     "english": "There was a torn (ka/wə1 type) basket in it,",
      "miluk_ascii": "gwa-p!@<#sas ka:<w@l-dala<ha,",
      "miluk": "gwa-p̓ə́łsas ká·wəl-daláha,",
      "entries": [
@@ -34881,7 +34881,7 @@
     },
     {
      "line": 259,
-     "english": "Then he took that torn ka/w@1 (torn ka/w@1) basket ( of his own)",
+     "english": "Then he took that torn ka/wə1 (torn ka/wə1) basket ( of his own)",
      "miluk_ascii": "tsu<-gum-kwi:<-ga<la<m t#@-k!ha< gwa-di<tc-tsha<uxax& d@-t#@-k!ha<,",
      "miluk": "tsú-gum-kwí·-gálám tłə-k̓há gwa-dítc-tsháuxax̯ də-tłə-k̓há,",
      "entries": [
@@ -35187,7 +35187,7 @@
     },
     {
      "line": 290,
-     "english": "@-! An odorous ant bit his penis.",
+     "english": "ə-! An odorous ant bit his penis.",
      "miluk_ascii": "@:< k!a:<dic kwi:-t'sg;a:<` dix;u:<t'#.",
      "miluk": "ə́· k̓á·dic kwi·-t'sg̣á·ʻ dix̣ú·t'ł.",
      "entries": [
@@ -35577,7 +35577,7 @@
     },
     {
      "line": 330,
-     "english": "@@/@ my niece! (brother's daughter!)",
+     "english": "əə/ə my niece! (brother's daughter!)",
      "miluk_ascii": "@:<. n@x;-up@<na.",
      "miluk": "ə́·. nəx̣-upə́na.",
      "entries": []
@@ -36991,7 +36991,7 @@
     },
     {
      "line": 477,
-     "english": "H@.  So he thinks that I know nothing.",
+     "english": "Hə. So he thinks that I know nothing.",
      "miluk_ascii": "h@<: x&-we:<n-d@'lu<we a<Ntc-'n@mi<t'sis.",
      "miluk": "hə́· x̯-wɛ́·n-də'lúwɛ áɴtc-'nəmít'sis.",
      "entries": []
@@ -37044,7 +37044,7 @@
     },
     {
      "line": 483,
-     "english": "a<sn>sa/!  (\"\"Yes!') Then she got pitch,",
+     "english": "ásn>sa/! (\"\"Yes!') Then she got pitch,",
      "miluk_ascii": "avn:< tsu<-g;e#e<u-g;a<lmi:<t!a,",
      "miluk": "áⁿ· tsú-g̣ɛłɛ́u-g̣álmí·t̓a,",
      "entries": [
@@ -37508,7 +37508,7 @@
     },
     {
      "line": 531,
-     "english": "@@/@!  so now you are ashamed because you are lying.",
+     "english": "əə/ə! so now you are ashamed because you are lying.",
      "miluk_ascii": "@:<:i tsu:<-n@djicdzi<lt'su na<im-n@he<wese:nu.",
      "miluk": "ə́··i tsú·-nədjicdzílt'su náim-nəhɛ́wɛsɛ·nu.",
      "entries": [
@@ -38515,7 +38515,7 @@
     },
     {
      "line": 637,
-     "english": "a^<sn>s. (Ah yes!) since you are a shaman,",
+     "english": "á^sn>s. (Ah yes!) since you are a shaman,",
      "miluk_ascii": "a^vu:! i-n@-i<l:s <x;q!ain,",
      "miluk": "a̓^ᵘ· i-nə-íl·s ́x̣q̓ain,",
      "entries": [
@@ -38542,7 +38542,7 @@
     },
     {
      "line": 640,
-     "english": "@@/@ (Very well.) Then he went inside.",
+     "english": "əə/ə (Very well.) Then he went inside.",
      "miluk_ascii": "@:<. tsu<-de:<dje",
      "miluk": "ə́·. tsú-dɛ́·djɛ",
      "entries": [
@@ -38989,7 +38989,7 @@
     },
     {
      "line": 688,
-     "english": "m@mm Sure enough it is only that trickster!",
+     "english": "məmm Sure enough it is only that trickster!",
      "miluk_ascii": "m^: a:<yu-x&-kw@-t'smi:<x;w@n",
      "miluk": "m^· á·yu-x̯-kwə-t'smí·x̣wən",
      "entries": [
@@ -40174,7 +40174,7 @@
     },
     {
      "line": 816,
-     "english": "(and said) H@!  my child died.",
+     "english": "(and said) Hə! my child died.",
      "miluk_ascii": "h@<! q!a<yau-'nik!&i<l:ga",
      "miluk": "h̓ə́ q̓áyau-'ni̯k̓íl·ga",
      "entries": [
@@ -41253,7 +41253,7 @@
     },
     {
      "line": 936,
-     "english": "H@<sn>s@/@ I will see that woman who cries all the time.",
+     "english": "Hə́sn>sə/ə I will see that woman who cries all the time.",
      "miluk_ascii": "h@vu:<: k&#a:<wi-want# kw@tc-a<x;:ats-gu:s-mi<n ku-hu:<mis.",
      "miluk": "hə́ᵘ·· k̯łá·wi-wantł kwətc-áx̣·ats-gu·s-mín ku-hú·mis.",
      "entries": [
@@ -41327,7 +41327,7 @@
     },
     {
      "line": 943,
-     "english": "@<sn>s/`! why is that?",
+     "english": "ə́sn>s/ʻ! why is that?",
      "miluk_ascii": "@vu<` dji:<x;a'ya",
      "miluk": "ə́ᵘʻ djí·x̣a'ya",
      "entries": [
@@ -41477,7 +41477,7 @@
     },
     {
      "line": 958,
-     "english": "@@/@! child of trickster!",
+     "english": "əə/ə! child of trickster!",
      "miluk_ascii": "@:<:! t'smi:<x;w@n-dik!&i<l:ga",
      "miluk": "ə́··̓ t'smí·x̣wən-di̯k̓íl·ga",
      "entries": []
@@ -41671,7 +41671,7 @@
     },
     {
      "line": 979,
-     "english": "And then the mit'ee/d@n-shaman fixed her.",
+     "english": "And then the mit'ɛɛ/dən-shaman fixed her.",
      "miluk_ascii": "tsu<-x; m@-t!e:<d@n dza<itst.",
      "miluk": "tsú-x̣ mə-t̓ɛ́·dən dzáitst.",
      "entries": [
@@ -43127,7 +43127,7 @@
     },
     {
      "line": 1136,
-     "english": "@@/@ the awful thing!",
+     "english": "əə/ə the awful thing!",
      "miluk_ascii": "@:<: zu:<t'#u:c",
      "miluk": "ə́·· zú·t'łu·c",
      "entries": [
@@ -44375,7 +44375,7 @@
     },
     {
      "line": 1270,
-     "english": "H@ how is it that these people are so poor?",
+     "english": "Hə how is it that these people are so poor?",
      "miluk_ascii": "h@vu dji<-g:e d@-gwi:<-ha-kwi:<ne<'wet'# d@<-k!a<`",
      "miluk": "həᵘ djí-g·ɛ də-gwí·-ha-kwí·nɛ́'wɛt'ł də́-k̓áʻ",
      "entries": [
@@ -44523,7 +44523,7 @@
     },
     {
      "line": 1286,
-     "english": "H@<sn>s very well.",
+     "english": "Hə́sn>s very well.",
      "miluk_ascii": "h@vu k!&e:<le.",
      "miluk": "həᵘ k̯̓ɛ́·lɛ.",
      "entries": [
@@ -48720,7 +48720,7 @@
     },
     {
      "line": 1728,
-     "english": "@@/@ so you have come back.",
+     "english": "əə/ə so you have come back.",
      "miluk_ascii": "@:<: we:<stn@.",
      "miluk": "ə́·· wɛ́·stnə.",
      "entries": []
@@ -49145,7 +49145,7 @@
     },
     {
      "line": 1777,
-     "english": "(The younger said to the older trickster,) H@@/ come in!",
+     "english": "(The younger said to the older trickster,) Həə/ come in!",
      "miluk_ascii": "h@:<- e<`ditc",
      "miluk": "hə́·- ɛ́ʻditc",
      "entries": [
@@ -50435,7 +50435,7 @@
     },
     {
      "line": 9,
-     "english": "you should watch for wealth (t'l=x;i/nx;at).",
+     "english": "you should watch for wealth (t'l=x̣i/nx̣at).",
      "miluk_ascii": "hada<i'm@s d@-na:-na<nt# #u:<d@da:'ya",
      "miluk": "hadái'məs də-na·-nántł łú·dəda·'ya",
      "entries": [
@@ -51662,7 +51662,7 @@
     },
     {
      "line": 38,
-     "english": "So then she followed her relatives (to Ya<hatc),",
+     "english": "So then she followed her relatives (to Yáhatc),",
      "miluk_ascii": "x;-we<n u<mida:t!a t#@-d@-ma:<ni'yas,",
      "miluk": "x̣-wɛ́n úmida·t̓a tłə-də-má·ni'yas,",
      "entries": [
@@ -51721,7 +51721,7 @@
     },
     {
      "line": 44,
-     "english": "she had followed her parents to Ya<hatc to where the people had been moved.",
+     "english": "she had followed her parents to Yáhatc to where the people had been moved.",
      "miluk_ascii": "u<mida:<t!a t#@-d@ma:<ni<'yas ya:<x;adja kwi:-dzits#i:<nu t#e<-k!a<`.",
      "miluk": "úmidá·t̓a tłə-dəmá·ní'yas yá·x̣adja kwi·-dzitsłí·nu tłɛ́-k̓áʻ.",
      "entries": [
@@ -51733,7 +51733,7 @@
     },
     {
      "line": 45,
-     "english": "I did not know Ya<hatc (well),",
+     "english": "I did not know Yáhatc (well),",
      "miluk_ascii": "wi:<-an-u<mit'ssi<yada t#@-ya:<x;atc,",
      "miluk": "wí·-an-úmit'ssíyada tłə-yá·x̣atc,",
      "entries": [
@@ -52003,7 +52003,7 @@
     },
     {
      "line": 72,
-     "english": "Now we retumed to Ya<hatc,",
+     "english": "Now we retumed to Yáhatc,",
      "miluk_ascii": "wi:<-tsu:-#-ya<x;atca-bi:<na<t's,",
      "miluk": "wí·-tsu·-ł-yáx̣atca-bí·nát's,",
      "entries": [
@@ -52043,7 +52043,7 @@
     },
     {
      "line": 76,
-     "english": "We stayed at Ya<hatc.",
+     "english": "We stayed at Yáhatc.",
      "miluk_ascii": "ya:<x;adjiya-#dle:<g;eq.",
      "miluk": "yá·x̣adjiya-łdlɛ́·g̣ɛq.",
      "entries": [
@@ -52087,7 +52087,7 @@
     },
     {
      "line": 81,
-     "english": "That is how we lived at Ya<hatc. The Indians' head man did not look after us.",
+     "english": "That is how we lived at Yáhatc. The Indians' head man did not look after us.",
      "miluk_ascii": "x;-we:<n-#-dle:<-g;eq i#-ya:<x;adjiya a<n-#u:<didi<mi:du:n t#e-x;-k!a<`-disik&i<nen.",
      "miluk": "x̣-wɛ́·n-ł-dlɛ́·-g̣ɛq ił-yá·x̣adjiya án-łú·didími·du·n tłɛ-x̣-k̓áʻ-disik̯ínɛn.",
      "entries": [
@@ -52249,7 +52249,7 @@
     },
     {
      "line": 98,
-     "english": "whose name was tl=aa<pt'a",
+     "english": "whose name was tl=aápt'a",
      "miluk_ascii": "wi:<-we:<n-di-saN t#a:<pt!a.",
      "miluk": "wí·-wɛ́·n-di-saɴ tłá·pt̓a.",
      "entries": []
@@ -52397,7 +52397,7 @@
     },
     {
      "line": 113,
-     "english": "and he (tl=aa<pt'a) beat me,",
+     "english": "and he (tl=aápt'a) beat me,",
      "miluk_ascii": "wi:<-menk&du:<n'u-gum,",
      "miluk": "wí·-mɛnk̯dú·n'u-gum,",
      "entries": [
@@ -52843,7 +52843,7 @@
     },
     {
      "line": 162,
-     "english": "because they had already (1877) left Ya<hatc to make their residence at Siuslau.",
+     "english": "because they had already (1877) left Yáhatc to make their residence at Siuslau.",
      "miluk_ascii": "na<im-i#-ma:<n i:<g;evi x;-ya:<x;atc ce'yu<ct#e'edje i#mit'#da'ya<s.",
      "miluk": "náim-ił-má·n í·g̣ɛⁱ x̣-yá·x̣atc cɛ'yúctłɛ'ɛdjɛ iłmit'łda'yás.",
      "entries": [
@@ -52865,7 +52865,7 @@
     },
     {
      "line": 164,
-     "english": "I stayed there with my mother's brother Jesse (luu<k).",
+     "english": "I stayed there with my mother's brother Jesse (luúk).",
      "miluk_ascii": "t#@-'n@'ax&i<yax&itc jesse da<`-udlu:<g;wa",
      "miluk": "tłə-'nə'ax̯íyax̯itc jɛssɛ dáʻ-udlú·g̣wa",
      "entries": []
@@ -52893,7 +52893,7 @@
     },
     {
      "line": 167,
-     "english": "I came back here (to Coos Bay) to haa<nis (Empire).",
+     "english": "I came back here (to Coos Bay) to haánis (Empire).",
      "miluk_ascii": "wi<-g;esde<-udji ha:<ni<sidja.",
      "miluk": "wí-g̣ɛsdɛ́-udji há·nísidja.",
      "entries": [
@@ -53487,7 +53487,7 @@
     },
     {
      "line": 226,
-     "english": "My mother's sister (t'cee<xet,) would not have that,",
+     "english": "My mother's sister (t'cɛɛ́xɛt,) would not have that,",
      "miluk_ascii": "wen-a<n-du-du:<ha'ya t#i-'nexvuk!w@<n,",
      "miluk": "wɛn-án-du-dú·ha'ya tłi-'nɛxᵘk̓wə́n,",
      "entries": [
@@ -53704,7 +53704,7 @@
     },
     {
      "line": 249,
-     "english": "One winter we moved to qaltaa<t'",
+     "english": "One winter we moved to qaltaát'",
      "miluk_ascii": "wi:<-hit'ci<-g;e:<lu wi:<-qalta:<t!idji ts#@<n:tsiM,",
      "miluk": "wí·-hit'cí-g̣ɛ́·lu wí·-qaltá·t̓idji tsłə́n·tsiᴍ,",
      "entries": [
@@ -55210,7 +55210,7 @@
    "lines": [
     {
      "line": 1,
-     "english": "Melsin was bothering the waiqdi< (village) woman.",
+     "english": "Melsin was bothering the waiqdí (village) woman.",
      "miluk_ascii": "t#@-me<lsin wi<-kwi-a<n-hu:t'su<wa t#@-wa<iqdi<-k!a`.",
      "miluk": "tłə-mɛ́lsin wí-kwi-án-hu·t'súwa tłə-wáiqdí-k̓aʻ.",
      "entries": [
@@ -55270,7 +55270,7 @@
     },
     {
      "line": 7,
-     "english": "After that he (Melsin) stayed all the time with the son of tcictci<llu,",
+     "english": "After that he (Melsin) stayed all the time with the son of tcictcíllu,",
      "miluk_ascii": "wi<-da<-q#imni<yu wi:<-t#@-dlu:<-g;wa'a<tc gu:<s-mi<N t#@-tcictci<l:u-d@dl@<l:we,",
      "miluk": "wí-dá-qłimníyu wí·-tłə-dlú·-g̣wa'átc gú·s-míɴ tłə-tcictcíl·u-dədlə́l·wɛ,",
      "entries": [
@@ -55290,7 +55290,7 @@
     },
     {
      "line": 9,
-     "english": "tcictci<l:u had two daughters,",
+     "english": "tcictcíl·u had two daughters,",
      "miluk_ascii": "adzu<-d@gwa:<-ya tcictci<l:u,",
      "miluk": "adzú-dəgwá·-ya tcictcíl·u,",
      "entries": [
@@ -55460,7 +55460,7 @@
    "lines": [
     {
      "line": 1,
-     "english": "Long ago when the son of tcictci<l:u became a young man,",
+     "english": "Long ago when the son of tcictcíl·u became a young man,",
      "miluk_ascii": "t#e-he:<niye i-de:<mili<ye t#@-d@dl@<l:we t#@:tci<ctci<l-u,",
      "miluk": "tłɛ-hɛ́·niyɛ i-dɛ́·milíyɛ tłə-dədlə́l·wɛ tłə·tcíctcíl-u,",
      "entries": [
@@ -55539,7 +55539,7 @@
     },
     {
      "line": 9,
-     "english": "So tcictci<llu purchased her,",
+     "english": "So tcictcíllu purchased her,",
      "miluk_ascii": "wi<-a:<yu-gum kwi:-t#a:<wi t#e-x;-tcictci<l:u,",
      "miluk": "wí-á·yu-gum kwi·-tłá·wi tłɛ-x̣-tcictcíl·u,",
      "entries": [
@@ -56473,7 +56473,7 @@
     },
     {
      "line": 100,
-     "english": "She was the sister of dji<xwe<nt!î.",
+     "english": "She was the sister of djíxwɛ́nt̓î.",
      "miluk_ascii": "dji:xw@nt!e<-d(th)@kwe:<ne<t'#.",
      "miluk": "dji·xwənt̓ɛ́-d(th)əkwɛ́·nɛ́t'ł.",
      "entries": []
@@ -56497,7 +56497,7 @@
    "lines": [
     {
      "line": 1,
-     "english": "Rogers was the one who bought the daughter of tl=e<i*#1",
+     "english": "Rogers was the one who bought the daughter of tl=ɛ́i*ł1",
      "miluk_ascii": "t#@-t#e<i%@l-digwa:<ya wi:<-x;-la<dj@s kwi:-t#a:<wi.",
      "miluk": "tłə-tłɛ́iɣəl-digwá·ya wí·-x̣-ládjəs kwi·-tłá·wi.",
      "entries": [
@@ -56508,7 +56508,7 @@
     },
     {
      "line": 2,
-     "english": "Two sticks ($2,000) he paid for her.",
+     "english": "Two sticks (ð̥2,̥̥) he paid for her.",
      "miluk_ascii": "adzu<-nik!&i<n-kwi:-x;-we:<n-dag;w@<la<qvw.",
      "miluk": "adzú-ni̯k̓ín-kwi·-x̣-wɛ́·n-dag̣wə́láqʷ.",
      "entries": [
@@ -56518,7 +56518,7 @@
     },
     {
      "line": 3,
-     "english": "Her mother left tl=e<i*#1.",
+     "english": "Her mother left tl=ɛ́i*ł1.",
      "miluk_ascii": "wi:<-t#@-d@'e<ne wi:<-ha:<g;wiya t#@-t#e<i%@l.",
      "miluk": "wí·-tłə-də'ɛ́nɛ wí·-há·g̣wiya tłə-tłɛ́iɣəl.",
      "entries": [
@@ -56538,7 +56538,7 @@
     },
     {
      "line": 5,
-     "english": "From then on tl=e<i*#1 no longer had her ( his wife ) for his wife.",
+     "english": "From then on tl=ɛ́i*ł1 no longer had her ( his wife ) for his wife.",
      "miluk_ascii": "we<n-ma:<tsi t!i<mi:duwe kwi-an-da:<s-kwi-d@hu:<mis t#@-t#e<i%@l.",
      "miluk": "wɛ́n-má·tsi t̓ími·duwɛ kwi-an-dá·s-kwi-dəhú·mis tłə-tłɛ́iɣəl.",
      "entries": [
@@ -56689,7 +56689,7 @@
     },
     {
      "line": 19,
-     "english": "The people left Ya<hatc,",
+     "english": "The people left Yáhatc,",
      "miluk_ascii": "wi:<-kwi-t#e-x-ya:<hatc i:<g;evi-d@<k!a`",
      "miluk": "wí·-kwi-tłɛ-x-yá·hatc í·g̣ɛⁱ-də́k̓aʻ",
      "entries": [
@@ -56710,7 +56710,7 @@
     },
     {
      "line": 21,
-     "english": "When they left Ya<hatc she had one daughter.",
+     "english": "When they left Yáhatc she had one daughter.",
      "miluk_ascii": "hi<t'ci<-d@gwa:<ya t#i-i#-xg;e<t-i:<g;evi t#e-x-ya:<hatc.",
      "miluk": "hít'cí-dəgwá·ya tłi-ił-xg̣ɛ́t-í·g̣ɛⁱ tłɛ-x-yá·hatc.",
      "entries": [
@@ -57172,7 +57172,7 @@
     },
     {
      "line": 18,
-     "english": "This is how they sang. gaya< gaya< gaya< semelii'i s emelii'i, ehe'e<i ehe'e<i.",
+     "english": "This is how they sang. gayá gayá gayá semelii'i s emelii'i, ɛhɛ'ɛ́i ɛhɛ'ɛ́i.",
      "miluk_ascii": "wi<-kwi-ha:<-di:da t#i-i#mi:<disa:ma i#dimeg;e:<n wi<-wen- i#ha:<t!i. gaya< gaya gaya<, semeli:'i semeli:'i ehe'e<i ehe'e<i.",
      "miluk": "wí-kwi-há·-di·da tłi-iłmí·disa·ma iłdimɛg̣ɛ́·n wí-wɛn- iłhá·t̓i. gayá gaya gayá, sɛmɛli·'i sɛmɛli·'i ɛhɛ'ɛ́i ɛhɛ'ɛ́i.",
      "entries": [
@@ -66002,7 +66002,7 @@
     },
     {
      "line": 13,
-     "english": "And if you want him to become a forest being (î:<cin),",
+     "english": "And if you want him to become a forest being (î·́cin),",
      "miluk_ascii": "wi<-indu:<ha'ya e:<ci'ni<ye,",
      "miluk": "wí-indú·ha'ya ɛ́·ci'níyɛ,",
      "entries": [
@@ -66086,14 +66086,14 @@
     },
     {
      "line": 22,
-     "english": "That is why (mit!î:<din) shamans were no good (evil).",
+     "english": "That is why (mít̓î·din) shamans were no good (evil).",
      "miluk_ascii": "we:<n-t#@-mit!e:<din a<N-we:<n-ditc.",
      "miluk": "wɛ́·n-tłə-mit̓ɛ́·din áɴ-wɛ́·n-ditc.",
      "entries": []
     },
     {
      "line": 23,
-     "english": "They were even worse than (ilx-q!a<in) shamans.",
+     "english": "They were even worse than (ilx-q̓áin) shamans.",
      "miluk_ascii": "he<le'yu-a<N-we<n x;-i<l:a<x;q!ai'nitc.",
      "miluk": "hɛ́lɛ'yu-áɴ-wɛ́n x̣-íl·áx̣q̓ai'nitc.",
      "entries": [
@@ -66111,7 +66111,7 @@
    "lines": [
     {
      "line": 1,
-     "english": "Bi/ndi/dza:s was begging meals,",
+     "english": "Bi/ndi/dza·s was begging meals,",
      "miluk_ascii": "hitchidji<nai-du t#@-bi<ndi<dza:s,",
      "miluk": "hitchidjínai-du tłə-bíndídza·s,",
      "entries": [
@@ -66186,7 +66186,7 @@
     },
     {
      "line": 8,
-     "english": "Now when ti:na<t'sis came to the house ( his house ) of kwa<isi<ya,",
+     "english": "Now when ti·nát'sis came to the house ( his house ) of kwáisíya,",
      "miluk_ascii": "wi<-yu-kwi:< dji< t#@-ti:<na:<t'sis t#@-kwa<isi<ya-d@ye:<ts@dje,",
      "miluk": "wí-yu-kwí· djí tłə-tí·ná·t'sis tłə-kwáisíya-dəyɛ́·tsədjɛ,",
      "entries": [
@@ -66207,7 +66207,7 @@
     },
     {
      "line": 10,
-     "english": "Kwa<isi<ya was having potatoes roasted in hot coals.",
+     "english": "Kwáisíya was having potatoes roasted in hot coals.",
      "miluk_ascii": "wi:<-kwi:-qwi:<'mits-d@x;e<lp! t#@-kwa<isi<ya.",
      "miluk": "wí·-kwi·-qwí·'mits-dəx̣ɛ́lp̓ tłə-kwáisíya.",
      "entries": [
@@ -66239,7 +66239,7 @@
     },
     {
      "line": 13,
-     "english": "But she offered nothing to bi<ndi<dza:s.",
+     "english": "But she offered nothing to bíndídza·s.",
      "miluk_ascii": "wi<-an-q!atsk tl@-bi<ndi<dza:s.",
      "miluk": "wí-an-q̓atsk tlə-bíndídza·s.",
      "entries": [
@@ -66248,7 +66248,7 @@
     },
     {
      "line": 14,
-     "english": "Bi<ndi<dza:s went back home (without eating).",
+     "english": "Bíndídza·s went back home (without eating).",
      "miluk_ascii": "tsu<-w@<s:i t#@-bi<ndi<-dza:s.",
      "miluk": "tsú-wə́s·i tłə-bíndí-dza·s.",
      "entries": [
@@ -66257,7 +66257,7 @@
     },
     {
      "line": 15,
-     "english": "Now then kwa<isi<ya became ill.",
+     "english": "Now then kwáisíya became ill.",
      "miluk_ascii": "hevi-ma;<tsi x;e<nx;enu'itc t#@-kwa<isi<ya.",
      "miluk": "hɛ́ⁱ-mạtsi x̣ɛ́nx̣ɛnu'itc tłə-kwáisíya.",
      "entries": [
@@ -66268,7 +66268,7 @@
     },
     {
      "line": 16,
-     "english": "They fetched tsi<lx;en for a doctor.",
+     "english": "They fetched tsílx̣ɛn for a doctor.",
      "miluk_ascii": "tsu<-i<l:a<x;q!ain tsu<-i#-kwi:<-g;a-lam t#@-tsi<lx;en.",
      "miluk": "tsú-íl·áx̣q̓ain tsú-ił-kwí·-g̣a-lam tłə-tsílx̣ɛn.",
      "entries": [
@@ -66278,7 +66278,7 @@
     },
     {
      "line": 17,
-     "english": "When evening came the people went there to the house of kwa<isi<ya.",
+     "english": "When evening came the people went there to the house of kwáisíya.",
      "miluk_ascii": "a:<yu g;a<tq!aidi<ya g;e<`-#a:-d@<-k!a t#@-kwa<isi<ya-d@ye:<ts@dje.",
      "miluk": "á·yu g̣átq̓aidíya g̣ɛ́ʻ-ła·-də́-k̓a tłə-kwáisíya-dəyɛ́·tsədjɛ.",
      "entries": [
@@ -66288,7 +66288,7 @@
     },
     {
      "line": 18,
-     "english": "Tsi<lx;en began doctoring there.",
+     "english": "Tsílx̣ɛn began doctoring there.",
      "miluk_ascii": "tsu<-g;e`qwa<'wa<iwa t#@-tsi<lx;en.",
      "miluk": "tsú-g̣ɛʻqwá'wáiwa tłə-tsílx̣ɛn.",
      "entries": [
@@ -66345,7 +66345,7 @@
     },
     {
      "line": 24,
-     "english": "But you offered nothing to ti:na<t'sis.",
+     "english": "But you offered nothing to ti·nát'sis.",
      "miluk_ascii": "an:a<q!atsk t#@-ti:na:<t'sis.",
      "miluk": "an·áq̓atsk tłə-ti·ná·t'sis.",
      "entries": [
@@ -66370,7 +66370,7 @@
     },
     {
      "line": 27,
-     "english": "So tsi<lx;en worked on her.",
+     "english": "So tsílx̣ɛn worked on her.",
      "miluk_ascii": "a:<yu<-dza<itst t#e-x;-tsi<lx;en.",
      "miluk": "á·yú-dzáitst tłɛ-x̣-tsílx̣ɛn.",
      "entries": [
@@ -66419,7 +66419,7 @@
     },
     {
      "line": 32,
-     "english": "That is how tsi:lx;en cured kwa<isi<ya.",
+     "english": "That is how tsi·lx̣ɛn cured kwáisíya.",
      "miluk_ascii": "x;-we<n t#@-kwi:<-#ha:<t t#e-x;-tsi<lx;en tl@-kwa<isi<ya.",
      "miluk": "x̣-wɛ́n tłə-kwí·-łhá·t tłɛ-x̣-tsílx̣ɛn tlə-kwáisíya.",
      "entries": [
@@ -66486,7 +66486,7 @@
     },
     {
      "line": 6,
-     "english": "It is like a gu<'me` that is eating on him there inside him.",
+     "english": "It is like a gú'mɛʻ that is eating on him there inside him.",
      "miluk_ascii": "t#@tc-gwa<`-gu<'me` kwi-da<`-d#u<wi<yam t#@-d@g;a<l:a'yu.",
      "miluk": "tłətc-gwáʻ-gú'mɛʻ kwi-dáʻ-dłúwíyam tłə-dəg̣ál·a'yu.",
      "entries": [
@@ -66509,7 +66509,7 @@
     },
     {
      "line": 8,
-     "english": "that thing like a gu<'me` worm.",
+     "english": "that thing like a gú'mɛʻ worm.",
      "miluk_ascii": "t#e<-x;-gwa<`-gu:'me<`-ditc.",
      "miluk": "tłɛ́-x̣-gwáʻ-gu·'mɛ́ʻ-ditc.",
      "entries": [
@@ -67421,7 +67421,7 @@
     },
     {
      "line": 3,
-     "english": "I saw him (Frank) go down to the ( river ) water to a (t#guus) canoe,",
+     "english": "I saw him (Frank) go down to the ( river ) water to a (tłguus) canoe,",
      "miluk_ascii": "he<u-ma:<-tsi-u-kwi<-k&#a:<wi ma:<tsi-t#gu<s@dj@ kwi:-te<iy@<x;eu,",
      "miluk": "hɛ́u-má·-tsi-u-kwí-k̯łá·wi má·tsi-tłgúsədjə kwi·-tɛ́iyə́x̣ɛu,",
      "entries": [
@@ -67517,7 +67517,7 @@
     },
     {
      "line": 11,
-     "english": "Aha! it must have been his spirit double there (M. d#/maak!&is).",
+     "english": "Aha! it must have been his spirit double there (M. dł/maa̯k̓is).",
      "miluk_ascii": "h@<! ye:<gwede-x&-da<-x&-du.",
      "miluk": "h̓ə́ yɛ́·gwɛdɛ-x̯-dá-x̯-du.",
      "entries": [
@@ -69200,7 +69200,7 @@
     },
     {
      "line": 7,
-     "english": "At that time djiixwe<nt'î was a child.",
+     "english": "At that time djiixwɛ́nt'î was a child.",
      "miluk_ascii": "wi:<-kwi-t#@-djixw@<nt!e wi<-t!@<ma-k!&i<lga.",
      "miluk": "wí·-kwi-tłə-djixwə́nt̓ɛ wí-t̓ə́ma̯-k̓ílga.",
      "entries": [
@@ -69319,14 +69319,14 @@
     },
     {
      "line": 18,
-     "english": "The name of his paternal aunt was hu:'mik!&i<nîn",
+     "english": "The name of his paternal aunt was hu·'mi̯k̓ínîn",
      "miluk_ascii": "wi:<-we:n-di<saN tl@-d@'a<t!a hu:'mik!&i<nen.",
      "miluk": "wí·-wɛ·n-dísaɴ tlə-də'át̓a hu·'mi̯k̓ínɛn.",
      "entries": []
     },
     {
      "line": 19,
-     "english": "That is how they were at Ya<hatc.",
+     "english": "That is how they were at Yáhatc.",
      "miluk_ascii": "wi:<-x-we:n t#@-kwi ya:<x;adja.",
      "miluk": "wí·-x-wɛ·n tłə-kwi yá·x̣adja.",
      "entries": [
@@ -69357,7 +69357,7 @@
     },
     {
      "line": 22,
-     "english": "When he had grown up dji<xwe<nt!î began to have an affair with Popeyes",
+     "english": "When he had grown up djíxwɛ́nt̓î began to have an affair with Popeyes",
      "miluk_ascii": "wi<-y@-he:<wi wi:<-kwi:-t#@-tcu:<wa<`tc@s kwi:<ye d@-ha<ihaya'na:<ya t#e-x;- dji:<xw@<nt!e.",
      "miluk": "wí-yə-hɛ́·wi wí·-kwi·-tłə-tcú·wáʻtcəs kwí·yɛ də-háihaya'ná·ya tłɛ-x̣- djí·xwə́nt̓ɛ.",
      "entries": [
@@ -69456,7 +69456,7 @@
     },
     {
      "line": 32,
-     "english": "Then dji:xwe<nt!î married Fat Face.",
+     "english": "Then dji·xwɛ́nt̓î married Fat Face.",
      "miluk_ascii": "wi<-t#@-djixw@<nt!e wi:<-t#a<l:a<u' e kuwi<-wamsts.",
      "miluk": "wí-tłə-djixwə́nt̓ɛ wí·-tłál·áu' ɛ kuwí-wamsts.",
      "entries": [
@@ -69486,7 +69486,7 @@
     },
     {
      "line": 35,
-     "english": "dji:xwe<nt!î and his aunts went to the Lower Coquille to live,",
+     "english": "dji·xwɛ́nt̓î and his aunts went to the Lower Coquille to live,",
      "miluk_ascii": "wi:<-qvwci<dje g;e<`-i#dl@<qvwsiM t#i-i#dji:xw@<nt!e t#@-d@'a<t!a,",
      "miluk": "wí·-qʷcídjɛ g̣ɛ́ʻ-iłdlə́qʷsiᴍ tłi-iłdji·xwə́nt̓ɛ tłə-də'át̓a,",
      "entries": [
@@ -69495,7 +69495,7 @@
     },
     {
      "line": 36,
-     "english": "and with his sisters dji<xwe<nt!î lived there too (near Prosper).",
+     "english": "and with his sisters djíxwɛ́nt̓î lived there too (near Prosper).",
      "miluk_ascii": "we<n-kw@-d@kwe:<ne<t'#@me wi:<-his-hi<dji da<`-dlu:<g;wa t#@-djixw@<nt!e.",
      "miluk": "wɛ́n-kwə-dəkwɛ́·nɛ́t'łəmɛ wí·-his-hídji dáʻ-dlú·g̣wa tłə-djixwə́nt̓ɛ.",
      "entries": [
@@ -69548,7 +69548,7 @@
     },
     {
      "line": 41,
-     "english": "her father bi<ndi<dza:s.",
+     "english": "her father bíndídza·s.",
      "miluk_ascii": "t#@-d@'e<#e da<` dibi<ndi<dza:s.",
      "miluk": "tłə-də'ɛ́łɛ dáʻ dibíndídza·s.",
      "entries": []
@@ -69566,7 +69566,7 @@
     },
     {
      "line": 43,
-     "english": "Then dji:xwe<nt!î left his wife (Fat Face).",
+     "english": "Then dji·xwɛ́nt̓î left his wife (Fat Face).",
      "miluk_ascii": "we<n-kwi:-ha:<g;wiya t#@-d@hu:<mis t#e-x;-dji:xw@<nt!e.",
      "miluk": "wɛ́n-kwi·-há·g̣wiya tłə-dəhú·mis tłɛ-x̣-dji·xwə́nt̓ɛ.",
      "entries": [
@@ -69647,7 +69647,7 @@
     },
     {
      "line": 51,
-     "english": "So dji:-xwe<nt!î continued to live on the Lower Coquille.",
+     "english": "So dji·-xwɛ́nt̓î continued to live on the Lower Coquille.",
      "miluk_ascii": "wi<-tl@-dji:xw@<nt!e wi<-ma<`-g;u<g;wis leqle<m.",
      "miluk": "wí-tlə-dji·xwə́nt̓ɛ wí-máʻ-g̣úg̣wis lɛqlɛ́m.",
      "entries": [
@@ -69658,7 +69658,7 @@
     },
     {
      "line": 52,
-     "english": "There Popeyes and dji:xwe<nt!î had ( a lot of ) many children.",
+     "english": "There Popeyes and dji·xwɛ́nt̓î had ( a lot of ) many children.",
      "miluk_ascii": "wi<-da<`-g;a-l@<lya-i<tcdihi:<me t#i-itc-tcu:<wa<`tc@s t#@-djixw@<nt!e.",
      "miluk": "wí-dáʻ-g̣a-lə́lya-ítcdihí·mɛ tłi-itc-tcú·wáʻtcəs tłə-djixwə́nt̓ɛ.",
      "entries": [
@@ -69667,7 +69667,7 @@
     },
     {
      "line": 53,
-     "english": "Then dji:xwe<nt!î also died there (about 1924),",
+     "english": "Then dji·xwɛ́nt̓î also died there (about 1924),",
      "miluk_ascii": "wi<-his-hi<dji da<'-q!a<yavn t#@-djixw@<nt!e,",
      "miluk": "wí-his-hídji dá'-q̓áyaⁿ tłə-djixwə́nt̓ɛ,",
      "entries": [
@@ -69738,7 +69738,7 @@
     },
     {
      "line": 60,
-     "english": "They are the only ones living of dji<xwe<nt!î's children.",
+     "english": "They are the only ones living of djíxwɛ́nt̓î's children.",
      "miluk_ascii": "kuwi<-t#a gwi:<det t#@-djixw@nt!e<-dihi:<me.",
      "miluk": "kuwí-tła gwí·dɛt tłə-djixwənt̓ɛ́-dihí·mɛ.",
      "entries": [
@@ -70328,9 +70328,9 @@
     },
     {
      "line": 4,
-     "english": "(vocative;dative referential)",
-     "miluk_ascii": "d(u):<d(e)",
-     "miluk": "d(ú)·d(ɛ)",
+     "english": "d(ú)·d(ɛ)",
+     "miluk_ascii": "(vocative;dative referential)",
+     "miluk": "(ocatịᵉdatiᵉ rɛfɛrɛntial)",
      "entries": []
     },
     {
@@ -70519,7 +70519,7 @@
     },
     {
      "line": 2,
-     "english": "(e):<#K",
+     "english": "(ɛ́)·łK",
      "miluk_ascii": "small piece larger than ts'(e):<#K",
      "miluk": "small piɛcɛ largɛr than ts'(ɛ́)·łK",
      "entries": []
@@ -70625,9 +70625,9 @@
     },
     {
      "line": 4,
-     "english": "dl(u):<(gg)wI",
-     "miluk_ascii": "sit down (in a chair)! get up (from bed i.e.)!",
-     "miluk": "sit down (in a chair̓) gɛt up (from bɛd i.ɛ̓.)",
+     "english": "sit down (in a chair)! get up (from bed i.e.)!",
+     "miluk_ascii": "dl(u):<(gg)wI",
+     "miluk": "dl(ú)·(gg)wI",
      "entries": []
     },
     {
@@ -70738,16 +70738,16 @@
     },
     {
      "line": 3,
-     "english": "nI<ya",
-     "miluk_ascii": "give it (to him)!",
-     "miluk": "giᵉ it (to him̓)",
+     "english": "give it (to him)!",
+     "miluk_ascii": "nI<ya",
+     "miluk": "nÍya",
      "entries": []
     },
     {
      "line": 4,
-     "english": "nI<ya hIdjI",
-     "miluk_ascii": "give it! to him!",
-     "miluk": "giᵉ it̓ to him̓",
+     "english": "give it! to him!",
+     "miluk_ascii": "nI<ya hIdjI",
+     "miluk": "nÍya hIdjI",
      "entries": []
     },
     {
@@ -70801,16 +70801,16 @@
     },
     {
      "line": 12,
-     "english": "dzI<n'(u)",
-     "miluk_ascii": "bring it to me! gimme!",
-     "miluk": "bring it to mɛ̓ gimmɛ̓",
+     "english": "bring it to me! gimme!",
+     "miluk_ascii": "dzI<n'(u)",
+     "miluk": "dzÍn'(u)",
      "entries": []
     },
     {
      "line": 13,
-     "english": "dzI<n'wa#(u)",
-     "miluk_ascii": "bring it to me! gimme!",
-     "miluk": "bring it to mɛ̓ gimmɛ̓",
+     "english": "bring it to me! gimme!",
+     "miluk_ascii": "dzI<n'wa#(u)",
+     "miluk": "dzÍn'wał(u)",
      "entries": []
     },
     {
@@ -70822,9 +70822,9 @@
     },
     {
      "line": 15,
-     "english": "dzIn'(u)<`wa",
-     "miluk_ascii": "bring it to me here!",
-     "miluk": "bring it to mɛ hɛrɛ̓",
+     "english": "bring it to me here!",
+     "miluk_ascii": "dzIn'(u)<`wa",
+     "miluk": "dzIn'(ú)ʻwa",
      "entries": []
     },
     {
@@ -70928,9 +70928,9 @@
     },
     {
      "line": 7,
-     "english": "t's(e)<Ist",
-     "miluk_ascii": "smash it!",
-     "miluk": "smash it̓",
+     "english": "smash it!",
+     "miluk_ascii": "t's(e)<Ist",
+     "miluk": "t's(ɛ́)Ist",
      "entries": []
     },
     {
@@ -70956,9 +70956,9 @@
     },
     {
      "line": 11,
-     "english": "t'(th)nI<XdI",
-     "miluk_ascii": "squash it (using the back)!",
-     "miluk": "squash it (using thɛ back̓)",
+     "english": "squash it (using the back)!",
+     "miluk_ascii": "t'(th)nI<XdI",
+     "miluk": "t'(th)nÍXdI",
      "entries": []
     },
     {
@@ -71175,7 +71175,7 @@
     },
     {
      "line": 8,
-     "english": "But, I did kick you indeed;yes I kicked you",
+     "english": "But, I did kick you indɛɛḍyɛs I kicked you",
      "miluk_ascii": "#t(gg)we<dza:<mI:<nI",
      "miluk": "łt(gg)wɛ́dzá·mI·́nI",
      "entries": []
@@ -72283,9 +72283,9 @@
     },
     {
      "line": 8,
-     "english": "have a dirty face",
-     "miluk_ascii": "ne(xx)(e):hI",
-     "miluk": "nɛ(xx)(ɛ)·hI",
+     "english": "ne(xx)(e):hI",
+     "miluk_ascii": "have a dirty face",
+     "miluk": "haᵉ a dirty facɛ",
      "entries": []
     },
     {
@@ -73432,7 +73432,7 @@
     },
     {
      "line": 8,
-     "english": "(th)djI'la<ya (th)a<",
+     "english": "(th)djI'láya (th)á",
      "miluk_ascii": "he went ( down, close to the shore) along the beach, riverside qqq (th)dj(e)<Isetc (th)a< + he went along the ocean beach",
      "miluk": "hɛ wɛnt ( down, closɛ to thɛ shorɛ) along thɛ bɛach, riᵉrsidɛ qqq (th)dj(ɛ́)Isɛtc (th)á + hɛ wɛnt along thɛ ocɛan bɛach",
      "entries": []
@@ -73665,16 +73665,16 @@
     },
     {
      "line": 6,
-     "english": "tsXI<",
-     "miluk_ascii": "step on it! (to 1)",
-     "miluk": "stɛp on it̓ (to 1)",
+     "english": "step on it! (to 1)",
+     "miluk_ascii": "tsXI<",
+     "miluk": "tsXÍ",
      "entries": []
     },
     {
      "line": 7,
-     "english": "tsXI'yI<m(e)",
-     "miluk_ascii": "step on them!",
-     "miluk": "stɛp on thɛm̓",
+     "english": "step on them!",
+     "miluk_ascii": "tsXI'yI<m(e)",
+     "miluk": "tsXI'yÍm(ɛ)",
      "entries": []
     },
     {
@@ -73728,7 +73728,7 @@
     },
     {
      "line": 15,
-     "english": "t'(th)ba:<tsne",
+     "english": "t'(th)bá·tsnɛ",
      "miluk_ascii": "you squashed ( flattened it) (many squashes) it with your hand qqq t'(th)ba:<tsnI:< + yes, you squashed it with your hand",
      "miluk": "you squashɛd ( flattɛnɛd it) (many squashɛs) it with your hand qqq t'(th)bá·tsnI·́ + yɛs, you squashɛd it with your hand",
      "entries": []
@@ -74117,9 +74117,9 @@
     },
     {
      "line": 8,
-     "english": "tsa:KI<n:a",
-     "miluk_ascii": "help him! support him! hold him!",
-     "miluk": "hɛlp him̓ support him̓ hold him̓",
+     "english": "help him! support him! hold him!",
+     "miluk_ascii": "tsa:KI<n:a",
+     "miluk": "tsá·KIn·a",
      "entries": []
     },
     {
@@ -74138,9 +74138,9 @@
     },
     {
      "line": 11,
-     "english": "tsq(e)<l(e)'w(e)",
-     "miluk_ascii": "Go deficate!",
-     "miluk": "Go dɛficatɛ̓",
+     "english": "Go deficate!",
+     "miluk_ascii": "tsq(e)<l(e)'w(e)",
+     "miluk": "tsq(ɛ́)l(ɛ)'w(ɛ)",
      "entries": []
     },
     {
