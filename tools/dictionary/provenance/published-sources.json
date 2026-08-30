@@ -17,7 +17,7 @@
       "published_titles": 77,
       "recovered_records": 75,
       "represented_titles": 77,
-      "provenance": "publication-inventory.json maps every printed title and page to a story_id and line span; two titles are absorbed into other recovered records",
+      "provenance": "publication-inventory.json records every contents title and starting page, distinct verified heading wording, and verified complete page spans; it maps represented titles to story_id and line spans, including two titles absorbed into other recovered records",
       "collation_status": "922 observations cover printed pages 19-33, 39-62, and 71-121; the source workbook says pages 112-114 were not collated"
     },
     {
@@ -28,7 +28,7 @@
       "published_titles": 34,
       "recovered_records": 33,
       "represented_titles": 33,
-      "provenance": "publication-inventory.json maps 33 represented titles; The rock point person lost his good luck thing, pages 133-135, is absent pending authorized source-integrity work",
+      "provenance": "publication-inventory.json records 34 contents titles and starting pages, maps 33 represented titles, and records The rock point person lost his good luck thing, pages 133-135, as absent pending authorized source-integrity work",
       "collation_status": "uncollated"
     }
   ],

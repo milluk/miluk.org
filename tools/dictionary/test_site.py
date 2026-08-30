@@ -124,6 +124,12 @@ outside_ids = {s['story_id'] for s in OUTSIDE['stories']}
 # Publication titles are a separate level from recovered export records.
 publication_texts = PUBLICATION['texts']
 publication_ids = [item['publication_id'] for item in publication_texts]
+check(PUBLICATION['schema'] == 'miluk-uwpa-publication-inventory/2',
+      'publication inventory schema')
+check({'contents_title', 'heading_title', 'printed_start_page',
+       'printed_page_span', 'status', 'corpus_mapping'} <=
+      set(PUBLICATION.get('field_definitions', {})),
+      'publication inventory field semantics are documented')
 check(PUBLICATION['counts']['published_titles'] == len(publication_texts) == 111,
       'publication inventory must contain 111 Miluk-bearing titles')
 check(len(publication_ids) == len(set(publication_ids)), 'duplicate publication identity')
@@ -148,9 +154,21 @@ check(separate_story_ids == public_ids and len(separate_story_ids) == 108,
       'every public record must map to one separate publication title')
 publication_lines_by_story = {story_id: [] for story_id in public_ids}
 for item in publication_texts:
-    check({'publication_id', 'volume', 'printed_title', 'printed_pages',
+    check({'publication_id', 'volume', 'contents_title', 'printed_start_page',
            'status', 'corpus_mapping'} <= set(item),
           f"incomplete publication inventory item: {item.get('publication_id')}")
+    check('printed_title' not in item and 'printed_pages' not in item,
+          f"ambiguous legacy publication fields: {item.get('publication_id')}")
+    check(isinstance(item['printed_start_page'], int) and item['printed_start_page'] > 0,
+          f"invalid publication start page: {item.get('publication_id')}")
+    page_span = item.get('printed_page_span')
+    if page_span is not None:
+        check(set(page_span) == {'start', 'end'} and
+              isinstance(page_span['start'], int) and
+              isinstance(page_span['end'], int) and
+              page_span['start'] == item['printed_start_page'] and
+              page_span['end'] >= page_span['start'],
+              f"invalid verified publication page span: {item.get('publication_id')}")
     mapping = item['corpus_mapping']
     if mapping is None:
         continue
@@ -165,23 +183,40 @@ for story_id, mapped_lines in publication_lines_by_story.items():
     check(sorted(mapped_lines) == list(range(1, story_by_id[story_id]['line_count'] + 1)),
           f'publication mappings must cover each recovered line exactly once: {story_id}')
 known_publication_mappings = {
-    'A man obtained fir power': ('t006-hadj-yasa-t-i-l-and-others', 69, 90,
-                                 'absorbed_into_another_record'),
-    'The water got high': ('t023-he-eats-human-children', 92, 118,
-                           'absorbed_into_another_record'),
+    'A man obtains fir power': {
+        'contents_title': 'A man obtained fir power',
+        'pages': (28, 29),
+        'mapping': ('t006-hadj-yasa-t-i-l-and-others', 69, 90,
+                    'absorbed_into_another_record'),
+    },
+    'The water got high': {
+        'contents_title': 'The water got high',
+        'pages': (58, 59),
+        'mapping': ('t023-he-eats-human-children', 92, 118,
+                    'absorbed_into_another_record'),
+    },
 }
-for printed_title, expected in known_publication_mappings.items():
-    matches = [item for item in publication_texts if item['printed_title'] == printed_title]
-    check(len(matches) == 1, f'unique publication inventory title: {printed_title}')
+for heading_title, expected in known_publication_mappings.items():
+    matches = [item for item in publication_texts
+               if item.get('heading_title') == heading_title]
+    check(len(matches) == 1, f'unique publication heading title: {heading_title}')
     if len(matches) == 1:
-        mapping = matches[0]['corpus_mapping']
+        item = matches[0]
+        mapping = item['corpus_mapping']
         actual = (mapping['story_id'], mapping['line_start'], mapping['line_end'],
-                  matches[0]['status'])
-        check(actual == expected, f'absorbed publication mapping: {printed_title}')
+                  item['status'])
+        check(item['contents_title'] == expected['contents_title'],
+              f'documentary title forms remain separate: {heading_title}')
+        check((item['printed_start_page'], item['printed_page_span']['end']) ==
+              expected['pages'], f'verified printed page span: {heading_title}')
+        check(actual == expected['mapping'],
+              f'absorbed publication mapping: {heading_title}')
 absent = [item for item in publication_texts if item['status'] == 'absent']
 check(len(absent) == 1 and
-      absent[0]['printed_title'] == 'The rock point person lost his good luck thing' and
-      absent[0]['printed_pages'] == '133-135' and absent[0]['corpus_mapping'] is None,
+      absent[0]['contents_title'] == 'The rock point person lost his good luck thing' and
+      absent[0]['printed_start_page'] == 133 and
+      absent[0]['printed_page_span'] == {'start': 133, 'end': 135} and
+      absent[0]['corpus_mapping'] is None,
       'missing 1940 text must remain explicitly absent')
 for entry in D['entries']:
     for attestation in entry['attestations']:

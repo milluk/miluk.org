@@ -45,11 +45,19 @@ numerical boundary does not prove publication completeness. The separate
 texts (77 in 1939, 34 in 1940): 110 are represented in the 108 recovered
 records, including two absorbed texts, and one 1940 text is absent.
 
-The absorbed texts are “A man obtains fir power” at lines 69-90 of `t006` and
-“The water got high” at lines 92-118 of `t023`. “The rock point person lost his
-good luck thing” (1940, printed pages 133-135) is absent. Record splitting or a
-source-bound import is pending source-integrity work requiring Troy's
-authorization; this repair performs neither.
+The 1939 page heading “A man obtains fir power” (printed pages 28-29; the
+contents says “A man obtained fir power”) is absorbed at lines 69-90 of `t006`.
+“The water got high” (printed pages 58-59) is absorbed at lines 92-118 of
+`t023`. “The rock point person lost his good luck thing” (1940, printed pages
+133-135) is absent. Record splitting or a source-bound import is pending
+source-integrity work requiring Troy's authorization; this repair performs
+neither.
+
+Every inventory item has an integer `printed_start_page`, meaning the page on
+which the published text starts. The optional `printed_page_span` is an
+inclusive `{start, end}` pair and appears only where the complete span has been
+verified. `contents_title` and the optional `heading_title` preserve those
+documentary title forms separately.
 
 Original 1990 dictionary citations to outside-edition sources remain in
 `dictionary.json`. They resolve against the archival outside-edition records for
