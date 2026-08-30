@@ -51,7 +51,7 @@ for e in ENTRIES:
                 key=len, reverse=True)
     entry_keys[e['entry_id']] = ks
 
-live = [s for s in STORIES if s.get('source', {}).get('layer') == 'uwpa-published']
+live = [s for s in STORIES if s.get('source', {}).get('layer') == 'uwpa-recovered-record']
 live_ids = {s['story_id'] for s in live}
 HOM = re.compile(r'[¹²³⁴⁵]+$')
 def plain_hw(e): return HOM.sub('', e['headword'])
@@ -346,7 +346,7 @@ for i, s in enumerate(live):
 
 # ---------------- stories index ----------------
 b = ['<h1>The texts</h1>',
-     '<p class="lead">%d texts, %d numbered lines. Read interlinearly, or in Miluk or English alone; every recognizable Miluk word links to its dictionary entry.</p>'
+     '<p class="lead">%d recovered corpus records representing 110 of 111 published Miluk-bearing texts, %d numbered lines. Two published texts are absorbed within records and one 1940 text is absent pending source-integrity work. Read interlinearly, or in Miluk or English alone; every recognizable Miluk word links to its dictionary entry.</p>'
      % (len(live), sum(s['line_count'] for s in live)),
      '<input id="storyfilter" type="search" placeholder="Filter by title…" autocomplete="off">',
      '<ul class="storylist">']
@@ -380,7 +380,7 @@ b = ['''<div class="dict-hero">
 <h1>A Miluk Dictionary</h1>
 <p class="hero-subtitle">The 1990 lexicography of the Jacobs corpus, restored</p>
 <div class="search-box big"><input id="q" type="search" placeholder="Search Miluk or English — try &lsquo;neqe&rsquo; or &lsquo;run away&rsquo;…" autocomplete="off"><div id="results"></div></div>
-<p class="stats">%d entries · %d attested forms · %d texts · %d lines</p>
+<p class="stats">%d entries · %d attested forms · %d corpus records · %d lines</p>
 </div>''' % nstats,
      '''<div class="cards">
 <a class="card" href="words/index.html"><span class="card-title">Miluk words</span><span class="card-sub">the full A&ndash;Z, every entry with its attestations in context</span></a>
@@ -395,7 +395,7 @@ as the first reference work in Miluk lexicography, recovered and restored in 202
 line where its forms occur, and every text links back into the dictionary.</p>
 </div>''']
 write('index.html', shell('A Miluk Dictionary', '\n'.join(b), './', active='home',
-                          desc='A Miluk Dictionary — %d entries and %d texts from the Jacobs corpus, searchable in Miluk and English.' % (len(ENTRIES), len(live))))
+                          desc='A Miluk Dictionary — %d entries and %d recovered corpus records representing 110 of 111 published Miluk-bearing texts, searchable in Miluk and English.' % (len(ENTRIES), len(live))))
 
 print('pages written:', sum(len(fs) for _, _, fs in os.walk(OUT)))
-print('entries:', len(ENTRIES), ' stories:', len(live))
+print('entries:', len(ENTRIES), ' corpus records:', len(live))

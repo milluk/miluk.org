@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Emit explicit provenance classifications for the 151-record working corpus."""
+"""Classify the 151 recovered export records without claiming title completeness."""
 import argparse
 from pathlib import Path
 
@@ -27,12 +27,23 @@ def main():
             edition = False
             reason = 'record occurs in the explicit Jacobs Slip Files source section'
         else:
-            layer = 'uwpa-published'
+            layer = 'uwpa-recovered-record'
             edition = True
-            reason = 'published Jacobs UWPA 1939/1940 text'
+            reason = ('record occurs in the recovered export numerical sections '
+                      'assigned to the two Jacobs UWPA volumes')
         records.append({'story_id': story['story_id'], 'source_layer': layer,
                         'edition_included': edition, 'reason': reason})
-    write(args.output, {'schema': 'miluk-source-classification/1', 'records': records})
+    write(args.output, {
+        'schema': 'miluk-source-classification/2',
+        'classification_scope': 'recovered Word Cruncher export records',
+        'publication_inventory': 'publication-inventory.json',
+        'completeness_limit': (
+            'Numerical-section classification establishes the recovered-export '
+            'boundary; publication completeness requires the separate 111-title '
+            'publication inventory.'
+        ),
+        'records': records,
+    })
     counts = {}
     for record in records:
         counts[record['source_layer']] = counts.get(record['source_layer'], 0) + 1

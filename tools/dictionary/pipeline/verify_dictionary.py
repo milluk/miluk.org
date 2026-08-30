@@ -18,7 +18,7 @@ def main():
     args = parser.parse_args()
     corpus = read(args.corpus)
     stories = [story for story in corpus['stories']
-               if story.get('source', {}).get('layer') == 'uwpa-published']
+               if story.get('source', {}).get('layer') == 'uwpa-recovered-record']
     keys = set()
     for story in stories:
         for line in story['lines']:

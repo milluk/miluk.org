@@ -27,9 +27,10 @@ Harrington, Frachtenberg, Dorsey, Milhau, Grant, modern-speaker, or other source
 layers as edition corpus evidence.
 
 The restored working corpus had 151 records / 7,723 lines. Explicit source
-classification shows:
+classification of the recovered export shows:
 
-- 108 published UWPA texts / 7,149 lines in `dictionary/data/corpus.json`;
+- 108 UWPA-section corpus records / 7,149 lines in
+  `dictionary/data/corpus.json`;
 - 35 Jacobs slip-file records / 574 lines preserved in
   `archive/outside-edition/slip-file-records.json`; and
 - eight empty Word Cruncher section containers preserved in
@@ -37,8 +38,18 @@ classification shows:
 
 The former filename regex suppressed 32 slip records but missed file 10, file
 20, and file 30 after their generated slugs became `f-1`, `f-2`, and `f-3`.
-`provenance/source-classification.json` now makes the boundary inspectable and
-the build does not infer provenance from filenames.
+`provenance/source-classification.json` now makes the recovered-export boundary
+inspectable and the build does not infer provenance from filenames. That
+numerical boundary does not prove publication completeness. The separate
+`provenance/publication-inventory.json` inventories 111 Miluk-bearing published
+texts (77 in 1939, 34 in 1940): 110 are represented in the 108 recovered
+records, including two absorbed texts, and one 1940 text is absent.
+
+The absorbed texts are “A man obtains fir power” at lines 69-90 of `t006` and
+“The water got high” at lines 92-118 of `t023`. “The rock point person lost his
+good luck thing” (1940, printed pages 133-135) is absent. Record splitting or a
+source-bound import is pending source-integrity work requiring Troy's
+authorization; this repair performs neither.
 
 Original 1990 dictionary citations to outside-edition sources remain in
 `dictionary.json`. They resolve against the archival outside-edition records for
@@ -57,7 +68,7 @@ archive/mirror. Stages are intentionally separate:
 4. `normalize_dictionary.py` creates display forms while retaining each ASCII
    form and logs every repair.
 5. `verify_dictionary.py` corroborates derived forms only against records
-   explicitly classified `uwpa-published`.
+   explicitly classified `uwpa-recovered-record`.
 6. `classify_sources.py` and `publish_corpus.py` enforce the public boundary and
    emit deterministic public and archival JSON.
 7. `import_collation.py`, `build_v2_receipt.py`, and `hash_manifest.py` emit the

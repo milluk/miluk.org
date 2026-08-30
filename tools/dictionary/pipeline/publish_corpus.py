@@ -45,7 +45,7 @@ def main():
             if english:
                 line['english_original'] = english['original_value']
         layer = classification['source_layer']
-        if layer == 'uwpa-published':
+        if layer == 'uwpa-recovered-record':
             public.append(story)
         elif layer == 'outside-edition-slip-file':
             outside.append(story)

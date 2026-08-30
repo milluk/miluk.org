@@ -39,6 +39,7 @@ CLASSIFICATION = load(PROV / 'source-classification.json')
 COLLATION = load(DATA / 'correction-ledger.json')
 V2 = load(PROV / 'v2-effective-diff.json')
 FIN_MANIFEST = load(PROV / 'fin-source-manifest.json')
+PUBLICATION = load(PROV / 'publication-inventory.json')
 fails = []
 
 
@@ -61,8 +62,8 @@ def declared_counts(dataset, label):
 declared_counts(C, 'public corpus')
 declared_counts(OUTSIDE, 'outside-edition corpus')
 declared_counts(CONTAINERS, 'working containers')
-check(C['story_count'] == 108, 'public corpus must contain 108 verified UWPA texts')
-check(C['line_count'] == 7149, 'public corpus must contain 7,149 verified UWPA lines')
+check(C['story_count'] == 108, 'public corpus must contain 108 recovered UWPA-section records')
+check(C['line_count'] == 7149, 'public corpus must contain 7,149 recovered UWPA-section lines')
 check(OUTSIDE['story_count'] == 35 and OUTSIDE['line_count'] == 574,
       'outside-edition archive must preserve 35 slip records / 574 lines')
 check(CONTAINERS['story_count'] == 8 and CONTAINERS['line_count'] == 0,
@@ -70,7 +71,7 @@ check(CONTAINERS['story_count'] == 8 and CONTAINERS['line_count'] == 0,
 check(D['entry_count'] == len(D['entries']) == 1111, 'dictionary entry count')
 for story in C['stories']:
     check(story['lines'], f"empty public story: {story['story_id']}")
-    check(story.get('source', {}).get('layer') == 'uwpa-published',
+    check(story.get('source', {}).get('layer') == 'uwpa-recovered-record',
           f"non-UWPA source layer in public corpus: {story['story_id']}")
     check(story.get('source', {}).get('edition_included') is True,
           f"public story not explicitly edition-included: {story['story_id']}")
@@ -83,6 +84,11 @@ all_stories = C['stories'] + OUTSIDE['stories'] + CONTAINERS['stories']
 check(len(classified) == 151, 'source classification must cover all 151 working records')
 check(set(classified) == {s['story_id'] for s in all_stories},
       'source classification identities must match preserved working records')
+check(CLASSIFICATION.get('classification_scope') == 'recovered Word Cruncher export records',
+      'source classification scope must describe recovered records')
+check('does not' in CLASSIFICATION.get('completeness_limit', '') or
+      'requires' in CLASSIFICATION.get('completeness_limit', ''),
+      'source classification must not claim publication completeness')
 fin_root = TOOL_DIR / 'archive' / '1990-fin'
 check(FIN_MANIFEST['file_count'] == len(FIN_MANIFEST['files']) == 684,
       '1990 FIN manifest must contain 684 sources')
@@ -114,6 +120,69 @@ for story in C['stories'] + OUTSIDE['stories']:
 
 public_ids = {s['story_id'] for s in C['stories']}
 outside_ids = {s['story_id'] for s in OUTSIDE['stories']}
+
+# Publication titles are a separate level from recovered export records.
+publication_texts = PUBLICATION['texts']
+publication_ids = [item['publication_id'] for item in publication_texts]
+check(PUBLICATION['counts']['published_titles'] == len(publication_texts) == 111,
+      'publication inventory must contain 111 Miluk-bearing titles')
+check(len(publication_ids) == len(set(publication_ids)), 'duplicate publication identity')
+check(sum(item['volume'] == '1939' for item in publication_texts) == 77,
+      '1939 publication inventory must contain 77 titles')
+check(sum(item['volume'] == '1940' for item in publication_texts) == 34,
+      '1940 publication inventory must contain 34 titles')
+status_counts = {status: sum(item['status'] == status for item in publication_texts)
+                 for status in ('separate', 'absorbed_into_another_record', 'absent')}
+check(status_counts == {'separate': 108, 'absorbed_into_another_record': 2, 'absent': 1},
+      'publication inventory disposition counts')
+check(sum(item['status'] != 'absent' for item in publication_texts) == 110,
+      '108 recovered records must represent 110 published texts')
+check(PUBLICATION['counts']['recovered_corpus_records'] == 108 and
+      PUBLICATION['counts']['represented_titles'] == 110 and
+      PUBLICATION['counts']['jacobs_1939_titles'] == 77 and
+      PUBLICATION['counts']['jacobs_1940_titles'] == 34,
+      'declared publication inventory counts')
+separate_story_ids = {item['corpus_mapping']['story_id'] for item in publication_texts
+                      if item['status'] == 'separate'}
+check(separate_story_ids == public_ids and len(separate_story_ids) == 108,
+      'every public record must map to one separate publication title')
+publication_lines_by_story = {story_id: [] for story_id in public_ids}
+for item in publication_texts:
+    check({'publication_id', 'volume', 'printed_title', 'printed_pages',
+           'status', 'corpus_mapping'} <= set(item),
+          f"incomplete publication inventory item: {item.get('publication_id')}")
+    mapping = item['corpus_mapping']
+    if mapping is None:
+        continue
+    check(mapping['story_id'] in public_ids,
+          f"publication mapping outside public corpus: {item['publication_id']}")
+    for line_number in range(mapping['line_start'], mapping['line_end'] + 1):
+        check((mapping['story_id'], line_number) in line_by,
+              f"publication mapping line missing: {item['publication_id']}:{line_number}")
+        publication_lines_by_story[mapping['story_id']].append(line_number)
+story_by_id = {story['story_id']: story for story in C['stories']}
+for story_id, mapped_lines in publication_lines_by_story.items():
+    check(sorted(mapped_lines) == list(range(1, story_by_id[story_id]['line_count'] + 1)),
+          f'publication mappings must cover each recovered line exactly once: {story_id}')
+known_publication_mappings = {
+    'A man obtained fir power': ('t006-hadj-yasa-t-i-l-and-others', 69, 90,
+                                 'absorbed_into_another_record'),
+    'The water got high': ('t023-he-eats-human-children', 92, 118,
+                           'absorbed_into_another_record'),
+}
+for printed_title, expected in known_publication_mappings.items():
+    matches = [item for item in publication_texts if item['printed_title'] == printed_title]
+    check(len(matches) == 1, f'unique publication inventory title: {printed_title}')
+    if len(matches) == 1:
+        mapping = matches[0]['corpus_mapping']
+        actual = (mapping['story_id'], mapping['line_start'], mapping['line_end'],
+                  matches[0]['status'])
+        check(actual == expected, f'absorbed publication mapping: {printed_title}')
+absent = [item for item in publication_texts if item['status'] == 'absent']
+check(len(absent) == 1 and
+      absent[0]['printed_title'] == 'The rock point person lost his good luck thing' and
+      absent[0]['printed_pages'] == '133-135' and absent[0]['corpus_mapping'] is None,
+      'missing 1940 text must remain explicitly absent')
 for entry in D['entries']:
     for attestation in entry['attestations']:
         story_id = attestation.get('story_id')
@@ -316,7 +385,9 @@ if not args.skip_git_diff:
 print('links checked :', nlinks)
 print('pages checked :', len(pages))
 print('entries       :', len(D['entries']))
-print('public stories:', C['story_count'])
+print('public records:', C['story_count'])
+print('represented texts:', sum(item['status'] != 'absent' for item in publication_texts))
+print('published titles:', len(publication_texts))
 print('public lines  :', C['line_count'])
 print('collation rows:', len(COLLATION['corrections']))
 if fails:

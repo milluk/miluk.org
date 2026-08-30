@@ -28,6 +28,15 @@
       "reason_not_copied": "manifest-only working source containing layers outside this edition"
     },
     {
+      "identity": "combined Jacobs UWPA scan used for the 111-title publication inventory",
+      "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/Jacobs/Published/Coos Narrative and Ethnologic and Myth Texts.pdf",
+      "sha256": "254e66bd66c98c6de33a6e35ba47ebf2ed9a69a323b16a9f420f0a33c9d996ed",
+      "size": 11603630,
+      "repository_copy": null,
+      "reason_not_copied": "manifest-only copyrighted Jacobs publication scan",
+      "repository_derivative": "tools/dictionary/provenance/publication-inventory.json"
+    },
+    {
       "identity": "922-item Jacobs 1939 collation workbook",
       "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/MILUK/Dictionary/Rebuild 2026-08-27/Jacobs collation - corrections to the 1990 transcription.xlsx",
       "sha256": "b86ab30a2ded33853328ecab88b0c348ed32c2317a85712fde7b363282e2fc3d",
