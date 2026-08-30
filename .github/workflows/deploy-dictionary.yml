@@ -1,0 +1,27 @@
+# One-shot: fetches the verified dictionary v2 build and commits it. Checksum-pinned.
+# Dormant after success; removed afterward from the session.
+name: Deploy dictionary (one-shot)
+on:
+  push:
+    paths:
+      - '.github/workflows/deploy-dictionary.yml'
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch, verify, unpack
+        run: |
+          curl -fSL --retry 2 -o /tmp/site.zip "https://uc5b9c99091c84b724982825c006.dl.dropboxusercontent.com/cd/0/get/DHJe63EhdEmQf9eIWmz2VBn8WAyK2HdcUpqOkCeGBgeUmKueFKHGYMnZXhpXJNRbrQiA99Qlj4W5m2SrNfCvzMNdgQpaaFpS7vU8WyC7WVDNqQq6op7cr-oH2Ef3lskQS76DBr_wFmaOLGLUtj2uHUENBWIjiiMOTLgrg1Igvjo5oQ/file?c_luid=db3f3ff0"
+          echo "a3f56c8af53dca8f7163bf9bed44bcb1c85ebf56279256a136b3e70c3d9bdb09  /tmp/site.zip" | sha256sum -c -
+          rm -rf dictionary
+          unzip -oq /tmp/site.zip -d .
+      - name: Commit the site
+        run: |
+          git config user.name "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add -A dictionary
+          git commit -m "Dictionary v2: convert 1986-notation tokens in English translations; un-swap a mixed line; clean gloss debris" -m "167 embedded Miluk names/interjections in the English translation lines now render in Jacobs orthography (Ya<hatc -> Yahatc with acute, djaq!u:<ni -> glottalized form). One line with swapped Miluk/English fields corrected at the corpus level. 1986 concordance-filename debris removed from glosses. Data JSONs updated in /dictionary/data/. Build re-verified: 55,279 links, all checks pass. Zip sha256 a3f56c8af53dca8f7163bf9bed44bcb1c85ebf56279256a136b3e70c3d9bdb09."
+          git push
