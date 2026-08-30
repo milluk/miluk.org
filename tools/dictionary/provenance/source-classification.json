@@ -1,0 +1,911 @@
+{
+  "schema": "miluk-source-classification/1",
+  "records": [
+    {
+      "story_id": "t001-origin-of-death",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t002-book2",
+      "source_layer": "working-container",
+      "edition_included": false,
+      "reason": "empty Word Cruncher section container; not a text"
+    },
+    {
+      "story_id": "t003-a-deserted-poor-woman-was-given-food-by-shag",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t004-how-a-child-was-frightened-and-later-taught-",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t005-grandmother-afterbirth",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t006-hadj-yasa-t-i-l-and-others",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t007-a-woman-obtained-fir-power-and-learned-two-m",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t008-getting-rid-of-a-thunder-dream-power",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t009-a-girl-found-a-husband",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t010-book3",
+      "source_layer": "working-container",
+      "edition_included": false,
+      "reason": "empty Word Cruncher section container; not a text"
+    },
+    {
+      "story_id": "t011-the-person-who-died-from-cold",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t012-the-woman-who-dreamt-but-did-not-do-what-her",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t013-lazy-young-man",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t014-about-encounter-power",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t015-the-father-s-helpers-the-storks",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t016-a-girl-became-a-dangerous-being-of-the-woods",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t017-swordfish-narrative",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t018-sea-otter-narrative",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t019-the-person-that-halloos",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t020-salmon-did-ill-to-boys",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t021-a-young-man-grew-up-alone-and-then-he-split-",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t022-the-young-man-stepped-on-snail-s-back",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t023-he-eats-human-children",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t024-the-s-gand-s-people",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t025-he-starved-his-mother-s-sister",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t026-myth-texts",
+      "source_layer": "working-container",
+      "edition_included": false,
+      "reason": "empty Word Cruncher section container; not a text"
+    },
+    {
+      "story_id": "t027-the-young-man-became-a-sea-gull",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t028-bluejay-shamans",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t029-fog-myth",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t030-the-old-couple-and-their-grandson-became-ash",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t031-ogress-myths",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t032-dove-myth",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t033-the-two-loose-women",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t034-the-bear-woman",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t035-the-person-coon-killed",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t036-jack-rabbit-man",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t037-the-wife-of-seal",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t038-dug-out-of-ground-child-and-popped-out-of-fi",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t039-black-bear-and-pack-basket-bear-grizzly",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t040-choked-with-food",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t041-the-girl-who-had-a-dog-husband",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t042-the-pouty-children",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t043-the-white-wife-of-mouse",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t044-crow-girl",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t045-the-young-man-became-an-owl",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t046-the-young-man-who-lived-alone",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t047-the-girls-who-wished-to-have-stars-for-their",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t048-i-will-tell-you-a-crow-myth",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t049-the-young-man-lived-with-his-grandmother",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t050-pheasant",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t051-that-whittles-his-penis-old-man-or-the-five-",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t052-myth-of-blue-jay",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t053-the-young-man-ate-the-thing-that-stank",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t054-butterball-duck-and-his-wife",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t055-the-trickster-person-who-made-the-country",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t056-there-were-many-people-at-that-place",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t057-myth-about-a-trickster",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t058-what-the-person-who-made-the-country-worldma",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t059-annie-miner-peterson",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t060-melsin",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t061-cissy",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t062-kitty-hayes",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t063-story-of-a-slave-ma-l-u-c",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t064-talking-too-much",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t065-gossips-and-liars",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t066-sport-of-riding-breakers-in-narrow-play-cano",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t067-book6",
+      "source_layer": "working-container",
+      "edition_included": false,
+      "reason": "empty Word Cruncher section container; not a text"
+    },
+    {
+      "story_id": "t068-adultery-before-marriage",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t069-the-kind-of-wife-to-select",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t070-marriage-negotiations",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t071-imparting-sexual-knowledge-after-the-marriag",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t072-excessive-sexuality-caused-loss-of-strength-",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t073-character-and-health",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t074-baby-s-cradle-was-hung",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t075-the-care-of-nursing-babies",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t076-people-called-to-baby-s-cry-to-come-along",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t077-an-undesired-wife",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t078-a-rejected-wife-and-her",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t079-a-wife-and-children-belonged-to",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t080-a-husband-must-not-see-his-wife-nude",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t081-children-had-to-be-inside-at-dusk",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t082-head-wives",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t083-poor-people-did-not-want",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t084-a-poor-girl-married-any-well-to-do-man-who-w",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t085-people-of-the-poorer-class",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t086-poor-people-who-became-wealthy",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t087-handouts-to-the-poor",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t088-the-chiefs-kept-the-poor-from-going-hungry",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t089-doctoring-power-appeared-like-a-person",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t090-a-shaman-s-increase-of-power-dance",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t091-a-male-shaman-watcher-took",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t092-a-new-shaman-offered-to-doctor-without-pay",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t093-a-m-t-din-shaman-s-prayer",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t094-t-din-shamans",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t095-an-il-xq-ain-shaman-cured",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t096-shamans-cured-tuberculosis",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t097-what-shamans-could-see",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t098-a-shaman-found-a-pain-power-hidden-in-a-danc",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t099-an-alsea-shaman-was-forced-to-take-back-a-pa",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t100-a-shaman-who-lost-control-of-his-pain-power",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t101-at-death-the-heart-went",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t102-seeing-a-person-s-spirit-double",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t103-seeing-a-person-s-spirit-double",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t104-thunder",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t105-encounter-power",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t106-angel-bird-s-eye",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t107-a-dream",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t108-a-dream",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t109-snow-is-the-ashes-from-the-hearth-of-the-gia",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t110-anger-at-seeing-a-rainbow",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t111-djiixw-nt",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t112-q-ic-c-batter-told-about-her-own-life-in-the",
+      "source_layer": "uwpa-published",
+      "edition_included": true,
+      "reason": "published Jacobs UWPA 1939/1940 text"
+    },
+    {
+      "story_id": "t113-slip-files",
+      "source_layer": "working-container",
+      "edition_included": false,
+      "reason": "empty Word Cruncher section container; not a text"
+    },
+    {
+      "story_id": "t114-jacobs-slip-files",
+      "source_layer": "working-container",
+      "edition_included": false,
+      "reason": "empty Word Cruncher section container; not a text"
+    },
+    {
+      "story_id": "t115-f1-fil-1",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t116-f2-fil-2",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t117-f3-fil-3",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t118-f4-fil-4",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t119-f5-fil-5",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t120-f6-fil-6",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t121-f7-fil-7",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t122-f8-fil-8",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t123-f9-fil-9",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t124-f-1-fil-1",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t125-f11-fil-11",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t126-f12-fil-12",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t127-f13-fil-13",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t128-f14-fil-14",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t129-f15-fil-15",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t130-f16-fil-16",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t131-f17-fil-17",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t132-f18-fil-18",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t133-f19-fil-19",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t134-f-2-fil-2",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t135-f21-fil-21",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t136-f22-fil-22",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t137-f23-fil-23",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t138-f24-fil-24",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t139-f25-fil-25",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t140-f26-fil-26",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t141-f27-file-27",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t142-f28-fil-28",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t143-f29-fil-29",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t144-f-3-fil-3",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t145-f31-fil-31",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t146-f32-fil-32",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t147-f33-fil-33",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t148-f34-35-fil-34-35",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t149-book8",
+      "source_layer": "working-container",
+      "edition_included": false,
+      "reason": "empty Word Cruncher section container; not a text"
+    },
+    {
+      "story_id": "t150-slipfile-supplement",
+      "source_layer": "outside-edition-slip-file",
+      "edition_included": false,
+      "reason": "record occurs in the explicit Jacobs Slip Files source section"
+    },
+    {
+      "story_id": "t151-dictionary-notes",
+      "source_layer": "working-container",
+      "edition_included": false,
+      "reason": "empty Word Cruncher section container; not a text"
+    }
+  ]
+}

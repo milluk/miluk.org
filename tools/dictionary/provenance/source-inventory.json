@@ -1,0 +1,116 @@
+{
+  "schema": "miluk-restoration-source-inventory/1",
+  "inspected_archive_root": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/MILUK/Dictionary/Rebuild 2026-08-27",
+  "runtime_dependency": false,
+  "artifacts": [
+    {
+      "identity": "recovered 1990 entry files (canonical root set; letter-folder mirror is byte-identical)",
+      "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/MILUK/Dictionary/MILUK/*.FIN",
+      "count": 684,
+      "total_bytes": 493522,
+      "repository_copy": "tools/dictionary/archive/1990-fin/",
+      "hash_manifest": "tools/dictionary/provenance/fin-source-manifest.json"
+    },
+    {
+      "identity": "1990 Word Cruncher corpus plain-text export",
+      "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/MILUK/data ready allnohy.txt",
+      "sha256": "789cd011c749e0bba4fec81f19b2bcd33467af20d41576770594c2ab2e31de61",
+      "size": 602461,
+      "repository_copy": null,
+      "reason_not_copied": "manifest-only copyrighted published-source transcription"
+    },
+    {
+      "identity": "Jacobs interlinear working spreadsheet",
+      "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/Jacobs/milluk interlinear with hanis with nb pgs.xlsx",
+      "sha256": "9b293928c92aeb6769260edbb4c7472e2cbe9eda0fe974648fe811addde59206",
+      "size": 1325094,
+      "repository_copy": null,
+      "reason_not_copied": "manifest-only working source containing layers outside this edition"
+    },
+    {
+      "identity": "922-item Jacobs 1939 collation workbook",
+      "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/MILUK/Dictionary/Rebuild 2026-08-27/Jacobs collation - corrections to the 1990 transcription.xlsx",
+      "sha256": "b86ab30a2ded33853328ecab88b0c348ed32c2317a85712fde7b363282e2fc3d",
+      "size": 71632,
+      "repository_derivative": "tools/dictionary/provenance/correction-ledger.json"
+    },
+    {
+      "identity": "post-repair working corpus JSON used for v2",
+      "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/MILUK/Dictionary/Rebuild 2026-08-27/data/corpus.json",
+      "sha256": "3b068ca54de27abcb4eee7eeae4a7996393d355a0bd080435b02cfd47159546e",
+      "repository_copy": "tools/dictionary/archive/restoration-checkpoint/corpus-v2-working.json"
+    },
+    {
+      "identity": "post-repair dictionary JSON used for v2",
+      "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/MILUK/Dictionary/Rebuild 2026-08-27/data/dictionary.json",
+      "sha256": "e20c3c794a5bff5cc0b126628a737ed1cb7b020589881af037c55a587afdea2d",
+      "repository_copy": "dictionary/data/dictionary.json"
+    },
+    {
+      "identity": "normalized dictionary restoration checkpoint",
+      "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/MILUK/Dictionary/Rebuild 2026-08-27/data/dictionary-entries-internal.json",
+      "sha256": "f6f837ab238d0e82f38f8bd0125e855e00c89f6182e162ef5c229dadb1237562",
+      "repository_copy": "tools/dictionary/archive/restoration-checkpoint/dictionary-entries-internal.json"
+    },
+    {
+      "identity": "337 unique applied corpus transformations",
+      "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/MILUK/Dictionary/Rebuild 2026-08-27/data/corpus-corrections.json",
+      "sha256": "1d9e9b662c561dea7b31f3c99cbfb6d2787b3a128bc48052950abbb7fc84b68f",
+      "repository_copy": "tools/dictionary/archive/restoration-checkpoint/applied-corpus-corrections.json"
+    },
+    {
+      "identity": "restoration pipeline README",
+      "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/MILUK/Dictionary/Rebuild 2026-08-27/README.md",
+      "sha256": "7786b6b8b1551702ee14e94c208fc42bbae6b497554596f03f4ad45d2ab1a3c4"
+    },
+    {
+      "identity": "2026 foreword source",
+      "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/MILUK/Dictionary/Rebuild 2026-08-27/Foreword.md",
+      "sha256": "5c9d0baf829a4ae4a892a159f90f7343fb2792d4d3c4e9b769690f8bf74ebb7e"
+    },
+    {
+      "identity": "Word Cruncher gap workbook",
+      "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/MILUK/Dictionary/Rebuild 2026-08-27/Word Cruncher lines missing from the interlinear.xlsx",
+      "sha256": "e586e9491859d8d383e20bb834f9ef6155750091f95b58730a56c99cdacd4e95"
+    },
+    {
+      "identity": "v2 build archive",
+      "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/MILUK/Dictionary/Rebuild 2026-08-27/miluk-dictionary-v2.zip",
+      "sha256": "a3f56c8af53dca8f7163bf9bed44bcb1c85ebf56279256a136b3e70c3d9bdb09"
+    },
+    {
+      "identity": "Grant, John Milhau's 1856 Hanis Coos Vocabularies, scan part 1",
+      "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/Milluk/anthony grant_001.pdf",
+      "sha256": "13b2bfc92fa3253ce33d057c98888606953039e18d2aa7ba03d423a88c428aa6",
+      "disposition": "reviewed and excluded as later scholarship outside the edition boundary"
+    },
+    {
+      "identity": "Grant paper scan continuation",
+      "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/Milluk/anthony grant_019.pdf",
+      "sha256": "6e6bda61c0b434af527b2930ac29d70b7a0b5e4530d0ab1eb70e5de1a03e36e5",
+      "disposition": "reviewed and excluded as later scholarship outside the edition boundary"
+    }
+  ],
+  "recovered_pipeline": [
+    {"path": "pipeline/anderson.py", "sha256": "2389402b243f7159e1ef54b4b0047712226282ccfd14831d003319f05c153946"},
+    {"path": "pipeline/build.py", "sha256": "fe848325748bd60c2b4fc613aaf1b0b85b9a20a2d0dbe4867f27539602ba6fbd"},
+    {"path": "pipeline/cites.py", "sha256": "61b647deaa4dc1e4e4dc9483ee4ef2f32c0fe531f77ee108603f534d9ffd30f8"},
+    {"path": "pipeline/corpus_index.py", "sha256": "712bf33b531f098330ca29d602302aaee6769659f96bd7ddacf140db1c3ad7e9"},
+    {"path": "pipeline/gap.py", "sha256": "7bd714d14f1715aba7aadf5e3a7c6e5df2c4716a0b5e9a42ed4bf23603d62228"},
+    {"path": "pipeline/gap_json.py", "sha256": "18781fd1430830a5266fb7489beb4ec02ce3f99aca7d9b883b5d9585740fd238"},
+    {"path": "pipeline/gap_xlsx.py", "sha256": "ccf9eb13f8e05754d242a65deba756c8edcd761b849a1e68a9217068d1cc0f9c"},
+    {"path": "pipeline/link.py", "sha256": "78576e12283e58b6b03fadbaa3e5f50a2022bf01484fb84ac56ace4af3fcc9a5"},
+    {"path": "pipeline/manuscript2.py", "sha256": "92a10318723e38fb80b8e9414da5622e552dd6ba0aa65cd3eac74c763dfdb515"},
+    {"path": "pipeline/parse2.py", "sha256": "642ade35798578b39b1333ae02ce2bedbf02033b38a999e0b5264a73e034ef6c"},
+    {"path": "pipeline/restructure.py", "sha256": "c23c51a9defd93f1bea9f5435a1c94d1865f6d00ede4184f09632ddb7108bd20"},
+    {"path": "pipeline/verify.py", "sha256": "4bf21d8132f3f125d544537ffde8503e3b75898bc6e58e415f8c61a8d94aeee4"}
+  ],
+  "missing_artifacts": [
+    "the exact 684-file LibreOffice UTF-8 conversion output consumed by parse2.py",
+    "lexicon.json consumed by build.py",
+    "corpus_index.pkl consumed by cites.py, verify.py, and link.py",
+    "entries.json and the pre-restructure dictionary.json intermediate",
+    "repair_log.json and unverified_forms.json emitted during the original run",
+    "a pinned LibreOffice version or byte-exact converter configuration for the original .FIN conversion"
+  ]
+}

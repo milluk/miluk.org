@@ -1,0 +1,103 @@
+{
+  "schema": "miluk-working-containers/1",
+  "story_count": 8,
+  "line_count": 0,
+  "stories": [
+    {
+      "story_id": "t002-book2",
+      "title": "book2",
+      "title_ascii": "book2",
+      "line_count": 0,
+      "lines": [],
+      "source": {
+        "layer": "working-container",
+        "edition_included": false,
+        "basis": "empty Word Cruncher section container; not a text"
+      }
+    },
+    {
+      "story_id": "t010-book3",
+      "title": "book3",
+      "title_ascii": "book3",
+      "line_count": 0,
+      "lines": [],
+      "source": {
+        "layer": "working-container",
+        "edition_included": false,
+        "basis": "empty Word Cruncher section container; not a text"
+      }
+    },
+    {
+      "story_id": "t026-myth-texts",
+      "title": "Myth texts",
+      "title_ascii": "Myth texts",
+      "line_count": 0,
+      "lines": [],
+      "source": {
+        "layer": "working-container",
+        "edition_included": false,
+        "basis": "empty Word Cruncher section container; not a text"
+      }
+    },
+    {
+      "story_id": "t067-book6",
+      "title": "book6",
+      "title_ascii": "book6",
+      "line_count": 0,
+      "lines": [],
+      "source": {
+        "layer": "working-container",
+        "edition_included": false,
+        "basis": "empty Word Cruncher section container; not a text"
+      }
+    },
+    {
+      "story_id": "t113-slip-files",
+      "title": "slip files",
+      "title_ascii": "slip files",
+      "line_count": 0,
+      "lines": [],
+      "source": {
+        "layer": "working-container",
+        "edition_included": false,
+        "basis": "empty Word Cruncher section container; not a text"
+      }
+    },
+    {
+      "story_id": "t114-jacobs-slip-files",
+      "title": "Jacobs· Slip Files",
+      "title_ascii": "Jacobs: Slip Files",
+      "line_count": 0,
+      "lines": [],
+      "source": {
+        "layer": "working-container",
+        "edition_included": false,
+        "basis": "empty Word Cruncher section container; not a text"
+      }
+    },
+    {
+      "story_id": "t149-book8",
+      "title": "book8",
+      "title_ascii": "book8",
+      "line_count": 0,
+      "lines": [],
+      "source": {
+        "layer": "working-container",
+        "edition_included": false,
+        "basis": "empty Word Cruncher section container; not a text"
+      }
+    },
+    {
+      "story_id": "t151-dictionary-notes",
+      "title": "Dictionary notes",
+      "title_ascii": "Dictionary notes",
+      "line_count": 0,
+      "lines": [],
+      "source": {
+        "layer": "working-container",
+        "edition_included": false,
+        "basis": "empty Word Cruncher section container; not a text"
+      }
+    }
+  ]
+}

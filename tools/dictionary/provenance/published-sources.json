@@ -1,0 +1,23 @@
+{
+  "schema": "miluk-published-source-manifest/1",
+  "edition_boundary": "Only Miluk materials published by Melville Jacobs in the two listed University of Washington Publications in Anthropology volumes are public corpus evidence.",
+  "sources": [
+    {
+      "source_id": "jacobs-1939-coos-narrative-ethnologic-texts",
+      "bibliographic_identity": "Melville Jacobs, Coos Narrative and Ethnologic Texts, University of Washington Publications in Anthropology (1939)",
+      "expected_source_identifier": "data ready allnohy.txt story records preceding the explicit slip_files section",
+      "transcription_sha256": "789cd011c749e0bba4fec81f19b2bcd33467af20d41576770594c2ab2e31de61",
+      "provenance": "story_id plus numbered line in corpus.json; printed page spans appear in correction-ledger.json where collated",
+      "collation_status": "922 observations cover printed pages 19-33, 39-62, and 71-121; the source workbook says pages 112-114 were not collated"
+    },
+    {
+      "source_id": "jacobs-1940-coos-myth-texts",
+      "bibliographic_identity": "Melville Jacobs, Coos Myth Texts, University of Washington Publications in Anthropology (1940)",
+      "expected_source_identifier": "the Myth texts section of the 1990 Word Cruncher export",
+      "transcription_sha256": "789cd011c749e0bba4fec81f19b2bcd33467af20d41576770594c2ab2e31de61",
+      "provenance": "story_id plus numbered line in corpus.json",
+      "collation_status": "uncollated"
+    }
+  ],
+  "not_committed": "No Jacobs publication scan or PDF is stored in this repository."
+}
