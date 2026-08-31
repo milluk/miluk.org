@@ -588,7 +588,7 @@ check('k̯ʼs·‿lɛ' in kele_page and
 form_link_count = sum(
     page.read_text(encoding='utf-8').count('<a class="formlink"')
     for page in (OUT / 'words').glob('e*.html'))
-check(form_link_count >= 3955,
+check(form_link_count >= 4041,
       'attested corpus/corroborated forms must remain directly inspectable')
 
 # Linguistic alphabet labels inherit Charis; interface chrome remains on the

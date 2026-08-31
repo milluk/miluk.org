@@ -96,6 +96,7 @@ def plain_hw(e): return HOM.sub('', presentation_headword(e))
 PUNCT = '.,;:?!"«»“”‘’()[]'
 ascii_piece_locations = collections.defaultdict(list)
 display_piece_locations = collections.defaultdict(list)
+display_piece_stream = []
 for story in live:
     for line in story['lines']:
         locator = (story['story_id'], story['title'], line['line'])
@@ -110,6 +111,7 @@ for story in live:
                 key = fold(piece)
                 if key:
                     display_piece_locations[key].append(locator)
+                    display_piece_stream.append((key, locator))
 
 def form_locator(form):
     """Return the first transparent public source locator for one form.
@@ -127,6 +129,15 @@ def form_locator(form):
     locations = display_piece_locations.get(fold(form.get('form', '')), ())
     if locations:
         return locations[0]
+    key = fold(form.get('form', ''))
+    if len(key) >= 3:
+        # The established corroboration rule also admits a form embedded in a
+        # longer morphological piece.  Preserve that same, already-labelled
+        # relation in the source link rather than leaving its evidence chip
+        # unexplorable.
+        for candidate, locator in display_piece_stream:
+            if key in candidate:
+                return locator
     return None
 
 # ---------------- public cross-reference display ----------------
