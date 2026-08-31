@@ -92,7 +92,7 @@
       "search_aliases": [],
       "series": "alveolar",
       "status": "Jacobs phonetic unit",
-      "count": 78
+      "count": 66
     },
     {
       "key": "t!",
@@ -118,7 +118,7 @@
       "search_aliases": [],
       "series": "alveolar",
       "status": "Jacobs phonetic unit",
-      "count": 35
+      "count": 30
     },
     {
       "key": "t's",
@@ -128,7 +128,7 @@
       ],
       "series": "alveolar",
       "status": "Jacobs phonetic unit",
-      "count": 9
+      "count": 14
     },
     {
       "key": "s",
@@ -165,7 +165,7 @@
       ],
       "series": "c-series",
       "status": "Jacobs phonetic unit",
-      "count": 25
+      "count": 18
     },
     {
       "key": "t'c",
@@ -177,7 +177,7 @@
       ],
       "series": "c-series",
       "status": "Jacobs phonetic unit",
-      "count": 2
+      "count": 8
     },
     {
       "key": "c",
@@ -209,7 +209,7 @@
       ],
       "series": "anterior palatal",
       "status": "Jacobs phonetic unit",
-      "count": 4
+      "count": 6
     },
     {
       "key": "k!&",
@@ -219,7 +219,7 @@
       ],
       "series": "anterior palatal",
       "status": "Jacobs phonetic unit",
-      "count": 4
+      "count": 10
     },
     {
       "key": "x&",
@@ -229,7 +229,7 @@
       ],
       "series": "anterior palatal",
       "status": "Jacobs phonetic unit",
-      "count": 2
+      "count": 4
     },
     {
       "key": "y",
@@ -247,7 +247,7 @@
       "search_aliases": [],
       "series": "medial palatal",
       "status": "Jacobs phonetic unit",
-      "count": 54
+      "count": 41
     },
     {
       "key": "gw",
@@ -255,7 +255,7 @@
       "search_aliases": [],
       "series": "medial palatal",
       "status": "Jacobs phonetic unit",
-      "count": 28
+      "count": 27
     },
     {
       "key": "k",
@@ -263,7 +263,7 @@
       "search_aliases": [],
       "series": "medial palatal",
       "status": "Jacobs phonetic unit",
-      "count": 38
+      "count": 28
     },
     {
       "key": "kw",
@@ -271,7 +271,7 @@
       "search_aliases": [],
       "series": "medial palatal",
       "status": "Jacobs phonetic unit",
-      "count": 20
+      "count": 18
     },
     {
       "key": "k!",
@@ -281,7 +281,7 @@
       ],
       "series": "medial palatal",
       "status": "Jacobs phonetic unit",
-      "count": 2
+      "count": 4
     },
     {
       "key": "k!w",
@@ -292,7 +292,7 @@
       ],
       "series": "medial palatal",
       "status": "Jacobs phonetic unit",
-      "count": 5
+      "count": 7
     },
     {
       "key": "%",
@@ -311,7 +311,7 @@
       "search_aliases": [],
       "series": "medial palatal",
       "status": "Jacobs phonetic unit",
-      "count": 32
+      "count": 22
     },
     {
       "key": "xw",
@@ -319,7 +319,7 @@
       "search_aliases": [],
       "series": "medial palatal",
       "status": "Jacobs phonetic unit",
-      "count": 11
+      "count": 8
     },
     {
       "key": "g;",
@@ -329,7 +329,7 @@
       ],
       "series": "velar",
       "status": "Jacobs phonetic unit",
-      "count": 26
+      "count": 39
     },
     {
       "key": "g;w",
@@ -339,7 +339,7 @@
       ],
       "series": "velar",
       "status": "Jacobs phonetic unit",
-      "count": 1
+      "count": 2
     },
     {
       "key": "q",
@@ -347,7 +347,7 @@
       "search_aliases": [],
       "series": "velar",
       "status": "Jacobs phonetic unit",
-      "count": 35
+      "count": 32
     },
     {
       "key": "qw",
@@ -355,7 +355,7 @@
       "search_aliases": [],
       "series": "velar",
       "status": "Jacobs phonetic unit",
-      "count": 12
+      "count": 10
     },
     {
       "key": "q!",
@@ -365,7 +365,7 @@
       ],
       "series": "velar",
       "status": "Jacobs phonetic unit",
-      "count": 8
+      "count": 12
     },
     {
       "key": "q!w",
@@ -376,7 +376,7 @@
       ],
       "series": "velar",
       "status": "Jacobs phonetic unit",
-      "count": 1
+      "count": 2
     },
     {
       "key": "x;",
@@ -384,7 +384,7 @@
       "search_aliases": [],
       "series": "velar",
       "status": "Jacobs phonetic unit",
-      "count": 8
+      "count": 16
     },
     {
       "key": "x;w",
@@ -392,7 +392,7 @@
       "search_aliases": [],
       "series": "velar",
       "status": "Jacobs phonetic unit",
-      "count": 1
+      "count": 4
     },
     {
       "key": "h",
@@ -427,7 +427,7 @@
       ],
       "series": "lateral",
       "status": "Jacobs phonetic unit",
-      "count": 12
+      "count": 17
     },
     {
       "key": "t'#",
@@ -438,7 +438,7 @@
       ],
       "series": "lateral",
       "status": "Jacobs phonetic unit",
-      "count": 11
+      "count": 19
     },
     {
       "key": "l",

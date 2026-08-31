@@ -19,9 +19,8 @@ OUT = args.out.resolve()
 PIPELINE = TOOL_DIR / 'pipeline'
 sys.path.insert(0, str(PIPELINE))
 from build_complete_dictionary import build as build_complete_dictionary
+from build_filename_surrogate_inventory import audit as audit_filename_surrogates
 from anderson import convert as convert_1990
-from jacobs_alphabet import (ORDER as JACOBS_ORDER, category as jacobs_category,
-                             initial_for_entry, presentation_headword)
 
 # dictionary.json is generated data. Rebuild it from the frozen D-Z checkpoint
 # and the byte-preserved A-C tables before rendering the site.
@@ -41,6 +40,17 @@ if DATA == (REPO_ROOT / 'dictionary' / 'data').resolve():
         receipt_path.write_bytes(receipt_bytes)
 C = json.loads((DATA / 'corpus.json').read_text(encoding='utf-8'))
 D = json.loads((DATA / 'dictionary.json').read_text(encoding='utf-8'))
+if DATA == (REPO_ROOT / 'dictionary' / 'data').resolve():
+    surrogate_inventory = audit_filename_surrogates(
+        D, TOOL_DIR / 'archive' / '1990-fin')
+    surrogate_bytes = (json.dumps(surrogate_inventory, ensure_ascii=False, indent=2) + '\n').encode()
+    surrogate_path = TOOL_DIR / 'provenance' / 'filename-surrogate-inventory.json'
+    if not surrogate_path.exists() or surrogate_path.read_bytes() != surrogate_bytes:
+        surrogate_path.write_bytes(surrogate_bytes)
+from jacobs_alphabet import (ORDER as JACOBS_ORDER,
+                             american_english_order, category as jacobs_category,
+                             initial_for_entry, presentation_headword,
+                             presentation_headword_ascii)
 ENTRIES = D['entries']; STORIES = C['stories']
 
 # ---------------- fold (identical in app.js) ----------------
@@ -374,7 +384,10 @@ for e in ENTRIES:
                      (plain_hw(e), public_gloss_text(e['gloss']) if e['gloss'] else 'Miluk word')))
 
 # ---------------- words index (Miluk A–Z) ----------------
-order = sorted(groups.keys(), key=JACOBS_ORDER.__getitem__)
+# The attested inventory remains in documented Jacobs order.  The reader's
+# table of contents is instead arranged by ordinary American English base
+# letters; diacritic ties retain the inventory order.
+order = sorted(groups.keys(), key=american_english_order)
 anchor_for = {key: 's-%02d' % JACOBS_ORDER[key] for key in order}
 b = ['<h1>Miluk words</h1>',
      '<p class="lead">%d entries from the 1990 dictionary. Diacritics are ignored in the index order.</p>' % len(ENTRIES),
@@ -457,7 +470,7 @@ write('stories/index.html', shell('The texts', '\n'.join(b), '../', active='stor
 
 # ---------------- search index ----------------
 def search_aliases(e):
-    raw = e.get('headword_ascii') or ''
+    raw = presentation_headword_ascii(e)
     key = letter_of(e)
     remainder = raw[len(key):] if raw.lower().startswith(key) else raw
     return [alias + remainder for alias in jacobs_category(key)['search_aliases']]

@@ -46,11 +46,14 @@ RECOVERED_MANIFEST = load(PROV / 'recovered-source-manifest.json')
 RECOVERED_RECORDS = load(PROV / 'recovered-records.json')
 JACOBS = load(PROV / 'jacobs-alphabet.json')
 ATTESTED_INDEX = load(PROV / 'attested-index-inventory.json')
+SURROGATE_AUDIT = load(PROV / 'filename-surrogate-inventory.json')
 DZ_CHECKPOINT = load(TOOL_DIR / 'archive' / 'restoration-checkpoint' / 'dictionary-dz-1111.json')
 sys.path.insert(0, str(TOOL_DIR / 'pipeline'))
 from jacobs_alphabet import (DOCUMENTARY_EXCEPTIONS, JACOBS_ALPHABET,
-                             ORDER as JACOBS_ORDER, initial_for_entry, initial_key,
-                             presentation_headword)
+                             ORDER as JACOBS_ORDER, PRESENTATION_HEADWORD_FORMS,
+                             american_english_order, initial_for_entry, initial_key,
+                             presentation_headword, presentation_headword_ascii)
+from build_filename_surrogate_inventory import audit as audit_filename_surrogates
 from parse_byn import parse_byn
 fails = []
 
@@ -242,6 +245,28 @@ check(all(initial_for_entry(e) == '#' for e in length_bearing_barred_l),
 check(any(row['key'] == '#:' for row in JACOBS['phonetic_inventory']) and
       '#:' not in attested_initials,
       'Jacobs barred-L glottalized unit must remain in the 68 but be unattested initially')
+check(SURROGATE_AUDIT['schema'] == 'miluk-1990-filename-surrogate-audit/1' and
+      SURROGATE_AUDIT['entry_count'] == len(D['entries']) == 1275,
+      'filename-surrogate audit must account for every entry')
+check(SURROGATE_AUDIT['disposition_counts'] == {
+      'accepted-filename-surrogate': 224,
+      'filename-reference-fold-mismatch': 247,
+      'not-fin-source': 164,
+      'not-single-reference-list': 178,
+      'shared-fin-source': 462,
+      }, 'filename-surrogate audit disposition counts')
+check(SURROGATE_AUDIT['accepted_alias_count'] == len(PRESENTATION_HEADWORD_FORMS) == 224 and
+      SURROGATE_AUDIT['initial_repair_count'] == 71,
+      'complete filename-surrogate alias and initial-repair counts')
+check(audit_filename_surrogates(D, TOOL_DIR / 'archive' / '1990-fin') == SURROGATE_AUDIT,
+      'filename-surrogate audit must reproduce from protected FIN sources')
+entries_by_id = {entry['entry_id']: entry for entry in D['entries']}
+for rule in SURROGATE_AUDIT['accepted_aliases']:
+    entry = entries_by_id[rule['entry_id']]
+    check(presentation_headword_ascii(entry) == rule['first_reference_ascii'] and
+          presentation_headword(entry) == rule['first_reference_display'] and
+          initial_for_entry(entry) == rule['initial_key'],
+          f"audited filename surrogate not used for public presentation: {entry['entry_id']}")
 ka_entry = next(e for e in D['entries'] if e['entry_id'] == 'e0511-ka')
 check((ka_entry['headword'], ka_entry['headword_ascii'], ka_entry['source_file']) ==
       ('ka', 'KA', 'KA'),
@@ -254,9 +279,9 @@ check(presentation_headword(ka_entry) == "k̯̓a'" and
       initial_for_entry(ka_entry) == 'k!&' and
       initial_key("k!&a'") == initial_key("k&!a'") == initial_key("k̯̓a'") == 'k!&',
       'people headword must present and classify as initial anterior-palatal ejective k')
-check([e['entry_id'] for e in D['entries'] if initial_for_entry(e) == 'k!&'] ==
-      ['e0480-ki-muwi', 'e0481-kiyas', 'e0482-kituwa', 'e0511-ka'],
-      'all and only attested anterior-palatal ejective-k initials must share one category')
+check('e0511-ka' in [e['entry_id'] for e in D['entries'] if initial_for_entry(e) == 'k!&'] and
+      len([e for e in D['entries'] if initial_for_entry(e) == 'k!&']) == 10,
+      'all provenanced anterior-palatal ejective-k forms must share one category')
 ka_fin = TOOL_DIR / 'archive' / '1990-fin' / 'KA.FIN'
 check(hashlib.sha256(ka_fin.read_bytes()).hexdigest() ==
       '2687f8b29f5aa114b3a55b4456fbf86d187aa0b2fb94638a5b96ff07f3004b0d',
@@ -523,9 +548,10 @@ tab_labels = [html.unescape(value) for value in
               re.findall(r'<a href="#s-\d+">([^<]+)</a>', words_index)]
 expected_labels = [next(row['display'] for row in
                         JACOBS['phonetic_inventory'] + JACOBS['documentary_index_exceptions']
-                        if row['key'] == key) for key in attested_initials]
+                        if row['key'] == key)
+                   for key in sorted(attested_initials, key=american_english_order)]
 check(tab_labels == expected_labels,
-      'emitted index tabs must equal attested initial categories in Jacobs order')
+      'emitted index tabs must equal attested initial categories in American English order')
 search_by_id = {item['i']: item for item in index['entries']}
 check(search_by_id['e1111-z']['k'] == 'z', 'documentary Z entry literal search key changed')
 check('>z</a>' in words_index and '>Z</a>' not in words_index,

@@ -84,15 +84,28 @@ select the documentary display spelling.
 `KA.FIN` is preserved as the DOS-era source filename, but its filename is not
 linguistic evidence that the “people, person” headword was simply `ka`.
 `parse_dictionary.py` historically copied `Path.stem` into `headword`; that is
-why entry `e0511-ka` and its generated navigation inherited `KA`. The protected
-record's first Reference List form is `k!&a'`, which the authoritative converter
-renders `k̯̓a'`. A guarded presentation rule now uses that exact surviving form
-for the public header, indexes it beneath the existing Jacobs `k!&` unit
-(displayed `k̯'` in the inventory), and leaves `KA.FIN`, `source_file`,
-`headword_ascii`, `headword`, entry ID, and dictionary data unchanged. Unicode
-canonical ordering yields `k&!` from the two combining marks, so initial
-classification normalizes that ordering to the recovered inventory key `k!&`;
-it does not posit a new phonetic unit.
+why entry `e0511-ka` and its generated navigation inherited `KA`. Its protected
+first Reference List form is `k!&a'`, which the authoritative converter renders
+`k̯̓a'`.
+
+This is now an auditable general rule, not a KA-only exception. The deterministic
+`provenance/filename-surrogate-inventory.json` accounts for all 1,275 entries.
+It admits a public lemma only when one entry owns a `.FIN` source, that source
+has exactly one Reference List, and the source filename and its first Reference
+List form have the same conservative DOS-safe fold. Of 224 admitted filename
+surrogates, 71 change the initial category: for example, `GAHAIS.FIN` supplies
+`g;a<ha<is` → `g̣áháis`, under `g̣` rather than `g`. The 1,051 shared,
+non-single, nonmatching, or non-FIN records are explicit audit findings and
+remain unaltered.
+
+The rule affects only public headers, index placement, and search presentation.
+It leaves `.FIN` bytes, `source_file`, `headword_ascii`, `headword`, entry IDs,
+and dictionary data unchanged. Unicode canonical ordering yields `k&!` from the
+two combining marks, so initial classification normalizes that ordering to the
+recovered inventory key `k!&`; it does not posit a new phonetic unit. The public
+table of contents uses ordinary American English base-letter order; where that
+order ignores a Miluk diacritic, the documented Jacobs inventory supplies the
+stable tie-break.
 
 The visible `x'` bucket was likewise a classifier artifact. Entry
 `e1021-xinxinu` displays `x·ínx̣inu`, and its preserved form begins
@@ -147,8 +160,8 @@ literal form remains searchable.
 ## Before/after entries and attested index
 
 The old 1,111-entry checkpoint and complete 1,275-entry result classify as
-follows under the same Jacobs-aware longest-match rule. “Recovered” is the
-mechanical difference between the two builds.
+follows under the same source-provenanced rule. “Recovered” is the mechanical
+difference between the two builds.
 
 | Initial | Before | Recovered | After |
 |---|---:|---:|---:|
@@ -162,44 +175,44 @@ mechanical difference between the two builds.
 | `w` | 63 | 0 | 63 |
 | `m` | 65 | 0 | 65 |
 | `d` | 99 | 0 | 99 |
-| `t` | 78 | 0 | 78 |
+| `t` | 66 | 0 | 66 |
 | `t'` | 4 | 0 | 4 |
 | `dz` | 32 | 0 | 32 |
-| `ts` | 35 | 0 | 35 |
-| `t's` | 9 | 0 | 9 |
+| `ts` | 30 | 0 | 30 |
+| `t's` | 14 | 0 | 14 |
 | `s` | 35 | 0 | 35 |
 | `n` | 33 | 0 | 33 |
 | `dj` | 17 | 0 | 17 |
-| `tc` | 25 | 0 | 25 |
-| `t'c` | 2 | 0 | 2 |
+| `tc` | 18 | 0 | 18 |
+| `t'c` | 8 | 0 | 8 |
 | `c` | 3 | 24 | 27 |
 | `g̯` | 1 | 0 | 1 |
-| `k̯` | 4 | 0 | 4 |
-| `k̯'` | 4 | 0 | 4 |
-| `x̯` | 2 | 0 | 2 |
+| `k̯` | 6 | 0 | 6 |
+| `k̯'` | 10 | 0 | 10 |
+| `x̯` | 4 | 0 | 4 |
 | `y` | 45 | 0 | 45 |
-| `g` | 54 | 0 | 54 |
-| `gw` | 28 | 0 | 28 |
-| `k` | 38 | 0 | 38 |
-| `kw` | 20 | 0 | 20 |
-| `k'` | 2 | 0 | 2 |
-| `k'w` | 5 | 0 | 5 |
+| `g` | 41 | 0 | 41 |
+| `gw` | 27 | 0 | 27 |
+| `k` | 28 | 0 | 28 |
+| `kw` | 18 | 0 | 18 |
+| `k'` | 4 | 0 | 4 |
+| `k'w` | 7 | 0 | 7 |
 | `ɣ` | 0 | 8 | 8 |
-| `x` | 32 | 0 | 32 |
-| `xw` | 11 | 0 | 11 |
-| `g̣` | 26 | 0 | 26 |
-| `g̣w` | 1 | 0 | 1 |
-| `q` | 35 | 0 | 35 |
-| `qw` | 12 | 0 | 12 |
-| `q'` | 8 | 0 | 8 |
-| `q'w` | 1 | 0 | 1 |
-| `x̣` | 8 | 0 | 8 |
-| `x̣w` | 1 | 0 | 1 |
+| `x` | 22 | 0 | 22 |
+| `xw` | 8 | 0 | 8 |
+| `g̣` | 39 | 0 | 39 |
+| `g̣w` | 2 | 0 | 2 |
+| `q` | 32 | 0 | 32 |
+| `qw` | 10 | 0 | 10 |
+| `q'` | 12 | 0 | 12 |
+| `q'w` | 2 | 0 | 2 |
+| `x̣` | 16 | 0 | 16 |
+| `x̣w` | 4 | 0 | 4 |
 | `h` | 109 | 0 | 109 |
 | `hw` | 5 | 0 | 5 |
 | `dl` | 24 | 0 | 24 |
-| `tł` | 12 | 0 | 12 |
-| `t'ł` | 11 | 0 | 11 |
+| `tł` | 17 | 0 | 17 |
+| `t'ł` | 19 | 0 | 19 |
 | `l` | 31 | 0 | 31 |
 | `ł` | 0 | 57 | 57 |
 | `z` | 1 | 0 | 1 |

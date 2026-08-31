@@ -88,6 +88,11 @@ Stages are intentionally separate:
    final entries after proving the sole `#dja` duplicate is a strict superset.
 9. `jacobs_alphabet.py` classifies initials by longest Jacobs unit and separately
    scopes the founder-authorized documentary Z exception to `e1111-z`/`Z.FIN`.
+10. `build_filename_surrogate_inventory.py` audits every entry against the
+    preserved `.FIN` files. It permits a public lemma representative only for a
+    one-entry, one-Reference-List source whose DOS-safe filename fold matches
+    the first listed form. The generated provenance inventory records both the
+    accepted forms and all non-automatic dispositions.
 
 All JSON emission is UTF-8, sorted by stable source order, indented two spaces,
 and terminated by one newline.
@@ -101,10 +106,12 @@ admitted 684 D-Z sources but missed five consolidated A-C BYN tables containing
 successor, so the complete build admits 164 recovered entries and publishes
 1,275 entries without changing IDs `e0001` through `e1111`.
 
-The 1990 index contains only attested Jacobs initials, in Jacobs order, plus one
-separately labeled documentary exception: the unchanged `e1111-z` entry from
-`Z.FIN`. The visible Z category preserves a literal 1990 source form and does
-not assert independent phonemic status for `z`.
+The 1990 index contains only attested Jacobs initials plus one separately
+labeled documentary exception: the unchanged `e1111-z` entry from `Z.FIN`.
+The provenance receipt remains in Jacobs order; the reader-facing table of
+contents is sorted by American English base letters, with Jacobs order retained
+only to break diacritic ties. The visible Z category preserves a literal 1990
+source form and does not assert independent phonemic status for `z`.
 
 ## Provenance and corrections
 

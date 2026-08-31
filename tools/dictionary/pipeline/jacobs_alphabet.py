@@ -2,8 +2,10 @@
 """Jacobs-aware Miluk initial units and documentary index exceptions."""
 from __future__ import annotations
 
+import json
 import re
 import unicodedata
+from pathlib import Path
 
 
 def unit(key, display, aliases=(), series=""):
@@ -69,16 +71,17 @@ DOCUMENTARY_EXCEPTIONS = [{
     "explanation": "Preserves the literal 1990 Z.FIN headword without asserting independent phonemic status for z.",
 }]
 
-# A DOS filename is provenance, not necessarily the linguistic headword.  This
-# one guarded presentation rule is supported by KA.FIN's first Reference List
-# form and leaves the protected entry/source values untouched.
+# A DOS filename is provenance, not necessarily the linguistic headword.  The
+# audited inventory admits a source form only when a one-entry .FIN source has
+# exactly one Reference List and the filename's conservative DOS-safe fold
+# matches that list's first form.  The protected entry/source values remain
+# unchanged; this is public presentation and classification only.
+SURROGATE_INVENTORY = json.loads((Path(__file__).resolve().parents[1] /
+                                 "provenance" /
+                                 "filename-surrogate-inventory.json").read_text(
+                                     encoding="utf-8"))
 PRESENTATION_HEADWORD_FORMS = {
-    "e0511-ka": {
-        "source_file": "KA",
-        "filename_headword": "KA",
-        "form_ascii": "k!&a'",
-        "form_display": "k̯̓a'",
-    },
+    row["entry_id"]: row for row in SURROGATE_INVENTORY["accepted_aliases"]
 }
 
 ALL_CATEGORIES = JACOBS_ALPHABET + DOCUMENTARY_EXCEPTIONS
@@ -146,14 +149,20 @@ def presentation_headword(entry) -> str:
     if rule is None:
         return entry["headword"]
     if (entry.get("source_file") != rule["source_file"] or
-            entry.get("headword_ascii") != rule["filename_headword"] or
-            entry.get("headword") != rule["filename_headword"].lower()):
+            entry.get("headword_ascii") != rule["headword_ascii"]):
         raise ValueError(f"presentation-headword provenance changed: {entry.get('entry_id')}")
-    matches = [form for form in entry.get("forms", [])
-               if form.get("ascii") == rule["form_ascii"]]
-    if len(matches) != 1 or matches[0].get("form") != rule["form_display"]:
+    forms = entry.get("forms", [])
+    if (not forms or forms[0].get("ascii") != rule["first_reference_ascii"] or
+            forms[0].get("form") != rule["first_reference_display"]):
         raise ValueError(f"presentation-headword source form changed: {entry.get('entry_id')}")
-    return matches[0]["form"]
+    return forms[0]["form"]
+
+
+def presentation_headword_ascii(entry) -> str:
+    """Return the provenanced Anderson form behind a public headword."""
+    rule = PRESENTATION_HEADWORD_FORMS.get(entry.get("entry_id"))
+    return (rule["first_reference_ascii"] if rule is not None
+            else entry.get("headword_ascii") or entry["headword"])
 
 
 def initial_for_entry(entry) -> str:
@@ -168,11 +177,25 @@ def initial_for_entry(entry) -> str:
         return "#"
     if display.startswith("x·"):
         return "x"
-    value = (presentation_headword(entry) if entry.get("entry_id") in PRESENTATION_HEADWORD_FORMS
-             else entry.get("headword_ascii") or entry["headword"])
+    value = presentation_headword_ascii(entry)
     return initial_key(value,
                        entry_id=entry.get("entry_id"), source_file=entry.get("source_file"))
 
 
 def category(key: str):
     return BY_KEY[key]
+
+
+def american_english_order(key: str):
+    """Sort visible index labels by their English base letters.
+
+    Diacritics and apostrophes do not create English alphabet positions.  When
+    two Miluk units have the same English base, retain the documented Jacobs
+    inventory order as a stable secondary key.
+    """
+    value = unicodedata.normalize("NFD", category(key)["display"].lower())
+    value = "".join(ch for ch in value if not unicodedata.combining(ch))
+    value = (value.replace("ɛ", "e").replace("ə", "e").replace("ɣ", "g")
+                  .replace("ł", "l").replace("ƚ", "l").replace("ʔ", "q"))
+    value = re.sub(r"[^a-z]", "", value)
+    return value, ORDER[key]
