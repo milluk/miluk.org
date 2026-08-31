@@ -30,9 +30,11 @@ h1 { font-size: 2rem; line-height: 1.2; margin: .4rem 0 .6rem; }
 h1.hw { font-size: 2.4rem; color: var(--gold-light); }
 h2 { font-family: var(--font-sans); font-size: .8rem; letter-spacing: .14em;
      text-transform: uppercase; color: var(--gold); margin: 1.8rem 0 .5rem; }
+h2[id^="s-"] { font-family: var(--font-serif); }
 .lead { color: var(--gray); margin-bottom: 1rem; }
-.crumb { font-family: var(--font-sans); font-size: .8rem; color: var(--dim); margin-bottom: .4rem; }
-.crumb a { color: var(--dim); } .crumb a:hover { color: var(--gold); }
+.crumb { font-family: var(--font-serif); font-size: .8rem; color: var(--dim); margin-bottom: .4rem; }
+.crumb a { color: var(--dim); font-family: var(--font-sans); }
+.crumb a:hover { color: var(--gold); }
 .gloss { font-style: italic; font-size: 1.25rem; color: var(--white); margin-bottom: .6rem; }
 .mk { font-family: var(--font-serif); }
 
@@ -66,7 +68,6 @@ b { color: var(--gold-light); }
 /* indexes */
 .alpha { font-family: var(--font-serif); letter-spacing: .1em; margin: .8rem 0 1.2rem;
          line-height: 2.1; }
-.alpha ~ h2 { font-family: var(--font-serif); }
 .alpha a { padding: .15rem .45rem; border: 1px solid var(--line); border-radius: .35rem; }
 .entryindex { list-style: none; columns: 2; column-gap: 2.4rem; margin-bottom: 1.4rem; }
 .entryindex li { break-inside: avoid; padding: .16rem 0; }

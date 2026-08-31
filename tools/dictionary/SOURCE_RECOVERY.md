@@ -81,6 +81,28 @@ select the documentary display spelling.
 
 ### Initial-index presentation boundary
 
+`KA.FIN` is preserved as the DOS-era source filename, but its filename is not
+linguistic evidence that the “people, person” headword was simply `ka`.
+`parse_dictionary.py` historically copied `Path.stem` into `headword`; that is
+why entry `e0511-ka` and its generated navigation inherited `KA`. The protected
+record's first Reference List form is `k!&a'`, which the authoritative converter
+renders `k̯̓a'`. A guarded presentation rule now uses that exact surviving form
+for the public header, indexes it beneath the existing Jacobs `k!&` unit
+(displayed `k̯'` in the inventory), and leaves `KA.FIN`, `source_file`,
+`headword_ascii`, `headword`, entry ID, and dictionary data unchanged. Unicode
+canonical ordering yields `k&!` from the two combining marks, so initial
+classification normalizes that ordering to the recovered inventory key `k!&`;
+it does not posit a new phonetic unit.
+
+The visible `x'` bucket was likewise a classifier artifact. Entry
+`e1021-xinxinu` displays `x·ínx̣inu`, and its preserved form begins
+`x:i<nx;inu`: the colon is the length mark rendered as a middle dot. The raw
+classifier converted the middle dot back to a colon and then selected `x:` by
+longest match, even though the Jacobs inventory uses that same key to name the
+distinct glottalized `x'` unit. Presentation-aware classification now keeps
+this length-bearing entry beneath `x`. Jacobs `x'` remains in the 68-unit
+inventory but is unattested word-initially, so no `x'` tab is emitted.
+
 The four recovered records `DICT#.BYN:3` through `DICT#.BYN:6` (entries
 `e1114-l-e-nwi` through `e1117-l-u`) begin with raw `#:` and display barred L
 plus length (`ł·`). The colon is therefore a length mark in these lexical
@@ -89,18 +111,6 @@ uses that converted presentation evidence to group the four beneath `ł`.
 Jacobs `ł′` remains one of the 68 phonetic units but is unattested initially,
 so no `ł′` index tab is emitted. The raw rows, entry IDs, and headwords are
 unchanged.
-
-The existing entry `e1021-xinxinu` likewise begins in converted display with
-`x·`, and its preserved 1990 form is `x:i<nx;inu`. The middle dot is visible
-length, not Jacobs's separate glottalized `x′` unit. It therefore indexes under
-`x`; `x′` remains in the 68-unit inventory but is unattested word-initially.
-
-`KA.FIN` is the DOS-safe filename surrogate for the Anderson headword `k!&a`.
-The archival entry continues to retain `headword_ascii: KA`, source file `KA`,
-and stable ID `e0511-ka`; its preserved Reference List begins `k!&a'` and
-`k!&a<\``. Public lexical surfaces restore the representative `k̯̓a` and file
-it under Jacobs's anterior-palatal ejective `k̯'`. This is a presentation and
-index correction only, not a rewrite of the 1990 record.
 
 `e0027-u-u` remains a Gate 2 read-only source-fidelity audit target for its
 missing gloss and large form family; Gate 1 makes no inference or regrouping.
@@ -127,7 +137,7 @@ The existing source `Z.FIN` (421 bytes, SHA-256
 produces `e1111-z`, headword `z`, form `zu:<t'#u:c`, gloss “awful thing.”
 Jacobs's authoritative inventory contains `dz` but no independent `z` unit.
 
-The founder ruling retains a visible `Z` index category for this literal 1990
+The founder ruling retains a visible lowercase `z` index category for this literal 1990
 source form. It does not reinterpret the entry as `DZ` and does not add an
 independent `z` to Jacobs's phonetic inventory. The exception is constrained
 in code and verification to entry `e1111-z`, source file `Z`, and ASCII
@@ -164,8 +174,8 @@ mechanical difference between the two builds.
 | `t'c` | 2 | 0 | 2 |
 | `c` | 3 | 24 | 27 |
 | `g̯` | 1 | 0 | 1 |
-| `k̯` | 7 | 0 | 7 |
-| `k̯'` | 1 | 0 | 1 |
+| `k̯` | 4 | 0 | 4 |
+| `k̯'` | 4 | 0 | 4 |
 | `x̯` | 2 | 0 | 2 |
 | `y` | 45 | 0 | 45 |
 | `g` | 54 | 0 | 54 |
@@ -191,14 +201,24 @@ mechanical difference between the two builds.
 | `tł` | 12 | 0 | 12 |
 | `t'ł` | 11 | 0 | 11 |
 | `l` | 31 | 0 | 31 |
-| `ł` | 0 | 53 | 53 |
-| `ł'` | 0 | 4 | 4 |
-| `Z` | 1 | 0 | 1 |
+| `ł` | 0 | 57 | 57 |
+| `z` | 1 | 0 | 1 |
 
-The 52 rows above are the complete attested initial-index inventory, already in
+The 51 rows above are the complete attested initial-index inventory, already in
 Jacobs order with the documentary exception last. The phonetic inventory has
-68 units; the 17 unattested word-initial units are omitted from the visible
+68 units; the 18 unattested word-initial units are omitted from the visible
 index rather than emitted as empty tabs.
+
+## Dictionary font path
+
+The site still requests Charis SIL remotely and retains Georgia/Times fallbacks;
+no font files or dependencies were added. Chrome's receipt for `x̣` identified
+a separate CSS defect: `.alpha`, generic `h2`, and `.crumb` explicitly selected
+the system sans stack, so those linguistic index labels could never inherit the
+body's Charis stack. The word-index alphabet and section headings, plus the
+linguistic part of entry breadcrumbs, now select the serif/Charis stack. The
+breadcrumb link and the rest of the navigation/interface chrome remain on the
+system sans stack.
 
 ## Integrity hashes
 

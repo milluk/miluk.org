@@ -48,9 +48,9 @@ JACOBS = load(PROV / 'jacobs-alphabet.json')
 ATTESTED_INDEX = load(PROV / 'attested-index-inventory.json')
 DZ_CHECKPOINT = load(TOOL_DIR / 'archive' / 'restoration-checkpoint' / 'dictionary-dz-1111.json')
 sys.path.insert(0, str(TOOL_DIR / 'pipeline'))
-from jacobs_alphabet import (DOCUMENTARY_EXCEPTIONS, DOCUMENTARY_HEADWORD_ALIASES,
-                             JACOBS_ALPHABET, ORDER as JACOBS_ORDER,
-                             initial_for_entry, initial_key, public_headword_for_entry)
+from jacobs_alphabet import (DOCUMENTARY_EXCEPTIONS, JACOBS_ALPHABET,
+                             ORDER as JACOBS_ORDER, initial_for_entry, initial_key,
+                             presentation_headword)
 from parse_byn import parse_byn
 fails = []
 
@@ -242,24 +242,32 @@ check(all(initial_for_entry(e) == '#' for e in length_bearing_barred_l),
 check(any(row['key'] == '#:' for row in JACOBS['phonetic_inventory']) and
       '#:' not in attested_initials,
       'Jacobs barred-L glottalized unit must remain in the 68 but be unattested initially')
-x_length = next(e for e in D['entries'] if e['entry_id'] == 'e1021-xinxinu')
-check(x_length['headword'] == x_length['headword_ascii'] == 'x·ínx̣inu' and
-      x_length['source_file'] == 'X',
-      'x-plus-length documentary entry changed')
-check(initial_for_entry(x_length) == 'x' and 'x:' not in attested_initials,
-      'x-plus-length entry must index beneath x, not Jacobs glottalized x')
-ka_surrogate = next(e for e in D['entries'] if e['entry_id'] == 'e0511-ka')
-check(ka_surrogate['headword'] == 'ka' and ka_surrogate['headword_ascii'] == 'KA' and
-      ka_surrogate['source_file'] == 'KA',
-      'KA.FIN archival filename surrogate changed')
-check(DOCUMENTARY_HEADWORD_ALIASES[("e0511-ka", "KA", "KA")]['ascii'] == 'k!&a' and
-      public_headword_for_entry(ka_surrogate) == 'k̯̓a' and
-      initial_for_entry(ka_surrogate) == 'k!&',
-      'KA.FIN public headword restoration or anterior-palatal ejective classification')
-ka_source = (TOOL_DIR / 'archive' / '1990-fin' / 'KA.FIN').read_text(
-    encoding='ascii', errors='ignore')
-check("Reference List:  k!&a',k!&a<`" in ka_source,
-      'KA.FIN preserved Reference List no longer supports the restored headword')
+ka_entry = next(e for e in D['entries'] if e['entry_id'] == 'e0511-ka')
+check((ka_entry['headword'], ka_entry['headword_ascii'], ka_entry['source_file']) ==
+      ('ka', 'KA', 'KA'),
+      'KA.FIN filename-derived protected fields changed')
+check([form for form in ka_entry['forms']
+       if form.get('ascii') == "k!&a'" and form.get('form') == "k̯̓a'"] ==
+      [ka_entry['forms'][0]],
+      'KA.FIN first Reference List form no longer uniquely supports the public headword')
+check(presentation_headword(ka_entry) == "k̯̓a'" and
+      initial_for_entry(ka_entry) == 'k!&' and
+      initial_key("k!&a'") == initial_key("k&!a'") == initial_key("k̯̓a'") == 'k!&',
+      'people headword must present and classify as initial anterior-palatal ejective k')
+check([e['entry_id'] for e in D['entries'] if initial_for_entry(e) == 'k!&'] ==
+      ['e0480-ki-muwi', 'e0481-kiyas', 'e0482-kituwa', 'e0511-ka'],
+      'all and only attested anterior-palatal ejective-k initials must share one category')
+ka_fin = TOOL_DIR / 'archive' / '1990-fin' / 'KA.FIN'
+check(hashlib.sha256(ka_fin.read_bytes()).hexdigest() ==
+      '2687f8b29f5aa114b3a55b4456fbf86d187aa0b2fb94638a5b96ff07f3004b0d',
+      'protected KA.FIN bytes changed')
+length_bearing_x = [e for e in D['entries'] if e['headword'].startswith('x·')]
+check([e['entry_id'] for e in length_bearing_x] == ['e1021-xinxinu'] and
+      initial_for_entry(length_bearing_x[0]) == 'x',
+      'length-bearing x record must index beneath x')
+check(any(row['key'] == 'x:' for row in JACOBS['phonetic_inventory']) and
+      'x:' not in attested_initials,
+      "Jacobs x' unit must remain in the 68 but be unattested initially")
 attested_counts = Counter(classified_initials)
 check([row['key'] for row in ATTESTED_INDEX['categories']] == attested_initials,
       'attested index receipt category order')
@@ -495,7 +503,8 @@ for page in pages:
 
 for entry in D['entries']:
     text = (OUT / 'words' / (entry['entry_id'] + '.html')).read_text(encoding='utf-8')
-    check(html.escape(entry['headword']) in text, f"headword missing on page: {entry['entry_id']}")
+    check(html.escape(presentation_headword(entry)) in text,
+          f"presentation headword missing on page: {entry['entry_id']}")
     for block in re.findall(r'<div class="att">(.*?)</div>', text, re.S):
         if 'stories/' in block:
             check('<b>' in block, f"attestation without bolded form: {entry['entry_id']}")
@@ -523,24 +532,39 @@ check('>z</a>' in words_index and '>Z</a>' not in words_index,
       'documentary index heading must be lowercase z')
 check('ł′' not in tab_labels and 'ł' in tab_labels,
       'unattested barred-L glottalized tab must not be emitted')
+check("x'" not in tab_labels and 'x' in tab_labels,
+      "unattested x glottalized tab must not be emitted")
 for entry in length_bearing_barred_l:
     page = (OUT / 'words' / (entry['entry_id'] + '.html')).read_text(encoding='utf-8')
     check('<a href="../words/index.html">Words</a> · ł</p>' in page,
           f"barred-L-plus-length breadcrumb: {entry['entry_id']}")
 ka_page = (OUT / 'words' / 'e0511-ka.html').read_text(encoding='utf-8')
-check('<title>k̯̓a — Miluk Dictionary</title>' in ka_page and
-      '<h1 class="hw">k̯̓a</h1>' in ka_page and
-      '<a href="../words/index.html">Words</a> · k̯&#x27;</p>' in ka_page,
-      'KA.FIN public title, headword, or restored initial breadcrumb')
-check('<p class="alpha">' in words_index and
-      '<h2 id="s-55">x̣</h2>' in words_index,
-      'Miluk index navigation and initial headings must retain scoped linguistic markup')
-dictionary_css = (OUT / 'style.css').read_text(encoding='utf-8')
-check('.alpha { font-family: var(--font-serif);' in dictionary_css and
-      '.alpha ~ h2 { font-family: var(--font-serif); }' in dictionary_css and
-      '.nav-links { display: flex;' in dictionary_css and
-      'font-family: var(--font-sans);' in dictionary_css,
-      'Charis index repair must leave interface chrome on the system sans-serif stack')
+check('<h1 class="hw">k̯̓a&#x27;</h1>' in ka_page and
+      '<a href="../words/index.html">Words</a> · k̯&#x27;</p>' in ka_page and
+      '1990 source file: KA · id: e0511-ka' in ka_page,
+      'KA.FIN public headword, lawful category, or provenance missing')
+check('href="e0511-ka.html" class="mk">k̯̓a&#x27;</a>' in words_index and
+      search_by_id['e0511-ka']['h'] == "k̯̓a'" and
+      search_by_id['e0511-ka']['k'] == 'ka',
+      'people presentation headword missing from index/search surfaces')
+x_length_page = (OUT / 'words' / 'e1021-xinxinu.html').read_text(encoding='utf-8')
+check('<a href="../words/index.html">Words</a> · x</p>' in x_length_page,
+      'length-bearing x breadcrumb must use x rather than unattested x glottalized')
+
+# Linguistic alphabet labels inherit Charis; interface chrome remains on the
+# system stack. This directly guards the selector path identified in Chrome.
+style = (OUT / 'style.css').read_text(encoding='utf-8')
+check(re.search(r'h2\[id\^="s-"\]\s*\{[^}]*var\(--font-serif\)', style, re.S),
+      'linguistic index headings must use the Charis serif stack')
+check(re.search(r'\.alpha\s*\{[^}]*var\(--font-serif\)', style, re.S),
+      'linguistic alphabet navigation must use the Charis serif stack')
+check(re.search(r'\.crumb\s*\{[^}]*var\(--font-serif\)', style, re.S) and
+      re.search(r'\.crumb a\s*\{[^}]*var\(--font-sans\)', style, re.S),
+      'linguistic breadcrumb label must use Charis while its interface link remains sans')
+check('>x̣</a>' in words_index and re.search(r'<h2 id="s-\d+">x̣</h2>', words_index) and
+      '<a href="../words/index.html">Words</a> · x̣</p>' in
+      (OUT / 'words' / 'e1022-xlgwat.html').read_text(encoding='utf-8'),
+      'x-dot-below linguistic tab, heading, and breadcrumb selector paths changed')
 
 # Public reference presentation: raw data remains archival ASCII; exactly four
 # pre-fix fields required deterministic conversion, and only unique targets link.
