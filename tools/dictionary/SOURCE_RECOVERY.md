@@ -90,6 +90,18 @@ Jacobs `ł′` remains one of the 68 phonetic units but is unattested initially,
 so no `ł′` index tab is emitted. The raw rows, entry IDs, and headwords are
 unchanged.
 
+The existing entry `e1021-xinxinu` likewise begins in converted display with
+`x·`, and its preserved 1990 form is `x:i<nx;inu`. The middle dot is visible
+length, not Jacobs's separate glottalized `x′` unit. It therefore indexes under
+`x`; `x′` remains in the 68-unit inventory but is unattested word-initially.
+
+`KA.FIN` is the DOS-safe filename surrogate for the Anderson headword `k!&a`.
+The archival entry continues to retain `headword_ascii: KA`, source file `KA`,
+and stable ID `e0511-ka`; its preserved Reference List begins `k!&a'` and
+`k!&a<\``. Public lexical surfaces restore the representative `k̯̓a` and file
+it under Jacobs's anterior-palatal ejective `k̯'`. This is a presentation and
+index correction only, not a rewrite of the 1990 record.
+
 `e0027-u-u` remains a Gate 2 read-only source-fidelity audit target for its
 missing gloss and large form family; Gate 1 makes no inference or regrouping.
 
@@ -153,17 +165,17 @@ mechanical difference between the two builds.
 | `c` | 3 | 24 | 27 |
 | `g̯` | 1 | 0 | 1 |
 | `k̯` | 7 | 0 | 7 |
+| `k̯'` | 1 | 0 | 1 |
 | `x̯` | 2 | 0 | 2 |
 | `y` | 45 | 0 | 45 |
 | `g` | 54 | 0 | 54 |
 | `gw` | 28 | 0 | 28 |
-| `k` | 39 | 0 | 39 |
+| `k` | 38 | 0 | 38 |
 | `kw` | 20 | 0 | 20 |
 | `k'` | 2 | 0 | 2 |
 | `k'w` | 5 | 0 | 5 |
 | `ɣ` | 0 | 8 | 8 |
-| `x` | 31 | 0 | 31 |
-| `x'` | 1 | 0 | 1 |
+| `x` | 32 | 0 | 32 |
 | `xw` | 11 | 0 | 11 |
 | `g̣` | 26 | 0 | 26 |
 | `g̣w` | 1 | 0 | 1 |

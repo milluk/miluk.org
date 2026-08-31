@@ -69,6 +69,19 @@ DOCUMENTARY_EXCEPTIONS = [{
     "explanation": "Preserves the literal 1990 Z.FIN headword without asserting independent phonemic status for z.",
 }]
 
+# KA.FIN is a DOS-safe filename surrogate, not the lexical headword. Its
+# preserved 1990 Reference List begins with anterior-palatal ejective forms
+# (``k!&...``). Keep the archival fields and stable entry ID unchanged while
+# restoring the intended lexical representative on public surfaces.
+DOCUMENTARY_HEADWORD_ALIASES = {
+    ("e0511-ka", "KA", "KA"): {
+        "ascii": "k!&a",
+        "display": "k̯̓a",
+        "initial_key": "k!&",
+        "reason": "KA.FIN is the DOS-safe surrogate for the 1990 Anderson headword k!&a",
+    },
+}
+
 ALL_CATEGORIES = JACOBS_ALPHABET + DOCUMENTARY_EXCEPTIONS
 BY_KEY = {row["key"]: row for row in ALL_CATEGORIES}
 ORDER = {row["key"]: number for number, row in enumerate(ALL_CATEGORIES)}
@@ -127,6 +140,10 @@ def initial_key(value: str, *, entry_id=None, source_file=None) -> str:
 
 
 def initial_for_entry(entry) -> str:
+    alias = DOCUMENTARY_HEADWORD_ALIASES.get(
+        (entry.get("entry_id"), entry.get("source_file"), entry.get("headword_ascii")))
+    if alias is not None:
+        return alias["initial_key"]
     # The recovered A-C tables use a colon after barred L as a length mark,
     # which the display converter renders as a middle dot. Do not let the raw
     # longest-match key ``#:`` reinterpret that prosodic mark as Jacobs's
@@ -136,8 +153,18 @@ def initial_for_entry(entry) -> str:
     display = entry.get("headword", "").strip().lower()
     if display.startswith(("ł·", "ƚ·")):
         return "#"
+    # The sole x-plus-length lexical headword likewise displays a middle dot.
+    # Do not reinterpret that visible length as the separate Jacobs x' unit.
+    if display.startswith("x·"):
+        return "x"
     return initial_key(entry.get("headword_ascii") or entry["headword"],
                        entry_id=entry.get("entry_id"), source_file=entry.get("source_file"))
+
+
+def public_headword_for_entry(entry) -> str:
+    alias = DOCUMENTARY_HEADWORD_ALIASES.get(
+        (entry.get("entry_id"), entry.get("source_file"), entry.get("headword_ascii")))
+    return alias["display"] if alias is not None else entry["headword"]
 
 
 def category(key: str):

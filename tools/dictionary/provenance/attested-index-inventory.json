@@ -212,6 +212,16 @@
       "count": 7
     },
     {
+      "key": "k!&",
+      "display": "k̯'",
+      "search_aliases": [
+        "ky'"
+      ],
+      "series": "anterior palatal",
+      "status": "Jacobs phonetic unit",
+      "count": 1
+    },
+    {
       "key": "x&",
       "display": "x̯",
       "search_aliases": [
@@ -253,7 +263,7 @@
       "search_aliases": [],
       "series": "medial palatal",
       "status": "Jacobs phonetic unit",
-      "count": 39
+      "count": 38
     },
     {
       "key": "kw",
@@ -301,17 +311,7 @@
       "search_aliases": [],
       "series": "medial palatal",
       "status": "Jacobs phonetic unit",
-      "count": 31
-    },
-    {
-      "key": "x:",
-      "display": "x'",
-      "search_aliases": [
-        "x'"
-      ],
-      "series": "medial palatal",
-      "status": "Jacobs phonetic unit",
-      "count": 1
+      "count": 32
     },
     {
       "key": "xw",

@@ -48,8 +48,9 @@ JACOBS = load(PROV / 'jacobs-alphabet.json')
 ATTESTED_INDEX = load(PROV / 'attested-index-inventory.json')
 DZ_CHECKPOINT = load(TOOL_DIR / 'archive' / 'restoration-checkpoint' / 'dictionary-dz-1111.json')
 sys.path.insert(0, str(TOOL_DIR / 'pipeline'))
-from jacobs_alphabet import (DOCUMENTARY_EXCEPTIONS, JACOBS_ALPHABET,
-                             ORDER as JACOBS_ORDER, initial_for_entry, initial_key)
+from jacobs_alphabet import (DOCUMENTARY_EXCEPTIONS, DOCUMENTARY_HEADWORD_ALIASES,
+                             JACOBS_ALPHABET, ORDER as JACOBS_ORDER,
+                             initial_for_entry, initial_key, public_headword_for_entry)
 from parse_byn import parse_byn
 fails = []
 
@@ -241,6 +242,24 @@ check(all(initial_for_entry(e) == '#' for e in length_bearing_barred_l),
 check(any(row['key'] == '#:' for row in JACOBS['phonetic_inventory']) and
       '#:' not in attested_initials,
       'Jacobs barred-L glottalized unit must remain in the 68 but be unattested initially')
+x_length = next(e for e in D['entries'] if e['entry_id'] == 'e1021-xinxinu')
+check(x_length['headword'] == x_length['headword_ascii'] == 'x·ínx̣inu' and
+      x_length['source_file'] == 'X',
+      'x-plus-length documentary entry changed')
+check(initial_for_entry(x_length) == 'x' and 'x:' not in attested_initials,
+      'x-plus-length entry must index beneath x, not Jacobs glottalized x')
+ka_surrogate = next(e for e in D['entries'] if e['entry_id'] == 'e0511-ka')
+check(ka_surrogate['headword'] == 'ka' and ka_surrogate['headword_ascii'] == 'KA' and
+      ka_surrogate['source_file'] == 'KA',
+      'KA.FIN archival filename surrogate changed')
+check(DOCUMENTARY_HEADWORD_ALIASES[("e0511-ka", "KA", "KA")]['ascii'] == 'k!&a' and
+      public_headword_for_entry(ka_surrogate) == 'k̯̓a' and
+      initial_for_entry(ka_surrogate) == 'k!&',
+      'KA.FIN public headword restoration or anterior-palatal ejective classification')
+ka_source = (TOOL_DIR / 'archive' / '1990-fin' / 'KA.FIN').read_text(
+    encoding='ascii', errors='ignore')
+check("Reference List:  k!&a',k!&a<`" in ka_source,
+      'KA.FIN preserved Reference List no longer supports the restored headword')
 attested_counts = Counter(classified_initials)
 check([row['key'] for row in ATTESTED_INDEX['categories']] == attested_initials,
       'attested index receipt category order')
@@ -508,6 +527,20 @@ for entry in length_bearing_barred_l:
     page = (OUT / 'words' / (entry['entry_id'] + '.html')).read_text(encoding='utf-8')
     check('<a href="../words/index.html">Words</a> · ł</p>' in page,
           f"barred-L-plus-length breadcrumb: {entry['entry_id']}")
+ka_page = (OUT / 'words' / 'e0511-ka.html').read_text(encoding='utf-8')
+check('<title>k̯̓a — Miluk Dictionary</title>' in ka_page and
+      '<h1 class="hw">k̯̓a</h1>' in ka_page and
+      '<a href="../words/index.html">Words</a> · k̯&#x27;</p>' in ka_page,
+      'KA.FIN public title, headword, or restored initial breadcrumb')
+check('<p class="alpha">' in words_index and
+      '<h2 id="s-55">x̣</h2>' in words_index,
+      'Miluk index navigation and initial headings must retain scoped linguistic markup')
+dictionary_css = (OUT / 'style.css').read_text(encoding='utf-8')
+check('.alpha { font-family: var(--font-serif);' in dictionary_css and
+      '.alpha ~ h2 { font-family: var(--font-serif); }' in dictionary_css and
+      '.nav-links { display: flex;' in dictionary_css and
+      'font-family: var(--font-sans);' in dictionary_css,
+      'Charis index repair must leave interface chrome on the system sans-serif stack')
 
 # Public reference presentation: raw data remains archival ASCII; exactly four
 # pre-fix fields required deterministic conversion, and only unique targets link.

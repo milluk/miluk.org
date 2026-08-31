@@ -64,8 +64,9 @@ a.w:hover { color: var(--gold); border-bottom-color: var(--gold); }
 b { color: var(--gold-light); }
 
 /* indexes */
-.alpha { font-family: var(--font-sans); letter-spacing: .1em; margin: .8rem 0 1.2rem;
+.alpha { font-family: var(--font-serif); letter-spacing: .1em; margin: .8rem 0 1.2rem;
          line-height: 2.1; }
+.alpha ~ h2 { font-family: var(--font-serif); }
 .alpha a { padding: .15rem .45rem; border: 1px solid var(--line); border-radius: .35rem; }
 .entryindex { list-style: none; columns: 2; column-gap: 2.4rem; margin-bottom: 1.4rem; }
 .entryindex li { break-inside: avoid; padding: .16rem 0; }

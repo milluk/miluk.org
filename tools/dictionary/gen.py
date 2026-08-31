@@ -20,7 +20,8 @@ PIPELINE = TOOL_DIR / 'pipeline'
 sys.path.insert(0, str(PIPELINE))
 from build_complete_dictionary import build as build_complete_dictionary
 from anderson import convert as convert_1990
-from jacobs_alphabet import ORDER as JACOBS_ORDER, category as jacobs_category, initial_for_entry
+from jacobs_alphabet import (ORDER as JACOBS_ORDER, category as jacobs_category,
+                             initial_for_entry, public_headword_for_entry)
 
 # dictionary.json is generated data. Rebuild it from the frozen D-Z checkpoint
 # and the byte-preserved A-C tables before rendering the site.
@@ -76,7 +77,7 @@ for e in ENTRIES:
 live = [s for s in STORIES if s.get('source', {}).get('layer') == 'uwpa-recovered-record']
 live_ids = {s['story_id'] for s in live}
 HOM = re.compile(r'[¹²³⁴⁵]+$')
-def plain_hw(e): return HOM.sub('', e['headword'])
+def plain_hw(e): return HOM.sub('', public_headword_for_entry(e))
 
 # ---------------- public cross-reference display ----------------
 # Archival fields retain Anderson's 1990 ASCII. Only their public rendering is
@@ -256,7 +257,7 @@ for e in ENTRIES:
     eid = e['entry_id']; root = '../'
     b = []
     b.append('<p class="crumb"><a href="../words/index.html">Words</a> · %s</p>' % E(label_for[letter_of(e)]))
-    b.append('<h1 class="hw">%s</h1>' % E(e['headword']))
+    b.append('<h1 class="hw">%s</h1>' % E(public_headword_for_entry(e)))
     if e['gloss']:
         b.append('<p class="gloss">%s</p>' % public_gloss(e['gloss']))
     # forms
@@ -291,7 +292,8 @@ for e in ENTRIES:
                 tgt = targets[0]
                 lead = x.split('--')[0].strip()
                 pre = (E(lead) + ' — ') if '--' in x and lead else ''
-                xs.append('%s<a href="%s.html">%s</a>' % (pre, tgt['entry_id'], E(tgt['headword'])))
+                xs.append('%s<a href="%s.html">%s</a>' %
+                          (pre, tgt['entry_id'], E(public_headword_for_entry(tgt))))
             else:
                 if ASCII_NOTATION.search(tail):
                     if '--' in x:
@@ -367,7 +369,7 @@ for e in ENTRIES:
                  % ' · '.join(E(a['unresolved']) for a in unres))
     b.append('<p class="prov">1990 source file: %s · id: %s</p>' % (E(e.get('source_file') or ''), E(eid)))
     write('words/%s.html' % eid,
-          shell(e['headword'], '\n'.join(b), root, active='words',
+          shell(public_headword_for_entry(e), '\n'.join(b), root, active='words',
                 desc='Miluk dictionary entry: %s — %s' %
                      (plain_hw(e), public_gloss_text(e['gloss']) if e['gloss'] else 'Miluk word')))
 
@@ -382,7 +384,7 @@ for k in order:
     b.append('<h2 id="%s">%s</h2><ul class="entryindex">' % (anchor_for[k], E(label_for[k])))
     for e in sorted(groups[k], key=lambda x: (fold(plain_hw(x)), x['headword'])):
         b.append('<li><a href="%s.html" class="mk">%s</a><span class="g">%s</span></li>'
-                 % (e['entry_id'], E(e['headword']), E(public_gloss_text(e['gloss'] or ''))))
+                 % (e['entry_id'], E(public_headword_for_entry(e)), E(public_gloss_text(e['gloss'] or ''))))
     b.append('</ul>')
 write('words/index.html', shell('Miluk words', '\n'.join(b), '../', active='words',
                                 desc='Miluk–English: all %d entries of the 1990 Miluk dictionary.' % len(ENTRIES)))
@@ -406,7 +408,7 @@ for k in sorted(senses):
     if f0 != cur:
         cur = f0
         b.append('<h2>%s</h2>' % E(cur))
-    links = ', '.join('<a class="mk" href="../words/%s.html">%s</a>' % (i, E(by_id[i]['headword']))
+    links = ', '.join('<a class="mk" href="../words/%s.html">%s</a>' % (i, E(public_headword_for_entry(by_id[i])))
                       for i in sorted(senses[k]))
     b.append('<p class="sense"><span class="e">%s</span> %s</p>' % (E(k), links))
 write('english/index.html', shell('English finder', '\n'.join(b), '../', active='english',
@@ -458,7 +460,7 @@ def search_aliases(e):
     remainder = raw[len(key):] if raw.lower().startswith(key) else raw
     return [alias + remainder for alias in jacobs_category(key)['search_aliases']]
 
-idx = {'entries': [{'i': e['entry_id'], 'h': e['headword'],
+idx = {'entries': [{'i': e['entry_id'], 'h': public_headword_for_entry(e),
                     'k': fold(plain_hw(e)) or '',
                     'kk': sorted({fold(f['form']) for f in e['forms'] if fold(f['form'])} |
                                  {fold(a) for a in search_aliases(e) if fold(a)}),
