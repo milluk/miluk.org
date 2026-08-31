@@ -41,7 +41,12 @@ h2[id^="s-"] { font-family: var(--font-serif); }
 /* forms */
 .formlist { list-style: none; display: flex; flex-wrap: wrap; gap: .5rem .9rem; }
 .formlist li { background: var(--panel); border: 1px solid var(--line); border-radius: .5rem;
-               padding: .35rem .7rem; display: flex; align-items: baseline; gap: .55rem; }
+               padding: 0; display: flex; align-items: baseline; gap: .55rem; }
+.formlink { color: var(--white); display: flex; align-items: baseline; gap: .55rem;
+            padding: .35rem .7rem; width: 100%; border-radius: inherit; }
+.formlink:hover { color: var(--gold); background: #1b160b; }
+.formlink:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.form-unlocated { cursor: default; padding: .35rem .7rem !important; }
 .badge { font-family: var(--font-sans); font-size: .62rem; letter-spacing: .06em;
          text-transform: uppercase; padding: .1rem .4rem; border-radius: .3rem; }
 .badge-corpus { background: #24391f; color: #b7e0a8; }

@@ -577,6 +577,20 @@ x_length_page = (OUT / 'words' / 'e1021-xinxinu.html').read_text(encoding='utf-8
 check('<a href="../words/index.html">Words</a> · x</p>' in x_length_page,
       'length-bearing x breadcrumb must use x rather than unattested x glottalized')
 
+# Attested-form blocks are source-navigation controls, not inert labels.  The
+# unusual KELE form remains exactly as recorded, while the link lets a reader
+# inspect its preserved corpus occurrence rather than silently repairing it.
+kele_page = (OUT / 'words' / 'e0515-kele.html').read_text(encoding='utf-8')
+check('k̯ʼs·‿lɛ' in kele_page and
+      'href="../stories/t055-the-trickster-person-who-made-the-country.html#l622"' in kele_page and
+      'Show source line: The trickster person who made the country, line 622' in kele_page,
+      'KELE corpus form must link to its preserved source line')
+form_link_count = sum(
+    page.read_text(encoding='utf-8').count('<a class="formlink"')
+    for page in (OUT / 'words').glob('e*.html'))
+check(form_link_count >= 3955,
+      'attested corpus/corroborated forms must remain directly inspectable')
+
 # Linguistic alphabet labels inherit Charis; interface chrome remains on the
 # system stack. This directly guards the selector path identified in Chrome.
 style = (OUT / 'style.css').read_text(encoding='utf-8')

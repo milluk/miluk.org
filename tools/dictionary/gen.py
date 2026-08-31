@@ -89,6 +89,46 @@ live_ids = {s['story_id'] for s in live}
 HOM = re.compile(r'[¹²³⁴⁵]+$')
 def plain_hw(e): return HOM.sub('', presentation_headword(e))
 
+# A displayed form is evidence, not merely decoration.  Where its preserved
+# 1990 spelling, or its normalized corroborating spelling, occurs in the
+# public corpus, retain a stable route back to that line.  The source record
+# itself is never rewritten to make a locator appear.
+PUNCT = '.,;:?!"«»“”‘’()[]'
+ascii_piece_locations = collections.defaultdict(list)
+display_piece_locations = collections.defaultdict(list)
+for story in live:
+    for line in story['lines']:
+        locator = (story['story_id'], story['title'], line['line'])
+        raw_tokens = line['miluk_ascii'].split()
+        display_tokens = line['miluk'].split()
+        for token in raw_tokens:
+            for piece in token.strip(PUNCT).split('-'):
+                if piece:
+                    ascii_piece_locations[piece].append(locator)
+        for token in display_tokens:
+            for piece in token.strip(PUNCT).split('-'):
+                key = fold(piece)
+                if key:
+                    display_piece_locations[key].append(locator)
+
+def form_locator(form):
+    """Return the first transparent public source locator for one form.
+
+    Exact preserved ASCII wins.  A normalized piece match is used only for a
+    form already classified as corpus/corroborated evidence, mirroring the
+    verification standard that assigned that evidence label.  Unverified forms
+    intentionally have no invented target.
+    """
+    if form.get('evidence') == 'unverified':
+        return None
+    locations = ascii_piece_locations.get(form.get('ascii'), ())
+    if locations:
+        return locations[0]
+    locations = display_piece_locations.get(fold(form.get('form', '')), ())
+    if locations:
+        return locations[0]
+    return None
+
 # ---------------- public cross-reference display ----------------
 # Archival fields retain Anderson's 1990 ASCII. Only their public rendering is
 # converted here, and links are emitted only for a unique dictionary target.
@@ -145,7 +185,6 @@ def public_gloss(value):
     return E(value[:match.start(1)]) + label
 
 # ---------------- word-level linking ----------------
-PUNCT = '.,;:?!"«»“”‘’()[]'
 def link_line(miluk, cands, root, self_id=None):
     """Render a Miluk line with each recognizable piece linked to its entry.
        If self_id is set, that entry's pieces are bolded instead of linked."""
@@ -275,9 +314,16 @@ for e in ENTRIES:
         b.append('<section class="forms"><h2>Attested forms</h2><ul class="formlist">')
     for f in e['forms']:
         cls, tip = BADGE.get(f['evidence'], ('badge-unv', f['evidence']))
-        b.append('<li><span class="mk">%s</span> <span class="badge %s" title="%s">%s</span></li>'
-                 % (E(f['form']), cls, E(tip),
-                    {'corpus':'corpus','corroborated':'corroborated','unverified':'unverified'}[f['evidence']]))
+        label = {'corpus':'corpus','corroborated':'corroborated','unverified':'unverified'}[f['evidence']]
+        locator = form_locator(f)
+        if locator:
+            story_id, title, line_number = locator
+            b.append('<li><a class="formlink" href="../stories/%s.html#l%d" title="Show source line: %s, line %d"><span class="mk">%s</span> <span class="badge %s" title="%s">%s</span></a></li>'
+                     % (story_id, line_number, E(title), line_number, E(f['form']),
+                        cls, E(tip), label))
+        else:
+            b.append('<li class="form-unlocated"><span class="mk">%s</span> <span class="badge %s" title="%s">%s</span></li>'
+                     % (E(f['form']), cls, E(tip), label))
     if e['forms']:
         b.append('</ul></section>')
     if e.get('extensions') or e.get('citation_summary') or e.get('record_notes') or e.get('raw_source_lines'):
