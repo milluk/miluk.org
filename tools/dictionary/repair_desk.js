@@ -5,6 +5,29 @@
   var cfg = window.DICTIONARY_REPAIR_DESK_CONFIG || {};
   if (!cfg.token || ['127.0.0.1', 'localhost', '::1'].indexOf(location.hostname) < 0) return;
 
+  var sessionKey = 'dictionary-repair-desk-enabled';
+  var url = new URL(location.href);
+  var requested = url.searchParams.get('desk');
+  var enabled = false;
+  if (requested === '1' || requested === '0') {
+    enabled = requested === '1';
+    try {
+      if (enabled) sessionStorage.setItem(sessionKey, '1');
+      else sessionStorage.removeItem(sessionKey);
+    } catch (error) {
+      // The explicit setting still applies to this page when storage is unavailable.
+    }
+    url.searchParams.delete('desk');
+    history.replaceState(history.state, '', url.pathname + url.search + url.hash);
+  } else {
+    try {
+      enabled = sessionStorage.getItem(sessionKey) === '1';
+    } catch (error) {
+      enabled = false;
+    }
+  }
+  if (!enabled) return;
+
   function esc(value) {
     return String(value == null ? '' : value).replace(/[&<>"']/g, function (c) {
       return {'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c];
