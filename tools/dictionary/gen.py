@@ -19,6 +19,7 @@ OUT = args.out.resolve()
 PIPELINE = TOOL_DIR / 'pipeline'
 sys.path.insert(0, str(PIPELINE))
 from build_complete_dictionary import build as build_complete_dictionary
+from anderson import convert as convert_1990
 from jacobs_alphabet import ORDER as JACOBS_ORDER, category as jacobs_category, initial_for_entry
 
 # dictionary.json is generated data. Rebuild it from the frozen D-Z checkpoint
@@ -76,6 +77,61 @@ live = [s for s in STORIES if s.get('source', {}).get('layer') == 'uwpa-recovere
 live_ids = {s['story_id'] for s in live}
 HOM = re.compile(r'[¹²³⁴⁵]+$')
 def plain_hw(e): return HOM.sub('', e['headword'])
+
+# ---------------- public cross-reference display ----------------
+# Archival fields retain Anderson's 1990 ASCII. Only their public rendering is
+# converted here, and links are emitted only for a unique dictionary target.
+ASCII_NOTATION = re.compile(r"[<@#;!&$%`0/]|:")
+
+def ascii_reference_fold(value):
+    value = value.lower()
+    value = re.sub(r"[<:;!&$'`0/]", '', value)
+    value = value.replace('#', 'l').replace('@', 'e').replace('%', 'g')
+    value = re.sub(r'v(?=[a-z])', '', value)
+    return re.sub(r'[^a-z0-9]', '', value)
+
+def reference_targets(value):
+    target_fold = ascii_reference_fold(value)
+    if len(target_fold) < 3:
+        return []
+    matches = []
+    for candidate in ENTRIES:
+        if fold(plain_hw(candidate)) == target_fold:
+            matches.append(candidate)
+    for candidate in ENTRIES:
+        if (candidate not in matches and
+                any(fold(form['form']) == target_fold for form in candidate['forms'])):
+            matches.append(candidate)
+    return matches
+
+def converted_reference(value):
+    return convert_1990(value) if ASCII_NOTATION.search(value) else value
+
+def gloss_reference(value):
+    match = re.search(r"\bsee(?: reference under)?\s+(\S+)$", value, re.I)
+    if not match or not ASCII_NOTATION.search(match.group(1)):
+        return None
+    return match, match.group(1)
+
+def public_gloss_text(value):
+    """Convert only a terminal 1990 see-target for plain-text public surfaces."""
+    found = gloss_reference(value)
+    if not found:
+        return value
+    match, raw_target = found
+    return value[:match.start(1)] + converted_reference(raw_target)
+
+def public_gloss(value):
+    """Escape a gloss and link a converted terminal target only if unique."""
+    found = gloss_reference(value)
+    if not found:
+        return E(value)
+    match, raw_target = found
+    label = E(converted_reference(raw_target))
+    targets = reference_targets(raw_target)
+    if len(targets) == 1:
+        label = '<a href="%s.html">%s</a>' % (targets[0]['entry_id'], label)
+    return E(value[:match.start(1)]) + label
 
 # ---------------- word-level linking ----------------
 PUNCT = '.,;:?!"«»“”‘’()[]'
@@ -202,7 +258,7 @@ for e in ENTRIES:
     b.append('<p class="crumb"><a href="../words/index.html">Words</a> · %s</p>' % E(label_for[letter_of(e)]))
     b.append('<h1 class="hw">%s</h1>' % E(e['headword']))
     if e['gloss']:
-        b.append('<p class="gloss">%s</p>' % E(e['gloss']))
+        b.append('<p class="gloss">%s</p>' % public_gloss(e['gloss']))
     # forms
     if e['forms']:
         b.append('<section class="forms"><h2>Attested forms</h2><ul class="formlist">')
@@ -230,26 +286,22 @@ for e in ENTRIES:
         xs = []
         for x in e['cross_references']:
             tail = x.split('--')[-1].strip()
-            def afold(a):  # 1986 ASCII -> comparable fold
-                a = a.lower()
-                a = re.sub(r"[<:;!&$'`0/]", '', a)
-                a = a.replace('#', 'l').replace('@', 'e').replace('%', 'g')
-                a = re.sub(r'v(?=[a-z])', '', a)
-                return re.sub(r'[^a-z0-9]', '', a)
-            tf = afold(tail)
-            tgt = None
-            if len(tf) >= 3:
-                for e2 in ENTRIES:
-                    if fold(plain_hw(e2)) == tf: tgt = e2; break
-                if tgt is None:
-                    for e2 in ENTRIES:
-                        if any(fold(f2['form']) == tf for f2 in e2['forms']): tgt = e2; break
-            if tgt:
+            targets = reference_targets(tail)
+            if len(targets) == 1:
+                tgt = targets[0]
                 lead = x.split('--')[0].strip()
                 pre = (E(lead) + ' — ') if '--' in x and lead else ''
                 xs.append('%s<a href="%s.html">%s</a>' % (pre, tgt['entry_id'], E(tgt['headword'])))
             else:
-                xs.append('<span class="code1990" title="1990 note, in the original keyboard notation">%s</span>' % E(x))
+                if ASCII_NOTATION.search(tail):
+                    if '--' in x:
+                        lead = x.split('--')[0].strip()
+                        shown = ((E(lead) + ' — ') if lead else '') + E(converted_reference(tail))
+                    else:
+                        shown = E(converted_reference(tail))
+                    xs.append('<span class="mk">%s</span>' % shown)
+                else:
+                    xs.append('<span class="code1990" title="1990 note, in the original keyboard notation">%s</span>' % E(x))
         b.append('<p class="xref">See %s</p>' % ', '.join(xs))
     # attestations
     def really_verified(a):
@@ -316,7 +368,8 @@ for e in ENTRIES:
     b.append('<p class="prov">1990 source file: %s · id: %s</p>' % (E(e.get('source_file') or ''), E(eid)))
     write('words/%s.html' % eid,
           shell(e['headword'], '\n'.join(b), root, active='words',
-                desc='Miluk dictionary entry: %s — %s' % (plain_hw(e), e['gloss'] or 'Miluk word')))
+                desc='Miluk dictionary entry: %s — %s' %
+                     (plain_hw(e), public_gloss_text(e['gloss']) if e['gloss'] else 'Miluk word')))
 
 # ---------------- words index (Miluk A–Z) ----------------
 order = sorted(groups.keys(), key=JACOBS_ORDER.__getitem__)
@@ -329,7 +382,7 @@ for k in order:
     b.append('<h2 id="%s">%s</h2><ul class="entryindex">' % (anchor_for[k], E(label_for[k])))
     for e in sorted(groups[k], key=lambda x: (fold(plain_hw(x)), x['headword'])):
         b.append('<li><a href="%s.html" class="mk">%s</a><span class="g">%s</span></li>'
-                 % (e['entry_id'], E(e['headword']), E(e['gloss'] or '')))
+                 % (e['entry_id'], E(e['headword']), E(public_gloss_text(e['gloss'] or ''))))
     b.append('</ul>')
 write('words/index.html', shell('Miluk words', '\n'.join(b), '../', active='words',
                                 desc='Miluk–English: all %d entries of the 1990 Miluk dictionary.' % len(ENTRIES)))
@@ -409,7 +462,7 @@ idx = {'entries': [{'i': e['entry_id'], 'h': e['headword'],
                     'k': fold(plain_hw(e)) or '',
                     'kk': sorted({fold(f['form']) for f in e['forms'] if fold(f['form'])} |
                                  {fold(a) for a in search_aliases(e) if fold(a)}),
-                    'g': (e['gloss'] or '')} for e in ENTRIES],
+                    'g': public_gloss_text(e['gloss'] or '')} for e in ENTRIES],
        'stories': [{'i': s['story_id'], 't': s['title']} for s in live]}
 write('search-index.json', json.dumps(idx, ensure_ascii=False, separators=(',', ':')))
 

@@ -215,6 +215,7 @@ for sample, expected in longest_cases.items():
 check(all(row['key'] != 'z' and row['display'] != 'Z' for row in JACOBS_ALPHABET),
       'independent z must not enter the Jacobs phonetic inventory')
 check(DOCUMENTARY_EXCEPTIONS == [JACOBS['documentary_index_exceptions'][0]] and
+      DOCUMENTARY_EXCEPTIONS[0]['display'] == 'z' and
       DOCUMENTARY_EXCEPTIONS[0]['entry_id'] == 'e1111-z' and
       DOCUMENTARY_EXCEPTIONS[0]['source_file'] == 'Z',
       'documentary Z exception scope changed')
@@ -229,6 +230,17 @@ check(initial_key('Z', entry_id='e1111-z', source_file='Z') == 'z-exception',
 check([e['entry_id'] for e in D['entries'] if
        (e.get('headword_ascii') or '').lower().startswith('z')] == ['e1111-z'],
       'additional independent-z initial requires separate authorization')
+length_bearing_barred_l = [e for e in D['entries'] if
+                           (e.get('headword_ascii') or '').lower().startswith('#:')]
+check([e['entry_id'] for e in length_bearing_barred_l] ==
+      ['e1114-l-e-nwi', 'e1115-l-a', 'e1116-l-g-e-n', 'e1117-l-u'] and
+      all(e['headword'].startswith('ł·') for e in length_bearing_barred_l),
+      'exact recovered barred-L-plus-length record set')
+check(all(initial_for_entry(e) == '#' for e in length_bearing_barred_l),
+      'barred-L-plus-length records must index beneath barred L')
+check(any(row['key'] == '#:' for row in JACOBS['phonetic_inventory']) and
+      '#:' not in attested_initials,
+      'Jacobs barred-L glottalized unit must remain in the 68 but be unattested initially')
 attested_counts = Counter(classified_initials)
 check([row['key'] for row in ATTESTED_INDEX['categories']] == attested_initials,
       'attested index receipt category order')
@@ -488,6 +500,51 @@ check(tab_labels == expected_labels,
       'emitted index tabs must equal attested initial categories in Jacobs order')
 search_by_id = {item['i']: item for item in index['entries']}
 check(search_by_id['e1111-z']['k'] == 'z', 'documentary Z entry literal search key changed')
+check('>z</a>' in words_index and '>Z</a>' not in words_index,
+      'documentary index heading must be lowercase z')
+check('ł′' not in tab_labels and 'ł' in tab_labels,
+      'unattested barred-L glottalized tab must not be emitted')
+for entry in length_bearing_barred_l:
+    page = (OUT / 'words' / (entry['entry_id'] + '.html')).read_text(encoding='utf-8')
+    check('<a href="../words/index.html">Words</a> · ł</p>' in page,
+          f"barred-L-plus-length breadcrumb: {entry['entry_id']}")
+
+# Public reference presentation: raw data remains archival ASCII; exactly four
+# pre-fix fields required deterministic conversion, and only unique targets link.
+see_glosses = [e for e in D['entries'] if re.search(r'\bsee\b', e.get('gloss') or '', re.I)]
+check(len(see_glosses) == 7, 'exhaustive see-gloss audit count changed')
+check(sum(len(e.get('cross_references', [])) for e in D['entries']) == 12,
+      'exhaustive structured cross-reference audit count changed')
+expected_reference_rendering = {
+    'e0032-den': ('dá·tsan', 'e0039-datsan.html'),
+    'e0193-e-le-ma': ("lə́'ma", 'e0578-lama.html'),
+    'e0295-gendji': ('g̣ɛ́wi', 'e0300-gewi.html'),
+}
+raw_reference_targets = {
+    'e0032-den': 'da:<tsan',
+    'e0193-e-le-ma': "l@<'ma",
+    'e0295-gendji': 'g;e<wi',
+}
+for entry_id, (label, target) in expected_reference_rendering.items():
+    page = (OUT / 'words' / (entry_id + '.html')).read_text(encoding='utf-8')
+    check(html.escape(label, quote=True) in page and ('href="' + target + '"') in page,
+          f'deterministic public see-reference conversion/link: {entry_id}')
+    raw_target = raw_reference_targets[entry_id]
+    check(html.escape(raw_target, quote=True) not in page and
+          html.escape(raw_target, quote=True) not in words_index and
+          raw_target not in search_by_id[entry_id]['g'] and
+          label in search_by_id[entry_id]['g'],
+          f'archival see-target leaked through a public surface: {entry_id}')
+demedes = (OUT / 'words' / 'e0011-demedes.html').read_text(encoding='utf-8')
+check('də́m·ɛ·dɛ' in demedes and 'd@&lt;m:e:de' not in demedes,
+      'unresolved structured reference must be converted but not linked')
+ambiguous = (OUT / 'words' / 'e0008-delagawiyatas.html').read_text(encoding='utf-8')
+check('łag̣áwiyát̓as' in ambiguous and '<p class="xref">See <a ' not in ambiguous,
+      'ambiguous structured reference must not retain a guessed link')
+gendji_source = (TOOL_DIR / 'archive' / '1990-fin' / 'GENDJI.FIN').read_text(
+    encoding='ascii', errors='ignore')
+check('see g;e<wi' in gendji_source and dictionary_by_id['e0295-gendji']['gloss'] == 'see g;e<wi',
+      'e0295 archival ASCII cross-reference changed')
 for key, alias in (('c', 'sh'), ('tc', 'ch'), ("t'c", "ch'")):
     example = next(e for e in D['entries'] if initial_for_entry(e) == key)
     check(any(value.startswith(re.sub(r'[^a-z0-9]', '', alias))

@@ -457,21 +457,11 @@
       ],
       "series": "lateral",
       "status": "Jacobs phonetic unit",
-      "count": 53
-    },
-    {
-      "key": "#:",
-      "display": "ł'",
-      "search_aliases": [
-        "ł'"
-      ],
-      "series": "lateral",
-      "status": "Jacobs phonetic unit",
-      "count": 4
+      "count": 57
     },
     {
       "key": "z-exception",
-      "display": "Z",
+      "display": "z",
       "search_aliases": [
         "z"
       ],

@@ -79,6 +79,20 @@ for the anterior-palatal inflection, `;` for the velar dot, `#` for `ł`, and
 `t#` → `tł`, `t'#` → `t'ł`, `#` → `ł`, and `%` → `ɣ`. Search aliases do not
 select the documentary display spelling.
 
+### Initial-index presentation boundary
+
+The four recovered records `DICT#.BYN:3` through `DICT#.BYN:6` (entries
+`e1114-l-e-nwi` through `e1117-l-u`) begin with raw `#:` and display barred L
+plus length (`ł·`). The colon is therefore a length mark in these lexical
+records, not evidence for word-initial Jacobs `ł′`. Initial classification
+uses that converted presentation evidence to group the four beneath `ł`.
+Jacobs `ł′` remains one of the 68 phonetic units but is unattested initially,
+so no `ł′` index tab is emitted. The raw rows, entry IDs, and headwords are
+unchanged.
+
+`e0027-u-u` remains a Gate 2 read-only source-fidelity audit target for its
+missing gloss and large form family; Gate 1 makes no inference or regrouping.
+
 ## Source duplicate
 
 `DICT#.BYN:27` and `DICT#.BYN:28` have the same headword `#dja`, gloss

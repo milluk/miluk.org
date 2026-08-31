@@ -601,7 +601,7 @@
   "documentary_index_exceptions": [
     {
       "key": "z-exception",
-      "display": "Z",
+      "display": "z",
       "search_aliases": [
         "z"
       ],

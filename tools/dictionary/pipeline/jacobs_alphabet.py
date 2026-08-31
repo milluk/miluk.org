@@ -63,7 +63,7 @@ JACOBS_ALPHABET = [
 ]
 
 DOCUMENTARY_EXCEPTIONS = [{
-    "key": "z-exception", "display": "Z", "search_aliases": ["z"],
+    "key": "z-exception", "display": "z", "search_aliases": ["z"],
     "series": "documentary exception", "status": "1990 documentary index exception",
     "entry_id": "e1111-z", "source_file": "Z", "headword_ascii": "Z",
     "explanation": "Preserves the literal 1990 Z.FIN headword without asserting independent phonemic status for z.",
@@ -127,6 +127,15 @@ def initial_key(value: str, *, entry_id=None, source_file=None) -> str:
 
 
 def initial_for_entry(entry) -> str:
+    # The recovered A-C tables use a colon after barred L as a length mark,
+    # which the display converter renders as a middle dot. Do not let the raw
+    # longest-match key ``#:`` reinterpret that prosodic mark as Jacobs's
+    # separate glottalized-barred-L unit. The distinction is intentionally
+    # presentation-aware here; source bytes and the 68-unit inventory stay
+    # unchanged.
+    display = entry.get("headword", "").strip().lower()
+    if display.startswith(("ł·", "ƚ·")):
+        return "#"
     return initial_key(entry.get("headword_ascii") or entry["headword"],
                        entry_id=entry.get("entry_id"), source_file=entry.get("source_file"))
 
