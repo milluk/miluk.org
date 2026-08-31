@@ -585,6 +585,14 @@ check('k̯ʼs·‿lɛ' in kele_page and
       'href="../stories/t055-the-trickster-person-who-made-the-country.html#l622"' in kele_page and
       'Show source line: The trickster person who made the country, line 622' in kele_page,
       'KELE corpus form must link to its preserved source line')
+t055 = story_by_id['t055-the-trickster-person-who-made-the-country']
+t055_line_622 = next(line for line in t055['lines'] if line['line'] == 622)
+check(t055_line_622['miluk_ascii'] == 'ha:<:: k!&s:<le n@x;-he<mq!etc.' and
+      t055_line_622['miluk'] == 'há··· k̯̓s·́lɛ nəx̣-hɛ́mq̓ɛtc.',
+      'repair-desk candidate source must remain unchanged at t055 line 622')
+check('/__repair/' not in kele_page and
+      all('/__repair/' not in page.read_text(encoding='utf-8') for page in pages),
+      'local repair desk must not enter generated public pages')
 form_link_count = sum(
     page.read_text(encoding='utf-8').count('<a class="formlink"')
     for page in (OUT / 'words').glob('e*.html'))
