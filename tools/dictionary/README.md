@@ -31,10 +31,13 @@ Open `http://127.0.0.1:8000/dictionary/`. Story lines and located attested
 forms gain a **Queue correction** control by default in this dedicated local
 server. The ordinary generated site remains desk-free. The desk
 loads the current ASCII and rendered Miluk from the canonical data, shows a
-before/after diff, and previews the proposed rendering. No candidate is queued
-until **Create GitHub Issue** is pressed. That control invokes the authenticated
-local `gh` CLI on the server and returns the new issue URL; no GitHub credential
-is sent to browser JavaScript or written into generated files.
+before/after diff, previews the proposed rendering, and uses the authenticated
+local `gh` CLI to find exact structured correction candidates already queued
+for that source location. Existing open or closed candidates are shown in the
+dialog and suppress creation. Lookup failures also suppress creation. When no
+candidate exists, **Create GitHub Issue** performs the lookup again before it
+invokes `gh issue create` and returns the new Issue URL. No GitHub credential is
+sent to browser JavaScript or written into generated files.
 
 The GitHub Issue is the candidate queue. The desk never writes corpus,
 dictionary, correction-ledger, archival, or publication-control files. An
