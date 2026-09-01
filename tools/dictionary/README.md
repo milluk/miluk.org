@@ -10,6 +10,7 @@ From the repository root, using Python 3 and only the standard library:
 ```sh
 python3 tools/dictionary/gen.py
 python3 tools/dictionary/test_site.py
+python3 tools/dictionary/test_repair_desk.py
 ```
 
 The defaults read the canonical public inputs from `dictionary/data/` and write
@@ -17,6 +18,31 @@ the site to `dictionary/`. Both commands also accept `--data` and `--out`.
 Generation removes stale generator-owned word and story pages, is deterministic,
 and the verifier runs a second generation before checking that the tracked
 `dictionary/` tree has no diff.
+
+## Local Dictionary Repair Desk
+
+After generation, start the review desk on the loopback interface:
+
+```sh
+python3 tools/dictionary/repair_desk.py
+```
+
+Open `http://127.0.0.1:8000/dictionary/`. Story lines and located attested
+forms gain a **Queue correction** control by default in this dedicated local
+server. The ordinary generated site remains desk-free. The desk
+loads the current ASCII and rendered Miluk from the canonical data, shows a
+before/after diff, previews the proposed rendering, and uses the authenticated
+local `gh` CLI to find exact structured correction candidates already queued
+for that source location. Existing open or closed candidates are shown in the
+dialog and suppress creation. Lookup failures also suppress creation. When no
+candidate exists, **Create GitHub Issue** performs the lookup again before it
+invokes `gh issue create` and returns the new Issue URL. No GitHub credential is
+sent to browser JavaScript or written into generated files.
+
+The GitHub Issue is the candidate queue. The desk never writes corpus,
+dictionary, correction-ledger, archival, or publication-control files. An
+accepted correction still requires its own ledger-backed implementation and
+tests. Stop the desk with `Ctrl-C` when review is complete.
 
 ## Edition boundary
 
