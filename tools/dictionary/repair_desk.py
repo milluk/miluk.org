@@ -3,9 +3,10 @@
 """Loopback-only review desk for queuing dictionary correction candidates.
 
 This server deliberately keeps candidate corrections out of the repository.
-It reads the generated dictionary and its canonical inputs, then creates a
-GitHub Issue through the authenticated local ``gh`` process only in response to
-the desk's explicit Create Issue request.
+It reads the generated dictionary and its canonical inputs, looks up existing
+candidate Issues through the authenticated local ``gh`` process, then creates a
+GitHub Issue only in response to the desk's explicit Create Issue request and
+only after a second successful duplicate check.
 """
 import argparse
 import html
@@ -41,6 +42,12 @@ SUGGESTIONS = {
         'summary': 'Correct k!&s:<le to k!&e:<le.',
     },
 }
+
+STRUCTURED_CANDIDATE_PATTERN = re.compile(
+    r'^#{1,6}[ \t]+Structured candidate[ \t]*\r?$'
+    r'(?:[ \t]*\r?\n)+[ \t]*```json[ \t]*\r?\n'
+    r'(?P<payload>.*?)^[ \t]*```[ \t]*\r?$',
+    re.IGNORECASE | re.MULTILINE | re.DOTALL)
 
 
 def render_miluk(value):
@@ -237,6 +244,90 @@ corpus, dictionary, correction ledger, or published site.
     )
 
 
+def _structured_candidates(body):
+    """Yield valid JSON objects from named Structured candidate blocks."""
+    for match in STRUCTURED_CANDIDATE_PATTERN.finditer(body):
+        try:
+            candidate = json.loads(match.group('payload'))
+        except json.JSONDecodeError:
+            continue
+        if isinstance(candidate, dict):
+            yield candidate
+
+
+def _candidate_matches(candidate, story_id, line_number):
+    target = candidate.get('target')
+    if not isinstance(target, dict):
+        return False
+    candidate_line = target.get('line')
+    return (
+        candidate.get('schema') == 'miluk-dictionary-correction-candidate/1' and
+        target.get('source') == 'corpus' and
+        target.get('story_id') == story_id and
+        isinstance(candidate_line, int) and
+        not isinstance(candidate_line, bool) and
+        candidate_line == line_number and
+        target.get('field') == 'miluk_ascii'
+    )
+
+
+def _candidate_ascii(candidate, side):
+    value = candidate.get(side)
+    if isinstance(value, dict) and isinstance(value.get('miluk_ascii'), str):
+        return value['miluk_ascii']
+    return ''
+
+
+def find_existing_issues(context, repo, runner=subprocess.run):
+    """Return exact correction candidates from a read-only local gh lookup."""
+    command = [
+        'gh', 'issue', 'list', '--repo', repo, '--state', 'all',
+        '--limit', '10000',
+        '--json', 'number,title,state,url,updatedAt,body',
+    ]
+    result = runner(command, cwd=REPO_ROOT, text=True,
+                    capture_output=True, check=False)
+    if result.returncode:
+        detail = (result.stderr or result.stdout or 'gh issue lookup failed').strip()
+        raise RuntimeError(detail)
+    try:
+        issues = json.loads(result.stdout or '')
+    except json.JSONDecodeError:
+        raise RuntimeError('gh issue lookup returned invalid JSON') from None
+    if not isinstance(issues, list):
+        raise RuntimeError('gh issue lookup returned invalid JSON')
+
+    story = context['story']
+    matches = []
+    for issue in issues:
+        if not isinstance(issue, dict) or not isinstance(issue.get('body'), str):
+            continue
+        candidate = next((item for item in _structured_candidates(issue['body'])
+                          if _candidate_matches(
+                              item, story['story_id'], story['line'])), None)
+        if candidate is None:
+            continue
+        number = issue.get('number')
+        title = issue.get('title')
+        state = issue.get('state')
+        url = issue.get('url')
+        updated_at = issue.get('updatedAt')
+        if (not isinstance(number, int) or isinstance(number, bool) or
+                not all(isinstance(item, str)
+                        for item in (title, state, url, updated_at))):
+            raise RuntimeError('gh issue lookup returned invalid Issue metadata')
+        matches.append({
+            'number': number,
+            'title': title,
+            'state': state.lower(),
+            'url': url,
+            'updated_at': updated_at,
+            'before_miluk_ascii': _candidate_ascii(candidate, 'before'),
+            'after_miluk_ascii': _candidate_ascii(candidate, 'after'),
+        })
+    return matches
+
+
 def create_issue(context, proposed_ascii, repo, summary='', notes='', runner=subprocess.run):
     proposed_ascii = proposed_ascii.strip()
     if not proposed_ascii:
@@ -266,6 +357,23 @@ def create_issue(context, proposed_ascii, repo, summary='', notes='', runner=sub
     if not match:
         raise RuntimeError('gh did not return a GitHub Issue URL')
     return match.group(0), body
+
+
+class ExistingCandidateError(FileExistsError):
+    def __init__(self, matches):
+        super().__init__(
+            'an exact correction candidate already exists; inspect, comment on, '
+            'or reopen the existing Issue')
+        self.matches = matches
+
+
+def create_issue_if_unique(context, proposed_ascii, repo, summary='', notes='',
+                           runner=subprocess.run):
+    """Create only after a successful, empty exact-candidate lookup."""
+    matches = find_existing_issues(context, repo, runner=runner)
+    if matches:
+        raise ExistingCandidateError(matches)
+    return create_issue(context, proposed_ascii, repo, summary, notes, runner=runner)
 
 
 def is_loopback_name(value):
@@ -423,14 +531,30 @@ class RepairDeskHandler(BaseHTTPRequestHandler):
                 self._json({'miluk_ascii': proposed_ascii,
                             'miluk': render_miluk(proposed_ascii)})
                 return
+            if parsed.path == '/__repair/issues/lookup':
+                matches = find_existing_issues(
+                    context, self.server.github_repo,
+                    runner=self.server.issue_runner)
+                self._json({
+                    'schema': 'miluk-dictionary-correction-lookup/1',
+                    'matches': matches,
+                    'can_create': not matches,
+                })
+                return
             if parsed.path == '/__repair/issues':
-                issue_url, _ = create_issue(
+                issue_url, _ = create_issue_if_unique(
                     context, proposed_ascii, self.server.github_repo,
                     str(request.get('summary') or ''), str(request.get('notes') or ''),
                     runner=self.server.issue_runner)
                 self._json({'issue_url': issue_url}, HTTPStatus.CREATED)
                 return
             self._error(HTTPStatus.NOT_FOUND, 'not found')
+        except ExistingCandidateError as error:
+            self._json({
+                'error': str(error),
+                'matches': error.matches,
+                'can_create': False,
+            }, HTTPStatus.CONFLICT)
         except ValueError as error:
             self._error(HTTPStatus.BAD_REQUEST, str(error))
         except RuntimeError as error:

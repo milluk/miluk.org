@@ -31,7 +31,12 @@
     options.headers = Object.assign({'X-Repair-Desk-Token': cfg.token}, options.headers || {});
     return fetch(path, options).then(function (response) {
       return response.json().then(function (payload) {
-        if (!response.ok) throw new Error(payload.error || ('Request failed: ' + response.status));
+        if (!response.ok) {
+          var error = new Error(payload.error || ('Request failed: ' + response.status));
+          error.status = response.status;
+          error.payload = payload;
+          throw error;
+        }
         return payload;
       });
     });
@@ -55,6 +60,8 @@
     '.repair-dialog textarea{min-height:4.5rem;resize:vertical}.repair-actions{display:flex;align-items:center;gap:.7rem;margin-top:1rem;flex-wrap:wrap}',
     '.repair-create{font:600 .8rem system-ui,sans-serif;color:#0a0a0a;background:#c9952a;border:0;border-radius:.4rem;padding:.55rem .8rem;cursor:pointer}.repair-create:disabled{opacity:.45;cursor:not-allowed}',
     '.repair-status{font:.78rem system-ui,sans-serif;color:#9a948a}.repair-status.error{color:#e0a8a8}.repair-status a{color:#e8d4a8}',
+    '.repair-existing{border-top:1px solid #262626;margin-top:1rem;padding-top:.9rem}.repair-existing h3{font:.78rem system-ui,sans-serif;margin:0 0 .55rem;color:#e8d4a8}',
+    '.repair-lookup{font:.78rem system-ui,sans-serif;color:#9a948a}.repair-lookup.error{color:#e0a8a8}.repair-issue{background:#171717;border:1px solid #3a3a3a;border-radius:.45rem;padding:.7rem;margin:.55rem 0}.repair-issue p{margin:.25rem 0}.repair-issue a{color:#e8d4a8}.repair-issue code{overflow-wrap:anywhere;white-space:pre-wrap}',
     '@media(max-width:650px){.repair-diff{grid-template-columns:1fr}}'
   ].join('');
   document.head.appendChild(style);
@@ -73,6 +80,8 @@
     '<input id="repair-summary" type="text" maxlength="300">' +
     '<label class="repair-field" for="repair-notes">Reviewer notes (optional)</label>' +
     '<textarea id="repair-notes" maxlength="8000"></textarea>' +
+    '<section class="repair-existing"><h3>Existing correction candidates</h3>' +
+    '<div class="repair-lookup" role="status" aria-live="polite">Checking GitHub Issues…</div></section>' +
     '<div class="repair-actions"><button type="button" class="repair-create">Create GitHub Issue</button>' +
     '<span class="repair-status" role="status" aria-live="polite"></span></div></div>';
   document.body.appendChild(dialog);
@@ -80,12 +89,16 @@
   var currentContext = null;
   var currentRequest = null;
   var currentRendered = '';
+  var lookupReady = false;
+  var lookupHasMatches = false;
+  var deskSequence = 0;
   var previewSequence = 0;
   var asciiInput = dialog.querySelector('#repair-ascii');
   var summaryInput = dialog.querySelector('#repair-summary');
   var notesInput = dialog.querySelector('#repair-notes');
   var createButton = dialog.querySelector('.repair-create');
   var status = dialog.querySelector('.repair-status');
+  var lookup = dialog.querySelector('.repair-lookup');
 
   dialog.querySelector('.repair-close').addEventListener('click', function () { dialog.close(); });
 
@@ -99,7 +112,27 @@
     dialog.querySelector('.repair-after code').innerHTML = changedMarkup(beforeAscii, afterAscii, 'ins');
     dialog.querySelector('.repair-before .mk').innerHTML = changedMarkup(beforeMiluk, afterMiluk, 'del');
     dialog.querySelector('.repair-after .mk').innerHTML = changedMarkup(beforeMiluk, afterMiluk, 'ins');
-    createButton.disabled = !afterAscii.trim() || afterAscii.trim() === beforeAscii;
+    createButton.disabled = !lookupReady || lookupHasMatches ||
+      !afterAscii.trim() || afterAscii.trim() === beforeAscii;
+  }
+
+  function renderMatches(matches) {
+    if (!matches.length) {
+      lookup.textContent = 'No existing correction candidate was found for this source location.';
+      lookup.className = 'repair-lookup';
+      return;
+    }
+    lookup.className = 'repair-lookup';
+    lookup.innerHTML = matches.map(function (issue) {
+      var updated = new Date(issue.updated_at);
+      var updatedText = isNaN(updated.getTime()) ? issue.updated_at : updated.toLocaleString();
+      return '<article class="repair-issue"><p><a target="_blank" rel="noopener" href="' +
+        esc(issue.url) + '">#' + esc(issue.number) + ' · ' + esc(issue.title) + '</a></p>' +
+        '<p>State: ' + esc(issue.state) + ' · Last updated: <time datetime="' +
+        esc(issue.updated_at) + '">' + esc(updatedText) + '</time></p>' +
+        '<p>Before: <code>' + esc(issue.before_miluk_ascii || '—') + '</code></p>' +
+        '<p>After: <code>' + esc(issue.after_miluk_ascii || '—') + '</code></p></article>';
+    }).join('') + '<p>Inspect, comment on, or reopen the existing Issue instead of creating a duplicate.</p>';
   }
 
   function preview() {
@@ -123,13 +156,20 @@
   });
 
   function openDesk(source) {
+    var sequence = ++deskSequence;
     previewSequence++;
     currentContext = null;
     currentRequest = source;
+    lookupReady = false;
+    lookupHasMatches = false;
+    createButton.hidden = true;
     createButton.disabled = true;
     status.textContent = 'Loading source context…'; status.className = 'repair-status';
+    lookup.textContent = 'Checking GitHub Issues…'; lookup.className = 'repair-lookup';
+    if (!dialog.open) dialog.showModal();
     var query = new URLSearchParams(source).toString();
     request('/__repair/context?' + query).then(function (context) {
+      if (sequence !== deskSequence) return;
       currentContext = context;
       currentRendered = context.proposed.miluk;
       dialog.querySelector('.repair-meta').textContent = context.story.title + ' · ' +
@@ -143,13 +183,32 @@
       asciiInput.value = context.proposed.miluk_ascii;
       summaryInput.value = context.proposed.summary;
       notesInput.value = '';
-      status.textContent = 'Review the before/after diff. No issue exists yet.';
+      status.textContent = 'Review the before/after diff.';
       status.className = 'repair-status';
       updateDiff();
-      if (!dialog.open) dialog.showModal();
     }).catch(function (error) {
+      if (sequence !== deskSequence) return;
       status.textContent = error.message; status.className = 'repair-status error';
-      if (!dialog.open) dialog.showModal();
+    });
+    request('/__repair/issues/lookup', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(source)
+    }).then(function (payload) {
+      if (sequence !== deskSequence) return;
+      lookupReady = payload.can_create === true;
+      lookupHasMatches = payload.matches.length > 0;
+      createButton.hidden = !lookupReady || lookupHasMatches;
+      renderMatches(payload.matches);
+      updateDiff();
+    }).catch(function (error) {
+      if (sequence !== deskSequence) return;
+      lookupReady = false;
+      lookupHasMatches = false;
+      createButton.hidden = true;
+      createButton.disabled = true;
+      lookup.textContent = 'Existing candidate lookup failed: ' + error.message +
+        ' Issue creation is unavailable until the duplicate check succeeds.';
+      lookup.className = 'repair-lookup error';
     });
   }
 
@@ -166,10 +225,21 @@
         notes: notesInput.value
       }))
     }).then(function (payload) {
+      lookupReady = false;
+      createButton.hidden = true;
+      createButton.disabled = true;
       status.innerHTML = 'Issue created: <a target="_blank" rel="noopener" href="' +
         esc(payload.issue_url) + '">' + esc(payload.issue_url) + '</a>';
     }).catch(function (error) {
-      createButton.disabled = false;
+      if (error.status === 409) {
+        lookupReady = false;
+        lookupHasMatches = true;
+        createButton.hidden = true;
+        createButton.disabled = true;
+        renderMatches(error.payload.matches || []);
+      } else {
+        createButton.disabled = !lookupReady || lookupHasMatches;
+      }
       status.textContent = error.message; status.className = 'repair-status error';
     });
   });
