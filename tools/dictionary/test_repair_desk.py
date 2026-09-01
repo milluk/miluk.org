@@ -51,11 +51,10 @@ class RepairDeskTests(unittest.TestCase):
             self.assertNotIn(credential_name, javascript)
 
     @unittest.skipUnless(shutil.which('node'), 'Node.js is required for browser asset tests')
-    def test_browser_desk_is_explicit_and_session_scoped(self):
+    def test_browser_desk_is_enabled_by_the_loopback_server(self):
         harness = r'''const fs = require('fs');
 const vm = require('vm');
 const source = fs.readFileSync(process.argv[1], 'utf8');
-const stored = new Map();
 
 function visit(href) {
   const current = new URL(href);
@@ -94,25 +93,14 @@ function visit(href) {
       return [];
     }
   };
-  let displayed = current.pathname + current.search + current.hash;
   const sandbox = {
     URL, URLSearchParams, document, location: current,
-    sessionStorage: {
-      getItem(key) { return stored.has(key) ? stored.get(key) : null; },
-      setItem(key, value) { stored.set(key, String(value)); },
-      removeItem(key) { stored.delete(key); }
-    },
-    history: {
-      state: null,
-      replaceState(state, title, replacement) { displayed = replacement; }
-    },
     setTimeout() { return 1; }, clearTimeout() {}, fetch() {}, console
   };
   sandbox.window = sandbox;
   sandbox.window.DICTIONARY_REPAIR_DESK_CONFIG = {token: 'test-token'};
   vm.runInNewContext(source, sandbox);
-  return {queueCount: queued.length, displayed,
-          setting: stored.get('dictionary-repair-desk-enabled') || null};
+  return queued.length;
 }
 
 const word = 'http://127.0.0.1:8000/dictionary/words/e0515-kele.html';
@@ -120,37 +108,18 @@ const story = 'http://127.0.0.1:8000/dictionary/stories/t055-the-trickster-perso
 const results = [];
 results.push(visit(word));
 results.push(visit(story));
-results.push(visit(word + '?view=full&desk=1&lang=miluk#forms'));
-results.push(visit(story));
-results.push(visit(story + '?view=full&desk=0&lang=miluk#l622'));
-results.push(visit(word));
+results.push(visit(word + '?view=full&desk=0&lang=miluk#forms'));
+results.push(visit(story + '?view=full&desk=1&lang=miluk#l622'));
 process.stdout.write(JSON.stringify(results));'''
         result = subprocess.run(
             ['node', '-e', harness, str(DESK_JS)], check=True,
             text=True, capture_output=True)
         visits = json.loads(result.stdout)
 
-        self.assertEqual(visits[0]['queueCount'], 0)
-        self.assertIsNone(visits[0]['setting'])
-        self.assertEqual(visits[1]['queueCount'], 0)
-        self.assertIsNone(visits[1]['setting'])
-        self.assertEqual(visits[2], {
-            'queueCount': 1,
-            'displayed': ('/dictionary/words/e0515-kele.html'
-                          '?view=full&lang=miluk#forms'),
-            'setting': '1',
-        })
-        self.assertEqual(visits[3]['queueCount'], 1)
-        self.assertEqual(visits[3]['setting'], '1')
-        self.assertEqual(visits[4], {
-            'queueCount': 0,
-            'displayed': ('/dictionary/stories/'
-                          't055-the-trickster-person-who-made-the-country.html'
-                          '?view=full&lang=miluk#l622'),
-            'setting': None,
-        })
-        self.assertEqual(visits[5]['queueCount'], 0)
-        self.assertIsNone(visits[5]['setting'])
+        self.assertEqual(visits, [1, 1, 1, 1])
+        javascript = DESK_JS.read_text(encoding='utf-8')
+        self.assertNotIn('sessionStorage', javascript)
+        self.assertNotIn("searchParams.get('desk')", javascript)
 
     def test_issue_is_structured_and_uses_gh_without_shell(self):
         context = self.data.context(

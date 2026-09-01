@@ -27,10 +27,9 @@ After generation, start the review desk on the loopback interface:
 python3 tools/dictionary/repair_desk.py
 ```
 
-Open `http://127.0.0.1:8000/dictionary/?desk=1` to enable the desk for the
-current browser tab/session; use `?desk=0` to disable it again. Story lines and
-located attested forms gain a **Queue correction** control only while the desk
-is enabled in this local server. The desk
+Open `http://127.0.0.1:8000/dictionary/`. Story lines and located attested
+forms gain a **Queue correction** control by default in this dedicated local
+server. The ordinary generated site remains desk-free. The desk
 loads the current ASCII and rendered Miluk from the canonical data, shows a
 before/after diff, and previews the proposed rendering. No candidate is queued
 until **Create GitHub Issue** is pressed. That control invokes the authenticated
