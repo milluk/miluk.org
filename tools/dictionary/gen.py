@@ -237,6 +237,27 @@ def link_line(miluk, cands, root, self_id=None):
         out.append(E(lead) + '-'.join(rend) + E(trail))
     return ' '.join(out)
 
+def line_entry_links(entry_ids, root):
+    """Expose only the recorded dictionary relations for a corpus line.
+
+    Word-level links above remain a reading aid.  This small disclosure is the
+    complementary provenance view: it lists the exact entry identifiers stored
+    on the line, without deriving another relation from spelling similarity.
+    """
+    entries = [by_id[entry_id] for entry_id in entry_ids if entry_id in by_id]
+    if not entries:
+        return ''
+    noun = 'entry' if len(entries) == 1 else 'entries'
+    links = []
+    for entry in entries:
+        label = E(presentation_headword(entry))
+        gloss = public_gloss_text(entry.get('gloss') or '')
+        suffix = (' <span class="line-entry-gloss">%s</span>' % E(gloss)) if gloss else ''
+        links.append('<a class="mk" href="%swords/%s.html">%s</a>%s' %
+                     (root, entry['entry_id'], label, suffix))
+    return ('<details class="line-evidence"><summary>Linked dictionary %s (%d)</summary>'
+            '<p>%s</p></details>' % (noun, len(entries), ' · '.join(links)))
+
 # ---------------- page shell ----------------
 def shell(title, body, root, desc='', active=''):
     nav = ''.join(
@@ -499,10 +520,11 @@ for i, s in enumerate(live):
          '<div class="story mode-inter" id="story">']
     for l in s['lines']:
         b.append('<div class="line" id="l%d"><a class="n" href="#l%d">%d</a>'
-                 '<p class="m">%s</p><p class="e">%s</p></div>'
+                 '<p class="m">%s</p><p class="e">%s</p>%s</div>'
                  % (l['line'], l['line'], l['line'],
                     link_line(l['miluk'], l.get('entries', []), root),
-                    E(l['english'].strip())))
+                    E(l['english'].strip()),
+                    line_entry_links(l.get('entries', []), root)))
     b.append('</div>')
     nav2 = []
     if i > 0: nav2.append('<a href="%s.html">&larr; %s</a>' % (live[i-1]['story_id'], E(live[i-1]['title'])))

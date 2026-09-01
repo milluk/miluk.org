@@ -93,6 +93,14 @@ b { color: var(--gold-light); }
            font-size: .72rem; padding-top: .45rem; text-align: right; }
 .line .m { font-size: 1.12rem; }
 .line .e { font-style: italic; color: var(--gray); font-size: .95rem; }
+.line-evidence { grid-column: 2; margin-top: .08rem; font-family: var(--font-sans);
+                 font-size: .72rem; color: var(--dim); }
+.line-evidence summary { cursor: pointer; width: fit-content; color: var(--dim); }
+.line-evidence summary:hover { color: var(--gold); }
+.line-evidence p { margin: .18rem 0 0; line-height: 1.55; }
+.line-evidence a { color: var(--gray); }
+.line-evidence a:hover { color: var(--gold); }
+.line-entry-gloss { color: var(--dim); font-style: italic; }
 .line:target { background: #17130a; outline: 1px solid #3a2f15; border-radius: .3rem; }
 .mode-miluk .line .e { display: none; }
 .mode-english .line .m { display: none; }
