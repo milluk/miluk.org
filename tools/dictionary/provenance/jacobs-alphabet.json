@@ -1,0 +1,616 @@
+{
+  "schema": "miluk-jacobs-alphabet/1",
+  "authority": {
+    "path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/Jacobs/Coos Phonetics from UWPA.pdf",
+    "sha256": "de8f1cd6abfb4a19088cc87e2fab564ac081b87d6de34f3596283a6ec9ab050f",
+    "byte_length": 11673201,
+    "relevant_pdf_pages_zero_based": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "printed_pages": "11-18"
+  },
+  "historical_mapping": {
+    "path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/Parse Project/Parse Project (1)/Guide to Moving Melville Jacobs Materials from Handwritten to Machine.docx",
+    "sha256": "bdc74baa66c467d731f8ab9c9a44f93ca4e2bd4704d3cb45bc2605c718d31ba2",
+    "byte_length": 3006624
+  },
+  "ordering_rule": "Vowels, then Jacobs's consonant series in the sequence described on printed pages 12-13; longest matching unit wins.",
+  "phonetic_unit_count": 68,
+  "documentary_exception_count": 1,
+  "phonetic_inventory": [
+    {
+      "key": "@",
+      "display": "ə",
+      "search_aliases": [
+        "schwa"
+      ],
+      "series": "vowel",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "a",
+      "display": "a",
+      "search_aliases": [],
+      "series": "vowel",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "e",
+      "display": "ɛ",
+      "search_aliases": [
+        "e"
+      ],
+      "series": "vowel",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "i",
+      "display": "i",
+      "search_aliases": [],
+      "series": "vowel",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "u",
+      "display": "u",
+      "search_aliases": [],
+      "series": "vowel",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "b",
+      "display": "b",
+      "search_aliases": [],
+      "series": "bilabial",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "p",
+      "display": "p",
+      "search_aliases": [],
+      "series": "bilabial",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "p!",
+      "display": "p'",
+      "search_aliases": [
+        "p'"
+      ],
+      "series": "bilabial",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "w",
+      "display": "w",
+      "search_aliases": [],
+      "series": "bilabial",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "w:",
+      "display": "w'",
+      "search_aliases": [
+        "w'"
+      ],
+      "series": "bilabial",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "m",
+      "display": "m",
+      "search_aliases": [],
+      "series": "bilabial",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "m:",
+      "display": "m'",
+      "search_aliases": [
+        "m'"
+      ],
+      "series": "bilabial",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "d",
+      "display": "d",
+      "search_aliases": [],
+      "series": "alveolar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "t",
+      "display": "t",
+      "search_aliases": [],
+      "series": "alveolar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "t!",
+      "display": "t'",
+      "search_aliases": [
+        "t'"
+      ],
+      "series": "alveolar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "dz",
+      "display": "dz",
+      "search_aliases": [],
+      "series": "alveolar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "ts",
+      "display": "ts",
+      "search_aliases": [],
+      "series": "alveolar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "t's",
+      "display": "t's",
+      "search_aliases": [
+        "ts'"
+      ],
+      "series": "alveolar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "s",
+      "display": "s",
+      "search_aliases": [],
+      "series": "alveolar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "s:",
+      "display": "s'",
+      "search_aliases": [
+        "s'"
+      ],
+      "series": "alveolar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "n",
+      "display": "n",
+      "search_aliases": [],
+      "series": "alveolar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "n:",
+      "display": "n'",
+      "search_aliases": [
+        "n'"
+      ],
+      "series": "alveolar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "dj",
+      "display": "dj",
+      "search_aliases": [
+        "j"
+      ],
+      "series": "c-series",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "tc",
+      "display": "tc",
+      "search_aliases": [
+        "ch",
+        "č"
+      ],
+      "series": "c-series",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "t'c",
+      "display": "t'c",
+      "search_aliases": [
+        "ch'",
+        "č'",
+        "tc'"
+      ],
+      "series": "c-series",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "c",
+      "display": "c",
+      "search_aliases": [
+        "sh",
+        "š",
+        "ʃ"
+      ],
+      "series": "c-series",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "c:",
+      "display": "c'",
+      "search_aliases": [
+        "sh'",
+        "š'",
+        "ʃ'"
+      ],
+      "series": "c-series",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "g&",
+      "display": "g̯",
+      "search_aliases": [
+        "gy"
+      ],
+      "series": "anterior palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "k&",
+      "display": "k̯",
+      "search_aliases": [
+        "ky"
+      ],
+      "series": "anterior palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "k!&",
+      "display": "k̯'",
+      "search_aliases": [
+        "ky'"
+      ],
+      "series": "anterior palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "x&",
+      "display": "x̯",
+      "search_aliases": [
+        "xy"
+      ],
+      "series": "anterior palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "x:&",
+      "display": "x̯'",
+      "search_aliases": [
+        "xy'"
+      ],
+      "series": "anterior palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "y",
+      "display": "y",
+      "search_aliases": [
+        "ɣy"
+      ],
+      "series": "anterior palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "y:",
+      "display": "y'",
+      "search_aliases": [
+        "y'",
+        "ɣy'"
+      ],
+      "series": "anterior palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "g",
+      "display": "g",
+      "search_aliases": [],
+      "series": "medial palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "gw",
+      "display": "gw",
+      "search_aliases": [],
+      "series": "medial palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "k",
+      "display": "k",
+      "search_aliases": [],
+      "series": "medial palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "kw",
+      "display": "kw",
+      "search_aliases": [],
+      "series": "medial palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "k!",
+      "display": "k'",
+      "search_aliases": [
+        "k'"
+      ],
+      "series": "medial palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "k!w",
+      "display": "k'w",
+      "search_aliases": [
+        "kw'",
+        "k'w"
+      ],
+      "series": "medial palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "%",
+      "display": "ɣ",
+      "search_aliases": [
+        "gamma",
+        "ɣ"
+      ],
+      "series": "medial palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "%:",
+      "display": "ɣ'",
+      "search_aliases": [
+        "ɣ'"
+      ],
+      "series": "medial palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "%w",
+      "display": "ɣw",
+      "search_aliases": [
+        "ɣw"
+      ],
+      "series": "medial palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "x",
+      "display": "x",
+      "search_aliases": [],
+      "series": "medial palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "x:",
+      "display": "x'",
+      "search_aliases": [
+        "x'"
+      ],
+      "series": "medial palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "xw",
+      "display": "xw",
+      "search_aliases": [],
+      "series": "medial palatal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "g;",
+      "display": "g̣",
+      "search_aliases": [
+        "ɢ"
+      ],
+      "series": "velar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "g;w",
+      "display": "g̣w",
+      "search_aliases": [
+        "ɢw"
+      ],
+      "series": "velar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "q",
+      "display": "q",
+      "search_aliases": [],
+      "series": "velar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "qw",
+      "display": "qw",
+      "search_aliases": [],
+      "series": "velar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "q!",
+      "display": "q'",
+      "search_aliases": [
+        "q'"
+      ],
+      "series": "velar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "q!w",
+      "display": "q'w",
+      "search_aliases": [
+        "qw'",
+        "q'w"
+      ],
+      "series": "velar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "%;",
+      "display": "ɣ̣",
+      "search_aliases": [
+        "ɣ̣"
+      ],
+      "series": "velar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "%;:",
+      "display": "ɣ̣'",
+      "search_aliases": [
+        "ɣ̣'"
+      ],
+      "series": "velar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "%;w",
+      "display": "ɣ̣w",
+      "search_aliases": [
+        "ɣ̣w"
+      ],
+      "series": "velar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "x;",
+      "display": "x̣",
+      "search_aliases": [],
+      "series": "velar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "x;:",
+      "display": "x̣'",
+      "search_aliases": [
+        "x̣'"
+      ],
+      "series": "velar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "x;w",
+      "display": "x̣w",
+      "search_aliases": [],
+      "series": "velar",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "'",
+      "display": "ʔ",
+      "search_aliases": [
+        "glottal stop"
+      ],
+      "series": "faucal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "h",
+      "display": "h",
+      "search_aliases": [],
+      "series": "faucal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "hw",
+      "display": "hw",
+      "search_aliases": [],
+      "series": "faucal",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "dl",
+      "display": "dl",
+      "search_aliases": [],
+      "series": "lateral",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "t#",
+      "display": "tł",
+      "search_aliases": [
+        "tl",
+        "ƛ"
+      ],
+      "series": "lateral",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "t'#",
+      "display": "t'ł",
+      "search_aliases": [
+        "tl'",
+        "ƛ'"
+      ],
+      "series": "lateral",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "l",
+      "display": "l",
+      "search_aliases": [],
+      "series": "lateral",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "l:",
+      "display": "l'",
+      "search_aliases": [
+        "l'"
+      ],
+      "series": "lateral",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "#",
+      "display": "ł",
+      "search_aliases": [
+        "ƚ",
+        "ł"
+      ],
+      "series": "lateral",
+      "status": "Jacobs phonetic unit"
+    },
+    {
+      "key": "#:",
+      "display": "ł'",
+      "search_aliases": [
+        "ł'"
+      ],
+      "series": "lateral",
+      "status": "Jacobs phonetic unit"
+    }
+  ],
+  "documentary_index_exceptions": [
+    {
+      "key": "z-exception",
+      "display": "z",
+      "search_aliases": [
+        "z"
+      ],
+      "series": "documentary exception",
+      "status": "1990 documentary index exception",
+      "entry_id": "e1111-z",
+      "source_file": "Z",
+      "headword_ascii": "Z",
+      "explanation": "Preserves the literal 1990 Z.FIN headword without asserting independent phonemic status for z."
+    }
+  ]
+}

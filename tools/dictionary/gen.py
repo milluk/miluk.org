@@ -2,12 +2,55 @@
 """miluk.org /dictionary/ — static site generator.
 Reads corpus.json + dictionary.json (the 1990 dictionary, restored 2026)
 and emits the dictionary sub-site. Everything is generated; nothing hand-edited."""
-import json, os, re, html, unicodedata, collections
+import argparse, json, os, re, html, unicodedata, collections, sys
+from pathlib import Path
 
-SRC = os.path.dirname(os.path.abspath(__file__))
-OUT = '/home/claude/site-repo/dictionary'
-C = json.load(open(os.path.join(SRC, 'corpus.json')))
-D = json.load(open(os.path.join(SRC, 'dictionary.json')))
+TOOL_DIR = Path(__file__).resolve().parent
+REPO_ROOT = TOOL_DIR.parents[1]
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--data', type=Path, default=REPO_ROOT / 'dictionary' / 'data',
+                    help='input directory containing corpus.json and dictionary.json')
+parser.add_argument('--out', type=Path, default=REPO_ROOT / 'dictionary',
+                    help='generated dictionary site directory')
+args = parser.parse_args()
+DATA = args.data.resolve()
+OUT = args.out.resolve()
+PIPELINE = TOOL_DIR / 'pipeline'
+sys.path.insert(0, str(PIPELINE))
+from build_complete_dictionary import build as build_complete_dictionary
+from build_filename_surrogate_inventory import audit as audit_filename_surrogates
+from anderson import convert as convert_1990
+
+# dictionary.json is generated data. Rebuild it from the frozen D-Z checkpoint
+# and the byte-preserved A-C tables before rendering the site.
+if DATA == (REPO_ROOT / 'dictionary' / 'data').resolve():
+    rebuilt, recovered_records = build_complete_dictionary(
+        TOOL_DIR / 'archive' / 'restoration-checkpoint' / 'dictionary-dz-1111.json',
+        TOOL_DIR / 'archive' / '1990-abc')
+    dictionary_bytes = (json.dumps(rebuilt, ensure_ascii=False, indent=1) + '\n').encode()
+    dictionary_path = DATA / 'dictionary.json'
+    if not dictionary_path.exists() or dictionary_path.read_bytes() != dictionary_bytes:
+        dictionary_path.write_bytes(dictionary_bytes)
+    receipt = {'schema': 'miluk-1990-recovered-records/1',
+               'record_count': len(recovered_records), 'records': recovered_records}
+    receipt_bytes = (json.dumps(receipt, ensure_ascii=False, indent=1) + '\n').encode()
+    receipt_path = TOOL_DIR / 'provenance' / 'recovered-records.json'
+    if not receipt_path.exists() or receipt_path.read_bytes() != receipt_bytes:
+        receipt_path.write_bytes(receipt_bytes)
+C = json.loads((DATA / 'corpus.json').read_text(encoding='utf-8'))
+D = json.loads((DATA / 'dictionary.json').read_text(encoding='utf-8'))
+if DATA == (REPO_ROOT / 'dictionary' / 'data').resolve():
+    surrogate_inventory = audit_filename_surrogates(
+        D, TOOL_DIR / 'archive' / '1990-fin')
+    surrogate_bytes = (json.dumps(surrogate_inventory, ensure_ascii=False, indent=2) + '\n').encode()
+    surrogate_path = TOOL_DIR / 'provenance' / 'filename-surrogate-inventory.json'
+    if not surrogate_path.exists() or surrogate_path.read_bytes() != surrogate_bytes:
+        surrogate_path.write_bytes(surrogate_bytes)
+from jacobs_alphabet import (ORDER as JACOBS_ORDER,
+                             american_english_order, category as jacobs_category,
+                             initial_for_entry, presentation_headword,
+                             presentation_headword_ascii)
 ENTRIES = D['entries']; STORIES = C['stories']
 
 # ---------------- fold (identical in app.js) ----------------
@@ -41,14 +84,118 @@ for e in ENTRIES:
                 key=len, reverse=True)
     entry_keys[e['entry_id']] = ks
 
-SLIP = re.compile(r'-(f\d+|slipfile|slip-file|jacobs-slip)', re.I)
-live = [s for s in STORIES if s['lines'] and not SLIP.search(s['story_id'])]
+live = [s for s in STORIES if s.get('source', {}).get('layer') == 'uwpa-recovered-record']
 live_ids = {s['story_id'] for s in live}
 HOM = re.compile(r'[¹²³⁴⁵]+$')
-def plain_hw(e): return HOM.sub('', e['headword'])
+def plain_hw(e): return HOM.sub('', presentation_headword(e))
+
+# A displayed form is evidence, not merely decoration.  Where its preserved
+# 1990 spelling, or its normalized corroborating spelling, occurs in the
+# public corpus, retain a stable route back to that line.  The source record
+# itself is never rewritten to make a locator appear.
+PUNCT = '.,;:?!"«»“”‘’()[]'
+ascii_piece_locations = collections.defaultdict(list)
+display_piece_locations = collections.defaultdict(list)
+display_piece_stream = []
+for story in live:
+    for line in story['lines']:
+        locator = (story['story_id'], story['title'], line['line'])
+        raw_tokens = line['miluk_ascii'].split()
+        display_tokens = line['miluk'].split()
+        for token in raw_tokens:
+            for piece in token.strip(PUNCT).split('-'):
+                if piece:
+                    ascii_piece_locations[piece].append(locator)
+        for token in display_tokens:
+            for piece in token.strip(PUNCT).split('-'):
+                key = fold(piece)
+                if key:
+                    display_piece_locations[key].append(locator)
+                    display_piece_stream.append((key, locator))
+
+def form_locator(form):
+    """Return the first transparent public source locator for one form.
+
+    Exact preserved ASCII wins.  A normalized piece match is used only for a
+    form already classified as corpus/corroborated evidence, mirroring the
+    verification standard that assigned that evidence label.  Unverified forms
+    intentionally have no invented target.
+    """
+    if form.get('evidence') == 'unverified':
+        return None
+    locations = ascii_piece_locations.get(form.get('ascii'), ())
+    if locations:
+        return locations[0]
+    locations = display_piece_locations.get(fold(form.get('form', '')), ())
+    if locations:
+        return locations[0]
+    key = fold(form.get('form', ''))
+    if len(key) >= 3:
+        # The established corroboration rule also admits a form embedded in a
+        # longer morphological piece.  Preserve that same, already-labelled
+        # relation in the source link rather than leaving its evidence chip
+        # unexplorable.
+        for candidate, locator in display_piece_stream:
+            if key in candidate:
+                return locator
+    return None
+
+# ---------------- public cross-reference display ----------------
+# Archival fields retain Anderson's 1990 ASCII. Only their public rendering is
+# converted here, and links are emitted only for a unique dictionary target.
+ASCII_NOTATION = re.compile(r"[<@#;!&$%`0/]|:")
+
+def ascii_reference_fold(value):
+    value = value.lower()
+    value = re.sub(r"[<:;!&$'`0/]", '', value)
+    value = value.replace('#', 'l').replace('@', 'e').replace('%', 'g')
+    value = re.sub(r'v(?=[a-z])', '', value)
+    return re.sub(r'[^a-z0-9]', '', value)
+
+def reference_targets(value):
+    target_fold = ascii_reference_fold(value)
+    if len(target_fold) < 3:
+        return []
+    matches = []
+    for candidate in ENTRIES:
+        if fold(plain_hw(candidate)) == target_fold:
+            matches.append(candidate)
+    for candidate in ENTRIES:
+        if (candidate not in matches and
+                any(fold(form['form']) == target_fold for form in candidate['forms'])):
+            matches.append(candidate)
+    return matches
+
+def converted_reference(value):
+    return convert_1990(value) if ASCII_NOTATION.search(value) else value
+
+def gloss_reference(value):
+    match = re.search(r"\bsee(?: reference under)?\s+(\S+)$", value, re.I)
+    if not match or not ASCII_NOTATION.search(match.group(1)):
+        return None
+    return match, match.group(1)
+
+def public_gloss_text(value):
+    """Convert only a terminal 1990 see-target for plain-text public surfaces."""
+    found = gloss_reference(value)
+    if not found:
+        return value
+    match, raw_target = found
+    return value[:match.start(1)] + converted_reference(raw_target)
+
+def public_gloss(value):
+    """Escape a gloss and link a converted terminal target only if unique."""
+    found = gloss_reference(value)
+    if not found:
+        return E(value)
+    match, raw_target = found
+    label = E(converted_reference(raw_target))
+    targets = reference_targets(raw_target)
+    if len(targets) == 1:
+        label = '<a href="%s.html">%s</a>' % (targets[0]['entry_id'], label)
+    return E(value[:match.start(1)]) + label
 
 # ---------------- word-level linking ----------------
-PUNCT = '.,;:?!"«»“”‘’()[]'
 def link_line(miluk, cands, root, self_id=None):
     """Render a Miluk line with each recognizable piece linked to its entry.
        If self_id is set, that entry's pieces are bolded instead of linked."""
@@ -89,6 +236,27 @@ def link_line(miluk, cands, root, self_id=None):
                 rend.append('<a class="w" href="%swords/%s.html">%s</a>' % (root, best, E(pc)))
         out.append(E(lead) + '-'.join(rend) + E(trail))
     return ' '.join(out)
+
+def line_entry_links(entry_ids, root):
+    """Expose only the recorded dictionary relations for a corpus line.
+
+    Word-level links above remain a reading aid.  This small disclosure is the
+    complementary provenance view: it lists the exact entry identifiers stored
+    on the line, without deriving another relation from spelling similarity.
+    """
+    entries = [by_id[entry_id] for entry_id in entry_ids if entry_id in by_id]
+    if not entries:
+        return ''
+    noun = 'entry' if len(entries) == 1 else 'entries'
+    links = []
+    for entry in entries:
+        label = E(presentation_headword(entry))
+        gloss = public_gloss_text(entry.get('gloss') or '')
+        suffix = (' <span class="line-entry-gloss">%s</span>' % E(gloss)) if gloss else ''
+        links.append('<a class="mk" href="%swords/%s.html">%s</a>%s' %
+                     (root, entry['entry_id'], label, suffix))
+    return ('<details class="line-evidence"><summary>Linked dictionary %s (%d)</summary>'
+            '<p>%s</p></details>' % (noun, len(entries), ' · '.join(links)))
 
 # ---------------- page shell ----------------
 def shell(title, body, root, desc='', active=''):
@@ -131,9 +299,16 @@ def shell(title, body, root, desc='', active=''):
               root, root, root, nav, body, root, root)
 
 def write(path, text):
-    p = os.path.join(OUT, path)
-    os.makedirs(os.path.dirname(p), exist_ok=True)
-    open(p, 'w', encoding='utf-8').write(text)
+    p = OUT / path
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(text, encoding='utf-8')
+
+# Remove only generator-owned pages. This prevents stale entry or story pages from
+# surviving a boundary correction while leaving data and static assets untouched.
+for owned_dir in (OUT / 'words', OUT / 'stories'):
+    if owned_dir.exists():
+        for owned_page in owned_dir.glob('*.html'):
+            owned_page.unlink()
 
 # ---------------- entry pages ----------------
 BADGE = {'corpus':       ('badge-corpus', 'attested verbatim in the corpus'),
@@ -141,59 +316,82 @@ BADGE = {'corpus':       ('badge-corpus', 'attested verbatim in the corpus'),
          'unverified':   ('badge-unv',    'not found in the digitized corpus — needs review')}
 
 def letter_of(e):
-    k = fold(plain_hw(e))
-    return k[:1] or '#'
+    return initial_for_entry(e)
 
 # section label letters (majority real initial per folded letter)
 groups = collections.defaultdict(list)
 for e in ENTRIES: groups[letter_of(e)].append(e)
-label_for = {}
-for k, es in groups.items():
-    label_for[k] = collections.Counter(x['headword'][:1] for x in es).most_common(1)[0][0].upper()
+label_for = {k: jacobs_category(k)['display'] for k in groups}
+attested_inventory = {
+    'schema': 'miluk-attested-initial-index/1',
+    'rule': 'Only attested word-initial Jacobs units are emitted; the sole documentary exception is separately scoped.',
+    'categories': [dict(jacobs_category(k), count=len(groups[k]))
+                   for k in sorted(groups, key=JACOBS_ORDER.__getitem__)],
+}
+attested_bytes = (json.dumps(attested_inventory, ensure_ascii=False, indent=2) + '\n').encode()
+attested_path = TOOL_DIR / 'provenance' / 'attested-index-inventory.json'
+if not attested_path.exists() or attested_path.read_bytes() != attested_bytes:
+    attested_path.write_bytes(attested_bytes)
 
 MAX_FULL = 8
 for e in ENTRIES:
     eid = e['entry_id']; root = '../'
     b = []
     b.append('<p class="crumb"><a href="../words/index.html">Words</a> · %s</p>' % E(label_for[letter_of(e)]))
-    b.append('<h1 class="hw">%s</h1>' % E(e['headword']))
+    b.append('<h1 class="hw">%s</h1>' % E(presentation_headword(e)))
     if e['gloss']:
-        b.append('<p class="gloss">%s</p>' % E(e['gloss']))
+        b.append('<p class="gloss">%s</p>' % public_gloss(e['gloss']))
     # forms
     if e['forms']:
         b.append('<section class="forms"><h2>Attested forms</h2><ul class="formlist">')
     for f in e['forms']:
         cls, tip = BADGE.get(f['evidence'], ('badge-unv', f['evidence']))
-        b.append('<li><span class="mk">%s</span> <span class="badge %s" title="%s">%s</span></li>'
-                 % (E(f['form']), cls, E(tip),
-                    {'corpus':'corpus','corroborated':'corroborated','unverified':'unverified'}[f['evidence']]))
+        label = {'corpus':'corpus','corroborated':'corroborated','unverified':'unverified'}[f['evidence']]
+        locator = form_locator(f)
+        if locator:
+            story_id, title, line_number = locator
+            b.append('<li><a class="formlink" href="../stories/%s.html#l%d" title="Show source line: %s, line %d"><span class="mk">%s</span> <span class="badge %s" title="%s">%s</span></a></li>'
+                     % (story_id, line_number, E(title), line_number, E(f['form']),
+                        cls, E(tip), label))
+        else:
+            b.append('<li class="form-unlocated"><span class="mk">%s</span> <span class="badge %s" title="%s">%s</span></li>'
+                     % (E(f['form']), cls, E(tip), label))
     if e['forms']:
         b.append('</ul></section>')
+    if e.get('extensions') or e.get('citation_summary') or e.get('record_notes') or e.get('raw_source_lines'):
+        b.append('<section class="record1990"><h2>1990 record</h2>')
+        if e.get('extensions'):
+            b.append('<p><strong>Extensions:</strong> %s</p>' % E('; '.join(e['extensions'])))
+        if e.get('citation_summary'):
+            b.append('<p><strong>Source citation:</strong> %s</p>' % E(e['citation_summary']))
+        for note in e.get('record_notes', []):
+            b.append('<p>%s</p>' % E(note))
+        if e.get('raw_source_lines'):
+            b.append('<details class="source-record"><summary>Complete 1990 source record</summary><pre>%s</pre></details>' %
+                     E('\n'.join(e['raw_source_lines'])))
+        b.append('</section>')
     # cross references
     if e.get('cross_references'):
         xs = []
         for x in e['cross_references']:
             tail = x.split('--')[-1].strip()
-            def afold(a):  # 1986 ASCII -> comparable fold
-                a = a.lower()
-                a = re.sub(r"[<:;!&$'`0/]", '', a)
-                a = a.replace('#', 'l').replace('@', 'e').replace('%', 'g')
-                a = re.sub(r'v(?=[a-z])', '', a)
-                return re.sub(r'[^a-z0-9]', '', a)
-            tf = afold(tail)
-            tgt = None
-            if len(tf) >= 3:
-                for e2 in ENTRIES:
-                    if fold(plain_hw(e2)) == tf: tgt = e2; break
-                if tgt is None:
-                    for e2 in ENTRIES:
-                        if any(fold(f2['form']) == tf for f2 in e2['forms']): tgt = e2; break
-            if tgt:
+            targets = reference_targets(tail)
+            if len(targets) == 1:
+                tgt = targets[0]
                 lead = x.split('--')[0].strip()
                 pre = (E(lead) + ' — ') if '--' in x and lead else ''
-                xs.append('%s<a href="%s.html">%s</a>' % (pre, tgt['entry_id'], E(tgt['headword'])))
+                xs.append('%s<a href="%s.html">%s</a>' %
+                          (pre, tgt['entry_id'], E(presentation_headword(tgt))))
             else:
-                xs.append('<span class="code1990" title="1990 note, in the original keyboard notation">%s</span>' % E(x))
+                if ASCII_NOTATION.search(tail):
+                    if '--' in x:
+                        lead = x.split('--')[0].strip()
+                        shown = ((E(lead) + ' — ') if lead else '') + E(converted_reference(tail))
+                    else:
+                        shown = E(converted_reference(tail))
+                    xs.append('<span class="mk">%s</span>' % shown)
+                else:
+                    xs.append('<span class="code1990" title="1990 note, in the original keyboard notation">%s</span>' % E(x))
         b.append('<p class="xref">See %s</p>' % ', '.join(xs))
     # attestations
     def really_verified(a):
@@ -259,20 +457,26 @@ for e in ENTRIES:
                  % ' · '.join(E(a['unresolved']) for a in unres))
     b.append('<p class="prov">1990 source file: %s · id: %s</p>' % (E(e.get('source_file') or ''), E(eid)))
     write('words/%s.html' % eid,
-          shell(e['headword'], '\n'.join(b), root, active='words',
-                desc='Miluk dictionary entry: %s — %s' % (plain_hw(e), e['gloss'] or 'Miluk word')))
+          shell(presentation_headword(e), '\n'.join(b), root, active='words',
+                desc='Miluk dictionary entry: %s — %s' %
+                     (plain_hw(e), public_gloss_text(e['gloss']) if e['gloss'] else 'Miluk word')))
 
 # ---------------- words index (Miluk A–Z) ----------------
-order = sorted(groups.keys())
+# The attested inventory remains in documented Jacobs order.  The reader's
+# table of contents is instead arranged by ordinary American English base
+# letters; diacritic ties retain the inventory order.
+order = sorted(groups.keys(), key=american_english_order)
+anchor_for = {key: 's-%02d' % JACOBS_ORDER[key] for key in order}
 b = ['<h1>Miluk words</h1>',
      '<p class="lead">%d entries from the 1990 dictionary. Diacritics are ignored in the index order.</p>' % len(ENTRIES),
      '<div class="search-box"><input id="q" type="search" placeholder="Search Miluk or English…" autocomplete="off"><div id="results"></div></div>',
-     '<p class="alpha">%s</p>' % ' '.join('<a href="#s-%s">%s</a>' % (k, E(label_for[k])) for k in order)]
+     '<p class="alpha">%s</p>' % ' '.join('<a href="#%s">%s</a>' % (anchor_for[k], E(label_for[k])) for k in order)]
 for k in order:
-    b.append('<h2 id="s-%s">%s</h2><ul class="entryindex">' % (k, E(label_for[k])))
-    for e in sorted(groups[k], key=lambda x: (fold(plain_hw(x)), x['headword'])):
+    b.append('<h2 id="%s">%s</h2><ul class="entryindex">' % (anchor_for[k], E(label_for[k])))
+    for e in sorted(groups[k], key=lambda x: (fold(plain_hw(x)), presentation_headword(x))):
         b.append('<li><a href="%s.html" class="mk">%s</a><span class="g">%s</span></li>'
-                 % (e['entry_id'], E(e['headword']), E(e['gloss'] or '')))
+                 % (e['entry_id'], E(presentation_headword(e)),
+                    E(public_gloss_text(e['gloss'] or ''))))
     b.append('</ul>')
 write('words/index.html', shell('Miluk words', '\n'.join(b), '../', active='words',
                                 desc='Miluk–English: all %d entries of the 1990 Miluk dictionary.' % len(ENTRIES)))
@@ -296,7 +500,8 @@ for k in sorted(senses):
     if f0 != cur:
         cur = f0
         b.append('<h2>%s</h2>' % E(cur))
-    links = ', '.join('<a class="mk" href="../words/%s.html">%s</a>' % (i, E(by_id[i]['headword']))
+    links = ', '.join('<a class="mk" href="../words/%s.html">%s</a>' %
+                      (i, E(presentation_headword(by_id[i])))
                       for i in sorted(senses[k]))
     b.append('<p class="sense"><span class="e">%s</span> %s</p>' % (E(k), links))
 write('english/index.html', shell('English finder', '\n'.join(b), '../', active='english',
@@ -315,10 +520,11 @@ for i, s in enumerate(live):
          '<div class="story mode-inter" id="story">']
     for l in s['lines']:
         b.append('<div class="line" id="l%d"><a class="n" href="#l%d">%d</a>'
-                 '<p class="m">%s</p><p class="e">%s</p></div>'
+                 '<p class="m">%s</p><p class="e">%s</p>%s</div>'
                  % (l['line'], l['line'], l['line'],
                     link_line(l['miluk'], l.get('entries', []), root),
-                    E(l['english'].strip())))
+                    E(l['english'].strip()),
+                    line_entry_links(l.get('entries', []), root)))
     b.append('</div>')
     nav2 = []
     if i > 0: nav2.append('<a href="%s.html">&larr; %s</a>' % (live[i-1]['story_id'], E(live[i-1]['title'])))
@@ -330,7 +536,7 @@ for i, s in enumerate(live):
 
 # ---------------- stories index ----------------
 b = ['<h1>The texts</h1>',
-     '<p class="lead">%d texts, %d numbered lines. Read interlinearly, or in Miluk or English alone; every recognizable Miluk word links to its dictionary entry.</p>'
+     '<p class="lead">%d recovered corpus records representing 110 of 111 published Miluk-bearing texts, %d numbered lines. Two published texts are absorbed within records and one 1940 text is absent pending source-integrity work. Read interlinearly, or in Miluk or English alone; every recognizable Miluk word links to its dictionary entry.</p>'
      % (len(live), sum(s['line_count'] for s in live)),
      '<input id="storyfilter" type="search" placeholder="Filter by title…" autocomplete="off">',
      '<ul class="storylist">']
@@ -342,16 +548,23 @@ write('stories/index.html', shell('The texts', '\n'.join(b), '../', active='stor
                                   desc='The Miluk texts of Annie Miner Peterson, readable interlinearly.'))
 
 # ---------------- search index ----------------
-idx = {'entries': [{'i': e['entry_id'], 'h': e['headword'],
+def search_aliases(e):
+    raw = presentation_headword_ascii(e)
+    key = letter_of(e)
+    remainder = raw[len(key):] if raw.lower().startswith(key) else raw
+    return [alias + remainder for alias in jacobs_category(key)['search_aliases']]
+
+idx = {'entries': [{'i': e['entry_id'], 'h': presentation_headword(e),
                     'k': fold(plain_hw(e)) or '',
-                    'kk': sorted({fold(f['form']) for f in e['forms'] if fold(f['form'])}),
-                    'g': (e['gloss'] or '')} for e in ENTRIES],
+                    'kk': sorted({fold(f['form']) for f in e['forms'] if fold(f['form'])} |
+                                 {fold(a) for a in search_aliases(e) if fold(a)}),
+                    'g': public_gloss_text(e['gloss'] or '')} for e in ENTRIES],
        'stories': [{'i': s['story_id'], 't': s['title']} for s in live]}
 write('search-index.json', json.dumps(idx, ensure_ascii=False, separators=(',', ':')))
 
 # ---------------- about ----------------
-FOREWORD = open(os.path.join(SRC, 'foreword.html'), encoding='utf-8').read()
-INTRO = open(os.path.join(SRC, 'intro1990.html'), encoding='utf-8').read()
+FOREWORD = (TOOL_DIR / 'foreword.html').read_text(encoding='utf-8')
+INTRO = (TOOL_DIR / 'intro1990.html').read_text(encoding='utf-8')
 b = ['<h1>About the dictionary</h1>', FOREWORD, '<hr class="rule">',
      '<h1>Introduction (1990)</h1>', INTRO]
 write('about.html', shell('About', '\n'.join(b), './', active='about',
@@ -364,7 +577,7 @@ b = ['''<div class="dict-hero">
 <h1>A Miluk Dictionary</h1>
 <p class="hero-subtitle">The 1990 lexicography of the Jacobs corpus, restored</p>
 <div class="search-box big"><input id="q" type="search" placeholder="Search Miluk or English — try &lsquo;neqe&rsquo; or &lsquo;run away&rsquo;…" autocomplete="off"><div id="results"></div></div>
-<p class="stats">%d entries · %d attested forms · %d texts · %d lines</p>
+<p class="stats">%d entries · %d attested forms · %d corpus records · %d lines</p>
 </div>''' % nstats,
      '''<div class="cards">
 <a class="card" href="words/index.html"><span class="card-title">Miluk words</span><span class="card-sub">the full A&ndash;Z, every entry with its attestations in context</span></a>
@@ -379,7 +592,7 @@ as the first reference work in Miluk lexicography, recovered and restored in 202
 line where its forms occur, and every text links back into the dictionary.</p>
 </div>''']
 write('index.html', shell('A Miluk Dictionary', '\n'.join(b), './', active='home',
-                          desc='A Miluk Dictionary — %d entries and %d texts from the Jacobs corpus, searchable in Miluk and English.' % (len(ENTRIES), len(live))))
+                          desc='A Miluk Dictionary — %d entries and %d recovered corpus records representing 110 of 111 published Miluk-bearing texts, searchable in Miluk and English.' % (len(ENTRIES), len(live))))
 
 print('pages written:', sum(len(fs) for _, _, fs in os.walk(OUT)))
-print('entries:', len(ENTRIES), ' stories:', len(live))
+print('entries:', len(ENTRIES), ' corpus records:', len(live))
