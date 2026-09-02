@@ -537,6 +537,27 @@ for story in C['stories']:
     text = (OUT / 'stories' / (story['story_id'] + '.html')).read_text(encoding='utf-8')
     count = len(re.findall(r'<div class="line" id="l\d+">', text))
     check(count == story['line_count'], f"generated line count: {story['story_id']}")
+    for line in story['lines']:
+        line_match = re.search(r'<div class="line" id="l%d">(.*?)</div>' % line['line'],
+                               text, re.S)
+        check(line_match is not None,
+              f"generated line missing: {story['story_id']}:{line['line']}")
+        if line_match is None:
+            continue
+        evidence = re.search(r'<details class="line-evidence">(.*?)</details>',
+                             line_match.group(1), re.S)
+        expected_ids = line.get('entries', [])
+        if not expected_ids:
+            check(evidence is None,
+                  f"unrecorded dictionary relation rendered: {story['story_id']}:{line['line']}")
+            continue
+        check(evidence is not None,
+              f"recorded dictionary relation omitted: {story['story_id']}:{line['line']}")
+        if evidence is None:
+            continue
+        linked_ids = re.findall(r'href="\.\./words/(e[^\"]+)\.html"', evidence.group(1))
+        check(linked_ids == expected_ids,
+              f"line dictionary relation changed: {story['story_id']}:{line['line']}")
 
 index = load(OUT / 'search-index.json')
 check(len(index['entries']) == len(D['entries']), 'search index entry count')
