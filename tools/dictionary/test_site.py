@@ -272,12 +272,12 @@ check((ka_entry['headword'], ka_entry['headword_ascii'], ka_entry['source_file']
       ('ka', 'KA', 'KA'),
       'KA.FIN filename-derived protected fields changed')
 check([form for form in ka_entry['forms']
-       if form.get('ascii') == "k!&a'" and form.get('form') == "k̯̓a'"] ==
+       if form.get('ascii') == "k!&a'" and form.get('form') == "ḵ́̓a'"] ==
       [ka_entry['forms'][0]],
       'KA.FIN first Reference List form no longer uniquely supports the public headword')
-check(presentation_headword(ka_entry) == "k̯̓a'" and
+check(presentation_headword(ka_entry) == "ḵ́̓a'" and
       initial_for_entry(ka_entry) == 'k!&' and
-      initial_key("k!&a'") == initial_key("k&!a'") == initial_key("k̯̓a'") == 'k!&',
+      initial_key("k!&a'") == initial_key("k&!a'") == initial_key("ḵ́̓a'") == 'k!&',
       'people headword must present and classify as initial anterior-palatal ejective k')
 check('e0511-ka' in [e['entry_id'] for e in D['entries'] if initial_for_entry(e) == 'k!&'] and
       len([e for e in D['entries'] if initial_for_entry(e) == 'k!&']) == 10,
@@ -564,6 +564,20 @@ check(len(index['entries']) == len(D['entries']), 'search index entry count')
 check(len(index['stories']) == len(C['stories']), 'search index story count')
 check({item['i'] for item in index['entries']} == entry_id_set, 'search index entry identities')
 check({item['i'] for item in index['stories']} == public_ids, 'search index story identities')
+wn_index = load(OUT / 'wordnet-approx-index.json')
+check(isinstance(wn_index, dict) and len(wn_index) > 0,
+      'wordnet approximate-match index missing or empty')
+wn_bad_keys = [k for k in wn_index if ' ' in k or k != k.lower()]
+check(not wn_bad_keys, f'wordnet index keys must be single-token lowercase: {wn_bad_keys[:5]}')
+wn_bad_refs = []
+for word, pairs in wn_index.items():
+    for pair in pairs:
+        eid, score = pair[0], pair[1]
+        if eid not in entry_id_set or not (0 < score <= 1.0):
+            wn_bad_refs.append((word, pair))
+check(not wn_bad_refs,
+      f'wordnet index references a non-live entry or an out-of-range score: {wn_bad_refs[:5]}')
+
 words_index = (OUT / 'words' / 'index.html').read_text(encoding='utf-8')
 tab_labels = [html.unescape(value) for value in
               re.findall(r'<a href="#s-\d+">([^<]+)</a>', words_index)]
@@ -586,12 +600,12 @@ for entry in length_bearing_barred_l:
     check('<a href="../words/index.html">Words</a> · ł</p>' in page,
           f"barred-L-plus-length breadcrumb: {entry['entry_id']}")
 ka_page = (OUT / 'words' / 'e0511-ka.html').read_text(encoding='utf-8')
-check('<h1 class="hw">k̯̓a&#x27;</h1>' in ka_page and
-      '<a href="../words/index.html">Words</a> · k̯&#x27;</p>' in ka_page and
+check('<h1 class="hw">ḵ́̓a&#x27;</h1>' in ka_page and
+      '<a href="../words/index.html">Words</a> · ḵ&#x27;</p>' in ka_page and
       '1990 source file: KA · id: e0511-ka' in ka_page,
       'KA.FIN public headword, lawful category, or provenance missing')
-check('href="e0511-ka.html" class="mk">k̯̓a&#x27;</a>' in words_index and
-      search_by_id['e0511-ka']['h'] == "k̯̓a'" and
+check('href="e0511-ka.html" class="mk">ḵ́̓a&#x27;</a>' in words_index and
+      search_by_id['e0511-ka']['h'] == "ḵ́̓a'" and
       search_by_id['e0511-ka']['k'] == 'ka',
       'people presentation headword missing from index/search surfaces')
 x_length_page = (OUT / 'words' / 'e1021-xinxinu.html').read_text(encoding='utf-8')
@@ -602,14 +616,14 @@ check('<a href="../words/index.html">Words</a> · x</p>' in x_length_page,
 # unusual KELE form remains exactly as recorded, while the link lets a reader
 # inspect its preserved corpus occurrence rather than silently repairing it.
 kele_page = (OUT / 'words' / 'e0515-kele.html').read_text(encoding='utf-8')
-check('k̯ʼs·‿lɛ' in kele_page and
+check('ḵʼs·‿lɛ' in kele_page and
       'href="../stories/t055-the-trickster-person-who-made-the-country.html#l622"' in kele_page and
       'Show source line: The trickster person who made the country, line 622' in kele_page,
       'KELE corpus form must link to its preserved source line')
 t055 = story_by_id['t055-the-trickster-person-who-made-the-country']
 t055_line_622 = next(line for line in t055['lines'] if line['line'] == 622)
 check(t055_line_622['miluk_ascii'] == 'ha:<:: k!&s:<le n@x;-he<mq!etc.' and
-      t055_line_622['miluk'] == 'há··· k̯̓s·́lɛ nəx̣-hɛ́mq̓ɛtc.',
+      t055_line_622['miluk'] == 'há··· ḵ́s·́lɛ nəx̣-hɛ́mq̓ɛtc.',
       'repair-desk candidate source must remain unchanged at t055 line 622')
 check('/__repair/' not in kele_page and
       all('/__repair/' not in page.read_text(encoding='utf-8') for page in pages),
