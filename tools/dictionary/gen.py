@@ -562,6 +562,20 @@ idx = {'entries': [{'i': e['entry_id'], 'h': presentation_headword(e),
        'stories': [{'i': s['story_id'], 't': s['title']} for s in live]}
 write('search-index.json', json.dumps(idx, ensure_ascii=False, separators=(',', ':')))
 
+# ---------------- approximate-match index (B1, WordNet-derived) ----------------
+# Reads only the checked-in derived index below; no network, no WordNet
+# library, no runtime dependency. See provenance/WORDNET_SOURCE.md.
+live_ids = {e['entry_id'] for e in ENTRIES}
+wn_path = TOOL_DIR / 'wordnet-synonyms.json'
+wn_src = json.loads(wn_path.read_text(encoding='utf-8')) if wn_path.exists() else {}
+wn_out = {}
+for word, pairs in wn_src.items():
+    kept = [[eid, score] for eid, score in pairs if eid in live_ids]
+    if kept:
+        wn_out[word] = kept
+write('wordnet-approx-index.json',
+      json.dumps(wn_out, ensure_ascii=False, separators=(',', ':'), sort_keys=True))
+
 # ---------------- about ----------------
 FOREWORD = (TOOL_DIR / 'foreword.html').read_text(encoding='utf-8')
 INTRO = (TOOL_DIR / 'intro1990.html').read_text(encoding='utf-8')
