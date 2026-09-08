@@ -20,6 +20,7 @@
   if (q) {
     var box = document.getElementById('results');
     var IDX = null, loading = false, waiting = [];
+    var WN = null, wnLoading = false;
     function load(cb) {
       if (IDX) return cb();
       waiting.push(cb);
@@ -31,6 +32,17 @@
           var w = waiting; waiting = [];
           w.forEach(function (f) { f(); });
         });
+    }
+    /* Approximate (WordNet-derived) English matches: a separate, larger file,
+       fetched lazily only once a search is actually run, never blocking exact
+       search. See tools/dictionary/provenance/WORDNET_SOURCE.md. */
+    function loadApprox(cb) {
+      if (WN) return cb(WN);
+      if (wnLoading) { setTimeout(function () { loadApprox(cb); }, 50); return; }
+      wnLoading = true;
+      fetch(ROOT + 'wordnet-approx-index.json').then(function (r) { return r.json(); })
+        .then(function (j) { WN = j; cb(WN); })
+        .catch(function () { WN = {}; cb(WN); });
     }
     function esc(s) { return s.replace(/[&<>"]/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
@@ -46,6 +58,17 @@
         box.innerHTML = h;
       }
       box.classList.add('open');
+    }
+    function finish(rows) {
+      var seen = {};
+      rows = rows.filter(function (r) {
+        var k = r.grp + r.href;
+        if (seen[k]) return false; seen[k] = 1; return true;
+      }).sort(function (a, b) {
+        var g = { 'Approximate matches': 0, 'Miluk': 1, 'English': 2, 'Texts': 3 };
+        return (g[a.grp] - g[b.grp]) || (a.rank - b.rank) || (a.hw > b.hw ? 1 : -1);
+      });
+      render(rows);
     }
     function search() {
       var raw = q.value.trim();
@@ -71,15 +94,31 @@
             rows.push({ grp: 'Texts', rank: 1, hw: s.t, g: '',
                         href: ROOT + 'stories/' + s.i + '.html' });
         });
-        var seen = {};
-        rows = rows.filter(function (r) {
-          var k = r.grp + r.href;
-          if (seen[k]) return false; seen[k] = 1; return true;
-        }).sort(function (a, b) {
-          var g = { 'Miluk': 0, 'English': 1, 'Texts': 2 };
-          return (g[a.grp] - g[b.grp]) || (a.rank - b.rank) || (a.hw > b.hw ? 1 : -1);
-        });
-        render(rows);
+        /* Approximate matches only for a single-token English query, and only
+           when they add entries the exact search didn't already find — this
+           is a semantic fallback, not a replacement for exact results. */
+        var token = ql.replace(/[^a-z']/g, '');
+        if (token && token === ql && !/\s/.test(raw)) {
+          loadApprox(function (wn) {
+            var hits = wn[token];
+            if (hits && hits.length) {
+              var exactHrefs = {};
+              rows.forEach(function (r) { exactHrefs[r.href] = 1; });
+              var byId = {};
+              IDX.entries.forEach(function (e) { byId[e.i] = e; });
+              hits.forEach(function (pair) {
+                var e = byId[pair[0]];
+                if (!e) return;
+                var href = ROOT + 'words/' + e.i + '.html';
+                if (exactHrefs[href]) return;
+                rows.push({ grp: 'Approximate matches', rank: 1 - pair[1], hw: e.h, g: e.g, href: href });
+              });
+            }
+            finish(rows);
+          });
+        } else {
+          finish(rows);
+        }
       });
     }
     q.addEventListener('input', search);
