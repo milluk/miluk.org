@@ -2,7 +2,7 @@
 """miluk.org /dictionary/ — static site generator.
 Reads corpus.json + dictionary.json (the 1990 dictionary, restored 2026)
 and emits the dictionary sub-site. Everything is generated; nothing hand-edited."""
-import argparse, json, os, re, html, unicodedata, collections, sys
+import argparse, base64, hashlib, json, os, re, html, unicodedata, collections, sys
 from pathlib import Path
 
 TOOL_DIR = Path(__file__).resolve().parent
@@ -278,6 +278,12 @@ def shell(title, body, root, desc='', active=''):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="%sstyle.css">
+<link rel="manifest" href="%smanifest.json">
+<link rel="apple-touch-icon" href="%sicons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Miluk Dictionary">
+<meta name="theme-color" content="#11150c">
 </head>
 <body data-root="%s">
 <nav class="sticky-nav"><div class="nav-container">
@@ -296,7 +302,7 @@ def shell(title, body, root, desc='', active=''):
 </body>
 </html>''' % (E(title),
               ('<meta name="description" content="%s">\n' % E(desc)) if desc else '',
-              root, root, root, nav, body, root, root)
+              root, root, root, root, root, nav, body, root, root)
 
 def write(path, text):
     p = OUT / path
@@ -608,5 +614,72 @@ line where its forms occur, and every text links back into the dictionary.</p>
 write('index.html', shell('A Miluk Dictionary', '\n'.join(b), './', active='home',
                           desc='A Miluk Dictionary — %d entries and %d recovered corpus records representing 110 of 111 published Miluk-bearing texts, searchable in Miluk and English.' % (len(ENTRIES), len(live))))
 
+# ---------------- offline / installable app (iOS/Android home-screen) ----------------
+# Icons are checked in as base64 text (tools/dictionary/icons-src/) rather
+# than binary PNGs, so they push through the same text-only tooling as
+# every other source file; gen.py decodes them into real binary assets
+# below. One visit online (already required to "Add to Home Screen") lets
+# the service worker further down precache every generated file, so the
+# dictionary then works fully offline. The cache name is a hash of the
+# file manifest itself, never a timestamp, so a content-identical rebuild
+# stays byte-for-byte deterministic (see the second-generation check below).
+ICONS_SRC = TOOL_DIR / 'icons-src'
+for icon_name in ('apple-touch-icon.png', 'icon-192.png', 'icon-512.png'):
+    b64_text = (ICONS_SRC / (icon_name + '.b64')).read_text(encoding='ascii')
+    (OUT / 'icons').mkdir(parents=True, exist_ok=True)
+    (OUT / 'icons' / icon_name).write_bytes(base64.b64decode(b64_text))
+
+write('manifest.json', json.dumps({
+    'name': 'A Miluk Dictionary',
+    'short_name': 'Miluk',
+    'start_url': './index.html',
+    'scope': './',
+    'display': 'standalone',
+    'background_color': '#11150c',
+    'theme_color': '#11150c',
+    'icons': [
+        {'src': 'icons/icon-192.png', 'sizes': '192x192', 'type': 'image/png'},
+        {'src': 'icons/icon-512.png', 'sizes': '512x512', 'type': 'image/png'},
+    ],
+}, ensure_ascii=False, indent=2, sort_keys=True))
+
+precache_paths = sorted(
+    p.relative_to(OUT).as_posix()
+    for p in OUT.rglob('*')
+    if p.is_file() and p.name != 'service-worker.js')
+cache_version = hashlib.sha256('\n'.join(precache_paths).encode('utf-8')).hexdigest()[:16]
+write('service-worker.js', '''const CACHE = 'miluk-dictionary-%s';
+const ASSETS = %s;
+
+self.addEventListener('install', event => {
+  self.skipWaiting();
+  event.waitUntil(
+    caches.open(CACHE).then(cache =>
+      cache.addAll(ASSETS.map(p => new Request(p, { cache: 'reload' })))));
+});
+
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys()
+      .then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k))))
+      .then(() => self.clients.claim()));
+});
+
+// Cache-first for every same-origin asset (all precached above); anything
+// else (e.g. the Google Fonts CSS/woff2 the pages reference) is cached
+// opportunistically the first time it's fetched, so it also works offline
+// after that first online visit.
+self.addEventListener('fetch', event => {
+  if (event.request.method !== 'GET') return;
+  event.respondWith(
+    caches.match(event.request).then(hit => hit || fetch(event.request).then(res => {
+      var copy = res.clone();
+      caches.open(CACHE).then(cache => cache.put(event.request, copy));
+      return res;
+    }).catch(() => hit)));
+});
+''' % (cache_version, json.dumps(precache_paths, ensure_ascii=False)))
+
 print('pages written:', sum(len(fs) for _, _, fs in os.walk(OUT)))
 print('entries:', len(ENTRIES), ' corpus records:', len(live))
+print('offline cache version:', cache_version, '(%d assets)' % len(precache_paths))

@@ -150,4 +150,16 @@
       });
     });
   }
+
+  /* ---- offline / installable app ----
+     Registers with the default scope (the directory containing this
+     script's own URL, i.e. the site root), so it covers every page
+     regardless of how deep it is. First online visit precaches the
+     whole dictionary for later offline use. */
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      var root = document.body.getAttribute('data-root') || '';
+      navigator.serviceWorker.register(root + 'service-worker.js').catch(function () {});
+    });
+  }
 })();
