@@ -1,0 +1,1329 @@
+{
+ "schema": "miluk-1990-recovered-records/1",
+ "record_count": 165,
+ "records": [
+  {
+   "source_record": "DICT#.BYN:1",
+   "entry_id": "e1112-l",
+   "headword_ascii": "#",
+   "line_start": 2,
+   "line_end": 3,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:2",
+   "entry_id": "e1113-l-yu-li",
+   "headword_ascii": "#'yu:<'li",
+   "line_start": 4,
+   "line_end": 7,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:3",
+   "entry_id": "e1114-l-e-nwi",
+   "headword_ascii": "#:@<nwi",
+   "line_start": 8,
+   "line_end": 15,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:4",
+   "entry_id": "e1115-l-a",
+   "headword_ascii": "#:a",
+   "line_start": 16,
+   "line_end": 36,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:5",
+   "entry_id": "e1116-l-g-e-n",
+   "headword_ascii": "#:g;e:<n:",
+   "line_start": 37,
+   "line_end": 46,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:6",
+   "entry_id": "e1117-l-u",
+   "headword_ascii": "#:u",
+   "line_start": 47,
+   "line_end": 51,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:7",
+   "entry_id": "e1118-l-e-l",
+   "headword_ascii": "#<e:<#",
+   "line_start": 52,
+   "line_end": 57,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:8",
+   "entry_id": "e1119-le-mda",
+   "headword_ascii": "#@<mda-",
+   "line_start": 58,
+   "line_end": 75,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:9",
+   "entry_id": "e1120-le-n-ik",
+   "headword_ascii": "#@<n:ik!&",
+   "line_start": 76,
+   "line_end": 83,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:10",
+   "entry_id": "e1121-lendi-tcix",
+   "headword_ascii": "#@ndi<tcix&",
+   "line_start": 84,
+   "line_end": 85,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:11",
+   "entry_id": "e1122-lendzi-ye-ts",
+   "headword_ascii": "#@ndzi<ye:ts",
+   "line_start": 86,
+   "line_end": 88,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:12",
+   "entry_id": "e1123-lenimitgwi-dais",
+   "headword_ascii": "#@nimitgwi:<dais",
+   "line_start": 89,
+   "line_end": 91,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:13",
+   "entry_id": "e1124-leqle-m",
+   "headword_ascii": "#@q#e:<m",
+   "line_start": 92,
+   "line_end": 108,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:14",
+   "entry_id": "e1125-leta-ya-vu",
+   "headword_ascii": "#@ta<ya<vu",
+   "line_start": 109,
+   "line_end": 110,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:15",
+   "entry_id": "e1126-lex-e",
+   "headword_ascii": "#@x<e",
+   "line_start": 111,
+   "line_end": 112,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:16",
+   "entry_id": "e1127-lalx-we-n",
+   "headword_ascii": "#a#x;w@<n",
+   "line_start": 113,
+   "line_end": 114,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:17",
+   "entry_id": "e1128-la-ya",
+   "headword_ascii": "#a:'ya",
+   "line_start": 115,
+   "line_end": 125,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:18",
+   "entry_id": "e1129-la-li",
+   "headword_ascii": "#a:<#i",
+   "line_start": 126,
+   "line_end": 127,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:19",
+   "entry_id": "e1130-la-dza",
+   "headword_ascii": "#a:<dza",
+   "line_start": 128,
+   "line_end": 140,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:20",
+   "entry_id": "e1131-la-i",
+   "headword_ascii": "#a:<i",
+   "line_start": 141,
+   "line_end": 143,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:21",
+   "entry_id": "e1132-la-qa-q",
+   "headword_ascii": "#a:<qa:q",
+   "line_start": 144,
+   "line_end": 148,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:22",
+   "entry_id": "e1133-la-a",
+   "headword_ascii": "#a<'a",
+   "line_start": 149,
+   "line_end": 151,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:23",
+   "entry_id": "e1134-la-yat-a-u",
+   "headword_ascii": "#a<yat!a'u",
+   "line_start": 152,
+   "line_end": 154,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:24",
+   "entry_id": "e1135-lag-a-wiya-t-anidiya",
+   "headword_ascii": "#ag;a<wiya:t!anidiya",
+   "line_start": 155,
+   "line_end": 170,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:25",
+   "entry_id": "e1136-lakadro",
+   "headword_ascii": "#akadro",
+   "line_start": 171,
+   "line_end": 173,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:26",
+   "entry_id": "e1137-laq-a-ma",
+   "headword_ascii": "#aq!a:<ma",
+   "line_start": 174,
+   "line_end": 175,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:27",
+   "entry_id": null,
+   "headword_ascii": "#dja",
+   "line_start": 176,
+   "line_end": 186,
+   "disposition": "excluded-superseded-duplicate",
+   "duplicate_of": "DICT#.BYN:28",
+   "rule": "exclude only when the adjacent later row has identical headword, gloss, citation and a strict superset of documentary content"
+  },
+  {
+   "source_record": "DICT#.BYN:28",
+   "entry_id": "e1138-ldja",
+   "headword_ascii": "#dja",
+   "line_start": 187,
+   "line_end": 195,
+   "disposition": "admitted",
+   "supersedes": "DICT#.BYN:27"
+  },
+  {
+   "source_record": "DICT#.BYN:29",
+   "entry_id": "e1139-ldjal",
+   "headword_ascii": "#djal",
+   "line_start": 196,
+   "line_end": 202,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:30",
+   "entry_id": "e1140-ldje-is",
+   "headword_ascii": "#dje<is",
+   "line_start": 203,
+   "line_end": 204,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:31",
+   "entry_id": "e1141-ldle-miya",
+   "headword_ascii": "#dl@<miya",
+   "line_start": 205,
+   "line_end": 206,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:32",
+   "entry_id": "e1142-lg-e-lg-es",
+   "headword_ascii": "#g;e<lg;es",
+   "line_start": 207,
+   "line_end": 208,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:33",
+   "entry_id": "e1143-lg-wa",
+   "headword_ascii": "#g;wa<`",
+   "line_start": 209,
+   "line_end": 210,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:34",
+   "entry_id": "e1144-lha",
+   "headword_ascii": "#ha",
+   "line_start": 211,
+   "line_end": 221,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:35",
+   "entry_id": "e1145-lha-vi",
+   "headword_ascii": "#ha<vi",
+   "line_start": 222,
+   "line_end": 225,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:36",
+   "entry_id": "e1146-lhe-tem",
+   "headword_ascii": "#he<tem",
+   "line_start": 226,
+   "line_end": 230,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:37",
+   "entry_id": "e1147-li-tcat",
+   "headword_ascii": "#i:<tcat",
+   "line_start": 231,
+   "line_end": 233,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:38",
+   "entry_id": "e1148-li-x-teq",
+   "headword_ascii": "#i:<x&teq!",
+   "line_start": 234,
+   "line_end": 236,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:39",
+   "entry_id": "e1149-li-n-ex",
+   "headword_ascii": "#i<n:ex;",
+   "line_start": 237,
+   "line_end": 240,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:40",
+   "entry_id": "e1150-li-nya-wa",
+   "headword_ascii": "#i<nya<'wa",
+   "line_start": 241,
+   "line_end": 243,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:41",
+   "entry_id": "e1151-lku-us",
+   "headword_ascii": "#ku<us",
+   "line_start": 244,
+   "line_end": 246,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:42",
+   "entry_id": "e1152-lnaka-ti",
+   "headword_ascii": "#naka<ti",
+   "line_start": 247,
+   "line_end": 248,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:43",
+   "entry_id": "e1153-lpa-ma-k",
+   "headword_ascii": "#pa<ma:k&!",
+   "line_start": 249,
+   "line_end": 250,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:44",
+   "entry_id": "e1154-lq-a-mx",
+   "headword_ascii": "#q!a<mx;",
+   "line_start": 251,
+   "line_end": 252,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:45",
+   "entry_id": "e1155-lq-e-u",
+   "headword_ascii": "#q!e<u",
+   "line_start": 253,
+   "line_end": 254,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:46",
+   "entry_id": "e1156-lq-u",
+   "headword_ascii": "#q!u",
+   "line_start": 255,
+   "line_end": 259,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:47",
+   "entry_id": "e1157-lq-wa",
+   "headword_ascii": "#q!wa<",
+   "line_start": 260,
+   "line_end": 264,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:48",
+   "entry_id": "e1158-lqwe-l",
+   "headword_ascii": "#qw@<l",
+   "line_start": 265,
+   "line_end": 268,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:49",
+   "entry_id": "e1159-lt-a-yavu",
+   "headword_ascii": "#t!a<yavu",
+   "line_start": 269,
+   "line_end": 271,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:50",
+   "entry_id": "e1160-lt-la-ut",
+   "headword_ascii": "#t'#a<ut",
+   "line_start": 272,
+   "line_end": 273,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:51",
+   "entry_id": "e1161-lt-c-u",
+   "headword_ascii": "#t'c<u<",
+   "line_start": 274,
+   "line_end": 275,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:52",
+   "entry_id": "e1162-lts-as",
+   "headword_ascii": "#ts`as",
+   "line_start": 276,
+   "line_end": 278,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:53",
+   "entry_id": "e1163-lu",
+   "headword_ascii": "#u",
+   "line_start": 279,
+   "line_end": 287,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:54",
+   "entry_id": "e1164-lu-dedaya",
+   "headword_ascii": "#u:<d@daya",
+   "line_start": 288,
+   "line_end": 307,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:55",
+   "entry_id": "e1165-lu-we",
+   "headword_ascii": "#u<we",
+   "line_start": 308,
+   "line_end": 312,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:56",
+   "entry_id": "e1166-lug-wa-q-vwtc",
+   "headword_ascii": "#ug;wa:<q!vwtc",
+   "line_start": 313,
+   "line_end": 315,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:57",
+   "entry_id": "e1167-lug-wa-q-vwsedja",
+   "headword_ascii": "#ug;wa<q!vws@dja<",
+   "line_start": 316,
+   "line_end": 318,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT#.BYN:58",
+   "entry_id": "e1168-lx-a-lal",
+   "headword_ascii": "#x;a:<lal",
+   "line_start": 319,
+   "line_end": 321,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT%.BYN:1",
+   "entry_id": "e1169-gammaa-la-nu",
+   "headword_ascii": "%a:<la:<nu",
+   "line_start": 1,
+   "line_end": 8,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT%.BYN:2",
+   "entry_id": "e1170-gammaa-ili-yam",
+   "headword_ascii": "%a<ili<yam",
+   "line_start": 9,
+   "line_end": 10,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT%.BYN:3",
+   "entry_id": "e1171-gammaa-la",
+   "headword_ascii": "%a<la",
+   "line_start": 11,
+   "line_end": 12,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT%.BYN:4",
+   "entry_id": "e1172-gammaa-la-s",
+   "headword_ascii": "%a<la<s",
+   "line_start": 13,
+   "line_end": 14,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT%.BYN:5",
+   "entry_id": "e1173-gammaal-gammaa-l-i",
+   "headword_ascii": "%al'%a<l:i",
+   "line_start": 15,
+   "line_end": 19,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT%.BYN:6",
+   "entry_id": "e1174-gammaaya-l",
+   "headword_ascii": "%aya:<#",
+   "line_start": 20,
+   "line_end": 21,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT%.BYN:7",
+   "entry_id": "e1175-gammae-ye-ne",
+   "headword_ascii": "%e'ye<`ne",
+   "line_start": 22,
+   "line_end": 26,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICT%.BYN:8",
+   "entry_id": "e1176-gammai-t-lte-m",
+   "headword_ascii": "%i:<t'#t@<m",
+   "line_start": 27,
+   "line_end": 28,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:1",
+   "entry_id": "e1177-al",
+   "headword_ascii": "a#",
+   "line_start": 1,
+   "line_end": 3,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:2",
+   "entry_id": "e1178-a-la-ya",
+   "headword_ascii": "a'la<ya",
+   "line_start": 4,
+   "line_end": 5,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:3",
+   "entry_id": "e1179-a-ma-is",
+   "headword_ascii": "a'ma<is",
+   "line_start": 6,
+   "line_end": 11,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:4",
+   "entry_id": "e1180-a-dleq",
+   "headword_ascii": "a:<dl@q",
+   "line_start": 12,
+   "line_end": 13,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:5",
+   "entry_id": "e1181-a-giltaya",
+   "headword_ascii": "a:<gi#taya",
+   "line_start": 14,
+   "line_end": 16,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:6",
+   "entry_id": "e1182-a-iwa",
+   "headword_ascii": "a:<iwa",
+   "line_start": 17,
+   "line_end": 20,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:7",
+   "entry_id": "e1183-a-x-ayal-i",
+   "headword_ascii": "a:<x;aya#'i<",
+   "line_start": 21,
+   "line_end": 22,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:8",
+   "entry_id": "e1184-a-segammaa-la",
+   "headword_ascii": "a:s@%a'la`",
+   "line_start": 23,
+   "line_end": 24,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:9",
+   "entry_id": "e1185-a-uct",
+   "headword_ascii": "a:uct!",
+   "line_start": 25,
+   "line_end": 31,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:10",
+   "entry_id": "e1186-a-yu",
+   "headword_ascii": "a:yu:<",
+   "line_start": 32,
+   "line_end": 33,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:11",
+   "entry_id": "e1187-a-lak",
+   "headword_ascii": "a<`lak&!",
+   "line_start": 34,
+   "line_end": 35,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:12",
+   "entry_id": "e1188-a-dzu",
+   "headword_ascii": "a<dzu:",
+   "line_start": 36,
+   "line_end": 46,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:13",
+   "entry_id": "e1189-a-k-ta",
+   "headword_ascii": "a<k&!ta",
+   "line_start": 47,
+   "line_end": 48,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:14",
+   "entry_id": "e1190-a-l-qsa",
+   "headword_ascii": "a<l:qsa",
+   "line_start": 49,
+   "line_end": 53,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:15",
+   "entry_id": "e1191-a-la-m",
+   "headword_ascii": "a<la<m",
+   "line_start": 54,
+   "line_end": 55,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:16",
+   "entry_id": "e1192-a-lha-it-suwa",
+   "headword_ascii": "a<lha<it'suwa",
+   "line_start": 56,
+   "line_end": 58,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:17",
+   "entry_id": "e1193-a-lsi",
+   "headword_ascii": "a<lsi:<",
+   "line_start": 59,
+   "line_end": 61,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:18",
+   "entry_id": "e1194-a-m-i",
+   "headword_ascii": "a<m:i",
+   "line_start": 62,
+   "line_end": 69,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:19",
+   "entry_id": "e1195-a-s-da",
+   "headword_ascii": "a<s:da",
+   "line_start": 70,
+   "line_end": 77,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:20",
+   "entry_id": "e1196-a-s-u",
+   "headword_ascii": "a<s:u",
+   "line_start": 78,
+   "line_end": 84,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:21",
+   "entry_id": "e1197-a-t-a",
+   "headword_ascii": "a<t!a",
+   "line_start": 85,
+   "line_end": 92,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:22",
+   "entry_id": "e1198-a-x",
+   "headword_ascii": "a<x&",
+   "line_start": 93,
+   "line_end": 95,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:23",
+   "entry_id": "e1199-a-x-tle",
+   "headword_ascii": "a<x;t#@",
+   "line_start": 96,
+   "line_end": 100,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:24",
+   "entry_id": "e1200-a-ya-dja",
+   "headword_ascii": "a<ya:dja",
+   "line_start": 101,
+   "line_end": 106,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:25",
+   "entry_id": "e1201-a-yatsem",
+   "headword_ascii": "a<yats@m",
+   "line_start": 107,
+   "line_end": 113,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:26",
+   "entry_id": "e1202-adzu-x-g-e",
+   "headword_ascii": "adzu<x;g;e:",
+   "line_start": 114,
+   "line_end": 116,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:27",
+   "entry_id": "e1203-ag-a-na-ya",
+   "headword_ascii": "ag;a:<na<'ya",
+   "line_start": 117,
+   "line_end": 122,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:28",
+   "entry_id": "e1204-ag-a-nyadaya",
+   "headword_ascii": "ag;a<nyadaya",
+   "line_start": 123,
+   "line_end": 124,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:29",
+   "entry_id": "e1205-ak-a-l",
+   "headword_ascii": "ak'a:<l",
+   "line_start": 125,
+   "line_end": 131,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:30",
+   "entry_id": "e1206-akvw-a-i",
+   "headword_ascii": "akvw'a<i",
+   "line_start": 132,
+   "line_end": 133,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:31",
+   "entry_id": "e1207-al-u-taq",
+   "headword_ascii": "al:u<taq",
+   "line_start": 134,
+   "line_end": 135,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:32",
+   "entry_id": "e1208-alica-nida",
+   "headword_ascii": "alica<nida",
+   "line_start": 136,
+   "line_end": 156,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:33",
+   "entry_id": "e1209-astl",
+   "headword_ascii": "astl",
+   "line_start": 157,
+   "line_end": 159,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:34",
+   "entry_id": "e1210-at-si-x-is",
+   "headword_ascii": "at'si:<x&:is",
+   "line_start": 160,
+   "line_end": 161,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTA.BYN:35",
+   "entry_id": "e1211-ax-a-x-i",
+   "headword_ascii": "ax&a:<x&i",
+   "line_start": 162,
+   "line_end": 167,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:1",
+   "entry_id": "e1212-beha-na-ni-da-mi",
+   "headword_ascii": "b@ha<na'ni:da:<mi",
+   "line_start": 1,
+   "line_end": 7,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:2",
+   "entry_id": "e1213-besp-e-l-as",
+   "headword_ascii": "b@sp!@<l:as",
+   "line_start": 8,
+   "line_end": 9,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:3",
+   "entry_id": "e1214-betlbe-lu",
+   "headword_ascii": "b@t#b@<lu",
+   "line_start": 10,
+   "line_end": 13,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:4",
+   "entry_id": "e1215-ba-hvwya",
+   "headword_ascii": "ba:<hvwya",
+   "line_start": 14,
+   "line_end": 15,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:5",
+   "entry_id": "e1216-ba-mes",
+   "headword_ascii": "ba:<m@s",
+   "line_start": 16,
+   "line_end": 18,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:6",
+   "entry_id": "e1217-ba-saq",
+   "headword_ascii": "ba:<saq!",
+   "line_start": 19,
+   "line_end": 20,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:7",
+   "entry_id": "e1218-ba-steni",
+   "headword_ascii": "ba:<st@ni",
+   "line_start": 21,
+   "line_end": 23,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:8",
+   "entry_id": "e1219-ba-l-diya",
+   "headword_ascii": "ba<l:diya",
+   "line_start": 24,
+   "line_end": 60,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:9",
+   "entry_id": "e1220-ba-l",
+   "headword_ascii": "ba<l`",
+   "line_start": 61,
+   "line_end": 62,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:10",
+   "entry_id": "e1221-ba-mbam",
+   "headword_ascii": "ba<mbam",
+   "line_start": 63,
+   "line_end": 65,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:11",
+   "entry_id": "e1222-ba-nq-sem",
+   "headword_ascii": "ba<nq!s@m",
+   "line_start": 66,
+   "line_end": 67,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:12",
+   "entry_id": "e1223-ba-tg-i",
+   "headword_ascii": "ba<tg&i",
+   "line_start": 68,
+   "line_end": 70,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:13",
+   "entry_id": "e1224-ba-y-a",
+   "headword_ascii": "ba<y:a",
+   "line_start": 71,
+   "line_end": 72,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:14",
+   "entry_id": "e1225-ba-ya-na-t-s",
+   "headword_ascii": "ba<ya'na:t's",
+   "line_start": 73,
+   "line_end": 74,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:15",
+   "entry_id": "e1226-baqba-nq",
+   "headword_ascii": "baqba<nq!",
+   "line_start": 75,
+   "line_end": 76,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:16",
+   "entry_id": "e1227-be-i",
+   "headword_ascii": "be:<:i",
+   "line_start": 77,
+   "line_end": 78,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:17",
+   "entry_id": "e1228-be-djit",
+   "headword_ascii": "be:<djit!",
+   "line_start": 79,
+   "line_end": 80,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:18",
+   "entry_id": "e1229-be-l",
+   "headword_ascii": "be:<l",
+   "line_start": 81,
+   "line_end": 84,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:19",
+   "entry_id": "e1230-be-t-l",
+   "headword_ascii": "be:<t'#",
+   "line_start": 85,
+   "line_end": 87,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:20",
+   "entry_id": "e1231-be-igammaegamma",
+   "headword_ascii": "be<i%@%",
+   "line_start": 88,
+   "line_end": 89,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:21",
+   "entry_id": "e1232-be-idzets",
+   "headword_ascii": "be<idzets",
+   "line_start": 90,
+   "line_end": 91,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:22",
+   "entry_id": "e1233-be-l-ex",
+   "headword_ascii": "be<l:ex;",
+   "line_start": 92,
+   "line_end": 93,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:23",
+   "entry_id": "e1234-be-le-x-e-nu",
+   "headword_ascii": "be<le<x;e:nu",
+   "line_start": 94,
+   "line_end": 101,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:24",
+   "entry_id": "e1235-bi-l",
+   "headword_ascii": "bi:<#",
+   "line_start": 102,
+   "line_end": 103,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:25",
+   "entry_id": "e1236-bi-bi-na",
+   "headword_ascii": "bi:<bi:na",
+   "line_start": 104,
+   "line_end": 105,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:26",
+   "entry_id": "e1237-bi-si",
+   "headword_ascii": "bi:<si",
+   "line_start": 106,
+   "line_end": 107,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:27",
+   "entry_id": "e1238-bi-x",
+   "headword_ascii": "bi:<x;",
+   "line_start": 108,
+   "line_end": 109,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:28",
+   "entry_id": "e1239-bi-na-t-s",
+   "headword_ascii": "bi:na<t's",
+   "line_start": 110,
+   "line_end": 114,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:29",
+   "entry_id": "e1240-bi-l-gwetc",
+   "headword_ascii": "bi<#:gw@tc",
+   "line_start": 115,
+   "line_end": 116,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:30",
+   "entry_id": "e1241-bi-ntc",
+   "headword_ascii": "bi<ntc",
+   "line_start": 117,
+   "line_end": 123,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:31",
+   "entry_id": "e1242-bi-nve",
+   "headword_ascii": "bi<nve",
+   "line_start": 124,
+   "line_end": 125,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:32",
+   "entry_id": "e1243-bi-ve",
+   "headword_ascii": "bi<ve",
+   "line_start": 126,
+   "line_end": 127,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:33",
+   "entry_id": "e1244-bi-ya",
+   "headword_ascii": "bi<ya",
+   "line_start": 128,
+   "line_end": 130,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:34",
+   "entry_id": "e1245-bitlbi-l-u",
+   "headword_ascii": "bit#bi<l:u",
+   "line_start": 131,
+   "line_end": 135,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:35",
+   "entry_id": "e1246-bu-la-k",
+   "headword_ascii": "bu:<la<k&",
+   "line_start": 136,
+   "line_end": 140,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:36",
+   "entry_id": "e1247-bu-qvu",
+   "headword_ascii": "bu:<qvu",
+   "line_start": 141,
+   "line_end": 142,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:37",
+   "entry_id": "e1248-bu-wis",
+   "headword_ascii": "bu:<wis",
+   "line_start": 143,
+   "line_end": 145,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:38",
+   "entry_id": "e1249-bu-ye",
+   "headword_ascii": "bu:<ye",
+   "line_start": 146,
+   "line_end": 148,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:39",
+   "entry_id": "e1250-bu-was",
+   "headword_ascii": "bu<was",
+   "line_start": 149,
+   "line_end": 150,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTB.BYN:40",
+   "entry_id": "e1251-bug-wi-dletl",
+   "headword_ascii": "bug;wi:dlet#",
+   "line_start": 151,
+   "line_end": 151,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:1",
+   "entry_id": "e1252-ca-p-a-la",
+   "headword_ascii": "ca:p!a<la",
+   "line_start": 1,
+   "line_end": 3,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:2",
+   "entry_id": "e1253-cal",
+   "headword_ascii": "cal",
+   "line_start": 4,
+   "line_end": 5,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:3",
+   "entry_id": "e1254-cdjeti-t",
+   "headword_ascii": "cdj@ti:<t!",
+   "line_start": 6,
+   "line_end": 7,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:4",
+   "entry_id": "e1255-cdje-t",
+   "headword_ascii": "cdje:<t!",
+   "line_start": 8,
+   "line_end": 9,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:5",
+   "entry_id": "e1256-cdje-lt",
+   "headword_ascii": "cdje<lt!",
+   "line_start": 10,
+   "line_end": 11,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:6",
+   "entry_id": "e1257-cdji-t-es",
+   "headword_ascii": "cdji<t!@s",
+   "line_start": 12,
+   "line_end": 13,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:7",
+   "entry_id": "e1258-ce-yu-ctle",
+   "headword_ascii": "ce'yu<ctle",
+   "line_start": 14,
+   "line_end": 15,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:8",
+   "entry_id": "e1259-ci-t-a",
+   "headword_ascii": "ci:<t!a",
+   "line_start": 16,
+   "line_end": 17,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:9",
+   "entry_id": "e1260-ci-ct-cici-le",
+   "headword_ascii": "ci<ct'cici<le:",
+   "line_start": 18,
+   "line_end": 19,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:10",
+   "entry_id": "e1261-ci-l-ic",
+   "headword_ascii": "ci<l:ic",
+   "line_start": 20,
+   "line_end": 21,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:11",
+   "entry_id": "e1262-ci-lt",
+   "headword_ascii": "ci<lt",
+   "line_start": 22,
+   "line_end": 24,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:12",
+   "entry_id": "e1263-ci-t-ca-t",
+   "headword_ascii": "ci<t'ca`t",
+   "line_start": 25,
+   "line_end": 26,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:13",
+   "entry_id": "e1264-ci-t-cdi",
+   "headword_ascii": "ci<t'cdi",
+   "line_start": 27,
+   "line_end": 28,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:14",
+   "entry_id": "e1265-ci-t-eu",
+   "headword_ascii": "ci<t!eu",
+   "line_start": 29,
+   "line_end": 30,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:15",
+   "entry_id": "e1266-cidji-ls",
+   "headword_ascii": "cidji<ls",
+   "line_start": 31,
+   "line_end": 32,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:16",
+   "entry_id": "e1267-cile-t-c",
+   "headword_ascii": "cile:<t'c",
+   "line_start": 33,
+   "line_end": 35,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:17",
+   "entry_id": "e1268-cit-ce-mt-c",
+   "headword_ascii": "cit'ce'mt<c",
+   "line_start": 36,
+   "line_end": 37,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:18",
+   "entry_id": "e1269-cit-cdi-dje",
+   "headword_ascii": "cit'cdi:<dje",
+   "line_start": 38,
+   "line_end": 39,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:19",
+   "entry_id": "e1270-ct-ca-i",
+   "headword_ascii": "ct'ca<i",
+   "line_start": 40,
+   "line_end": 42,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:20",
+   "entry_id": "e1271-ct-ci-l",
+   "headword_ascii": "ct'ci<l",
+   "line_start": 43,
+   "line_end": 55,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:21",
+   "entry_id": "e1272-ct-cidji-ml",
+   "headword_ascii": "ct'cidji<m#",
+   "line_start": 56,
+   "line_end": 57,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:22",
+   "entry_id": "e1273-ctcu-q-vwda",
+   "headword_ascii": "ctcu<q!vwda",
+   "line_start": 58,
+   "line_end": 59,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:23",
+   "entry_id": "e1274-cu-t-lu",
+   "headword_ascii": "cu:<t'#u",
+   "line_start": 60,
+   "line_end": 61,
+   "disposition": "admitted"
+  },
+  {
+   "source_record": "DICTC.BYN:24",
+   "entry_id": "e1275-cvyugammatca-tc",
+   "headword_ascii": "cvyu%tca:tc",
+   "line_start": 62,
+   "line_end": 63,
+   "disposition": "admitted"
+  }
+ ]
+}

@@ -1,0 +1,4708 @@
+{
+  "schema": "miluk-outside-edition-corpus/1",
+  "story_count": 35,
+  "line_count": 574,
+  "stories": [
+    {
+      "story_id": "t115-f1-fil-1",
+      "title": "f1·filɛ ł1",
+      "title_ascii": "f1:file #1",
+      "line_count": 13,
+      "lines": [
+        {
+          "line": 1,
+          "english": "let's not swim(3)",
+          "miluk_ascii": "an(gg)a:<(th) sdle#q",
+          "miluk": "an(gg)á·(th) sdlɛłq",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "let's not swim(2)",
+          "miluk_ascii": "an(gg)a<s: dle#q",
+          "miluk": "an(gg)ás· dlɛłq",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "crack in dry ground",
+          "miluk_ascii": "cala:<#tIs",
+          "miluk": "calá·łtIs",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "d(ú)·d(ɛ)",
+          "miluk_ascii": "(vocative;dative referential)",
+          "miluk": "(ocatịᵉdatiᵉ rɛfɛrɛntial)",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "(vocative;dative referential)",
+            "miluk": "d(ú)·d(ɛ)",
+            "miluk_ascii": "d(u):<d(e)"
+          },
+          "transformation_ids": [
+            "v2-corpus-t115-l0004-english",
+            "v2-corpus-t115-l0004-miluk",
+            "v2-corpus-t115-l0004-miluk-ascii"
+          ],
+          "english_original": "(vocative;dative referential)"
+        },
+        {
+          "line": 5,
+          "english": "he's going after a woman",
+          "miluk_ascii": "h(u):<mIs(e)y(e)<'w(e)",
+          "miluk": "h(ú)·mIs(ɛ)y(ɛ́)'w(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "I'm going after a woman",
+          "miluk_ascii": "h(u):<mIs(e)y(e)<'w(e)-'want(th)",
+          "miluk": "h(ú)·mIs(ɛ)y(ɛ́)'w(ɛ)-'want(th)",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "I'm going after a canoe",
+          "miluk_ascii": "t(th)g(u):<s(e)y(e)<'w(e)-'want(th)",
+          "miluk": "t(th)g(ú)·s(ɛ)y(ɛ́)'w(ɛ)-'want(th)",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "I'm going to cut wood",
+          "miluk_ascii": "t(th)d(e):<w(e)-'wa<nt(th)",
+          "miluk": "t(th)d(ɛ́)·w(ɛ)-'wánt(th)",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "He's cutting wood",
+          "miluk_ascii": "t(th)da#i'yu<k#w",
+          "miluk": "t(th)dałi'yúkłw",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "I'm cutting wood",
+          "miluk_ascii": "we<t(th)da#i",
+          "miluk": "wɛ́t(th)dałi",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "I'm cutting wood",
+          "miluk_ascii": "t(th)da<#i#'(u)",
+          "miluk": "t(th)dáłił'(u)",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "I'm just starting to chop wood",
+          "miluk_ascii": "ts(u)<-'wa(gg)(e)t(th)d(i):<w(e)",
+          "miluk": "ts(ú)-'wa(gg)(ɛ)t(th)d(í)·w(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "Chop wood!",
+          "miluk_ascii": "t(th)d(e):<n",
+          "miluk": "t(th)d(ɛ́)·n",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t116-f2-fil-2",
+      "title": "f2·filɛ ł2",
+      "title_ascii": "f2:file #2",
+      "line_count": 14,
+      "lines": [
+        {
+          "line": 1,
+          "english": "what is left of spilled soup",
+          "miluk_ascii": "(xx)a:<t'(th)dI<t(th)KItsi",
+          "miluk": "(xx)á·t'(th)dÍt(th)KItsi",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "soup",
+          "miluk_ascii": "(xx)a:<t'(th)",
+          "miluk": "(xx)á·t'(th)",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "he spilled it",
+          "miluk_ascii": "t(th)ga:<ts",
+          "miluk": "t(th)gá·ts",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "spilled out reminant( of the soup)",
+          "miluk_ascii": "t(th)KItsI<",
+          "miluk": "t(th)KItsÍ",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "my (2) parents are ill",
+          "miluk_ascii": "t(th)e-'ne'ma:<nI'ya:s'Itc (xx)(e)<nwes",
+          "miluk": "t(th)ɛ-'nɛ'má·nI'ya·s'Itc (xx)(ɛ́)nwɛs",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "your (2) parents are ill",
+          "miluk_ascii": "(xx)(e)nwe<se<m:(e)",
+          "miluk": "(xx)(ɛ)nwɛ́sɛ́m·(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "it burned up ( a house)",
+          "miluk_ascii": "cy(u):<t'(th)(u)",
+          "miluk": "cy(ú)·t'(th)(u)",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "what's left after the burning, the burned remains",
+          "miluk_ascii": "cy(u):<t(th)tsI",
+          "miluk": "cy(ú)·t(th)tsI",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "I'm going to my parents",
+          "miluk_ascii": "t(th)e-'ne'ma:<nI:<cdja wa<nt(th)-(th)a",
+          "miluk": "t(th)ɛ-'nɛ́'má·nI·cdja wánt(th)-(th)a",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "that's the oldest",
+          "miluk_ascii": "k(u)wI<-q(e):<l-dItc",
+          "miluk": "k(ú)wI-q(ɛ́)·l-dItc",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "that's the newest",
+          "miluk_ascii": "k(u)wI<-t(th)a",
+          "miluk": "k(ú)wI-t(th)a",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "that's the oldest by far",
+          "miluk_ascii": "di:<-(th)I<nwI<-q(e)l",
+          "miluk": "dí·-(th)ÍnwÍ-q(ɛ)l",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "I'm going to my son",
+          "miluk_ascii": "t(th)e' (nn)dle<lw(e)'(e)dj(e)",
+          "miluk": "t(th)ɛ' (nn)dlɛ́lw(ɛ)'(ɛ)dj(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "I'm going to my sons",
+          "miluk_ascii": "t(th)e' (nn)dle<Lw(e)'(e)djem(e)",
+          "miluk": "t(th)ɛ' (nn)dlɛ́ʟw(ɛ)'(ɛ)djɛm(ɛ)",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t117-f3-fil-3",
+      "title": "f3·filɛ ł3",
+      "title_ascii": "f3:file #3",
+      "line_count": 12,
+      "lines": [
+        {
+          "line": 1,
+          "english": "a small portion, a tiny piece",
+          "miluk_ascii": "ts'(e)<:#K",
+          "miluk": "ts'(ɛ́)·łK",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "(ɛ́)·łK",
+          "miluk_ascii": "small piece larger than ts'(e):<#K",
+          "miluk": "small piɛcɛ largɛr than ts'(ɛ́)·łK",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "(e):<#K"
+          },
+          "transformation_ids": [
+            "v2-corpus-t117-l0002-english"
+          ],
+          "english_original": "(e):<#K"
+        },
+        {
+          "line": 3,
+          "english": "I'll go to the shed",
+          "miluk_ascii": "meqmI:<dja 'wa<nt(th)-(th)a",
+          "miluk": "mɛ́qmI·dja 'wánt(th)-(th)a",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "shed",
+          "miluk_ascii": "me<qmI",
+          "miluk": "mɛ́qmI",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "a certain place",
+          "miluk_ascii": "a:<GI#taya",
+          "miluk": "á·GIłtaya",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "I'll go to my father",
+          "miluk_ascii": "t(th)e-'ne'(e)(th)(e):<djIntc",
+          "miluk": "t(th)ɛ-'nɛ'(ɛ)(th)(ɛ́)·djIntc",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "I'll go to your father",
+          "miluk_ascii": "kwe-ne'(e)(th)(e):<djIntc",
+          "miluk": "kwɛ-nɛ'(ɛ)(th)(ɛ́)·djIntc",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "I'll go to his father",
+          "miluk_ascii": "hIdjI<m:I(th) (e)(th)(e):<djintc",
+          "miluk": "hIdjÍm·I(th) (ɛ)(th)(ɛ́)·djintc",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "in small pieces, two alike",
+          "miluk_ascii": "(e):#KI<n'I<m(e)",
+          "miluk": "(ɛ́)·łKIn'Ím(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "big pieces",
+          "miluk_ascii": "wa:<(gg)a'ama",
+          "miluk": "wá·(gg)a'ama",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "two enormous pieces",
+          "miluk_ascii": "wudla<m:a(gg)ama",
+          "miluk": "wudlám·a(gg)ama",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "big",
+          "miluk_ascii": "wa:<(gg)a",
+          "miluk": "wá·(gg)a",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t118-f4-fil-4",
+      "title": "f4·filɛ ł4",
+      "title_ascii": "f4:file #4",
+      "line_count": 16,
+      "lines": [
+        {
+          "line": 1,
+          "english": "sprinkle,drip",
+          "miluk_ascii": "psIn#qw",
+          "miluk": "psInłqw",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "it's sprinkling over it (a lot); blood is dripping over it",
+          "miluk_ascii": "pcIn qwa:#qwI<yam",
+          "miluk": "pcIn qwá·łqwIyam",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "sprinkle it with water",
+          "miluk_ascii": "pcI<n#qwI<y(e)",
+          "miluk": "pcÍnłqwÍy(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "sit down (in a chair)! get up (from bed i.e.)!",
+          "miluk_ascii": "dl(u):<(gg)wI",
+          "miluk": "dl(ú)·(gg)wI",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "dl(u):<(gg)wI",
+            "miluk": "sit down (in a chair̓) gɛt up (from bɛd i.ɛ̓.)",
+            "miluk_ascii": "sit down (in a chair)! get up (from bed i.e.)!"
+          },
+          "transformation_ids": [
+            "v2-corpus-t118-l0004-english",
+            "v2-corpus-t118-l0004-miluk",
+            "v2-corpus-t118-l0004-miluk-ascii"
+          ],
+          "english_original": "dl(u):<(gg)wI"
+        },
+        {
+          "line": 5,
+          "english": "sit down!",
+          "miluk_ascii": "dl(e):<(gg)(e)(gg)(e)(i)tcIl",
+          "miluk": "dl(ɛ́)·(gg)(ɛ)(gg)(ɛ)(i)tcIl",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "dl(e):qsI'mIy(e)(xx)tcIl",
+          "miluk_ascii": "get up from bed ( to 3)!",
+          "miluk": "gɛt up from bɛd ( to 3)̓",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "get up from bed (1)",
+          "miluk_ascii": "dlu<q#Ws(e)#q",
+          "miluk": "dlúqłWs(ɛ)łq",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "get up from bed (1)",
+          "miluk_ascii": "dl(u):<(gg)wI",
+          "miluk": "dl(ú)·(gg)wI",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "(imperative verb suffix)",
+          "miluk_ascii": "-I<y(e)",
+          "miluk": "-Íy(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "chew it !",
+          "miluk_ascii": "t'(th)mI<yu(xx)#Wt",
+          "miluk": "t'(th)mÍyu(xx)łWt",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "for a while",
+          "miluk_ascii": "ha:<ma",
+          "miluk": "há·ma",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "you just take this for a while",
+          "miluk_ascii": "ha<madi: ha'nI:<c-(gg)alam",
+          "miluk": "hámadi· há'nI·c-(gg)alam",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "you better talk!",
+          "miluk_ascii": "ha<ma-t(th)I:<t'seN",
+          "miluk": "hámá-t(th)I·t'sɛɴ",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "you go for a while!",
+          "miluk_ascii": "ha<ma (th)a'a:<ya(xx)",
+          "miluk": "háma (th)a'á·ya(xx)",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "you go, you go on!",
+          "miluk_ascii": "ha<ma (th)a'a:<ya(xx)",
+          "miluk": "háma (th)a'á·ya(xx)",
+          "entries": []
+        },
+        {
+          "line": 16,
+          "english": "you just go for a while!",
+          "miluk_ascii": "ha<ma (th)a'ya<#qa#i",
+          "miluk": "háma (th)a'yáłqałi",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t119-f5-fil-5",
+      "title": "f5·filɛ ł5",
+      "title_ascii": "f5:file #5",
+      "line_count": 22,
+      "lines": [
+        {
+          "line": 1,
+          "english": "give it (to me)!",
+          "miluk_ascii": "nI:<m",
+          "miluk": "nI·́m",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "give it! to me!",
+          "miluk_ascii": "(e)<n:(e)-'nI:<m",
+          "miluk": "(ɛ́)n·(ɛ́)-'nI·m",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "give it (to him)!",
+          "miluk_ascii": "nI<ya",
+          "miluk": "nÍya",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "nI<ya",
+            "miluk": "giᵉ it (to him̓)",
+            "miluk_ascii": "give it (to him)!"
+          },
+          "transformation_ids": [
+            "v2-corpus-t119-l0003-english",
+            "v2-corpus-t119-l0003-miluk",
+            "v2-corpus-t119-l0003-miluk-ascii"
+          ],
+          "english_original": "nI<ya"
+        },
+        {
+          "line": 4,
+          "english": "give it! to him!",
+          "miluk_ascii": "nI<ya hIdjI",
+          "miluk": "nÍya hIdjI",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "nI<ya hIdjI",
+            "miluk": "giᵉ it̓ to him̓",
+            "miluk_ascii": "give it! to him!"
+          },
+          "transformation_ids": [
+            "v2-corpus-t119-l0004-english",
+            "v2-corpus-t119-l0004-miluk",
+            "v2-corpus-t119-l0004-miluk-ascii"
+          ],
+          "english_original": "nI<ya hIdjI"
+        },
+        {
+          "line": 5,
+          "english": "give mine to him!",
+          "miluk_ascii": "nI<ya kwehI<djI kwe-'ne'-'(e)<n:(e)",
+          "miluk": "nÍya kwɛ́hIdjI kwɛ-'nɛ'-'(ɛ́)n·(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "blood",
+          "miluk_ascii": "wu<den",
+          "miluk": "wúdɛn",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "blood",
+          "miluk_ascii": "we<den",
+          "miluk": "wɛ́dɛn",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "I am bloody",
+          "miluk_ascii": "nu<'wu<de<n(e):<'(u)",
+          "miluk": "nú'wúdɛ́n(ɛ́)·'(u)",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "you are bloody",
+          "miluk_ascii": "ne'we<de<n(e)#:<n(e)",
+          "miluk": "nɛ'wɛ́dɛ́n(ɛ́)ł·n(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "I am bleeding ( a little blood)",
+          "miluk_ascii": "(xx)al'(g)I<yam'w",
+          "miluk": "(xx)ál'(g)Iyam'w",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "it made me bleed",
+          "miluk_ascii": "(xx)a<l(g)a<#t'w",
+          "miluk": "(xx)ál(g)áłt'w",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "bring it to me! gimme!",
+          "miluk_ascii": "dzI<n'(u)",
+          "miluk": "dzÍn'(u)",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "dzI<n'(u)",
+            "miluk": "bring it to mɛ̓ gimmɛ̓",
+            "miluk_ascii": "bring it to me! gimme!"
+          },
+          "transformation_ids": [
+            "v2-corpus-t119-l0012-english",
+            "v2-corpus-t119-l0012-miluk",
+            "v2-corpus-t119-l0012-miluk-ascii"
+          ],
+          "english_original": "dzI<n'(u)"
+        },
+        {
+          "line": 13,
+          "english": "bring it to me! gimme!",
+          "miluk_ascii": "dzI<n'wa#(u)",
+          "miluk": "dzÍn'wał(u)",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "dzI<n'wa#(u)",
+            "miluk": "bring it to mɛ̓ gimmɛ̓",
+            "miluk_ascii": "bring it to me! gimme!"
+          },
+          "transformation_ids": [
+            "v2-corpus-t119-l0013-english",
+            "v2-corpus-t119-l0013-miluk",
+            "v2-corpus-t119-l0013-miluk-ascii"
+          ],
+          "english_original": "dzI<n'wa#(u)"
+        },
+        {
+          "line": 14,
+          "english": "bring (2) them to me!",
+          "miluk_ascii": "dzIn'(u)<'(u)<ma",
+          "miluk": "dzIn'(ú)'(ú)ma",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "bring it to me here!",
+          "miluk_ascii": "dzIn'(u)<`wa",
+          "miluk": "dzIn'(ú)ʻwa",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "dzIn'(u)<`wa",
+            "miluk": "bring it to mɛ hɛrɛ̓",
+            "miluk_ascii": "bring it to me here!"
+          },
+          "transformation_ids": [
+            "v2-corpus-t119-l0015-english",
+            "v2-corpus-t119-l0015-miluk",
+            "v2-corpus-t119-l0015-miluk-ascii"
+          ],
+          "english_original": "dzIn'(u)<`wa"
+        },
+        {
+          "line": 16,
+          "english": "bring it to me here!",
+          "miluk_ascii": "dzI<n'wa<(u)`wa",
+          "miluk": "dzÍn'wá(u)ʻwa",
+          "entries": []
+        },
+        {
+          "line": 17,
+          "english": "it's starting to bleed",
+          "miluk_ascii": "(gg)(e)(xx)a<l'(g)I:<wa",
+          "miluk": "(gg)(ɛ́)(xx)ál'(g)I·wa",
+          "entries": []
+        },
+        {
+          "line": 18,
+          "english": "bite it!",
+          "miluk_ascii": "t's(gg)(e)<#a",
+          "miluk": "t's(gg)(ɛ́)ła",
+          "entries": []
+        },
+        {
+          "line": 19,
+          "english": "he bit it",
+          "miluk_ascii": "t's(gg)a<'yu<k#W",
+          "miluk": "t's(gg)á'yúkłW",
+          "entries": []
+        },
+        {
+          "line": 20,
+          "english": "I'll bite it",
+          "miluk_ascii": "t's(gg)a'wa<nt(th)",
+          "miluk": "t's(gg)a'wánt(th)",
+          "entries": []
+        },
+        {
+          "line": 21,
+          "english": "I bit it",
+          "miluk_ascii": "t's(gg)a<'w",
+          "miluk": "t's(gg)á'w",
+          "entries": []
+        },
+        {
+          "line": 22,
+          "english": "I bit ( chewed) it ( many times)",
+          "miluk_ascii": "mIt'(th)mI:<ya<(xx)'w",
+          "miluk": "mIt'(th)mI·́yá(xx)'w",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t120-f6-fil-6",
+      "title": "f6·filɛ ł6",
+      "title_ascii": "f6:file #6",
+      "line_count": 13,
+      "lines": [
+        {
+          "line": 1,
+          "english": "I (smashed it by) was sitting on it repeatedly",
+          "miluk_ascii": "t(th)Itct(th)(e)<ltc'w",
+          "miluk": "t(th)Itct(th)(ɛ́)ltc'w",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "I sit down on it; I get up from sitting on it",
+          "miluk_ascii": "dlu<q#Wse<m'(u)",
+          "miluk": "dlúqłWsɛ́m'(u)",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "my oldest sister",
+          "miluk_ascii": "neha<l(u)'wama gwe<l:a",
+          "miluk": "nɛhál(u)'wama gwɛ́l·a",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "the biggest one",
+          "miluk_ascii": "kwed(u)-'wa:<(gg)'a:yIm",
+          "miluk": "kwɛd(u)-'wá·(gg)'a·yIm",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "the littlest",
+          "miluk_ascii": "kwets'(e):#K(e):<yIm",
+          "miluk": "kwɛts'(ɛ)·łK(ɛ́)·yIm",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "he smashed it (by sitting on it)",
+          "miluk_ascii": "t'sa<Ist",
+          "miluk": "t'sáIst",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "smash it!",
+          "miluk_ascii": "t's(e)<Ist",
+          "miluk": "t's(ɛ́)Ist",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "t's(e)<Ist",
+            "miluk": "smash it̓",
+            "miluk_ascii": "smash it!"
+          },
+          "transformation_ids": [
+            "v2-corpus-t120-l0007-english",
+            "v2-corpus-t120-l0007-miluk",
+            "v2-corpus-t120-l0007-miluk-ascii"
+          ],
+          "english_original": "t's(e)<Ist"
+        },
+        {
+          "line": 8,
+          "english": "I smashed it (in reply)",
+          "miluk_ascii": "t'sa<Ist'wI",
+          "miluk": "t'sáIst'wI",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "I'm just going to go out for a while",
+          "miluk_ascii": "ha<ma'want(th)-ha'ni:<c sI<l#t",
+          "miluk": "háma'want(th)-ha'ní·c sÍlłt",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "he squashed it with his back",
+          "miluk_ascii": "t'(th)nI<Xda",
+          "miluk": "t'(th)nÍXda",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "squash it (using the back)!",
+          "miluk_ascii": "t'(th)nI<XdI",
+          "miluk": "t'(th)nÍXdI",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "t'(th)nI<XdI",
+            "miluk": "squash it (using thɛ back̓)",
+            "miluk_ascii": "squash it (using the back)!"
+          },
+          "transformation_ids": [
+            "v2-corpus-t120-l0011-english",
+            "v2-corpus-t120-l0011-miluk",
+            "v2-corpus-t120-l0011-miluk-ascii"
+          ],
+          "english_original": "t'(th)nI<XdI"
+        },
+        {
+          "line": 12,
+          "english": "I'll squash it",
+          "miluk_ascii": "t'(th)nIXda<'want(th)",
+          "miluk": "t'(th)nIXdá'want(th)",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "the biggest house",
+          "miluk_ascii": "kwe-'wa:<(gg)a y(e):<ts",
+          "miluk": "kwɛ-'wá·(gg)a y(ɛ́)·ts",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t121-f7-fil-7",
+      "title": "f7·filɛ ł7",
+      "title_ascii": "f7:file #7",
+      "line_count": 19,
+      "lines": [
+        {
+          "line": 1,
+          "english": "he smashed it with his elbow",
+          "miluk_ascii": "(xx)-gwaz<tgwe<setc #pa<lst",
+          "miluk": "(xx)-gwáztgwɛ́sɛtc łpálst",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "smash it! (elbow)",
+          "miluk_ascii": "#pI<lsiy(e)",
+          "miluk": "łpÍlsiy(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "I'll take it along",
+          "miluk_ascii": "(th)a:<(i)'wa<(xx)t(th)eL",
+          "miluk": "(th)á·(i)'wá(xx)t(th)ɛʟ",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "he squashed it with his (flattened) hand ( one squash)",
+          "miluk_ascii": "t'(th)ba<`",
+          "miluk": "t'(th)báʻ",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "he squashed it with his hand ( many squashes)",
+          "miluk_ascii": "t'(th)ba:<ts",
+          "miluk": "t'(th)bá·ts",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "I squashed it (one squash)",
+          "miluk_ascii": "t'(th)ba<'(u), t'(th)ba<'wI<",
+          "miluk": "t'(th)bá'(u), t'(th)bá'wÍ",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "I squashed it ( many squashes)",
+          "miluk_ascii": "t'(th)ba:<ts'(u), t'(th)ba:<ts'wI<",
+          "miluk": "t'(th)bá·ts'(u), t'(th)bá·ts'wÍ",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "you squashed it ( one squash)",
+          "miluk_ascii": "t'(th)ba<`(n), t'(th)ban:I<",
+          "miluk": "t'(th)báʻ(n), t'(th)bán·I",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "you squashed it (many squashes)",
+          "miluk_ascii": "t'(th)ba:<tsne, t'(th)ba:<tsni:<",
+          "miluk": "t'(th)bá·tsnɛ, t'(th)bá·tsní·",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "soak it in water!",
+          "miluk_ascii": "(th)#qa<n:I<'ya",
+          "miluk": "(th)łqán·Í'ya",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "she soaked it in water",
+          "miluk_ascii": "(th)#qa<n:I'ya'yuk#W",
+          "miluk": "(th)łqán·I'ya'yukłW",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "it's soaking ( in water now)",
+          "miluk_ascii": "(th)#qa:<naN",
+          "miluk": "(th)łqá·naɴ",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "it's soaking already",
+          "miluk_ascii": "ma:<n (th)qa:<nandItc",
+          "miluk": "má·n (th)qá·nandItc",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "it's been soaked",
+          "miluk_ascii": "ma:<n (th)#qanI",
+          "miluk": "má·n (th)łqanI",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "an expert dancer",
+          "miluk_ascii": "m(e)(gg)(e)<n:Is",
+          "miluk": "m(ɛ)(gg)(ɛ́)n·Is",
+          "entries": []
+        },
+        {
+          "line": 16,
+          "english": "the person who is singing-dancing his (own) song now",
+          "miluk_ascii": "ne'm(e)(gg)(e):<n(e)",
+          "miluk": "nɛ'm(ɛ)(gg)(ɛ́)·n(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 17,
+          "english": "it spoiled, got ruined, he ruined it",
+          "miluk_ascii": "alha<It.s(u)wa",
+          "miluk": "alháIt.s(u)wa",
+          "entries": []
+        },
+        {
+          "line": 18,
+          "english": "I spoiled it",
+          "miluk_ascii": "net'(th)#KI<lXtIt",
+          "miluk": "nɛ́t'(th)łKIlXtIt",
+          "entries": []
+        },
+        {
+          "line": 19,
+          "english": "it's getting spoiled (there), it is spoiled already",
+          "miluk_ascii": "alha<It.sem",
+          "miluk": "alháIt.sɛm",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t122-f8-fil-8",
+      "title": "f8·filɛ ł8",
+      "title_ascii": "f8:file #8",
+      "line_count": 20,
+      "lines": [
+        {
+          "line": 1,
+          "english": "the wind's blowing; my the wind's blowing",
+          "miluk_ascii": "h(e)Igwa<'aN #q(e)<w(e):<sI",
+          "miluk": "h(ɛ)Igwá'aɴ łq(ɛ́)w(ɛ́)·sI",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "the wind's starting in to blow",
+          "miluk_ascii": "#q(e)<w(e):<sIs (th)'a<ItIm",
+          "miluk": "łq(ɛ́)w(ɛ́)·sIs (th)'áItIm",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "he kicked him",
+          "miluk_ascii": "#t(gg)wa:<ts",
+          "miluk": "łt(gg)wá·ts",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "he kicked him (really)",
+          "miluk_ascii": "#t(gg)wa'yu<k#W",
+          "miluk": "łt(gg)wa'yúkłW",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "I kicked him",
+          "miluk_ascii": "#t(gg)wa<'w, #t(gg)wa<'#W(u)",
+          "miluk": "łt(gg)wá'w, łt(gg)wá'łW(u)",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "I kicked you",
+          "miluk_ascii": "#t(gg)wedza:<mI<`ne",
+          "miluk": "łt(gg)wɛ́dzá·mIʻnɛ",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "I kicked you",
+          "miluk_ascii": "t(gg)we<dza:<mI",
+          "miluk": "t(gg)wɛ́dzá·mI",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "But, I did kick you indɛɛḍyɛs I kicked you",
+          "miluk_ascii": "#t(gg)we<dza:<mI:<nI",
+          "miluk": "łt(gg)wɛ́dzá·mI·́nI",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "But, I did kick you indeed;yes I kicked you"
+          },
+          "transformation_ids": [
+            "v2-corpus-t122-l0008-english"
+          ],
+          "english_original": "But, I did kick you indeed;yes I kicked you"
+        },
+        {
+          "line": 9,
+          "english": "it's dark now",
+          "miluk_ascii": "h(e)<ndl(e):t(th) ts(u)<",
+          "miluk": "h(ɛ́)ndl(ɛ)·t(th) ts(ú)",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "it's dark now",
+          "miluk_ascii": "h(e)<ndl(e):t(th)'yu<k#W",
+          "miluk": "h(ɛ́)ndl(ɛ)·t(th)'yúkłW",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "h(e)ndl(u)",
+          "miluk_ascii": "it's getting dark (4 pm)",
+          "miluk": "it's gɛtting dark (4 pm)",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "it's going to get dark (3:30 pm)",
+          "miluk_ascii": "h(e)<ndluhant(th)I<",
+          "miluk": "h(ɛ́)ndluhánt(th)I",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "it's awfully dark (now)",
+          "miluk_ascii": "h(e)Igwa<'a<N h(e)<ndlIs",
+          "miluk": "h(ɛ)Igwá'áɴ h(ɛ́)ndlIs",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "ni",
+          "miluk_ascii": "give",
+          "miluk": "giᵉ",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "give me a little something!",
+          "miluk_ascii": "(e):<#K-dItc nI:<m",
+          "miluk": "(ɛ́)·łK-dItc nI·́m",
+          "entries": []
+        },
+        {
+          "line": 16,
+          "english": "I'm angry, I was angry",
+          "miluk_ascii": "b(e)l(e)<(xx)(e):<nu'w",
+          "miluk": "b(ɛ)l(ɛ́)(xx)(ɛ́)·nu'w",
+          "entries": []
+        },
+        {
+          "line": 17,
+          "english": "I'm beginning to be angry",
+          "miluk_ascii": "b(e)<l(xx)sI<m'w",
+          "miluk": "b(ɛ́)l(xx)sÍm'w",
+          "entries": []
+        },
+        {
+          "line": 18,
+          "english": "I have been angry at him for a long time",
+          "miluk_ascii": "h(e):<nIy(e) ' (e)<w(e)'w t'cI'lI<ya'lu<w(e):",
+          "miluk": "h(ɛ́)·nIy(ɛ) ' (ɛ́)w(ɛ)'w t'cI'lÍya'lúw(ɛ)·",
+          "entries": []
+        },
+        {
+          "line": 19,
+          "english": "he made me angry",
+          "miluk_ascii": "b(e)<l(xx)sIm'(u)hu'wI:<n",
+          "miluk": "b(ɛ́)l(xx)sIm'(u)hú'wI·n",
+          "entries": []
+        },
+        {
+          "line": 20,
+          "english": "I'm angry at him for that",
+          "miluk_ascii": "kwI'y(e):<n(u) wut'cI<'lIya'l(u)<w(e)",
+          "miluk": "kwI'y(ɛ́)·n(u) wút'cI'lIya'l(ú)w(ɛ)",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t123-f9-fil-9",
+      "title": "f9·filɛ ł9",
+      "title_ascii": "f9:file #9",
+      "line_count": 17,
+      "lines": [
+        {
+          "line": 1,
+          "english": "I'm crying",
+          "miluk_ascii": "a(xx)a<ts'w",
+          "miluk": "a(xx)áts'w",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "I'm crying( whenanswering)",
+          "miluk_ascii": "a(xx)a<ts'wI",
+          "miluk": "a(xx)áts'wI",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "he's starting in to cry (now)",
+          "miluk_ascii": "(xx)(gg)a<na(u)'yuk#W",
+          "miluk": "(xx)(gg)ána(u)'yukłW",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "he's stopped crying (now)",
+          "miluk_ascii": "a<nya'a<(xx)ats",
+          "miluk": "ánya'á(xx)ats",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "he's always crying",
+          "miluk_ascii": "g(u):s-'mI<nd(u)-'a<(xx)ats",
+          "miluk": "g(ú)·s-'mInd(u)-'á(xx)ats",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "nI",
+          "miluk_ascii": "with",
+          "miluk": "with",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "ne",
+          "miluk_ascii": "with",
+          "miluk": "with",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "nI'mIts",
+          "miluk_ascii": "with fat and all",
+          "miluk": "with fat and all",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "I'll start in to cry",
+          "miluk_ascii": "a(xx)a<ts'want(th)I<",
+          "miluk": "a(xx)áts'wánt(th)I",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "I'll cry",
+          "miluk_ascii": "a(xx)a<ts'want(th)",
+          "miluk": "a(xx)áts'want(th)",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "I'll cry again",
+          "miluk_ascii": "a(xx)a<ts'want(th)gum",
+          "miluk": "a(xx)áts'want(th)gum",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "he's going to cry again",
+          "miluk_ascii": "a(xx)a<tshant(th)gum",
+          "miluk": "a(xx)átshant(th)gum",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "let him cry!",
+          "miluk_ascii": "a(xx)a<tshant(th)I<",
+          "miluk": "a(xx)átshánt(th)I",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "it comes to my mind that it is",
+          "miluk_ascii": "ne<qsI",
+          "miluk": "nɛ́qsI",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "it's a basket, it comes to my mind",
+          "miluk_ascii": "neqsI< #kha<",
+          "miluk": "nɛ́qsI łkhá",
+          "entries": []
+        },
+        {
+          "line": 16,
+          "english": "I'm getting over my sickness",
+          "miluk_ascii": "(th)h(e)'w(e)#qh(e)m'(u)",
+          "miluk": "(th)h(ɛ)'w(ɛ)łqh(ɛ)m'(u)",
+          "entries": []
+        },
+        {
+          "line": 17,
+          "english": "he's getting over his sickness",
+          "miluk_ascii": "(th)h(e)'we<#qh(e)m",
+          "miluk": "(th)h(ɛ)'wɛ́łqh(ɛ)m",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t124-f-1-fil-1",
+      "title": "f̥1·filɛ ł̥1",
+      "title_ascii": "f10:file #10",
+      "line_count": 13,
+      "lines": [
+        {
+          "line": 1,
+          "english": "we (3:excl and incl) can do it",
+          "miluk_ascii": "wa:<tsan(th)a(xx)t(th)I<",
+          "miluk": "wá·tsan(th)á(xx)t(th)I",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "we (2 excl) can do it",
+          "miluk_ascii": "wa:<tsan:e<(xx)t(th)I<",
+          "miluk": "wá·tsán·ɛ́(xx)t(th)I",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "you (1) can do it",
+          "miluk_ascii": "wa:<tsan:ant(th)I<",
+          "miluk": "wá·tsan·ánt(th)I",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "we (2 incl) could do it",
+          "miluk_ascii": "wa:<tsansa<(xx)t(th)I",
+          "miluk": "wá·tsansá(xx)t(th)I",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "you (2) can do it",
+          "miluk_ascii": "wa:<tsaN'Isa<(xx)t(th)I<",
+          "miluk": "wá·tsáɴ'Isá(xx)t(th)I",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "you (3) can do it",
+          "miluk_ascii": "wa:<tsantcIl'a<(xx)t(th)I",
+          "miluk": "wá·tsantcIl'á(xx)t(th)I",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "they (2) can do it",
+          "miluk_ascii": "wa:<tsan'Itca<(xx)t(th)I",
+          "miluk": "wá·tsan'Itcá(xx)t(th)I",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "they (3) can do it",
+          "miluk_ascii": "wa:<tsan'I(th)a(xx)t(th)I",
+          "miluk": "wá·tsan'I(th)a(xx)t(th)I",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "hunt (?)",
+          "miluk_ascii": "ne<g(u)",
+          "miluk": "nɛ́g(u)",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "he hunted yesterday",
+          "miluk_ascii": "t(th)e-'ne<g(u) (th)I<m:da#i",
+          "miluk": "t(th)ɛ-'nɛ́g(u) (th)Ím·dałi",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "I can do it",
+          "miluk_ascii": "wa:<tsan'we(xx)t(th)I",
+          "miluk": "wá·tsan'wɛ(xx)t(th)I",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "you (1) can do it",
+          "miluk_ascii": "wa:<tsan:a<(xx)t(th)I, wa:<tsan:e<(xx)t(th)I",
+          "miluk": "wá·tsan·á(xx)t(th)I, wá·tsan·ɛ́(xx)t(th)I",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "he can do it",
+          "miluk_ascii": "wa:<tsan'a<(xx)t(th)I",
+          "miluk": "wá·tsan'á(xx)t(th)I",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t125-f11-fil-11",
+      "title": "f11·filɛ ł11",
+      "title_ascii": "f11:file #11",
+      "line_count": 22,
+      "lines": [
+        {
+          "line": 1,
+          "english": "I am sick",
+          "miluk_ascii": "(xx)(e)<nwe<s'w",
+          "miluk": "(xx)(ɛ́)nwɛ́s'w",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "I was sick, but am so no longer",
+          "miluk_ascii": "(xx)(e)<nwes'(u)g(u)m",
+          "miluk": "(xx)(ɛ́)nwɛs'(u)g(u)m",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "I am getting sick(now). I was getting sick ( there)",
+          "miluk_ascii": "(xx)(e)<n(xx)(e)n(u)'(u)",
+          "miluk": "(xx)(ɛ́)n(xx)(ɛ)n(u)'(u)",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "I'm not sick ( any more)",
+          "miluk_ascii": "a<nya'(u)(xx)(e)<nwes",
+          "miluk": "ánya'(u)(xx)(ɛ́)nwɛs",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "I wont get sick",
+          "miluk_ascii": "an'wa<nt(th) (xx)(e)<n(xx)(e)<n(u)",
+          "miluk": "an'wánt(th) (xx)(ɛ́)n(xx)(ɛ́)n(u)",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "I've gotten over my sickness",
+          "miluk_ascii": "g(u)m#t(u)<'ne(xx)(e)<nw(e)<'(e)s",
+          "miluk": "g(u)młt(ú)'nɛ(xx)(ɛ́)nw(ɛ́)'(ɛ)s",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "with canoe and all",
+          "miluk_ascii": "nt(th)g(u):<sI",
+          "miluk": "nt(th)g(ú)·sI",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "with bones and all",
+          "miluk_ascii": "ne'la:<maGI",
+          "miluk": "nɛ'lá·maGI",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "let me do it!",
+          "miluk_ascii": "(xx)'(e)<n:(e)(gg)a< (u)'wa:<tsaN",
+          "miluk": "(xx)'(ɛ́)n·(ɛ)(gg)á (u)'wá·tsaɴ",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "let us(2) do it!",
+          "miluk_ascii": "(xx)'(e)<n:(e)<shant(th) wa:<tsant",
+          "miluk": "(xx)'(ɛ́)n·(ɛ́)shant(th) wá·tsant",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "let us (3) do it!",
+          "miluk_ascii": "(xx)'(e)<n:(e):<(th)hant(th) wa:<tsant, wa:<tsan(th)a(xx)t(th)I",
+          "miluk": "(xx)'(ɛ́)n·(ɛ́)·(th)hant(th) wá·tsant, wá·tsan(th)a(xx)t(th)I",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "let him do it!",
+          "miluk_ascii": "tsI<'ma wa:<tsaN",
+          "miluk": "tsÍ'ma wá·tsaɴ",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "n-",
+          "miluk_ascii": "with",
+          "miluk": "with",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "where am I?",
+          "miluk_ascii": "Idja<(u)(xx)'wa",
+          "miluk": "Idjá(u)(xx)'wa",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "where are you?",
+          "miluk_ascii": "Idja<(u)'n, Idja<(u)'ne",
+          "miluk": "Idjá(u)'n, Idjá(u)'nɛ",
+          "entries": []
+        },
+        {
+          "line": 16,
+          "english": "where is he?",
+          "miluk_ascii": "Idja<(u)xa, Idja<(u)xa'ya",
+          "miluk": "Idjá(u)xa, Idjá(u)xa'ya",
+          "entries": []
+        },
+        {
+          "line": 17,
+          "english": "where are you?",
+          "miluk_ascii": "Idja<(u)ne",
+          "miluk": "Idjá(u)nɛ",
+          "entries": []
+        },
+        {
+          "line": 18,
+          "english": "where are we 2 incl.",
+          "miluk_ascii": "Idja<(u)XIsa",
+          "miluk": "Idjá(u)XIsa",
+          "entries": []
+        },
+        {
+          "line": 19,
+          "english": "where are we 3 incl.",
+          "miluk_ascii": "Idja<(u)XI(th)a",
+          "miluk": "Idjá(u)XI(th)a",
+          "entries": []
+        },
+        {
+          "line": 20,
+          "english": "I am filthy",
+          "miluk_ascii": "nt(gg)we<nwes(e)'",
+          "miluk": "nt(gg)wɛ́nwɛs(ɛ)'",
+          "entries": []
+        },
+        {
+          "line": 21,
+          "english": "I am dirty",
+          "miluk_ascii": "nt(th)b(e):<(gg)(e)'(u)",
+          "miluk": "nt(th)b(ɛ́)·(gg)(ɛ)'(u)",
+          "entries": []
+        },
+        {
+          "line": 22,
+          "english": "dirt",
+          "miluk_ascii": "t(th)b(e):<q",
+          "miluk": "t(th)b(ɛ́)·q",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t126-f12-fil-12",
+      "title": "f12·filɛ ł12",
+      "title_ascii": "f12:file #12",
+      "line_count": 17,
+      "lines": [
+        {
+          "line": 1,
+          "english": "let us (2) excl. do it!",
+          "miluk_ascii": "tsI<'ma` (xx)'(e)<n:(e) ne kwI:<-'wa:<tsant",
+          "miluk": "tsÍ'maʻ (xx)'(ɛ́)n·(ɛ) nɛ kwI·́-'wá·tsant",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "let us (3) excl. do it!",
+          "miluk_ascii": "tsI:<(th)hant(th) ma<`(xx)'(e)<n:(e)(th) kwI:-'wa:<tsaN",
+          "miluk": "tsI·́(th)hant(th) máʻ(xx)'(ɛ́)n·(ɛ)(th) kwI·-'wá·tsaɴ",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "kick",
+          "miluk_ascii": "#t(gg)w",
+          "miluk": "łt(gg)w",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "where are you(2)?",
+          "miluk_ascii": "Idja<(u)'Is",
+          "miluk": "Idjá(u)'Is",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "where are you(3)?",
+          "miluk_ascii": "Idja<(u)tsIl",
+          "miluk": "Idjá(u)tsIl",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "where are they (2)?",
+          "miluk_ascii": "Idja<(u)X'Itca, Idja<(u)X'Itc",
+          "miluk": "Idjá(u)X'Itca, Idjá(u)X'Itc",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "where are they (3)?",
+          "miluk_ascii": "Idja<(u)X'I(th), Idja<(u)X'I(th)a",
+          "miluk": "Idjá(u)X'I(th), Idjá(u)X'I(th)a",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "flounder",
+          "miluk_ascii": "se<t(th)I#K",
+          "miluk": "sɛ́t(th)IłK",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "where are we (2 excl.) I wonder",
+          "miluk_ascii": "IdanI'Idja<(u)'ya",
+          "miluk": "IdanI'Idjá(u)'ya",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "where are we (2 incl) I wonder",
+          "miluk_ascii": "Ida:<snI'Idja<(u)ya",
+          "miluk": "Idá·snI'Idjá(u)ya",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "where are we (3 incl) I wonder",
+          "miluk_ascii": "Ida:<(th)'Idja<(u)'ya",
+          "miluk": "Idá·(th)'Idjá(u)'ya",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "where are we (3 excl) I wonder",
+          "miluk_ascii": "Ida:<(th)gwa'Idja<(u)'ya",
+          "miluk": "Idá·(th)gwa'Idjá(u)'ya",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "I am dirty",
+          "miluk_ascii": "nt(th)b(e):<(gg)(e)'(u)",
+          "miluk": "nt(th)b(ɛ́)·(gg)(ɛ)'(u)",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "you're (1) dirty",
+          "miluk_ascii": "nt(th)b(e):<(gg)(e)`(n), nt(th)b(e):<(gg)(e)`ne",
+          "miluk": "nt(th)b(ɛ́)·(gg)(ɛ)ʻ(n), nt(th)b(ɛ́)·(gg)(ɛ)ʻnɛ",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "he made me dirty",
+          "miluk_ascii": "nt(th)b(e):<(gg)(e)'(u)h(u)'wI<n",
+          "miluk": "nt(th)b(ɛ́)·(gg)(ɛ)'(u)h(ú)'wIn",
+          "entries": []
+        },
+        {
+          "line": 16,
+          "english": "he made you dirty",
+          "miluk_ascii": "nt(th)b(e):<(gg)(e)yI<#qn(u)h(u)'wI<n",
+          "miluk": "nt(th)b(ɛ́)·(gg)(ɛ́)yIłqn(u)h(ú)'wIn",
+          "entries": []
+        },
+        {
+          "line": 17,
+          "english": "he made him dirty",
+          "miluk_ascii": "t(th)ba:<(gg)adzI<ya",
+          "miluk": "t(th)bá·(gg)ádzIya",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t127-f13-fil-13",
+      "title": "f13·filɛ ł13",
+      "title_ascii": "f13:file #13",
+      "line_count": 7,
+      "lines": [
+        {
+          "line": 1,
+          "english": "tiny obsidian arrowpoints",
+          "miluk_ascii": "su:<s",
+          "miluk": "sú·s",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "transparent white stone, used for daggers",
+          "miluk_ascii": "cI<lt",
+          "miluk": "cÍlt",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "nt(gg)wen",
+          "miluk_ascii": "be filthy",
+          "miluk": "bɛ filthy",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "I am filthy",
+          "miluk_ascii": "nt(gg)we<nwes(e)'u",
+          "miluk": "nt(gg)wɛ́nwɛs(ɛ)'u",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "you are filthy",
+          "miluk_ascii": "nt(gg)we<nwes(e)`n",
+          "miluk": "nt(gg)wɛ́nwɛs(ɛ)ʻn",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "he made himself filthy",
+          "miluk_ascii": "nt(gg)we<nwes(e):<dI#t(e)<`-wa:<wa",
+          "miluk": "nt(gg)wɛ́nwɛs(ɛ́)·dIłt(ɛ́)ʻ-wá·wa",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "he made me filthy",
+          "miluk_ascii": "nt(gg)we<nw(e)s(e)<'(u)h(u)'wI:<n",
+          "miluk": "nt(gg)wɛ́nw(ɛ)s(ɛ́)'(u)h(ú)'wI·n",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t128-f14-fil-14",
+      "title": "f14·filɛ ł14",
+      "title_ascii": "f14:file #14",
+      "line_count": 7,
+      "lines": [
+        {
+          "line": 1,
+          "english": "he scared me",
+          "miluk_ascii": "(e)q'(e)<lqs(u)< '(u)h(u)'wI:n",
+          "miluk": "(ɛ)q'(ɛ́)lqs(ú) '(u)h(u)'wI·n",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "I (just) scared you, only I scared you",
+          "miluk_ascii": "tsI:<-ne< a<q'a<lqsI#ta:<mI",
+          "miluk": "tsI·́-nɛ́ áq'álqsIłtá·mI",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "nobody knows me here",
+          "miluk_ascii": "a<n-'w(e)<(xx)-'wI mIt'ssI:<d(u)n dI<(u)",
+          "miluk": "án-'w(ɛ́)(xx)-'wI mIt'ssI·́d(u)n dÍ(u)",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "they dont know me",
+          "miluk_ascii": "an-'z(u)< mIt'ssI:<m",
+          "miluk": "an-'z(ú) mIt'ssI·́m",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "you dont know me, I suppose, eh?",
+          "miluk_ascii": "an'ne< mIt'ssI:<daI, h(e)<m(e)",
+          "miluk": "an'nɛ́ mIt'ssI·́daI, h(ɛ́)m(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "how many",
+          "miluk_ascii": "nI<ct'c",
+          "miluk": "nÍct'c",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "how many fish did you catch",
+          "miluk_ascii": "nI<ct'c `ne<(gg)alam k(u)-#qwe<nya#U",
+          "miluk": "nÍct'c ʻnɛ́(gg)alam k(u)-łqwɛ́nyałU",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t129-f15-fil-15",
+      "title": "f15·filɛ ł15",
+      "title_ascii": "f15:file #15",
+      "line_count": 24,
+      "lines": [
+        {
+          "line": 1,
+          "english": "I saw you break it (smash)",
+          "miluk_ascii": "ha<ma:#qa:<mI n(e)<`kwenekwI<-'yI<t'(th)at",
+          "miluk": "háma·łqá·mI n(ɛ́)ʻkwɛ́nɛ́kwI-'yIt'(th)at",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "I saw him break it up into pieces",
+          "miluk_ascii": "ha<ma<#q(u) kwI<-#pa<l(xx)#Wt",
+          "miluk": "hámáłq(u) kwÍ-łpál(xx)łWt",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "he saw me when I broke it",
+          "miluk_ascii": "h(e)<m(e)<#q(e)In'w(u) yu'ukwI:<-#pa<l(xx)#Wt",
+          "miluk": "h(ɛ́)m(ɛ́)łq(ɛ)In'w(u) yu'úkwI·-łpál(xx)łWt",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "you saw him break it",
+          "miluk_ascii": "ha<ma#qn:I: yukwI:<-'yI<t'(th)at",
+          "miluk": "hámałqn·I· yúkwI·-'yÍt'(th)at",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "we (2 excl.) make fun of you (1)",
+          "miluk_ascii": "(xx)'(e)<n:(e)'(e)m(e) neh(u):<dIda:mI`ne",
+          "miluk": "(xx)'(ɛ́)n·(ɛ)'(ɛ)m(ɛ) nɛh(ú)·dIda·mIʻnɛ",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "we (2 excl.) make fun of you (2)",
+          "miluk_ascii": "h(u):<dIdamI'Isi:",
+          "miluk": "h(ú)·dIdamI'Isi·",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "we (2 incl.) make fun of him",
+          "miluk_ascii": "h(u):<da:dIs",
+          "miluk": "h(ú)·da·dIs",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "we (2 incl.) make fun of him",
+          "miluk_ascii": "h(u):<da:dIs(i):<",
+          "miluk": "h(ú)·da·dIs(í)·",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "we (2 incl.) make fun of them(3)",
+          "miluk_ascii": "h(u):<dIdI:#ta'a<ma:s",
+          "miluk": "h(ú)·dIdI·łta'áma·s",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "I saw him dance",
+          "miluk_ascii": "ha<ma<#q.wI I<-'m(e)(gg)(e)<nt",
+          "miluk": "hámáłq.wI Í-'m(ɛ)(gg)(ɛ́)nt",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "I saw you dance",
+          "miluk_ascii": "ha<ma#qa<mInI Ine-'m(e)(gg)(e)<nt",
+          "miluk": "hámałqámInI Inɛ-'m(ɛ)(gg)(ɛ́)nt",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "I saw you dance ( up and dance, violent dancing)",
+          "miluk_ascii": "ha<ma#qa:<mInI Inetalta<l:I",
+          "miluk": "hámałqá·mInI Inɛtaltál·I",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "we (2 incl.) make fun of them (2)",
+          "miluk_ascii": "h(u):<dIdI:#ta:s",
+          "miluk": "h(ú)·dIdI·łta·s",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "we (2 incl.) make fun of ourselves",
+          "miluk_ascii": "h(u):<dad(n)<#t(e)'(e)<m(e)",
+          "miluk": "h(ú)·dád(n)łt(ɛ)'(ɛ́)m(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "the house is burnt up",
+          "miluk_ascii": "cy(u):<t'(th)(u)",
+          "miluk": "cy(ú)·t'(th)(u)",
+          "entries": []
+        },
+        {
+          "line": 16,
+          "english": "the house is burning",
+          "miluk_ascii": "cy(u)t(th)(e):<t'(th)",
+          "miluk": "cy(u)t(th)(ɛ́)·t'(th)",
+          "entries": []
+        },
+        {
+          "line": 17,
+          "english": "the house is starting to burn",
+          "miluk_ascii": "cy(u)t(th)at'(th)a:<wa:<s",
+          "miluk": "cy(u)t(th)at'(th)á·wá·s",
+          "entries": []
+        },
+        {
+          "line": 18,
+          "english": "the houses (3) are burning",
+          "miluk_ascii": "cy(u):t(th)et(th)a<'I(th), cy(u):<t(th)e<t(th)a",
+          "miluk": "cy(u)·t(th)ɛt(th)á'I(th), cy(ú)·t(th)ɛ́t(th)a",
+          "entries": []
+        },
+        {
+          "line": 19,
+          "english": "the houses (2) are burning",
+          "miluk_ascii": "cy(u):t(th)e<t(th)a",
+          "miluk": "cy(u)·t(th)ɛ́t(th)a",
+          "entries": []
+        },
+        {
+          "line": 20,
+          "english": "the houses (3) are burning",
+          "miluk_ascii": "cy(u):<t(th)et(th)a'a<ma",
+          "miluk": "cy(ú)·t(th)ɛt(th)a'áma",
+          "entries": []
+        },
+        {
+          "line": 21,
+          "english": "burn it! ( build a fire)",
+          "miluk_ascii": "ct'c(e):<l",
+          "miluk": "ct'c(ɛ́)·l",
+          "entries": []
+        },
+        {
+          "line": 22,
+          "english": "burn it ( to 2)",
+          "miluk_ascii": "cya<(u)t'(th)t'I<s",
+          "miluk": "cyá(ú)t'(th)t'Is",
+          "entries": []
+        },
+        {
+          "line": 23,
+          "english": "burn it (3)",
+          "miluk_ascii": "cy(u):t'(th)Iy(e):<tcIl",
+          "miluk": "cy(u)·t'(th)Iy(ɛ́)·tcIl",
+          "entries": []
+        },
+        {
+          "line": 24,
+          "english": "burn it (1)",
+          "miluk_ascii": "cy(u):<t'(th)I<y(e)",
+          "miluk": "cy(ú)·t'(th)Íy(ɛ)",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t130-f16-fil-16",
+      "title": "f16·filɛ ł16",
+      "title_ascii": "f16:file #16",
+      "line_count": 21,
+      "lines": [
+        {
+          "line": 1,
+          "english": "he's a big eater",
+          "miluk_ascii": "(th)I<nwI-de-dl(u)<'wa<wa:<s",
+          "miluk": "(th)ÍnwI-dɛ-dl(ú)'wáwá·s",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "he's a hog of an eater (lit. he's a dog)",
+          "miluk_ascii": "h(e)<l#tha-y(e)#Kl(u)",
+          "miluk": "h(ɛ́)lłtha-y(ɛ)łKl(u)",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "he's a good talker",
+          "miluk_ascii": "#K(e):<l(e)-de-t(th)I:<s",
+          "miluk": "łK(ɛ́)·l(ɛ)-dɛ́-t(th)I·s",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "he's a good fast walker",
+          "miluk_ascii": "ma'a:<yIm-detca<`",
+          "miluk": "ma'á·yIm-dɛtcáʻ",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "smash, squash it! (squeeze in the hand)",
+          "miluk_ascii": "tsbI<lq#Wt",
+          "miluk": "tsbÍlqłWt",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "smash it ( many squashes)",
+          "miluk_ascii": "daIbI<l(e):<q#W",
+          "miluk": "dáIbIl(ɛ́)·qłW",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "he squashed it",
+          "miluk_ascii": "tsba<lq#Wt'y(u)<k#W",
+          "miluk": "tsbálqłWt'y(ú)kłW",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "I know why he came here",
+          "miluk_ascii": "#kwa:<'nIyada-'wi (xx)-djI<'y(e):<#t",
+          "miluk": "łkwá·'nIyada-'wi (xx)-djÍ'y(ɛ́)·łt",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "why did he come here?",
+          "miluk_ascii": "dItcG(e):< (e)kw(e) (gg)(e)<sd(e)<`-dzIn'wa:<ya",
+          "miluk": "dItcG(ɛ́)· (ɛ)kw(ɛ) (gg)(ɛ́)sd(ɛ́)ʻ-dzIn'wá·ya",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "why did he want to come here, what did he want here",
+          "miluk_ascii": "dItcG(e):< (e)(gg)(e)sd(e)<` d(u):<ha<'ya",
+          "miluk": "dItcG(ɛ́)· (ɛ)(gg)(ɛ)sd(ɛ́)ʻ d(ú)·há'ya",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "you (3) make fun of us (2)",
+          "miluk_ascii": "h(u):<dIdI:#tIda<I'IstcIl",
+          "miluk": "h(ú)·dIdI·łtIdáI'IstcIl",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "you ( 3) make fun of us (3)",
+          "miluk_ascii": "h(u):dIdI: #tIda<I(th)ne",
+          "miluk": "h(u)·dIdI· łtIdáI(th)nɛ",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "you (3) make fun of them (3)",
+          "miluk_ascii": "h(u):<dIdI:#ta<`(nn)",
+          "miluk": "h(ú)·dIdI·łtáʻ(nn)",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "you (3) make fun of them (3)",
+          "miluk_ascii": "h(u):<dIdI:#ta<`ne",
+          "miluk": "h(ú)·dIdI·łtáʻnɛ",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "I know what you said",
+          "miluk_ascii": "#kwa:<nIyada(u) djI`-kwene-'I<l:at",
+          "miluk": "łkwá·nIyada(u) djIʻ-kwɛnɛ́-'Il·at",
+          "entries": []
+        },
+        {
+          "line": 16,
+          "english": "I heard what you said",
+          "miluk_ascii": "qa'wa:<ya'(u) djI<`-kwene-'I<l:at",
+          "miluk": "qa'wá·ya'(u) djÍʻ-kwɛnɛ́-'Il·at",
+          "entries": []
+        },
+        {
+          "line": 17,
+          "english": "But I did hear what you said",
+          "miluk_ascii": "qa'wa:<ya:X.wI< djI<-kwene-'I<l:at",
+          "miluk": "qa'wá·yá·X.wI djÍ-kwɛnɛ́-'Il·at",
+          "entries": []
+        },
+        {
+          "line": 18,
+          "english": "he makes fun of us (3 excl.)",
+          "miluk_ascii": "h(u):<dIdI:ns",
+          "miluk": "h(ú)·dIdI·ns",
+          "entries": []
+        },
+        {
+          "line": 19,
+          "english": "he makes fun of us (2 excl.)",
+          "miluk_ascii": "h(u):<dIdI:#tI<tIs",
+          "miluk": "h(ú)·dIdI·łtÍtIs",
+          "entries": []
+        },
+        {
+          "line": 20,
+          "english": "they (3) make fun of us (2 excl.)",
+          "miluk_ascii": "h(u):<dIdI:#tId(i)<n:e",
+          "miluk": "h(ú)·dIdI·łtId(í)n·ɛ",
+          "entries": []
+        },
+        {
+          "line": 21,
+          "english": "they (3) make fun of us (3 excl.)",
+          "miluk_ascii": "h(u):<dIdI:#tIdI:<n(th)",
+          "miluk": "h(ú)·dIdI·łtIdI·́n(th)",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t131-f17-fil-17",
+      "title": "f17·filɛ ł17",
+      "title_ascii": "f17:file #17",
+      "line_count": 18,
+      "lines": [
+        {
+          "line": 1,
+          "english": "he came out of the water",
+          "miluk_ascii": "(xx)-ha:<#pe<tc h(e)<gwen",
+          "miluk": "(xx)-há·łpɛ́tc h(ɛ́)gwɛn",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "come out ( of the water)",
+          "miluk_ascii": "h(e)<gwe'nI:<yI(xx)",
+          "miluk": "h(ɛ́)gwɛ́'nI·yI(xx)",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "come out (to 3)",
+          "miluk_ascii": "h(e)<gw(e)'nI:<y(e)<(xx)tcIl",
+          "miluk": "h(ɛ́)gw(ɛ́)'nI·y(ɛ́)(xx)tcIl",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "come out (to 2)",
+          "miluk_ascii": "h(e)<gw(e)'nI:<y(e)<(xx)'Is",
+          "miluk": "h(ɛ́)gw(ɛ́)'nI·y(ɛ́)(xx)'Is",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "it's starting to drizzle",
+          "miluk_ascii": "(th)'a<ItImde #pa'ya:<wa`s",
+          "miluk": "(th)'áItImdɛ łpa'yá·waʻs",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "shut your eyes",
+          "miluk_ascii": "dla:<n:I'ya ne(xx)wa<l(xx)wal",
+          "miluk": "dlá·n·I'ya nɛ(xx)wál(xx)wal",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "shut",
+          "miluk_ascii": "dla:<'na<N",
+          "miluk": "dlá·'náɴ",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "ne(xx)(e):hI",
+          "miluk_ascii": "have a dirty face",
+          "miluk": "haᵉ a dirty facɛ",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "have a dirty face",
+            "miluk": "nɛ(xx)(ɛ)·hI",
+            "miluk_ascii": "ne(xx)(e):hI"
+          },
+          "transformation_ids": [
+            "v2-corpus-t131-l0008-english",
+            "v2-corpus-t131-l0008-miluk",
+            "v2-corpus-t131-l0008-miluk-ascii"
+          ],
+          "english_original": "have a dirty face"
+        },
+        {
+          "line": 9,
+          "english": "I am dirty (my face is)",
+          "miluk_ascii": "ne<(xx)(e):hI<n(e)'(u)",
+          "miluk": "nɛ́(xx)(ɛ́)·hIn(ɛ)'(u)",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "he's crazy",
+          "miluk_ascii": "t(th)(xx)(e)dI:<wes",
+          "miluk": "t(th)(xx)(ɛ́)dI·wɛs",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "he's drunk ( head in a whirl)",
+          "miluk_ascii": "(xx)(u):'mI<yam",
+          "miluk": "(xx)(ú)·'mIyam",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "he's drunk (fainty)",
+          "miluk_ascii": "#KI`na'(g)I<yam",
+          "miluk": "łKIʻná'(g)Iyam",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "it's mine",
+          "miluk_ascii": "(e)<n:(e)<'n",
+          "miluk": "(ɛ́)n·(ɛ́)'n",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "it's yours",
+          "miluk_ascii": "n(e):<mI(th)",
+          "miluk": "n(ɛ́)·mI(th)",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "it's his",
+          "miluk_ascii": "hIdjI<m:I(th)",
+          "miluk": "hIdjÍm·I(th)",
+          "entries": []
+        },
+        {
+          "line": 16,
+          "english": "it's ours",
+          "miluk_ascii": "(e)<n:(e)<`ne",
+          "miluk": "(ɛ́)n·(ɛ́)ʻnɛ",
+          "entries": []
+        },
+        {
+          "line": 17,
+          "english": "it's yours (2)",
+          "miluk_ascii": "n(e):mI<(th)'I<cne",
+          "miluk": "n(ɛ́)·mI(th)'Ícnɛ",
+          "entries": []
+        },
+        {
+          "line": 18,
+          "english": "it's theirs",
+          "miluk_ascii": "hIdjI<m:I(th)'I(th)",
+          "miluk": "hIdjÍm·I(th)'I(th)",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t132-f18-fil-18",
+      "title": "f18·filɛ ł18",
+      "title_ascii": "f18:file #18",
+      "line_count": 14,
+      "lines": [
+        {
+          "line": 1,
+          "english": "give it to your grandmother",
+          "miluk_ascii": "nI<ya (u)<ma<t'(th)",
+          "miluk": "nÍya (ú)mát'(th)",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "give it to your grandson",
+          "miluk_ascii": "nI<ya kwen:dI<msIN",
+          "miluk": "nÍya kwɛ́n·dImsIɴ",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "give it to",
+          "miluk_ascii": "nI<ya kwen:tg",
+          "miluk": "nÍya kwɛn·tg",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "hello grandson!",
+          "miluk_ascii": "da<I (n)dI<msI",
+          "miluk": "dáI (n)dÍmsI",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "(my) older sisters (3) (present)",
+          "miluk_ascii": "h(e)n(e):<#k#W'ne<m(e)",
+          "miluk": "h(ɛ)n(ɛ́)·łkłW'nɛ́m(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "my absent distant older sisters (2,3)",
+          "miluk_ascii": "hana#kW'nI<ya:s",
+          "miluk": "hanáłkW'nIya·s",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "my absent distant older sisters (2,3)",
+          "miluk_ascii": "h(e)n(e):#kW'nI<ya:s",
+          "miluk": "h(ɛ)n(ɛ́)·łkW'nIya·s",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "my absent distant older sisters",
+          "miluk_ascii": "hana:<#kWnda<Is",
+          "miluk": "haná·łkWndáIs",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "my absent distant older sister",
+          "miluk_ascii": "hana#kw'na<Is",
+          "miluk": "hanałkw'náIs",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "my 2 older sisters present",
+          "miluk_ascii": "hana:<#kWnda:<s",
+          "miluk": "haná·łkWndá·s",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "my 2 older sister present",
+          "miluk_ascii": "hana:<#kwnI:<da:s",
+          "miluk": "háná·łkwnI·da·s",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "my canoe there is burning",
+          "miluk_ascii": "t(th)e-'nt(th)g(u):<s (e):<kwI: t'c(e):<l(e)I",
+          "miluk": "t(th)ɛ-'nt(th)g(ú)·s (ɛ́)·kwI· t'c(ɛ́)·l(ɛ)I",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "granddaughter, go get that",
+          "miluk_ascii": "tga:<ts kwI:<-(th)a:<dza",
+          "miluk": "tgá·ts kwI·́-(th)á·dza",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "granddaughters, go get that",
+          "miluk_ascii": "tgI<dze<nI kwI:<-(th)a:<dza",
+          "miluk": "tgÍdzɛ́nI kwI·́-(th)á·dza",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t133-f19-fil-19",
+      "title": "f19·filɛ ł19",
+      "title_ascii": "f19:file #19",
+      "line_count": 21,
+      "lines": [
+        {
+          "line": 1,
+          "english": "our absent younger brothers",
+          "miluk_ascii": "mIt#kwI:<sa(u)",
+          "miluk": "mItłkwI·́sa(u)",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "our absent uncles",
+          "miluk_ascii": "aKI:<xa(u)",
+          "miluk": "áKI·xa(u)",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "give it to your aunts",
+          "miluk_ascii": "nI<ya kwene x#U#kwe<ndIya:s",
+          "miluk": "nÍya kwɛnɛ xłUłkwɛ́ndIya·s",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "give it to your aunts (2)",
+          "miluk_ascii": "nI<yakwenex#U#kwe<'nem(e)",
+          "miluk": "nÍyakwɛnɛxłUłkwɛ́'nɛm(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "give it to your aunt!",
+          "miluk_ascii": "nI<ya a:#t",
+          "miluk": "nÍya a·łt",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "my aunts (crowd)",
+          "miluk_ascii": "t(th)e-'ne'a#tI<ya:s",
+          "miluk": "t(th)ɛ-'nɛ'áłtIya·s",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "my aunts",
+          "miluk_ascii": "t(th)e-'ne'a#tI<yase<ma",
+          "miluk": "t(th)ɛ-'nɛ'áłtIyasɛ́ma",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "my aunts ( including you)",
+          "miluk_ascii": "t(th)e-'ne'a<#tI'yI<ma",
+          "miluk": "t(th)ɛ-'nɛ́'áłtI'yIma",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "his grandchildren",
+          "miluk_ascii": "#kwe-de-du<msI'nIm(e)",
+          "miluk": "łkwɛ-dɛ-dúmsI'nIm(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "his grandchild",
+          "miluk_ascii": "kwe-de-dI<msIn",
+          "miluk": "kwɛ-dɛ́-dImsIn",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "give it to your grandchildren",
+          "miluk_ascii": "nI<ya kwenedI<msInI",
+          "miluk": "nÍya kwɛnɛ́dImsInI",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "give it to your grandchild",
+          "miluk_ascii": "nI<ya kwenedI<msIN",
+          "miluk": "nÍya kwɛnɛ́dImsIɴ",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "my older brother",
+          "miluk_ascii": "t(th)e-'ne h(e)<t'(th)(e)",
+          "miluk": "t(th)ɛ-'nɛ h(ɛ́)t'(th)(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "my (2) older brothers",
+          "miluk_ascii": "t(th)e-'ne h(e)<t'(th)(e)'(e)m(e)",
+          "miluk": "t(th)ɛ-'nɛ h(ɛ́)t'(th)(ɛ)'(ɛ)m(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "my (3) older brothers",
+          "miluk_ascii": "t(th)e-'ne hat'(th)I<ya:s",
+          "miluk": "t(th)ɛ-'nɛ hát'(th)Iya·s",
+          "entries": []
+        },
+        {
+          "line": 16,
+          "english": "my older brothers at a distance",
+          "miluk_ascii": "t(th)e-'nehat'(th)I:<daIs",
+          "miluk": "t(th)ɛ-'nɛhát'(th)I·daIs",
+          "entries": []
+        },
+        {
+          "line": 17,
+          "english": "my older brothers at a distance (big bunch)",
+          "miluk_ascii": "hat'(th)I<yada:s",
+          "miluk": "hát'(th)Iyada·s",
+          "entries": []
+        },
+        {
+          "line": 18,
+          "english": "(this form is for absent relatives)",
+          "miluk_ascii": "da:s",
+          "miluk": "da·s",
+          "entries": []
+        },
+        {
+          "line": 19,
+          "english": "I am talking to you uncle about my uncles",
+          "miluk_ascii": "t(th)e'ne'aXI:<xa(u) yuk#Wd(u):-'w(u)'I<ld(u)wa",
+          "miluk": "t(th)ɛ'nɛ'áXI·xa(u) yukłWd(u)·-'w(ú)'Ild(u)wa",
+          "entries": []
+        },
+        {
+          "line": 20,
+          "english": "I'm talking to you, sister, about our older sisters",
+          "miluk_ascii": "t(th)e'neha<na#kwIyada:s d(u)'wu'I<ldwa",
+          "miluk": "t(th)ɛ'nɛhánałkwIyada·s d(u)'wú'Ildwa",
+          "entries": []
+        },
+        {
+          "line": 21,
+          "english": "I'm talking to you brother, about our older brothers",
+          "miluk_ascii": "t(th)e'nehat'(th)I<daIs",
+          "miluk": "t(th)ɛ'nɛhát'(th)IdaIs",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t134-f-2-fil-2",
+      "title": "f̥2·filɛ ł̥2",
+      "title_ascii": "f20:file #20",
+      "line_count": 20,
+      "lines": [
+        {
+          "line": 1,
+          "english": "give it to your uncle",
+          "miluk_ascii": "bI:<s nI<ya",
+          "miluk": "bI·́s nÍya",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "give it to your grandfather",
+          "miluk_ascii": "nI<ya tsq(u):le#q#W",
+          "miluk": "nÍya tsq(u)·lɛłqłW",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "give it to your grandfathers",
+          "miluk_ascii": "nI<ya kwen: tsq(u):<l#q#Wdje<m(e)",
+          "miluk": "nÍya kwɛn· tsq(ú)·lłqłWdjɛ́m(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "my older sister",
+          "miluk_ascii": "t(th)e-'neh(e)<n(e):<#k#Wn",
+          "miluk": "t(th)ɛ-'nɛh(ɛ́)n(ɛ́)·łkłWn",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "give it to your older sister",
+          "miluk_ascii": "h(e):<nu<#kW nI<ya",
+          "miluk": "h(ɛ́)·núłkW nÍya",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "your older sister is sick",
+          "miluk_ascii": "t(th)e-neh(e)<n(e):<#kWn (xx)(e)<nwes",
+          "miluk": "t(th)ɛ-nɛh(ɛ́)n(ɛ́)·łkWn (xx)(ɛ́)nwɛs",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "to your older sisters (2,3)",
+          "miluk_ascii": "hana:<#kWn da:<s",
+          "miluk": "haná·łkWn dá·s",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "older sister!",
+          "miluk_ascii": "h(e):<nu#kwI",
+          "miluk": "h(ɛ́)·nułkwI",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "where is your younger brother",
+          "miluk_ascii": "idja<(u) ma:<t(th)k#W",
+          "miluk": "idjá(u) má·t(th)kłW",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "where is your older brother",
+          "miluk_ascii": "idja<(u) h(e):<t'(th)",
+          "miluk": "idjá(u) h(ɛ́)·t'(th)",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "where is your older brother",
+          "miluk_ascii": "idja<(u) t(th)e-ne-h(e)<t'(th)(e)",
+          "miluk": "idjá(u) t(th)ɛ-nɛ-h(ɛ́)t'(th)(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "where are your (2,3) younger brothers",
+          "miluk_ascii": "idja<(u) ma:<t(th)gu<ma",
+          "miluk": "idjá(u) má·t(th)gúma",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "where are your (2,3) older brothers",
+          "miluk_ascii": "idja<(u) h(e):t'(th)e<m(e)",
+          "miluk": "idjá(u) h(ɛ)·t'(th)ɛ́m(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "I'll go to my daughter",
+          "miluk_ascii": "t(th)e-'negwa:<ya'adja wa<nt(th)-(th)a",
+          "miluk": "t(th)ɛ-'nɛgwá·ya'adja wánt(th)-(th)a",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "I'll go to my daughters",
+          "miluk_ascii": "t(th)e-'negwa:<ya'adje<ma wa<nt(th)-(th)a",
+          "miluk": "t(th)ɛ-'nɛgwá·ya'adjɛ́ma wánt(th)-(th)a",
+          "entries": []
+        },
+        {
+          "line": 16,
+          "english": "he dampened it by wetting it with damp hands",
+          "miluk_ascii": "psI:<wI",
+          "miluk": "psI·́wI",
+          "entries": []
+        },
+        {
+          "line": 17,
+          "english": "it's been dampened already",
+          "miluk_ascii": "ma:<n'yuk#W psI:<wI",
+          "miluk": "má·n'yukłW psI·́wI",
+          "entries": []
+        },
+        {
+          "line": 18,
+          "english": "I'll do it for your daughter's sake",
+          "miluk_ascii": "kwenegwa:<yada<qdla#I wa<nt(th) w(e):<ntsem",
+          "miluk": "kwɛnɛgwá·yadáqdlałI wánt(th) w(ɛ́)·ntsɛm",
+          "entries": []
+        },
+        {
+          "line": 19,
+          "english": "I'll do it for my daughter's sake",
+          "miluk_ascii": "t(th)e-'negwa:<ya'ay:a<#t want(th) w(e):<ntsem",
+          "miluk": "t(th)ɛ-'nɛgwá·ya'ay·áłt want(th) w(ɛ́)·ntsɛm",
+          "entries": []
+        },
+        {
+          "line": 20,
+          "english": "I'll do it for my daughter's sake",
+          "miluk_ascii": "t(th)e-'negwa:<ya'daqdla'I:<ya#t wa:nt(th) w(e):<nt.sem",
+          "miluk": "t(th)ɛ-'nɛgwá·ya'daqdlá'I·yałt wa·nt(th) w(ɛ́)·nt.sɛm",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t135-f21-fil-21",
+      "title": "f21·filɛ ł21",
+      "title_ascii": "f21:file #21",
+      "line_count": 22,
+      "lines": [
+        {
+          "line": 1,
+          "english": "you (2) make fun of me",
+          "miluk_ascii": "h(u):<dIdaI'I<sne",
+          "miluk": "h(ú)·dIdáI'Isnɛ",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "you (2) make fun of yourselves (2)",
+          "miluk_ascii": "h(u):<dat'I<s(n)<#te",
+          "miluk": "h(ú)·dát'Is(n)́łtɛ",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "you (2) make fun of us(2)",
+          "miluk_ascii": "h(u):<dIdI:#tIda<Ine",
+          "miluk": "h(ú)·dIdI·łtIdáInɛ",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "you (2) make fun of us (3)",
+          "miluk_ascii": "h(u):<dIdI:#tIda<I'Is",
+          "miluk": "h(ú)·dIdI·łtIdáI'Is",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "you (2) make fun of them (3)",
+          "miluk_ascii": "h(u):<dIdI:#ta<'Ise<ma",
+          "miluk": "h(ú)·dIdI·łtá'Isɛ́ma",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "you (2) make fun of them (2)",
+          "miluk_ascii": "h(u):<dade<ma:<ne",
+          "miluk": "h(ú)·dadɛ́má·nɛ",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "Why does such a low down thing (of a woman) make fun of me",
+          "miluk_ascii": "I-d(e)-(xx)-djI< gw(e)-(xx)-we<n-dItc (u)h(u):<dIdi:n",
+          "miluk": "I-d(ɛ́)-(xx)-djI gw(ɛ)-(xx)-wɛ́n-dItc (u)h(ú)·dIdi·n",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "we (3) make fun of him",
+          "miluk_ascii": "h(u):<da:te(th)",
+          "miluk": "h(ú)·da·tɛ(th)",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "we (3) make fun of them (2)",
+          "miluk_ascii": "h(u):<dade<ma:(th)",
+          "miluk": "h(ú)·dadɛ́ma·(th)",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "we (3) make fun of them (3)",
+          "miluk_ascii": "h(u):<dIdI:<#ta'a<ma(th)",
+          "miluk": "h(ú)·dIdI·́łta'áma(th)",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "he made me go",
+          "miluk_ascii": "ta'(u)<h(u)'wi:n",
+          "miluk": "ta'(ú)h(u)'wi·n",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "he made me sing",
+          "miluk_ascii": "ha:#tI<'(u)h(u)'wI:n",
+          "miluk": "há·łtI'(u)h(u)'wI·n",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "he made me cry",
+          "miluk_ascii": "a(xx)a<ts'(u)h(u)'wI:<n",
+          "miluk": "a(xx)áts'(u)h(ú)'wI·n",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "I'll make you cry",
+          "miluk_ascii": "a(xx)a<ts-nant(th)-h(u)'wa:<mI",
+          "miluk": "a(xx)áts-nant(th)-h(u)'wá·mI",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "they (2) made fun of me",
+          "miluk_ascii": "h(u):<dIdI:n'I<tc'w",
+          "miluk": "h(ú)·dIdI·n'Ítc'w",
+          "entries": []
+        },
+        {
+          "line": 16,
+          "english": "they (2) made fun of you (1)",
+          "miluk_ascii": "h(u):<dIdI:n'I<tcne",
+          "miluk": "h(ú)·dIdI·n'Ítcnɛ",
+          "entries": []
+        },
+        {
+          "line": 17,
+          "english": "they (2) made fun of you (2)",
+          "miluk_ascii": "h(u):<dIdI:#tI<t'Is",
+          "miluk": "h(ú)·dIdI·łtÍt'Is",
+          "entries": []
+        },
+        {
+          "line": 18,
+          "english": "they (2) made fun of you (3)",
+          "miluk_ascii": "h(u):<dIdI:#tI<t tc(i)l",
+          "miluk": "h(ú)·dIdI·łtÍt tc(i)l",
+          "entries": []
+        },
+        {
+          "line": 19,
+          "english": "they (2) made fun of us (2)",
+          "miluk_ascii": "h(u):<dIdI:<nem(e):(th)",
+          "miluk": "h(ú)·dIdI·́nɛm(ɛ)·(th)",
+          "entries": []
+        },
+        {
+          "line": 20,
+          "english": "they (2) made fun of us (3)",
+          "miluk_ascii": "h(u):<dIdI:#t(i)t.(th).I<m(e)",
+          "miluk": "h(ú)·dIdI·łt(í)t.(th).Im(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 21,
+          "english": "he made her cry",
+          "miluk_ascii": "a(xx)a<ts-wa:<wa",
+          "miluk": "a(xx)áts-wá·wa",
+          "entries": []
+        },
+        {
+          "line": 22,
+          "english": "he made you cry",
+          "miluk_ascii": "a(xx)a<ts-neh(u)'wI:<n",
+          "miluk": "a(xx)áts-nɛh(ú)'wI·n",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t136-f22-fil-22",
+      "title": "f22·filɛ ł22",
+      "title_ascii": "f22:file #22",
+      "line_count": 23,
+      "lines": [
+        {
+          "line": 1,
+          "english": "I'm well, I've gotten well now",
+          "miluk_ascii": "#KI<l(e):t'w",
+          "miluk": "łKÍl(ɛ)·t'w",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "I'm well again",
+          "miluk_ascii": "#KI<l(e):t'wI<",
+          "miluk": "łKÍl(ɛ́)·t'wI",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "I always used to be well",
+          "miluk_ascii": "g(u):s'mI<n wudu-#K(e):<l(e)",
+          "miluk": "g(ú)·s'mIn wudu-łK(ɛ́)·l(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "I ought to be well",
+          "miluk_ascii": "an'wa<nG(e): #KI<l(e):t'ya",
+          "miluk": "an'wánG(ɛ)· łKÍl(ɛ)·t'ya",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "Why shouldn't I be well",
+          "miluk_ascii": "an'wa<nG(e): (th)h(e)<(u)'ya",
+          "miluk": "an'wánG(ɛ)· (th)h(ɛ́)(u)'ya",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "we (2) make fun of you",
+          "miluk_ascii": "neh(u):<dIda:<mI",
+          "miluk": "nɛh(ú)·dIdá·mI",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "we (2) make fun of you (2)",
+          "miluk_ascii": "h(u)<dIda:mI'yIm(e):<ne",
+          "miluk": "h(ú)dIda·mI'yIm(ɛ́)·nɛ",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "we (2) make fun of you (3)",
+          "miluk_ascii": "h(u):<dIda:mI'(e)m(e):<tcIl",
+          "miluk": "h(ú)·dIda·mI'(ɛ)m(ɛ́)·tcIl",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "he'll never get well",
+          "miluk_ascii": "an-ha<nt(th)-(th)h(e)<#U",
+          "miluk": "an-hánt(th)-(th)h(ɛ́)łU",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "he's nearly well",
+          "miluk_ascii": "ga:sI<ya (th)h(e)<(u)",
+          "miluk": "gá·sIya (th)h(ɛ́)(u)",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "he just got well ( just now)",
+          "miluk_ascii": "ts(u)<ha<(th)h(e)#U",
+          "miluk": "ts(ú)há(th)h(ɛ)łU",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "he just got well",
+          "miluk_ascii": "ts(u)<ha<#KI<l(e):t",
+          "miluk": "ts(ú)háłKÍl(ɛ)·t",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "he made fun of me",
+          "miluk_ascii": "h(u):<dId(i):<n'(u)",
+          "miluk": "h(ú)·dId(í)·n'(u)",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "he made fun of us (2)",
+          "miluk_ascii": "h(u):<dIdI:<'nIm(e):<n(e)",
+          "miluk": "h(ú)·dIdI·́'nIm(ɛ́)·n(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "he made fun of us (3)",
+          "miluk_ascii": "h(u):<dIdI:<#tI<(th)I(th)",
+          "miluk": "h(ú)·dIdI·́łtÍ(th)I(th)",
+          "entries": []
+        },
+        {
+          "line": 16,
+          "english": "he made fun of himself",
+          "miluk_ascii": "h(u):<dadI<#t(e)",
+          "miluk": "h(ú)·dádIłt(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 17,
+          "english": "he made fun of him",
+          "miluk_ascii": "h(u):<dat",
+          "miluk": "h(ú)·dat",
+          "entries": []
+        },
+        {
+          "line": 18,
+          "english": "go climb it for me",
+          "miluk_ascii": "(e)<n:(e)< h(e)<l(e)(gg)(e) dze<mI:daI",
+          "miluk": "(ɛ́)n·(ɛ́) h(ɛ́)l(ɛ)(gg)(ɛ) dzɛ́mI·daI",
+          "entries": []
+        },
+        {
+          "line": 19,
+          "english": "go climb it for him",
+          "miluk_ascii": "hIdjI< ha<l(gg)adzI<mIdIya",
+          "miluk": "hIdjÍ hál(gg)ádzImIdIya",
+          "entries": []
+        },
+        {
+          "line": 20,
+          "english": "they made fun of us (2)",
+          "miluk_ascii": "h(u):<dIdI#tI<tne",
+          "miluk": "h(ú)·dIdIłtÍtnɛ",
+          "entries": []
+        },
+        {
+          "line": 21,
+          "english": "they made fun of us (3)",
+          "miluk_ascii": "h(u):<dIdI:#tI<tI(th)",
+          "miluk": "h(ú)·dIdI·łtÍtI(th)",
+          "entries": []
+        },
+        {
+          "line": 22,
+          "english": "they made fun of you (2)",
+          "miluk_ascii": "h(u):<dIdI:#tIt'I<(th)ne",
+          "miluk": "h(ú)·dIdI·łtIt'Í(th)nɛ",
+          "entries": []
+        },
+        {
+          "line": 23,
+          "english": "they made fun of you (3)",
+          "miluk_ascii": "h(u):<dIdImId(u):<ntcIl",
+          "miluk": "h(ú)·dIdImId(ú)·ntcIl",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t137-f23-fil-23",
+      "title": "f23·filɛ ł23",
+      "title_ascii": "f23:file #23",
+      "line_count": 21,
+      "lines": [
+        {
+          "line": 1,
+          "english": "you make fun of me",
+          "miluk_ascii": "h(u):<dIda<Ine",
+          "miluk": "h(ú)·dIdáInɛ",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "you make fun of us (2)",
+          "miluk_ascii": "h(u):<dIdaI'yIma'ne",
+          "miluk": "h(ú)·dIdaI'yIma'nɛ",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "you make fun of us (3)",
+          "miluk_ascii": "h(u):<dIda<I(th)ne",
+          "miluk": "h(ú)·dIdáI(th)nɛ",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "you make fun of yourself",
+          "miluk_ascii": "h(u):<dat'(n)<#t(e)",
+          "miluk": "h(ú)·dát'(n)łt(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "you make fun of yourself",
+          "miluk_ascii": "h(u):<dat ne<#t(e)",
+          "miluk": "h(ú)·dat nɛ́łt(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "I make fun of myself",
+          "miluk_ascii": "h(u):<datnI:<#t(e)",
+          "miluk": "h(ú)·dátnI·łt(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "I'm the one you want",
+          "miluk_ascii": "(e)<n:(e) kwene d(u):<hIdai",
+          "miluk": "(ɛ́)n·(ɛ) kwɛnɛ d(ú)·hIdai",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "I'm the one you want",
+          "miluk_ascii": "(e)n:(e) kwen:d(u):<hIdai",
+          "miluk": "(ɛ)n·(ɛ) kwɛn·d(ú)·hIdai",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "he's the one you want",
+          "miluk_ascii": "hI<djI kwen:d(u):<ha<'ya",
+          "miluk": "hÍdjI kwɛn·d(ú)·há'ya",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "you make fun of him",
+          "miluk_ascii": "h(u):<datne",
+          "miluk": "h(ú)·datnɛ",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "you make fun of them (2)",
+          "miluk_ascii": "h(u):<dadema:ne",
+          "miluk": "h(ú)·dadɛma·nɛ",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "you make fun of them (3)",
+          "miluk_ascii": "h(u):<d(i)dI:#ta'amane",
+          "miluk": "h(ú)·d(i)dI·łta'amanɛ",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "I used to cheat at that time ( long ago)",
+          "miluk_ascii": "wI:n(e):<n(u)'w(u)<d(u) t(th)e#te<ma",
+          "miluk": "wI·n(ɛ́)·n(u)'w(ú)d(u) t(th)ɛłtɛ́ma",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "I make fun of you",
+          "miluk_ascii": "h(u):<dIda:mI:<nI",
+          "miluk": "h(ú)·dIdá·mI·nI",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "I make fun of you (2)",
+          "miluk_ascii": "h(u):<dIda:mI<'Is",
+          "miluk": "h(ú)·dIdá·mI'Is",
+          "entries": []
+        },
+        {
+          "line": 16,
+          "english": "I make fun of you (3)",
+          "miluk_ascii": "h(u):<dIda:mI:<tcIl",
+          "miluk": "h(ú)·dIdá·mI·tcIl",
+          "entries": []
+        },
+        {
+          "line": 17,
+          "english": "I make fun of him",
+          "miluk_ascii": "h(u):<dat'wI<",
+          "miluk": "h(ú)·dát'wI",
+          "entries": []
+        },
+        {
+          "line": 18,
+          "english": "I make fun of them (2)",
+          "miluk_ascii": "h(u):<dIdI:#ta<'wI",
+          "miluk": "h(ú)·dIdI·łtá'wI",
+          "entries": []
+        },
+        {
+          "line": 19,
+          "english": "I make fun of them (3)",
+          "miluk_ascii": "h(u):<dIdI:#ta'a<ma'wI<",
+          "miluk": "h(ú)·dIdI·łta'ámá'wI",
+          "entries": []
+        },
+        {
+          "line": 20,
+          "english": "pack",
+          "miluk_ascii": "#tI<m",
+          "miluk": "łtÍm",
+          "entries": []
+        },
+        {
+          "line": 21,
+          "english": "creek",
+          "miluk_ascii": "tI<mIn",
+          "miluk": "tÍmIn",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t138-f24-fil-24",
+      "title": "f24·filɛ ł24",
+      "title_ascii": "f24:file #24",
+      "line_count": 16,
+      "lines": [
+        {
+          "line": 1,
+          "english": "you (2) make fun of him",
+          "miluk_ascii": "h(u):<dat'Is",
+          "miluk": "h(ú)·dat'Is",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "it drizzled",
+          "miluk_ascii": "#pa'I<yamgum",
+          "miluk": "łpá'Iyamgum",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "it's drizzling",
+          "miluk_ascii": "pa'I<yam",
+          "miluk": "pá'Iyam",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "it will not be long before it will drizzle",
+          "miluk_ascii": "GI<h(e):<nIy(e) hant(th) ma:zn #pa'I<yam",
+          "miluk": "GÍh(ɛ́)·nIy(ɛ) hant(th) ma·zn łpá'Iyam",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "you (3) make fun of me",
+          "miluk_ascii": "h(u):<dIda<ItcIl",
+          "miluk": "h(ú)·dIdáItcIl",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "you (3) make fun of him",
+          "miluk_ascii": "h(u):<dattcIl",
+          "miluk": "h(ú)·dattcIl",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "you (3) make fun of them (2,3)",
+          "miluk_ascii": "h(u):<dade<ma'ne",
+          "miluk": "h(ú)·dadɛ́ma'nɛ",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "you (3) make fun of us (2)",
+          "miluk_ascii": "h(u):<dIda'ItcI<lne",
+          "miluk": "h(ú)·dIdá'ItcIlnɛ",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "you (3) make fun of us (3)",
+          "miluk_ascii": "h(u):<dIdI:#tIda<ItcIl",
+          "miluk": "h(ú)·dIdI·łtIdáItcIl",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "you (3) make fun of yourselves",
+          "miluk_ascii": "tcIlh(u):<dadematcIlne<#t(e)",
+          "miluk": "tcIlh(ú)·dadɛmatcIlnɛ́łt(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "you dirty low-down woman!",
+          "miluk_ascii": "idj(e)'(e)<Is h(u):<mIs",
+          "miluk": "idj(ɛ)'(ɛ́)Is h(ú)·mIs",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "I don't want to go with him",
+          "miluk_ascii": "an-'wu<d(u):<ha'ya kwI:<'ne<'ma:na<#t",
+          "miluk": "an-'wúd(ú)·ha'ya kwI·́'nɛ́'ma·náłt",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "I want to go with you",
+          "miluk_ascii": "d(u):<ha'ya (u)-'wu(th)(e):<(th) n(e)z<wI",
+          "miluk": "d(ú)·ha'ya (u)-'wu(th)(ɛ́)·(th) n(ɛ́)zwI",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "I want to go with him",
+          "miluk_ascii": "d(u):<ha'ya (u)-'w(u)(th)(e):<(th) hIdj(u):<wI",
+          "miluk": "d(ú)·ha'ya (u)-'w(u)(th)(ɛ́)·(th) hIdj(ú)·wI",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "He wants to go with me",
+          "miluk_ascii": "d(u):<ha'ya (e)<nI wu(th)(e):(th)",
+          "miluk": "d(ú)·ha'ya (ɛ́)nI wu(th)(ɛ)·(th)",
+          "entries": []
+        },
+        {
+          "line": 16,
+          "english": "to make fun of me like that!",
+          "miluk_ascii": "w(e):<n-hIs-w(e)-(xx)-kwI-h(u):<dIdI:n",
+          "miluk": "w(ɛ́)·n-hIs-w(ɛ)-(xx)-kwI-h(ú)·dIdI·n",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t139-f25-fil-25",
+      "title": "f25·filɛ ł25",
+      "title_ascii": "f25:file #25",
+      "line_count": 15,
+      "lines": [
+        {
+          "line": 1,
+          "english": "he made you dirty",
+          "miluk_ascii": "nt(th)b(e):<(gg)(e)yI#qn(u)h(u)'wI<n",
+          "miluk": "nt(th)b(ɛ́)·(gg)(ɛ)yIłqn(u)h(ú)'wIn",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "he made me dirty",
+          "miluk_ascii": "nt(th)b(e):<(gg)(e)'(u)h(u)'wI<n",
+          "miluk": "nt(th)b(ɛ́)·(gg)(ɛ)'(u)h(ú)'wIn",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "they made fun of me",
+          "miluk_ascii": "h(u):<dIdI:n'I<(th)'w",
+          "miluk": "h(ú)·dIdI·n'Í(th)'w",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "they made fun of you",
+          "miluk_ascii": "h(u):<dIdI:n'I<(th)ne",
+          "miluk": "h(ú)·dIdI·n'Í(th)nɛ",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "they made fun of him",
+          "miluk_ascii": "h(u):<dat'I(th)",
+          "miluk": "h(ú)·dat'I(th)",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "they made fun of them (3)",
+          "miluk_ascii": "h(u):<dId(i):#ta<'I(th)",
+          "miluk": "h(ú)·dId(i)·łtá'I(th)",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "they made fun of them (2)",
+          "miluk_ascii": "h(u):<dade<ma'I(th)",
+          "miluk": "h(ú)·dadɛ́ma'I(th)",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "(th)djI'láya (th)á",
+          "miluk_ascii": "he went ( down, close to the shore) along the beach, riverside qqq (th)dj(e)<Isetc (th)a< + he went along the ocean beach",
+          "miluk": "hɛ wɛnt ( down, closɛ to thɛ shorɛ) along thɛ bɛach, riᵉrsidɛ qqq (th)dj(ɛ́)Isɛtc (th)á + hɛ wɛnt along thɛ ocɛan bɛach",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "(th)djI'la<ya (th)a<"
+          },
+          "transformation_ids": [
+            "v2-corpus-t139-l0008-english"
+          ],
+          "english_original": "(th)djI'la<ya (th)a<"
+        },
+        {
+          "line": 9,
+          "english": "he made fun of you (1)",
+          "miluk_ascii": "h(u):<dIdI:<n:e",
+          "miluk": "h(ú)·dIdI·́n·ɛ",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "he made fun of you (2)",
+          "miluk_ascii": "h(u):<dIdI:n'(i)s",
+          "miluk": "h(ú)·dIdI·n'(i)s",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "he made fun of you (3)",
+          "miluk_ascii": "h(u):<dIdI:ntcIl",
+          "miluk": "h(ú)·dIdI·ntcIl",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "he made fun of them (2)",
+          "miluk_ascii": "h(u):<dIdI:<#ta",
+          "miluk": "h(ú)·dIdI·́łta",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "he made fun of them (3)",
+          "miluk_ascii": "h(u):<dIdI:<#ta'a<ma",
+          "miluk": "h(ú)·dIdI·́łta'áma",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "he made fun of them (3)",
+          "miluk_ascii": "h(u):<dade<ma",
+          "miluk": "h(ú)·dadɛ́ma",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "he's standing on his head",
+          "miluk_ascii": "l(e):<m(e)m",
+          "miluk": "l(ɛ́)·m(ɛ)m",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t140-f26-fil-26",
+      "title": "f26·filɛ ł26",
+      "title_ascii": "f26:file #26",
+      "line_count": 18,
+      "lines": [
+        {
+          "line": 1,
+          "english": "we (3) make fun of you",
+          "miluk_ascii": "h(u):<dIda:mI:<(th)ne",
+          "miluk": "h(ú)·dIdá·mI·(th)nɛ",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "we (3) make fun of you (2)",
+          "miluk_ascii": "h(u):<dIda:mI'I<sne",
+          "miluk": "h(ú)·dIdá·mI'Isnɛ",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "we (3) make fun of you (3)",
+          "miluk_ascii": "h(u):<dIda:<mI'I<ma",
+          "miluk": "h(ú)·dIdá·mI'Íma",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "that used to be my canoe",
+          "miluk_ascii": "(e)<n:(e)-(n)(th)(u)'wI:<na",
+          "miluk": "(ɛ́)n·(ɛ)-(n)(th)(ú)'wI·na",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "it used to be mine",
+          "miluk_ascii": "(e)<n:(e)-(n)t(th)gu:<s t(th)a<",
+          "miluk": "(ɛ́)n·(ɛ)-(n)t(th)gú·s t(th)á",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "it used to be mine",
+          "miluk_ascii": "n(e):<mI(th) (th)(u):<d(u)",
+          "miluk": "n(ɛ́)·mI(th) (th)(ú)·d(u)",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "it used to be yours",
+          "miluk_ascii": "n(e):<mI(th) (th)u'wI:<na",
+          "miluk": "n(ɛ́)·mI(th) (th)ú'wI·na",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "it used to be yours",
+          "miluk_ascii": "hIdjI<m:I(th) (th)u'wI:<na",
+          "miluk": "hIdjÍm·I(th) (th)ú'wI·na",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "it used to be his",
+          "miluk_ascii": "h(u):<dat'wu'(n)<#t(e)",
+          "miluk": "h(ú)·dat'wú'(n)łt(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "I make fun of myself",
+          "miluk_ascii": "h(u):<dIdI:#ta<(n)#t(e)",
+          "miluk": "h(ú)·dIdI·łtá(n)łt(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "I make fun of us (2)",
+          "miluk_ascii": "h(u):<dIdI:#ta<ne#t(e)",
+          "miluk": "h(ú)·dIdI·łtánɛłt(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "I make fun of ourselves (2)",
+          "miluk_ascii": "h(u):<dIdI:#ta:<(th)(n)<#t(e)",
+          "miluk": "h(ú)·dIdI·łtá·(th)(n)́łt(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "kItskIx",
+          "miluk_ascii": "I make fun of us (3)",
+          "miluk": "I makɛ fun of us (3)",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "laugh at",
+          "miluk_ascii": "kItskI:<xI:<n'(u)",
+          "miluk": "kItskI·́xI·́n'(u)",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "he laughed at me",
+          "miluk_ascii": "h(u):<da:dI(th)",
+          "miluk": "h(ú)·da·dI(th)",
+          "entries": []
+        },
+        {
+          "line": 16,
+          "english": "we (2) make fun of him",
+          "miluk_ascii": "h(u):<da:te(th)",
+          "miluk": "h(ú)·da·tɛ(th)",
+          "entries": []
+        },
+        {
+          "line": 17,
+          "english": "we (2) make fun of them (2)",
+          "miluk_ascii": "h(u):<dade<ma:(th)",
+          "miluk": "h(ú)·dadɛ́ma·(th)",
+          "entries": []
+        },
+        {
+          "line": 18,
+          "english": "we (2) make fun of them (3)",
+          "miluk_ascii": "h(u):<dIdI:#ta'a<ma(th)",
+          "miluk": "h(ú)·dIdI·łta'áma(th)",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t141-f27-file-27",
+      "title": "f27 file ł27",
+      "title_ascii": "f27 file #27",
+      "line_count": 15,
+      "lines": [
+        {
+          "line": 1,
+          "english": "he ferried him across",
+          "miluk_ascii": "(gg)a<lya",
+          "miluk": "(gg)álya",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "across the stream",
+          "miluk_ascii": "(gg)(e)djI<mIn",
+          "miluk": "(gg)(ɛ́)djImIn",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "step on it for me!",
+          "miluk_ascii": "tsXI< (e)<n:(e)-'ne<qdla#i",
+          "miluk": "tsXÍ (ɛ́)n·(ɛ)-'nɛ́qdlałi",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "step on it for him!",
+          "miluk_ascii": "tsXI< hIdjI<m:I(th)-qdla<#i",
+          "miluk": "tsXÍ hIdjÍm·I(th)-qdláłi",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "ferryman",
+          "miluk_ascii": "(gg)a'lI<ya'wa",
+          "miluk": "(gg)á'lIya'wa",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "step on it! (to 1)",
+          "miluk_ascii": "tsXI<",
+          "miluk": "tsXÍ",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "tsXI<",
+            "miluk": "stɛp on it̓ (to 1)",
+            "miluk_ascii": "step on it! (to 1)"
+          },
+          "transformation_ids": [
+            "v2-corpus-t141-l0006-english",
+            "v2-corpus-t141-l0006-miluk",
+            "v2-corpus-t141-l0006-miluk-ascii"
+          ],
+          "english_original": "tsXI<"
+        },
+        {
+          "line": 7,
+          "english": "step on them!",
+          "miluk_ascii": "tsXI'yI<m(e)",
+          "miluk": "tsXI'yÍm(ɛ)",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "tsXI'yI<m(e)",
+            "miluk": "stɛp on thɛm̓",
+            "miluk_ascii": "step on them!"
+          },
+          "transformation_ids": [
+            "v2-corpus-t141-l0007-english",
+            "v2-corpus-t141-l0007-miluk",
+            "v2-corpus-t141-l0007-miluk-ascii"
+          ],
+          "english_original": "tsXI'yI<m(e)"
+        },
+        {
+          "line": 8,
+          "english": "he stepped on it (many steps)",
+          "miluk_ascii": "tsxa:<ts",
+          "miluk": "tsxá·ts",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "tsxa",
+          "miluk_ascii": "he stepped on it (one step)",
+          "miluk": "hɛ stɛppɛd on it (onɛ stɛp)",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "he stepped on them",
+          "miluk_ascii": "tsxa'a<ma",
+          "miluk": "tsxa'áma",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "I smashed (squeezed) it with in my hand",
+          "miluk_ascii": "tsba<lq#Wt'w",
+          "miluk": "tsbálqłWt'w",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "I smashed (many squashes) with my hand",
+          "miluk_ascii": "dzIbI<la:q'(u)",
+          "miluk": "dzIbÍla·q'(u)",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "keep on smashing squeezing it in your hand",
+          "miluk_ascii": "dzIbI<la:q#W",
+          "miluk": "dzIbÍla·qłW",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "indeed",
+          "miluk_ascii": "i<",
+          "miluk": "í",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "t'(th)bá·tsnɛ",
+          "miluk_ascii": "you squashed ( flattened it) (many squashes) it with your hand qqq t'(th)ba:<tsnI:< + yes, you squashed it with your hand",
+          "miluk": "you squashɛd ( flattɛnɛd it) (many squashɛs) it with your hand qqq t'(th)bá·tsnI·́ + yɛs, you squashɛd it with your hand",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "t'(th)ba:<tsne"
+          },
+          "transformation_ids": [
+            "v2-corpus-t141-l0015-english"
+          ],
+          "english_original": "t'(th)ba:<tsne"
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t142-f28-fil-28",
+      "title": "f28·filɛ ł28",
+      "title_ascii": "f28:file #28",
+      "line_count": 13,
+      "lines": [
+        {
+          "line": 1,
+          "english": "I know where he came from",
+          "miluk_ascii": "#kwa:<'nIyada'wI:<-(xx)(gg)(e)<N-kwI:-djI<",
+          "miluk": "łkwá·'nIyádá'wI·-(xx)(gg)(ɛ́)ɴ-kwI·-djI",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "I know where he came from",
+          "miluk_ascii": "#kwa:<'nIyada'wI:<-(xx)(gg)(e)<N-kwI:-dze<n(e)",
+          "miluk": "łkwá·'nIyadá'wI·-(xx)(gg)(ɛ́)ɴ-kwI·-dzɛ́n(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "I saw where he went to",
+          "miluk_ascii": "ha<ma#q.we-(gg)(e)<ndjI-'a<ya:tsem",
+          "miluk": "hámałq.wɛ-(gg)(ɛ́)ndjI-'áya·tsɛm",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "somebody's making fun of me",
+          "miluk_ascii": "(xx)-'wI< (u)<h(u):dIdI:n",
+          "miluk": "(xx)-'wÍ (ú)h(u)·dIdI·n",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "somebody's making fun of us (2 excl.)",
+          "miluk_ascii": "(xx)-'wI:<s h(u):<dIdI:n",
+          "miluk": "(xx)-'wI·́s h(ú)·dIdI·n",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "somebody's making fun of us (3 excl.)",
+          "miluk_ascii": "(xx)-'wI:<(th) h(u):<dIdI:n",
+          "miluk": "(xx)-'wI·́(th) h(ú)·dIdI·n",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "somebody's making fun of you (1)",
+          "miluk_ascii": "(xx)-'wut (e)<h(u):<wIdI(th)",
+          "miluk": "(xx)-'wut (ɛ́)h(ú)·wIdI(th)",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "he's a good hunter, good his hunting",
+          "miluk_ascii": "#K(e):<l(e)de (th)I<m(e):<t",
+          "miluk": "łK(ɛ́)·l(ɛ)dɛ (th)Ím(ɛ́)·t",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "they make fun of themselves (3)",
+          "miluk_ascii": "h(u):<da#tI(th)de<#t(e)",
+          "miluk": "h(ú)·dałtI(th)dɛ́łt(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "better go now quick!",
+          "miluk_ascii": "I:<(gg)(e)#i t(th)(e)",
+          "miluk": "I·́(gg)(ɛ)łi t(th)(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "fast you must walk ( you ought to)",
+          "miluk_ascii": "mI:<mtc nant(th) tca:tca<#i",
+          "miluk": "mI·́mtc nant(th) tca·tcáłi",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "you must play",
+          "miluk_ascii": "alica<n(u)<nant(th)(i):<",
+          "miluk": "alicán(ú)nant(th)(í)·",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "they making fun of you (2)",
+          "miluk_ascii": "h(u):<d(e):t'Is",
+          "miluk": "h(ú)·d(ɛ)·t'Is",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t143-f29-fil-29",
+      "title": "f29·filɛ ł29",
+      "title_ascii": "f29:file #29",
+      "line_count": 15,
+      "lines": [
+        {
+          "line": 1,
+          "english": "somebody I dont know is making fun of you (1)",
+          "miluk_ascii": "(xx)-'wI<-ne<tsa h(u):<dIdI:n",
+          "miluk": "(xx)-'wÍ-nɛ́tsa h(ú)·dIdI·n",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "(I heard that) somebody is making fun of you (2)",
+          "miluk_ascii": "(xx)-#ka<'Is tsa h(u):<dIdI:n",
+          "miluk": "(xx)-łká'Is tsa h(ú)·dIdI·n",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "it's reddish",
+          "miluk_ascii": "gwa<(th)qwe'l(e)<#qh(e)m",
+          "miluk": "gwá(th)qwɛ'l(ɛ́)łqh(ɛ)m",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "it looks reddish",
+          "miluk_ascii": "ma:<tsIgwa<(th)qwel",
+          "miluk": "má·tsIgwá(th)qwɛl",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "somebody is making fun of you (2)",
+          "miluk_ascii": "(xx)-'wI<-'I<s h(u):<dIdI:n",
+          "miluk": "(xx)-'wÍ-'Ís h(ú)·dIdI·n",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "somebody is making fun of you (3)",
+          "miluk_ascii": "(xx)-'wI:<tcIl h(u):<dIdI:#tIdI:n",
+          "miluk": "(xx)-'wI·́tcIl h(ú)·dIdI·łtIdI·n",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "somebody is making fun of him",
+          "miluk_ascii": "(xx)-'wI h(u):<da:t",
+          "miluk": "(xx)-'wI h(ú)·da·t",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "somebody is making fun of them (2)",
+          "miluk_ascii": "(xx)-'wI< h(u):<dadema",
+          "miluk": "(xx)-'wÍ h(ú)·dadɛma",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "somebody is making fun of them (3)",
+          "miluk_ascii": "(xx)-'wu<t h(u)<wIdI:#ta(xx)am:a",
+          "miluk": "(xx)-'wút h(ú)wIdI·łta(xx)am·a",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "tsa`",
+          "miluk_ascii": "so they say",
+          "miluk": "so thɛy say",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "he's a liar, so they say",
+          "miluk_ascii": "h(e)<(u)sd(u):-tsa`",
+          "miluk": "h(ɛ́)(u)sd(u)·-tsaʻ",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "he's dead , so they say",
+          "miluk_ascii": "#qa<ya(u)-tsa`",
+          "miluk": "łqáya(u)-tsaʻ",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "we (3 excl.) are making fun of somebody",
+          "miluk_ascii": "wI:<(th)h(u):<dat",
+          "miluk": "wI·́(th)h(ú)·dat",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "we (3 excl.) are making fun of somebody",
+          "miluk_ascii": "#ka:<(th)h(u):dat",
+          "miluk": "łká·(th)h(u)·dat",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "we (3 excl.) are making fun of them",
+          "miluk_ascii": "h(u):<dIdI:#ta:<(th)I",
+          "miluk": "h(ú)·dIdI·łtá·(th)I",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t144-f-3-fil-3",
+      "title": "f̥3·filɛ ł̥3",
+      "title_ascii": "f30:file #30",
+      "line_count": 15,
+      "lines": [
+        {
+          "line": 1,
+          "english": "I know who you are",
+          "miluk_ascii": "mIt'ssI:<da:mI:nI:",
+          "miluk": "mIt'ssI·́da·mI·nI·",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "I know who he is",
+          "miluk_ascii": "mIt'ssI<yada-'wI<",
+          "miluk": "mIt'ssÍyadá-'wI",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "I know who I am",
+          "miluk_ascii": "mI<t'ssI<ya-wu<-'(n)#t(e)",
+          "miluk": "mÍt'ssÍya-wú-'(n)łt(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "I know who they are",
+          "miluk_ascii": "mIt'ssI<yam'a<ma'wI",
+          "miluk": "mIt'ssÍyam'áma'wI",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "you (1) make fun of us (2)",
+          "miluk_ascii": "h(u):<dIda<I'nIs",
+          "miluk": "h(ú)·dIdáI'nIs",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "you (1) make fun of us (3)",
+          "miluk_ascii": "h(u):<dIda<I(th)",
+          "miluk": "h(ú)·dIdáI(th)",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "you make fun of me? (suck with your mouth on your own thing)",
+          "miluk_ascii": "h(u):<dIda<InI m(e):<#k#Wd(u)-dI'y(e)<Is",
+          "miluk": "h(ú)·dIdáInI m(ɛ́)·łkłWd(u)-dI'y(ɛ́)Is",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "I'm well (again now)",
+          "miluk_ascii": "(th)h(e)<(u)'wI<",
+          "miluk": "(th)h(ɛ́)(ú)'wI",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "I'm well (now)",
+          "miluk_ascii": "(th)h(e)<#U'w",
+          "miluk": "(th)h(ɛ́)łU'w",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "it's good to be well now",
+          "miluk_ascii": "#K(e):<l(e) ye'we<(th)h(e)<#U",
+          "miluk": "łK(ɛ́)·l(ɛ) yɛ'wɛ́(th)h(ɛ́)łU",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "nickname for white man who liked to dance the sIms snowing",
+          "miluk_ascii": "sI<mtdz(u)",
+          "miluk": "sÍmtdz(u)",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "it's starting to snow",
+          "miluk_ascii": "(th)'a<ItI<mde sdl'la:<wa:<s",
+          "miluk": "(th)'áItÍmdɛ sdl'lá·wá·s",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "it's snowing",
+          "miluk_ascii": "sdl'lI<yam",
+          "miluk": "sdl'lÍyam",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "it's going to snow",
+          "miluk_ascii": "sdle<ltemX ha<nt(th)",
+          "miluk": "sdlɛ́ltɛmX hánt(th)",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "it snowed (I guess)",
+          "miluk_ascii": "sdlala<ldaX",
+          "miluk": "sdlaláldaX",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t145-f31-fil-31",
+      "title": "f31·filɛ ł31",
+      "title_ascii": "f31:file #31",
+      "line_count": 12,
+      "lines": [
+        {
+          "line": 1,
+          "english": "he's hopping ( on 2 legs) along",
+          "miluk_ascii": "tcux#Wtc(u):<x#W",
+          "miluk": "tcuxłWtc(ú)·xłW",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "he's tied (hands in back, feet, etc...)",
+          "miluk_ascii": "t'(th)d(e):<t",
+          "miluk": "t'(th)d(ɛ́)·t",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "I tied him",
+          "miluk_ascii": "t'(th)da<'(u)",
+          "miluk": "t'(th)dá'(u)",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "he cut wood",
+          "miluk_ascii": "t(th)da<#i",
+          "miluk": "t(th)dáłi",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "he's gone for wood chopping",
+          "miluk_ascii": "t(th)d(e):<w(e)",
+          "miluk": "t(th)d(ɛ́)·w(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "go chop wood!",
+          "miluk_ascii": "t(th)d(e):<w(e)",
+          "miluk": "t(th)d(ɛ́)·w(ɛ)",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "go chop wood!",
+          "miluk_ascii": "t(th)d(e):<n",
+          "miluk": "t(th)d(ɛ́)·n",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "help him! support him! hold him!",
+          "miluk_ascii": "tsa:KI<n:a",
+          "miluk": "tsá·KIn·a",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "tsa:KI<n:a",
+            "miluk": "hɛlp him̓ support him̓ hold him̓",
+            "miluk_ascii": "help him! support him! hold him!"
+          },
+          "transformation_ids": [
+            "v2-corpus-t145-l0008-english",
+            "v2-corpus-t145-l0008-miluk",
+            "v2-corpus-t145-l0008-miluk-ascii"
+          ],
+          "english_original": "tsa:KI<n:a"
+        },
+        {
+          "line": 9,
+          "english": "i'll help you!",
+          "miluk_ascii": "tsa:KIKI<na'mI:ne",
+          "miluk": "tsá·KIKIna'mI·nɛ",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "I'm going out to deficate",
+          "miluk_ascii": "tsq(e)<l(e)'w(e)'want(th)",
+          "miluk": "tsq(ɛ́)l(ɛ)'w(ɛ)'want(th)",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "Go deficate!",
+          "miluk_ascii": "tsq(e)<l(e)'w(e)",
+          "miluk": "tsq(ɛ́)l(ɛ)'w(ɛ)",
+          "entries": [],
+          "documentary_original_fields": {
+            "english": "tsq(e)<l(e)'w(e)",
+            "miluk": "Go dɛficatɛ̓",
+            "miluk_ascii": "Go deficate!"
+          },
+          "transformation_ids": [
+            "v2-corpus-t145-l0011-english",
+            "v2-corpus-t145-l0011-miluk",
+            "v2-corpus-t145-l0011-miluk-ascii"
+          ],
+          "english_original": "tsq(e)<l(e)'w(e)"
+        },
+        {
+          "line": 12,
+          "english": "shut your mouth!",
+          "miluk_ascii": "dla:<'na<N kwene-'y(e)<Is",
+          "miluk": "dlá·'náɴ kwɛnɛ-'y(ɛ́)Is",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t146-f32-fil-32",
+      "title": "f32·filɛ ł32",
+      "title_ascii": "f32:file #32",
+      "line_count": 15,
+      "lines": [
+        {
+          "line": 1,
+          "english": "he's standing on one foot",
+          "miluk_ascii": "ka'nI:<da",
+          "miluk": "ká'nI·da",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "he hops on one leg",
+          "miluk_ascii": "kanka<n:I",
+          "miluk": "kankán·I",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "you (2) make fun of us (2)",
+          "miluk_ascii": "h(u):<dIdaI'I<sne",
+          "miluk": "h(ú)·dIdáI'Isnɛ",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "you (2) make fun of us (2)",
+          "miluk_ascii": "h(u):<dIdI:#tIdaI'I<sne",
+          "miluk": "h(ú)·dIdI·łtIdáI'Isnɛ",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "you (2) make fun of us (3)",
+          "miluk_ascii": "h(u):<dIdI:#tIda<I(th)ne",
+          "miluk": "h(ú)·dIdI·łtIdáI(th)nɛ",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "he's lying on his back",
+          "miluk_ascii": "ts'a:<naN",
+          "miluk": "ts'á·naɴ",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "he's lying on his belly",
+          "miluk_ascii": "t(th)p(e):<l(e)I",
+          "miluk": "t(th)p(ɛ́)·l(ɛ)I",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "I'm hungry",
+          "miluk_ascii": "(th)(gg)(e):<n'(i)",
+          "miluk": "(th)(gg)(ɛ́)·n'(i)",
+          "entries": []
+        },
+        {
+          "line": 9,
+          "english": "I'm hungry",
+          "miluk_ascii": "(th)(gg)(e):<n'w#U",
+          "miluk": "(th)(gg)(ɛ́)·n'włU",
+          "entries": []
+        },
+        {
+          "line": 10,
+          "english": "I'm so hungry",
+          "miluk_ascii": "(th)(gg)(e):<nX'we<",
+          "miluk": "(th)(gg)(ɛ́)·nX'wɛ́",
+          "entries": []
+        },
+        {
+          "line": 11,
+          "english": "I 've gotten hungry, so very hungry",
+          "miluk_ascii": "t'(th)a<(g):a<t'w",
+          "miluk": "t'(th)á(g)·át'w",
+          "entries": []
+        },
+        {
+          "line": 12,
+          "english": "I'm going to the toilet",
+          "miluk_ascii": "sIl#tI<s'waN",
+          "miluk": "sIlłtÍs'waɴ",
+          "entries": []
+        },
+        {
+          "line": 13,
+          "english": "I'm going outside",
+          "miluk_ascii": "sI<l#t-'wa<N",
+          "miluk": "sÍlłt-'wáɴ",
+          "entries": []
+        },
+        {
+          "line": 14,
+          "english": "the tide's out",
+          "miluk_ascii": "t'clese<(gg)a:Is",
+          "miluk": "t'clɛsɛ́(gg)a·Is",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "the tide's going out, the water's running out",
+          "miluk_ascii": "(th)u(gg)wa:<#q#W",
+          "miluk": "(th)u(gg)wá·łqłW",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t147-f33-fil-33",
+      "title": "f33·filɛ ł33",
+      "title_ascii": "f33:file #33",
+      "line_count": 8,
+      "lines": [
+        {
+          "line": 1,
+          "english": "he is warming it (his hands e.g.)",
+          "miluk_ascii": "Xdla:<mam",
+          "miluk": "Xdlá·mam",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "I'm warming myself",
+          "miluk_ascii": "Xdla:<mam'we'(n)<#tc",
+          "miluk": "Xdlá·mam'wɛ́'(n)łtc",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "he's lying on his side",
+          "miluk_ascii": "c#KI:<dj(e):tc",
+          "miluk": "cłKI·́dj(ɛ)·tc",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "I'm warm",
+          "miluk_ascii": "t(th)#qa<l(xx)awI'wI",
+          "miluk": "t(th)łqál(xx)awI'wI",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "he's standing on his hands",
+          "miluk_ascii": "KI'I<yam",
+          "miluk": "KI'Íyam",
+          "entries": []
+        },
+        {
+          "line": 6,
+          "english": "he went inland to the woods back",
+          "miluk_ascii": "t'cI<cdj(e)< (th)a<",
+          "miluk": "t'cÍcdj(ɛ́) (th)á",
+          "entries": []
+        },
+        {
+          "line": 7,
+          "english": "the tide's coming in",
+          "miluk_ascii": "t'(th)(u):<'na",
+          "miluk": "t'(th)(ú)·'na",
+          "entries": []
+        },
+        {
+          "line": 8,
+          "english": "the tide's way in now",
+          "miluk_ascii": "qwa<lt'(th)(u)",
+          "miluk": "qwált'(th)(u)",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t148-f34-35-fil-34-35",
+      "title": "f34,35·filɛł 34,35",
+      "title_ascii": "f34,35:file# 34,35",
+      "line_count": 3,
+      "lines": [
+        {
+          "line": 1,
+          "english": "let's not swim (3)",
+          "miluk_ascii": "an(gg)a:<(th)sdl(e):<#q",
+          "miluk": "an(gg)á·(th)sdl(ɛ́)·łq",
+          "entries": []
+        },
+        {
+          "line": 2,
+          "english": "let's not swim (2)",
+          "miluk_ascii": "an(gg)a<s:dl(e)#q",
+          "miluk": "an(gg)ás·dl(ɛ)łq",
+          "entries": []
+        },
+        {
+          "line": 3,
+          "english": "he's gone down to the beach",
+          "miluk_ascii": "GI<cdj(e) t(e)<I(xx)(e)(u)",
+          "miluk": "GÍcdj(ɛ) t(ɛ́)I(xx)(ɛ)(u)",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    },
+    {
+      "story_id": "t150-slipfile-supplement",
+      "title": "slipfile supplement",
+      "title_ascii": "slipfile supplement",
+      "line_count": 33,
+      "lines": [
+        {
+          "line": 1,
+          "english": "he never gets afraid",
+          "miluk_ascii": "a<n-du<-q!a`yauts",
+          "miluk": "án-dú-q̓aʻyauts",
+          "entries": [
+            "e0730-qayauts"
+          ]
+        },
+        {
+          "line": 2,
+          "english": "he's not afraid",
+          "miluk_ascii": "a<n-q!a`yauts",
+          "miluk": "án-q̓aʻyauts",
+          "entries": [
+            "e0730-qayauts"
+          ]
+        },
+        {
+          "line": 3,
+          "english": "you're afraid",
+          "miluk_ascii": "e<lqsn@",
+          "miluk": "ɛ́lqsnə",
+          "entries": []
+        },
+        {
+          "line": 4,
+          "english": "I'm frightened",
+          "miluk_ascii": "wu<q!a`ya<uya",
+          "miluk": "wúq̓aʻyáuya",
+          "entries": []
+        },
+        {
+          "line": 5,
+          "english": "he's afraid",
+          "miluk_ascii": "q!a ya<uts-du",
+          "miluk": "q̓a yáuts-du",
+          "entries": [
+            "e0730-qayauts"
+          ]
+        },
+        {
+          "line": 6,
+          "english": "I'm afraid",
+          "miluk_ascii": "q!aya<uts-'u",
+          "miluk": "q̓ayáuts-'u",
+          "entries": [
+            "e0730-qayauts"
+          ]
+        },
+        {
+          "line": 7,
+          "english": "then after that, subsequently, then next in order",
+          "miluk_ascii": "q#@mniyu",
+          "miluk": "qłəmniyu",
+          "entries": [
+            "e0739-qlimniyu"
+          ]
+        },
+        {
+          "line": 8,
+          "english": "on top",
+          "miluk_ascii": "g;wa:<niyu",
+          "miluk": "g̣wá·niyu",
+          "entries": [
+            "e0322-gwan",
+            "e0323-gwana"
+          ]
+        },
+        {
+          "line": 9,
+          "english": "gee it's smoking",
+          "miluk_ascii": "hei gwa<'a<n g;w@l:i'u<ye",
+          "miluk": "hɛi gwá'án g̣wəl·i'úyɛ",
+          "entries": [
+            "e0320-gwali",
+            "e0409-hei"
+          ]
+        },
+        {
+          "line": 10,
+          "english": "it's starting to smoke(chimney)",
+          "miluk_ascii": "g;w@<l:i'i<ye",
+          "miluk": "g̣wə́l·i'íyɛ",
+          "entries": [
+            "e0320-gwali",
+            "e0332-gwelees"
+          ]
+        },
+        {
+          "line": 11,
+          "english": "it's not smoking anymore",
+          "miluk_ascii": "a<nya< g;w@<l:i",
+          "miluk": "ányá g̣wə́l·i",
+          "entries": [
+            "e0320-gwali",
+            "e0332-gwelees"
+          ]
+        },
+        {
+          "line": 12,
+          "english": "it's going to smoke",
+          "miluk_ascii": "g;w@<l: hant#",
+          "miluk": "g̣wə́l· hantł",
+          "entries": [
+            "e0332-gwelees",
+            "e0402-hantl"
+          ]
+        },
+        {
+          "line": 13,
+          "english": "it's going to be smoking",
+          "miluk_ascii": "g;w@<l: han#i",
+          "miluk": "g̣wə́l· hanłi",
+          "entries": [
+            "e0332-gwelees"
+          ]
+        },
+        {
+          "line": 14,
+          "english": "cry",
+          "miluk_ascii": "ax;a",
+          "miluk": "ax̣a",
+          "entries": []
+        },
+        {
+          "line": 15,
+          "english": "I'm the one who came here",
+          "miluk_ascii": "e<n:e'yukvw e'ug;e<sde<`-dji",
+          "miluk": "ɛ́n·ɛ'yukʷ ɛ'ug̣ɛ́sdɛ́ʻ-dji",
+          "entries": [
+            "e0140-dji",
+            "e0213-enne"
+          ]
+        },
+        {
+          "line": 16,
+          "english": "ever, continuative-durative",
+          "miluk_ascii": "ha",
+          "miluk": "ha",
+          "entries": []
+        },
+        {
+          "line": 17,
+          "english": "may I eat it?",
+          "miluk_ascii": "kwi-'wa<N-#dja-'i<",
+          "miluk": "kwi-'wáɴ-łdja-'í",
+          "entries": [
+            "e0541-kwi"
+          ]
+        },
+        {
+          "line": 18,
+          "english": "singer",
+          "miluk_ascii": "ha:t!a:<was",
+          "miluk": "ha·t̓á·was",
+          "entries": [
+            "e0404-hatai"
+          ]
+        },
+        {
+          "line": 19,
+          "english": "I saw you when you were coming",
+          "miluk_ascii": "ha<maq!a:<mi-'n@-'i<n@dz@ne",
+          "miluk": "hámaq̓á·mi-'nə-'ínədzənɛ",
+          "entries": [
+            "e0398-hamaq"
+          ]
+        },
+        {
+          "line": 20,
+          "english": "Let me do it",
+          "miluk_ascii": "ha<ma-'e<n:e he we<vi",
+          "miluk": "háma-'ɛ́n·ɛ hɛ wɛ́ⁱ",
+          "entries": [
+            "e0396-hama"
+          ]
+        },
+        {
+          "line": 21,
+          "english": "cause, make",
+          "miluk_ascii": "wawa,",
+          "miluk": "wawa,",
+          "entries": [
+            "e0998-wawa"
+          ]
+        },
+        {
+          "line": 22,
+          "english": "cause, make",
+          "miluk_ascii": "hu'wi",
+          "miluk": "hu'wi",
+          "entries": []
+        },
+        {
+          "line": 23,
+          "english": "it's too fatty",
+          "miluk_ascii": "he<lt!ha-'mits",
+          "miluk": "hɛ́lt̓ha-'mits",
+          "entries": [
+            "e0414-helt"
+          ]
+        },
+        {
+          "line": 24,
+          "english": "he never gets afraid",
+          "miluk_ascii": "a<n-ha-q!a`yauts",
+          "miluk": "án-ha-q̓aʻyauts",
+          "entries": [
+            "e0730-qayauts"
+          ]
+        },
+        {
+          "line": 25,
+          "english": "I hit myself",
+          "miluk_ascii": "x;dla<'w@<'n0t!e",
+          "miluk": "x̣dlá'wə́'n̥t̓ɛ",
+          "entries": [
+            "e0115-dete"
+          ]
+        },
+        {
+          "line": 26,
+          "english": "he hit me",
+          "miluk_ascii": "x;dldzu:<n'w",
+          "miluk": "x̣dldzú·n'w",
+          "entries": []
+        },
+        {
+          "line": 27,
+          "english": "he hit you",
+          "miluk_ascii": "x;dl@du<n:e",
+          "miluk": "x̣dlədún·ɛ",
+          "entries": []
+        },
+        {
+          "line": 28,
+          "english": "he hit him",
+          "miluk_ascii": "x;dla:<t",
+          "miluk": "x̣dlá·t",
+          "entries": []
+        },
+        {
+          "line": 29,
+          "english": "did he hit him?",
+          "miluk_ascii": "x;dla<`i<",
+          "miluk": "x̣dláʻí",
+          "entries": []
+        },
+        {
+          "line": 30,
+          "english": "did you hit him?",
+          "miluk_ascii": "x;dla<`ni'i<",
+          "miluk": "x̣dláʻni'í",
+          "entries": []
+        },
+        {
+          "line": 31,
+          "english": "I hit him",
+          "miluk_ascii": "x;dla<:'we<",
+          "miluk": "x̣dlá·'wɛ́",
+          "entries": []
+        },
+        {
+          "line": 32,
+          "english": "I hit you",
+          "miluk_ascii": "x;dlidza:mi<`ni",
+          "miluk": "x̣dlidza·míʻni",
+          "entries": []
+        },
+        {
+          "line": 33,
+          "english": "slime",
+          "miluk_ascii": "x;li:<s",
+          "miluk": "x̣lí·s",
+          "entries": []
+        }
+      ],
+      "source": {
+        "layer": "outside-edition-slip-file",
+        "edition_included": false,
+        "basis": "record occurs in the explicit Jacobs Slip Files source section"
+      }
+    }
+  ]
+}

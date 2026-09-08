@@ -1,0 +1,1396 @@
+{
+  "schema": "miluk-uwpa-publication-inventory/2",
+  "scope": "Miluk-bearing texts in Jacobs 1939 and 1940 UWPA volumes",
+  "source_evidence": {
+    "bibliographic_file": "Coos Narrative and Ethnologic and Myth Texts.pdf",
+    "discovered_path": "/Users/troy/Library/CloudStorage/Dropbox/Miluk/Language/Jacobs/Published/Coos Narrative and Ethnologic and Myth Texts.pdf",
+    "sha256": "254e66bd66c98c6de33a6e35ba47ebf2ed9a69a323b16a9f420f0a33c9d996ed",
+    "repository_copy": null,
+    "reason_not_copied": "copyrighted Jacobs publication scan; manifest and title/page inventory only"
+  },
+  "counts": {
+    "published_titles": 111,
+    "jacobs_1939_titles": 77,
+    "jacobs_1940_titles": 34,
+    "recovered_corpus_records": 108,
+    "represented_titles": 110,
+    "separate": 108,
+    "absorbed_into_another_record": 2,
+    "absent": 1
+  },
+  "model_note": "Numerical-section classification establishes the boundary of the recovered Word Cruncher export. It does not prove that the export contains every published text; publication completeness is assessed against this title inventory.",
+  "field_definitions": {
+    "contents_title": "Title wording transcribed from the applicable volume's table of contents.",
+    "heading_title": "Optional title wording transcribed from the heading printed above the text; kept separate when verified so that it is not collapsed into the contents wording.",
+    "printed_start_page": "Required integer locator for the printed page on which the text starts.",
+    "printed_page_span": "Optional inclusive complete page span, represented as integer start and end members, and present only when the full span has been verified.",
+    "status": "Relationship between the published text and the recovered public corpus, using one of the defined statuses.",
+    "corpus_mapping": "Recovered story identifier and inclusive recovered line span, or null when the published text is absent from the recovered corpus."
+  },
+  "statuses": {
+    "separate": "A published text mapped to its own recovered corpus record.",
+    "absorbed_into_another_record": "A distinct published text mapped to a line span inside a recovered record titled for another published text.",
+    "absent": "A published text not represented in the recovered public corpus."
+  },
+  "pending_source_integrity_work": [
+    {
+      "publication_id": "uwpa-1939-005",
+      "action": "Split lines 69-90 from t006 only with Troy's authorization."
+    },
+    {
+      "publication_id": "uwpa-1939-022",
+      "action": "Split lines 92-118 from t023 only with Troy's authorization."
+    },
+    {
+      "publication_id": "uwpa-1940-001",
+      "action": "Locate and assess an edition-bound source transcription before any import; Troy's authorization required."
+    }
+  ],
+  "texts": [
+    {
+      "publication_id": "uwpa-1939-001",
+      "volume": "1939",
+      "contents_title": "A deserted poor woman was given food by shags",
+      "printed_start_page": 19,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t003-a-deserted-poor-woman-was-given-food-by-shag",
+        "line_start": 1,
+        "line_end": 62
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-002",
+      "volume": "1939",
+      "contents_title": "How a child was frightened, and later was taught to be fearless",
+      "printed_start_page": 22,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t004-how-a-child-was-frightened-and-later-taught-",
+        "line_start": 1,
+        "line_end": 72
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-003",
+      "volume": "1939",
+      "contents_title": "Grandmother afterbirth",
+      "printed_start_page": 24,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t005-grandmother-afterbirth",
+        "line_start": 1,
+        "line_end": 27
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-004",
+      "volume": "1939",
+      "contents_title": "Hadjíyasa, tłɛ́iɣəl, and others",
+      "printed_start_page": 26,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t006-hadj-yasa-t-i-l-and-others",
+        "line_start": 1,
+        "line_end": 68
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-005",
+      "volume": "1939",
+      "contents_title": "A man obtained fir power",
+      "heading_title": "A man obtains fir power",
+      "printed_start_page": 28,
+      "printed_page_span": {
+        "start": 28,
+        "end": 29
+      },
+      "status": "absorbed_into_another_record",
+      "corpus_mapping": {
+        "story_id": "t006-hadj-yasa-t-i-l-and-others",
+        "line_start": 69,
+        "line_end": 90
+      },
+      "notes": "Published as a distinct text but absorbed into the recovered corpus record; splitting is pending Troy's authorization."
+    },
+    {
+      "publication_id": "uwpa-1939-006",
+      "volume": "1939",
+      "contents_title": "A woman obtained fir power and learned two medicines",
+      "printed_start_page": 29,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t007-a-woman-obtained-fir-power-and-learned-two-m",
+        "line_start": 1,
+        "line_end": 31
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-007",
+      "volume": "1939",
+      "contents_title": "Getting rid of a thunder dream-power",
+      "printed_start_page": 30,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t008-getting-rid-of-a-thunder-dream-power",
+        "line_start": 1,
+        "line_end": 39
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-008",
+      "volume": "1939",
+      "contents_title": "A girl found a husband who was a Timber Man and a wealth-encounter-power",
+      "printed_start_page": 32,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t009-a-girl-found-a-husband",
+        "line_start": 1,
+        "line_end": 37
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-009",
+      "volume": "1939",
+      "contents_title": "The person who died from cold",
+      "printed_start_page": 39,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t011-the-person-who-died-from-cold",
+        "line_start": 1,
+        "line_end": 38
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-010",
+      "volume": "1939",
+      "contents_title": "The woman who dreamt, but who did not want to do what her dream told her",
+      "printed_start_page": 39,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t012-the-woman-who-dreamt-but-did-not-do-what-her",
+        "line_start": 1,
+        "line_end": 41
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-011",
+      "volume": "1939",
+      "contents_title": "Lazy young man",
+      "printed_start_page": 41,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t013-lazy-young-man",
+        "line_start": 1,
+        "line_end": 32
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-012",
+      "volume": "1939",
+      "contents_title": "About encounter-power",
+      "printed_start_page": 41,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t014-about-encounter-power",
+        "line_start": 1,
+        "line_end": 38
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-013",
+      "volume": "1939",
+      "contents_title": "The father's helpers, the storks",
+      "printed_start_page": 42,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t015-the-father-s-helpers-the-storks",
+        "line_start": 1,
+        "line_end": 19
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-014",
+      "volume": "1939",
+      "contents_title": "A girl became a dangerous being of the woods",
+      "printed_start_page": 43,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t016-a-girl-became-a-dangerous-being-of-the-woods",
+        "line_start": 1,
+        "line_end": 90
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-015",
+      "volume": "1939",
+      "contents_title": "Swordfish narrative",
+      "printed_start_page": 45,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t017-swordfish-narrative",
+        "line_start": 1,
+        "line_end": 92
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-016",
+      "volume": "1939",
+      "contents_title": "Sea otter narrative",
+      "printed_start_page": 48,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t018-sea-otter-narrative",
+        "line_start": 1,
+        "line_end": 156
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-017",
+      "volume": "1939",
+      "contents_title": "The person that halloos",
+      "printed_start_page": 51,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t019-the-person-that-halloos",
+        "line_start": 1,
+        "line_end": 40
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-018",
+      "volume": "1939",
+      "contents_title": "Salmon did ill to boys",
+      "printed_start_page": 52,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t020-salmon-did-ill-to-boys",
+        "line_start": 1,
+        "line_end": 39
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-019",
+      "volume": "1939",
+      "contents_title": "A young man grew up alone, and then he split himself",
+      "printed_start_page": 53,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t021-a-young-man-grew-up-alone-and-then-he-split-",
+        "line_start": 1,
+        "line_end": 46
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-020",
+      "volume": "1939",
+      "contents_title": "The young man stepped on snail's back",
+      "printed_start_page": 54,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t022-the-young-man-stepped-on-snail-s-back",
+        "line_start": 1,
+        "line_end": 68
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-021",
+      "volume": "1939",
+      "contents_title": "He eats human children",
+      "printed_start_page": 56,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t023-he-eats-human-children",
+        "line_start": 1,
+        "line_end": 91
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-022",
+      "volume": "1939",
+      "contents_title": "The water got high",
+      "heading_title": "The water got high",
+      "printed_start_page": 58,
+      "printed_page_span": {
+        "start": 58,
+        "end": 59
+      },
+      "status": "absorbed_into_another_record",
+      "corpus_mapping": {
+        "story_id": "t023-he-eats-human-children",
+        "line_start": 92,
+        "line_end": 118
+      },
+      "notes": "Published as a distinct text but absorbed into the recovered corpus record; splitting is pending Troy's authorization."
+    },
+    {
+      "publication_id": "uwpa-1939-023",
+      "volume": "1939",
+      "contents_title": "The sɛ́gandá·s people",
+      "printed_start_page": 59,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t024-the-s-gand-s-people",
+        "line_start": 1,
+        "line_end": 98
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-024",
+      "volume": "1939",
+      "contents_title": "He starved his mother's sister",
+      "printed_start_page": 61,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t025-he-starved-his-mother-s-sister",
+        "line_start": 1,
+        "line_end": 62
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-025",
+      "volume": "1939",
+      "contents_title": "Adultery before marriage",
+      "printed_start_page": 71,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t068-adultery-before-marriage",
+        "line_start": 1,
+        "line_end": 49
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-026",
+      "volume": "1939",
+      "contents_title": "The kind of wife to select",
+      "printed_start_page": 72,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t069-the-kind-of-wife-to-select",
+        "line_start": 1,
+        "line_end": 22
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-027",
+      "volume": "1939",
+      "contents_title": "Marriage negotiations",
+      "printed_start_page": 72,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t070-marriage-negotiations",
+        "line_start": 1,
+        "line_end": 48
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-028",
+      "volume": "1939",
+      "contents_title": "Imparting sexual knowledge after the marriage payment",
+      "printed_start_page": 74,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t071-imparting-sexual-knowledge-after-the-marriag",
+        "line_start": 1,
+        "line_end": 34
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-029",
+      "volume": "1939",
+      "contents_title": "Excessive sexuality caused loss of strength and beauty",
+      "printed_start_page": 74,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t072-excessive-sexuality-caused-loss-of-strength-",
+        "line_start": 1,
+        "line_end": 21
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-030",
+      "volume": "1939",
+      "contents_title": "Character and health predictable by the time of the month when born",
+      "printed_start_page": 75,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t073-character-and-health",
+        "line_start": 1,
+        "line_end": 12
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-031",
+      "volume": "1939",
+      "contents_title": "Baby's cradle was hung from a limb of a tree",
+      "printed_start_page": 75,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t074-baby-s-cradle-was-hung",
+        "line_start": 1,
+        "line_end": 14
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-032",
+      "volume": "1939",
+      "contents_title": "The care of nursing babies",
+      "printed_start_page": 76,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t075-the-care-of-nursing-babies",
+        "line_start": 1,
+        "line_end": 71
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-033",
+      "volume": "1939",
+      "contents_title": "People called to baby's “cry” to come along",
+      "printed_start_page": 77,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t076-people-called-to-baby-s-cry-to-come-along",
+        "line_start": 1,
+        "line_end": 20
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-034",
+      "volume": "1939",
+      "contents_title": "An undesired wife",
+      "printed_start_page": 78,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t077-an-undesired-wife",
+        "line_start": 1,
+        "line_end": 27
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-035",
+      "volume": "1939",
+      "contents_title": "A rejected wife and her child",
+      "printed_start_page": 79,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t078-a-rejected-wife-and-her",
+        "line_start": 1,
+        "line_end": 59
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-036",
+      "volume": "1939",
+      "contents_title": "A wife and children belonged to the husband's family and place",
+      "printed_start_page": 80,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t079-a-wife-and-children-belonged-to",
+        "line_start": 1,
+        "line_end": 24
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-037",
+      "volume": "1939",
+      "contents_title": "A husband must not see his wife nude",
+      "printed_start_page": 81,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t080-a-husband-must-not-see-his-wife-nude",
+        "line_start": 1,
+        "line_end": 41
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-038",
+      "volume": "1939",
+      "contents_title": "Children had to be inside at dusk",
+      "printed_start_page": 82,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t081-children-had-to-be-inside-at-dusk",
+        "line_start": 1,
+        "line_end": 12
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-039",
+      "volume": "1939",
+      "contents_title": "Head wives",
+      "printed_start_page": 82,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t082-head-wives",
+        "line_start": 1,
+        "line_end": 75
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-040",
+      "volume": "1939",
+      "contents_title": "Poor people did not want their daughters seen by wealthy people",
+      "printed_start_page": 84,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t083-poor-people-did-not-want",
+        "line_start": 1,
+        "line_end": 37
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-041",
+      "volume": "1939",
+      "contents_title": "A poor girl married any well-to-do man who wanted her",
+      "printed_start_page": 85,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t084-a-poor-girl-married-any-well-to-do-man-who-w",
+        "line_start": 1,
+        "line_end": 31
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-042",
+      "volume": "1939",
+      "contents_title": "People of the poorer class",
+      "printed_start_page": 86,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t085-people-of-the-poorer-class",
+        "line_start": 1,
+        "line_end": 88
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-043",
+      "volume": "1939",
+      "contents_title": "Poor people who became wealthy and married well-to-do people",
+      "printed_start_page": 89,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t086-poor-people-who-became-wealthy",
+        "line_start": 1,
+        "line_end": 26
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-044",
+      "volume": "1939",
+      "contents_title": "Handouts to the poor",
+      "printed_start_page": 89,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t087-handouts-to-the-poor",
+        "line_start": 1,
+        "line_end": 10
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-045",
+      "volume": "1939",
+      "contents_title": "The chiefs kept the poor from going hungry",
+      "printed_start_page": 90,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t088-the-chiefs-kept-the-poor-from-going-hungry",
+        "line_start": 1,
+        "line_end": 7
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-046",
+      "volume": "1939",
+      "contents_title": "Doctoring power appeared like a person",
+      "printed_start_page": 90,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t089-doctoring-power-appeared-like-a-person",
+        "line_start": 1,
+        "line_end": 32
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-047",
+      "volume": "1939",
+      "contents_title": "A shaman's increase of power dance",
+      "printed_start_page": 91,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t090-a-shaman-s-increase-of-power-dance",
+        "line_start": 1,
+        "line_end": 6
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-048",
+      "volume": "1939",
+      "contents_title": "A male shaman watcher took away a bad power from a new shaman",
+      "printed_start_page": 91,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t091-a-male-shaman-watcher-took",
+        "line_start": 1,
+        "line_end": 8
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-049",
+      "volume": "1939",
+      "contents_title": "A new shaman offered to doctor without pay",
+      "printed_start_page": 91,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t092-a-new-shaman-offered-to-doctor-without-pay",
+        "line_start": 1,
+        "line_end": 7
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-050",
+      "volume": "1939",
+      "contents_title": "A mít̓î·din shaman's prayer when giving fresh fish and meat to a mourner after a burial",
+      "printed_start_page": 91,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t093-a-m-t-din-shaman-s-prayer",
+        "line_start": 1,
+        "line_end": 9
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-051",
+      "volume": "1939",
+      "contents_title": "Mít̓î·din shamans",
+      "printed_start_page": 92,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t094-t-din-shamans",
+        "line_start": 1,
+        "line_end": 23
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-052",
+      "volume": "1939",
+      "contents_title": "An il·áxq̓ain shaman cured a woman made ill by a mít̓î·din shaman",
+      "printed_start_page": 92,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t095-an-il-xq-ain-shaman-cured",
+        "line_start": 1,
+        "line_end": 32
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-053",
+      "volume": "1939",
+      "contents_title": "Shamans cured tuberculosis",
+      "printed_start_page": 93,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t096-shamans-cured-tuberculosis",
+        "line_start": 1,
+        "line_end": 12
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-054",
+      "volume": "1939",
+      "contents_title": "What shamans could see",
+      "printed_start_page": 93,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t097-what-shamans-could-see",
+        "line_start": 1,
+        "line_end": 6
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-055",
+      "volume": "1939",
+      "contents_title": "A shaman found a pain-power hidden in a dance house",
+      "printed_start_page": 94,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t098-a-shaman-found-a-pain-power-hidden-in-a-danc",
+        "line_start": 1,
+        "line_end": 15
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-056",
+      "volume": "1939",
+      "contents_title": "An Alsea shaman was forced to take back a pain-power",
+      "printed_start_page": 94,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t099-an-alsea-shaman-was-forced-to-take-back-a-pa",
+        "line_start": 1,
+        "line_end": 31
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-057",
+      "volume": "1939",
+      "contents_title": "A shaman who lost control of his pain-power",
+      "printed_start_page": 95,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t100-a-shaman-who-lost-control-of-his-pain-power",
+        "line_start": 1,
+        "line_end": 9
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-058",
+      "volume": "1939",
+      "contents_title": "At death the heart went above and the belongings of the deceased were burned",
+      "printed_start_page": 95,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t101-at-death-the-heart-went",
+        "line_start": 1,
+        "line_end": 19
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-059",
+      "volume": "1939",
+      "contents_title": "Seeing a person's spirit double",
+      "printed_start_page": 96,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t102-seeing-a-person-s-spirit-double",
+        "line_start": 1,
+        "line_end": 23
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-060",
+      "volume": "1939",
+      "contents_title": "Seeing a person's spirit double",
+      "printed_start_page": 97,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t103-seeing-a-person-s-spirit-double",
+        "line_start": 1,
+        "line_end": 11
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-061",
+      "volume": "1939",
+      "contents_title": "Thunder",
+      "printed_start_page": 97,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t104-thunder",
+        "line_start": 1,
+        "line_end": 36
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-062",
+      "volume": "1939",
+      "contents_title": "Encounter-power",
+      "printed_start_page": 98,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t105-encounter-power",
+        "line_start": 1,
+        "line_end": 28
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-063",
+      "volume": "1939",
+      "contents_title": "Angel-bird's eye",
+      "printed_start_page": 99,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t106-angel-bird-s-eye",
+        "line_start": 1,
+        "line_end": 12
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-064",
+      "volume": "1939",
+      "contents_title": "A dream",
+      "printed_start_page": 99,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t107-a-dream",
+        "line_start": 1,
+        "line_end": 28
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-065",
+      "volume": "1939",
+      "contents_title": "A dream",
+      "printed_start_page": 100,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t108-a-dream",
+        "line_start": 1,
+        "line_end": 13
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-066",
+      "volume": "1939",
+      "contents_title": "Snow is the ashes from the hearth of the giant spider",
+      "printed_start_page": 100,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t109-snow-is-the-ashes-from-the-hearth-of-the-gia",
+        "line_start": 1,
+        "line_end": 8
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-067",
+      "volume": "1939",
+      "contents_title": "Anger at seeing a rainbow",
+      "printed_start_page": 101,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t110-anger-at-seeing-a-rainbow",
+        "line_start": 1,
+        "line_end": 9
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-068",
+      "volume": "1939",
+      "contents_title": "Djiixwɛ́nt'î",
+      "printed_start_page": 101,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t111-djiixw-nt",
+        "line_start": 1,
+        "line_end": 61
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-069",
+      "volume": "1939",
+      "contents_title": "Qɛ́icɛc, “Batter,” told about her own life in these words",
+      "printed_start_page": 103,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t112-q-ic-c-batter-told-about-her-own-life-in-the",
+        "line_start": 1,
+        "line_end": 52
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-070",
+      "volume": "1939",
+      "contents_title": "Annie Miner Peterson",
+      "printed_start_page": 104,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t059-annie-miner-peterson",
+        "line_start": 1,
+        "line_end": 402
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-071",
+      "volume": "1939",
+      "contents_title": "Melsin",
+      "printed_start_page": 114,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t060-melsin",
+        "line_start": 1,
+        "line_end": 26
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-072",
+      "volume": "1939",
+      "contents_title": "Cissy",
+      "printed_start_page": 115,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t061-cissy",
+        "line_start": 1,
+        "line_end": 101
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-073",
+      "volume": "1939",
+      "contents_title": "Kitty Hayes",
+      "printed_start_page": 117,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t062-kitty-hayes",
+        "line_start": 1,
+        "line_end": 46
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-074",
+      "volume": "1939",
+      "contents_title": "Story of a slave, maál=uúc",
+      "printed_start_page": 118,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t063-story-of-a-slave-ma-l-u-c",
+        "line_start": 1,
+        "line_end": 51
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-075",
+      "volume": "1939",
+      "contents_title": "Talking too much",
+      "printed_start_page": 120,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t064-talking-too-much",
+        "line_start": 1,
+        "line_end": 3
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-076",
+      "volume": "1939",
+      "contents_title": "Gossips and liars",
+      "printed_start_page": 120,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t065-gossips-and-liars",
+        "line_start": 1,
+        "line_end": 20
+      }
+    },
+    {
+      "publication_id": "uwpa-1939-077",
+      "volume": "1939",
+      "contents_title": "Sport of riding breakers in narrow play canoes",
+      "printed_start_page": 121,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t066-sport-of-riding-breakers-in-narrow-play-cano",
+        "line_start": 1,
+        "line_end": 8
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-001",
+      "volume": "1940",
+      "contents_title": "The rock point person lost his good luck thing",
+      "printed_start_page": 133,
+      "printed_page_span": {
+        "start": 133,
+        "end": 135
+      },
+      "status": "absent",
+      "corpus_mapping": null,
+      "notes": "Pending source-integrity work; do not import without Troy's authorization."
+    },
+    {
+      "publication_id": "uwpa-1940-002",
+      "volume": "1940",
+      "contents_title": "Origin of death",
+      "printed_start_page": 135,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t001-origin-of-death",
+        "line_start": 1,
+        "line_end": 55
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-003",
+      "volume": "1940",
+      "contents_title": "The young man became a sea gull",
+      "printed_start_page": 137,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t027-the-young-man-became-a-sea-gull",
+        "line_start": 1,
+        "line_end": 42
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-004",
+      "volume": "1940",
+      "contents_title": "Bluejay shamans",
+      "printed_start_page": 138,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t028-bluejay-shamans",
+        "line_start": 1,
+        "line_end": 19
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-005",
+      "volume": "1940",
+      "contents_title": "Fog myth",
+      "printed_start_page": 139,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t029-fog-myth",
+        "line_start": 1,
+        "line_end": 105
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-006",
+      "volume": "1940",
+      "contents_title": "The old couple and their grandson and granddaughter became ashamed there",
+      "printed_start_page": 141,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t030-the-old-couple-and-their-grandson-became-ash",
+        "line_start": 1,
+        "line_end": 31
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-007",
+      "volume": "1940",
+      "contents_title": "Ogress myth",
+      "printed_start_page": 142,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t031-ogress-myths",
+        "line_start": 1,
+        "line_end": 43
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-008",
+      "volume": "1940",
+      "contents_title": "Dove myth",
+      "printed_start_page": 143,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t032-dove-myth",
+        "line_start": 1,
+        "line_end": 12
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-009",
+      "volume": "1940",
+      "contents_title": "The two loose women",
+      "printed_start_page": 143,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t033-the-two-loose-women",
+        "line_start": 1,
+        "line_end": 145
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-010",
+      "volume": "1940",
+      "contents_title": "The bear woman",
+      "printed_start_page": 147,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t034-the-bear-woman",
+        "line_start": 1,
+        "line_end": 35
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-011",
+      "volume": "1940",
+      "contents_title": "The persons coon killed",
+      "printed_start_page": 147,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t035-the-person-coon-killed",
+        "line_start": 1,
+        "line_end": 25
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-012",
+      "volume": "1940",
+      "contents_title": "Jack rabbit man",
+      "printed_start_page": 148,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t036-jack-rabbit-man",
+        "line_start": 1,
+        "line_end": 36
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-013",
+      "volume": "1940",
+      "contents_title": "The wife of seal",
+      "printed_start_page": 149,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t037-the-wife-of-seal",
+        "line_start": 1,
+        "line_end": 29
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-014",
+      "volume": "1940",
+      "contents_title": "Dug-out-of-ground child, (and) popped-out-of-fire",
+      "printed_start_page": 150,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t038-dug-out-of-ground-child-and-popped-out-of-fi",
+        "line_start": 1,
+        "line_end": 76
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-015",
+      "volume": "1940",
+      "contents_title": "Black bear and pack basket bear (grizzly)",
+      "printed_start_page": 152,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t039-black-bear-and-pack-basket-bear-grizzly",
+        "line_start": 1,
+        "line_end": 150
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-016",
+      "volume": "1940",
+      "contents_title": "Choked-with-food, or I fear the strength of choked-with-food",
+      "printed_start_page": 156,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t040-choked-with-food",
+        "line_start": 1,
+        "line_end": 134
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-017",
+      "volume": "1940",
+      "contents_title": "The girl who had a dog husband",
+      "printed_start_page": 159,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t041-the-girl-who-had-a-dog-husband",
+        "line_start": 1,
+        "line_end": 167
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-018",
+      "volume": "1940",
+      "contents_title": "The pouty children",
+      "printed_start_page": 162,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t042-the-pouty-children",
+        "line_start": 1,
+        "line_end": 94
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-019",
+      "volume": "1940",
+      "contents_title": "The white wife of mouse",
+      "printed_start_page": 165,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t043-the-white-wife-of-mouse",
+        "line_start": 1,
+        "line_end": 43
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-020",
+      "volume": "1940",
+      "contents_title": "Crow girl",
+      "printed_start_page": 166,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t044-crow-girl",
+        "line_start": 1,
+        "line_end": 24
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-021",
+      "volume": "1940",
+      "contents_title": "The young man became an owl",
+      "printed_start_page": 167,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t045-the-young-man-became-an-owl",
+        "line_start": 1,
+        "line_end": 33
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-022",
+      "volume": "1940",
+      "contents_title": "The young man who lived alone",
+      "printed_start_page": 168,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t046-the-young-man-who-lived-alone",
+        "line_start": 1,
+        "line_end": 58
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-023",
+      "volume": "1940",
+      "contents_title": "The girls who wished to have stars for their husbands",
+      "printed_start_page": 169,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t047-the-girls-who-wished-to-have-stars-for-their",
+        "line_start": 1,
+        "line_end": 35
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-024",
+      "volume": "1940",
+      "contents_title": "I will tell you a crow myth",
+      "printed_start_page": 170,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t048-i-will-tell-you-a-crow-myth",
+        "line_start": 1,
+        "line_end": 78
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-025",
+      "volume": "1940",
+      "contents_title": "The young man lived with his grandmother",
+      "printed_start_page": 172,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t049-the-young-man-lived-with-his-grandmother",
+        "line_start": 1,
+        "line_end": 47
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-026",
+      "volume": "1940",
+      "contents_title": "Pheasant",
+      "printed_start_page": 173,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t050-pheasant",
+        "line_start": 1,
+        "line_end": 52
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-027",
+      "volume": "1940",
+      "contents_title": "That whittles-his-penis old man, or The five brothers",
+      "printed_start_page": 175,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t051-that-whittles-his-penis-old-man-or-the-five-",
+        "line_start": 1,
+        "line_end": 308
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-028",
+      "volume": "1940",
+      "contents_title": "Myth of bluejay, (his) grandmother tied his head hair with her pubic hair",
+      "printed_start_page": 181,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t052-myth-of-blue-jay",
+        "line_start": 1,
+        "line_end": 41
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-029",
+      "volume": "1940",
+      "contents_title": "The young man ate the thing that stank",
+      "printed_start_page": 182,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t053-the-young-man-ate-the-thing-that-stank",
+        "line_start": 1,
+        "line_end": 37
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-030",
+      "volume": "1940",
+      "contents_title": "Butterball duck and his wife",
+      "printed_start_page": 183,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t054-butterball-duck-and-his-wife",
+        "line_start": 1,
+        "line_end": 7
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-031",
+      "volume": "1940",
+      "contents_title": "The trickster person who made the country",
+      "printed_start_page": 184,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t055-the-trickster-person-who-made-the-country",
+        "line_start": 1,
+        "line_end": 1809
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-032",
+      "volume": "1940",
+      "contents_title": "There were many people at that place",
+      "printed_start_page": 222,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t056-there-were-many-people-at-that-place",
+        "line_start": 1,
+        "line_end": 81
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-033",
+      "volume": "1940",
+      "contents_title": "Myth about a trickster",
+      "printed_start_page": 224,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t057-myth-about-a-trickster",
+        "line_start": 1,
+        "line_end": 66
+      }
+    },
+    {
+      "publication_id": "uwpa-1940-034",
+      "volume": "1940",
+      "contents_title": "What the person who made the country (worldmaker) did",
+      "printed_start_page": 225,
+      "status": "separate",
+      "corpus_mapping": {
+        "story_id": "t058-what-the-person-who-made-the-country-worldma",
+        "line_start": 1,
+        "line_end": 22
+      }
+    }
+  ]
+}

@@ -1,0 +1,3426 @@
+{
+  "schema": "miluk-1990-fin-manifest/1",
+  "file_count": 684,
+  "files": [
+    {
+      "path": "D#MAAK!&.FIN",
+      "size": 422,
+      "sha256": "90b3ce8471f25a9057a709761bf852792e78d2bfd2f3afa6244bc8344308cf8e"
+    },
+    {
+      "path": "D#UWIYAM.FIN",
+      "size": 2761,
+      "sha256": "f5aaad96c5755384218b029352a2db63672dc18dd879d741d8154a9299de515f"
+    },
+    {
+      "path": "D.FIN",
+      "size": 5522,
+      "sha256": "65e6c982c7454f875aadbfc4274b32f4535ed9cdc06e02f4314917b5e33f857a"
+    },
+    {
+      "path": "D2.FIN",
+      "size": 2119,
+      "sha256": "a39c7e180b1855ea06dd877a75f71324f978d812fdc3831692c9ff7c2ec8c6b3"
+    },
+    {
+      "path": "D3.FIN",
+      "size": 1244,
+      "sha256": "647f257e9d53a3d023b3251f757eed8459c56a90ef049b3f3b252118e0ffb2d2"
+    },
+    {
+      "path": "D4.FIN",
+      "size": 196,
+      "sha256": "589a74c86b5e74ca947589bbd09a1881f5e95e0c12357bd132852a4f22a3181c"
+    },
+    {
+      "path": "DA.FIN",
+      "size": 11246,
+      "sha256": "407bebe44f19a9d6bb3eaf579459f77790eabb1534b26b1822eeb3a526da9dcb"
+    },
+    {
+      "path": "DAANU.FIN",
+      "size": 197,
+      "sha256": "3d7aac2b2bf48812c495355e06a4e5c939b4051c27d4b98494ce992fb3ec3a05"
+    },
+    {
+      "path": "DACI.FIN",
+      "size": 519,
+      "sha256": "5622aa6732643ce9952bdd42c366cd0818036bf99710769696a689a3c2974989"
+    },
+    {
+      "path": "DAGA.FIN",
+      "size": 923,
+      "sha256": "b4e57a931cae12dcd66f755cc427809be31d28c365775e9fc1a8a9fd673b2f1c"
+    },
+    {
+      "path": "DAGAYA.FIN",
+      "size": 284,
+      "sha256": "cc8b74f5523b2e1fb94bab1f04460f0e826a6d4fcdf15e5d049c7c6c37e7616e"
+    },
+    {
+      "path": "DAHAI.FIN",
+      "size": 279,
+      "sha256": "6d9f95078b9f8a9c6ba0f2aa7f572d56ac56bab1e4099dc10b216e622e9a0e8d"
+    },
+    {
+      "path": "DAI.FIN",
+      "size": 512,
+      "sha256": "5da76c47fc65112eb966078f9a8e694b790d99295bb1ab61279f291cea2f1152"
+    },
+    {
+      "path": "DAN.FIN",
+      "size": 1374,
+      "sha256": "3f88d34393a0679e163db8ca3f15aefed7689dfd89ac7fc7d6d8290f4813e477"
+    },
+    {
+      "path": "DANU.FIN",
+      "size": 683,
+      "sha256": "2ced2a9fe08cf3cbd8b47bc2d08d3c8cebbe49e7bd273926ffc8afe5e965dd17"
+    },
+    {
+      "path": "DAS.FIN",
+      "size": 1391,
+      "sha256": "f9f17e2efb19360409aadcb2611364166d007041135cd54225423c0033ff8276"
+    },
+    {
+      "path": "DE.FIN",
+      "size": 602,
+      "sha256": "6c6399f877de96ca9de84226c02355a1a4eee420c9d4b51166980db591f2fb2a"
+    },
+    {
+      "path": "DEDJE.FIN",
+      "size": 1076,
+      "sha256": "10162d235e9edf704f0e343807fb3157236f346374d5f8b31c6a95b4bde6c376"
+    },
+    {
+      "path": "DEGEL.FIN",
+      "size": 192,
+      "sha256": "72dec31780bfba68a5b176118e3c1eaacd8af59dcedfec048ddc3e763f2e4145"
+    },
+    {
+      "path": "DEMIL.FIN",
+      "size": 3131,
+      "sha256": "348a64235f75e7a68642542d13a11342d70d40146d1ba40547cae18ec90bc0dc"
+    },
+    {
+      "path": "DENGI.FIN",
+      "size": 1469,
+      "sha256": "4e51549a18b55052e90966acb09443ddcc1074cd41133c24ac9873f592c66386"
+    },
+    {
+      "path": "DETE.FIN",
+      "size": 542,
+      "sha256": "b387a2ffdf9b2923837c9214ff594c077ed91873823c874441755ecb8a2fa63b"
+    },
+    {
+      "path": "DEU.FIN",
+      "size": 515,
+      "sha256": "b2a34f3a6b49afc5a4aaab05b6266eaaebf672d3310a9d8248bc4d14385fab31"
+    },
+    {
+      "path": "DEWEI.FIN",
+      "size": 200,
+      "sha256": "04eb6af5a084a4a2b88e03fdef7099b12e10dfb47ab5c13430cd4bd94976580b"
+    },
+    {
+      "path": "DEWUN.FIN",
+      "size": 345,
+      "sha256": "873f9a060f45089408936872e822cdb44dc519508d164c67fdf15e17a627d72d"
+    },
+    {
+      "path": "DEX.FIN",
+      "size": 894,
+      "sha256": "b2e54f25a41a1607855f07d70d239d3e913439c6467d5d54ace97608229ea883"
+    },
+    {
+      "path": "DIBU.FIN",
+      "size": 210,
+      "sha256": "163108b8e85227173533c3b671862223e7515154fd2477ec72afe0927f1b73c3"
+    },
+    {
+      "path": "DIDJANAN.FIN",
+      "size": 356,
+      "sha256": "60b8dbbe43a397db2ca5e78b6bc0cc6d265d27e58d4ab8f322b4bd2ed1b162f2"
+    },
+    {
+      "path": "DIDJENEN.FIN",
+      "size": 493,
+      "sha256": "2092cc27ceaf45765c48f8e5299c31901f56279d5f3ec399f39d6bda32084ada"
+    },
+    {
+      "path": "DII.FIN",
+      "size": 234,
+      "sha256": "c91b115c3f612e617d19dbe56fe1336c8cba9f454a9f6124109f0d0b16707483"
+    },
+    {
+      "path": "DILEI.FIN",
+      "size": 642,
+      "sha256": "c7bcd91cdf2f8127e668ae93fafb22f1f203bd46f03e62efe7a8085f5a97c0e1"
+    },
+    {
+      "path": "DILUL.FIN",
+      "size": 2630,
+      "sha256": "de79e9edfd91f77951d09a2158ad14617d0230f937048b1429cef816a43b8fb6"
+    },
+    {
+      "path": "DILUWE.FIN",
+      "size": 374,
+      "sha256": "241d19acfade858483baaa73a651ac6503d25c328b245708f0aff81da3ed087f"
+    },
+    {
+      "path": "DIMQEU.FIN",
+      "size": 195,
+      "sha256": "7571cfd3e631dd7faaf6392134cbf3b3e546d77b52995ab285b532359b5294cb"
+    },
+    {
+      "path": "DIMS.FIN",
+      "size": 591,
+      "sha256": "30812e17a72edb1eec885bb4c6fe320f586c0790e639a99f1782f15056d87e71"
+    },
+    {
+      "path": "DIMSIN.FIN",
+      "size": 348,
+      "sha256": "f601ce04d7528fd4718adee9f3ce35a23a2a29de3e2e240672d4e53e86566992"
+    },
+    {
+      "path": "DITIMEL.FIN",
+      "size": 183,
+      "sha256": "dcd490fd9deda7545f059b15763373516b4d339ed13a4530954bebe1dc03e1dc"
+    },
+    {
+      "path": "DIU.FIN",
+      "size": 617,
+      "sha256": "99d980ac403fe61a41a0c73297ba4328071f77adfba7162c2b1477a69ed063e7"
+    },
+    {
+      "path": "DIYAKDA.FIN",
+      "size": 186,
+      "sha256": "d0d978f0593410562f501ab48fb31c098f7198316c2dca4703ab9c076418a33c"
+    },
+    {
+      "path": "DIYEQ.FIN",
+      "size": 186,
+      "sha256": "3a3e37ed123b519ceadd5f58298f0a4daa5893d01e5f141f174d41d7dd239258"
+    },
+    {
+      "path": "DJAL.FIN",
+      "size": 696,
+      "sha256": "2f27ccfbf7546411fa308585db5eebba127f3cf7b740d553ab8b52bc06385c0e"
+    },
+    {
+      "path": "DJENEWET.FIN",
+      "size": 701,
+      "sha256": "9e5a47fec5ef28cd8fbe2e2f3c90649ca57281955260621e0d70079361f9b8c3"
+    },
+    {
+      "path": "DJI.FIN",
+      "size": 3264,
+      "sha256": "3bea3286f751217cbbd1251bf5aa970b945b9cf7d62bf8cdb35b4384cb707d98"
+    },
+    {
+      "path": "DJILE.FIN",
+      "size": 211,
+      "sha256": "a2f4c5af28b410e297e4e6e0234388a709daf27e524112596790e0ff0c6c62e2"
+    },
+    {
+      "path": "DJILTSAI.FIN",
+      "size": 590,
+      "sha256": "da5d2df4cdb2d2d7f517af87d77c925e93f424250073132e7884585c5e1527f5"
+    },
+    {
+      "path": "DJIN.FIN",
+      "size": 1606,
+      "sha256": "c2df60b554fc85340ca564b550cd9cf8156a4a027a390a1793497764b6a9a8c1"
+    },
+    {
+      "path": "DJIX.FIN",
+      "size": 375,
+      "sha256": "7d2b5031724ec0f3869bb49b949270e8a7be34deb1f0ef1231ed55a991629fb6"
+    },
+    {
+      "path": "DJIYANA.FIN",
+      "size": 402,
+      "sha256": "92acf28d49e3a23eba4efafdbce3ca01437ad760bd6516d3f90c34c1c37d0ef9"
+    },
+    {
+      "path": "DLAHAHAY.FIN",
+      "size": 201,
+      "sha256": "85b65ebbe426c69098e3c126e584f334b379f28e00251b26c12c669d5f5ab96c"
+    },
+    {
+      "path": "DLALWE.FIN",
+      "size": 183,
+      "sha256": "bc286c2a110bb661bec96c8cd5beaaa187ac30df6eb04cd416766b3ca7c3f6c4"
+    },
+    {
+      "path": "DLALYU.FIN",
+      "size": 612,
+      "sha256": "32a0a92b7f7a73691163747f916a1cd0731c3c44375b28f9b5e06d7bd5b04920"
+    },
+    {
+      "path": "DLAMAL.FIN",
+      "size": 379,
+      "sha256": "6764f06c7e392ab20af258d97312648ca5e677d71f2a684e9ea6ad47fb76473f"
+    },
+    {
+      "path": "DLAN.FIN",
+      "size": 572,
+      "sha256": "aaeef7101353b662adc3fe934b220581f2f662454b363ae51fb2d946cb42c86f"
+    },
+    {
+      "path": "DLANKTS.FIN",
+      "size": 406,
+      "sha256": "4e3d55174ac9b0938d440d4c27bc94aae3f5d59741ddd4df60f7d3d5bc3445f4"
+    },
+    {
+      "path": "DLEGEG.FIN",
+      "size": 2479,
+      "sha256": "7f550dee4b0ad64414aa1da2b52841267c1598763d8b47185b1b571f53ad15e7"
+    },
+    {
+      "path": "DLEWE.FIN",
+      "size": 253,
+      "sha256": "7309485ae13f4a7e71ba6ccec3db3ef1f2f0e29d6a4187ac10acb3f9d4d083ac"
+    },
+    {
+      "path": "DLEXEXE.FIN",
+      "size": 218,
+      "sha256": "c5bfb0a120bc73c3019212505c93258d6b41a823c0911687170277718c17113b"
+    },
+    {
+      "path": "DLIKWTIM.FIN",
+      "size": 325,
+      "sha256": "6a79f4db99201bd67e2ac0d3c9a1a2aeab612dd1e372b00313814f27597cf101"
+    },
+    {
+      "path": "DLUKWDA.FIN",
+      "size": 393,
+      "sha256": "059131e46b32cb07486738e8a8471e4f6a1076afd8ee8f9feceeec348692e9af"
+    },
+    {
+      "path": "DLUQWSAM.FIN",
+      "size": 851,
+      "sha256": "0800ee8a95ae896322adfbf705c0fc94de536722f761a8cddca29c8a06b8d902"
+    },
+    {
+      "path": "DLUTCI.FIN",
+      "size": 423,
+      "sha256": "d5713ee76a5598a850643431ce0d05ce49c05eb1712682ea26dcc1d8f371571b"
+    },
+    {
+      "path": "DUDEI.FIN",
+      "size": 112,
+      "sha256": "abbbe2a01689ca7c1bd1d84167fe7b025c66503b8998cb0d70789cbcc2387244"
+    },
+    {
+      "path": "DUHAYA.FIN",
+      "size": 2371,
+      "sha256": "dbcaa670f6bc43eeba588b89d3c9939d32c24f9e8357a96eb84da6ab955fb855"
+    },
+    {
+      "path": "DULAK.FIN",
+      "size": 385,
+      "sha256": "16c6e27ad1d6abc4f05e9196559dcedf5a6d79e42439b18f42bff983ba198e57"
+    },
+    {
+      "path": "DUWE.FIN",
+      "size": 591,
+      "sha256": "8e5156dd0297f4a1d28e51e4a46c5a381f21fa5314002bc2a2015018becfae14"
+    },
+    {
+      "path": "DZAGEG.FIN",
+      "size": 486,
+      "sha256": "9fd131bdff1b81eeccfac40f1a2b26c33d18aca02c2c1a6512ce96b8ef4fee65"
+    },
+    {
+      "path": "DZAGWAQW.FIN",
+      "size": 105,
+      "sha256": "1d338ec0ad0c01f45ea7546538f02481f778f4fe5cbbc00b3e4c1121be92552b"
+    },
+    {
+      "path": "DZAITST.FIN",
+      "size": 630,
+      "sha256": "3cb18bb3d9168b797d23d0b8bb1d40deac4d4f609b674e7ac587ab4f745733d9"
+    },
+    {
+      "path": "DZAMTS.FIN",
+      "size": 287,
+      "sha256": "4502f2b80bfcd53f9e8eaf06379f54437acd6068a3231131bdfec1ae6324d570"
+    },
+    {
+      "path": "DZANANU.FIN",
+      "size": 317,
+      "sha256": "57481c2c175710e2058fa23228396ab2cd3cbf2c51e0e0572b019ddb34473a9e"
+    },
+    {
+      "path": "DZAQWTS.FIN",
+      "size": 280,
+      "sha256": "ecb8b835b4beb1ca105d7c2a8ac5892e32ed8e2cc53c2cf56231871c8608a519"
+    },
+    {
+      "path": "DZASDLAQ.FIN",
+      "size": 632,
+      "sha256": "5f19fc4575d4ed4da6a7b5682b170d8d034e64c3af87d491984914ae6efd3b1d"
+    },
+    {
+      "path": "DZAWA.FIN",
+      "size": 662,
+      "sha256": "12a38e62b1111deb139f4bf22e58d2fa44be5f71d232378f216da5844b1fcd25"
+    },
+    {
+      "path": "DZEMTU.FIN",
+      "size": 184,
+      "sha256": "45182a5c8244b479f04f9222cf287b14ee34082e6bfadfdb7267c576eb6ade79"
+    },
+    {
+      "path": "DZENE.FIN",
+      "size": 596,
+      "sha256": "901dd952232908debb45f64b2f8dd8a72569c159a9773d5895edee59a3dae550"
+    },
+    {
+      "path": "DZENW.FIN",
+      "size": 376,
+      "sha256": "8528301d1ee8aef20613ff14456e04fabf1c3d8bcd4ca5a17d71173bc5cf7996"
+    },
+    {
+      "path": "DZES.FIN",
+      "size": 100,
+      "sha256": "a922badf2ed85cc25779ace55f3df0e896f1e1c47ab7b2d73db196fb29dc0de3"
+    },
+    {
+      "path": "DZETLIS.FIN",
+      "size": 268,
+      "sha256": "bbc9cb3c2ccf5d0addc1f94582969a974517c31bab6f730a143809fd2976a515"
+    },
+    {
+      "path": "DZEXEXEI.FIN",
+      "size": 104,
+      "sha256": "75d5a593058cfc28d02a259b84995f511745c124d7509518b2d8a86a7dd2d56c"
+    },
+    {
+      "path": "DZIDZE.FIN",
+      "size": 1160,
+      "sha256": "8f69a700dba0f6e1619d0bd9a2f743957981de35395f1bab9fecf6c23a7dab3e"
+    },
+    {
+      "path": "DZIDZU.FIN",
+      "size": 503,
+      "sha256": "75b7341912150a23ef570f8969b178a1725442420ba64229b2a68f411c808e9c"
+    },
+    {
+      "path": "DZINW.FIN",
+      "size": 355,
+      "sha256": "faf11bf0ab971087b88d1bd7aebabec0a661762a14142d331f6ee65d19a7cb38"
+    },
+    {
+      "path": "DZITSIG.FIN",
+      "size": 423,
+      "sha256": "9dbf761ab855e6caa00d0325346c6dca1dcfb7876c35131c949c7c7762157734"
+    },
+    {
+      "path": "DZITSLIN.FIN",
+      "size": 516,
+      "sha256": "c61ff0025757ad645ddb28fc1a3f8a65aafe80395d4a4ff8eb4ef1838e8b4acd"
+    },
+    {
+      "path": "DZULI.FIN",
+      "size": 254,
+      "sha256": "84d871d07f827bd6f565d295b5518f0bc810d4ff63e381d3f5016aeb365f33fe"
+    },
+    {
+      "path": "DZUNUG.FIN",
+      "size": 186,
+      "sha256": "b7e85d276671d522c26c55ee354d1e2e5f47dca917d48925448b08a5c0dc4aa6"
+    },
+    {
+      "path": "DZUTL.FIN",
+      "size": 180,
+      "sha256": "7393b7a93bc364f55cffdc861b20a9b4a7adb6861ce4c0a46b6e6f7ba2b12fe9"
+    },
+    {
+      "path": "DZUWIS.FIN",
+      "size": 300,
+      "sha256": "094195464bfa19109337cac8b24e64addb9444fb29d009532826c8dd308e6c4b"
+    },
+    {
+      "path": "E#E.FIN",
+      "size": 465,
+      "sha256": "389d829f7075676b87d3677f643310658f8adac832cea3ece6671ad30b5a797a"
+    },
+    {
+      "path": "E.FIN",
+      "size": 1705,
+      "sha256": "c969678a6050f5375f3c40c65aae7b9a4140ce57834a18427e92a4701286985d"
+    },
+    {
+      "path": "ECIN.FIN",
+      "size": 213,
+      "sha256": "6d25d1a44c9db084d29b2728512a2d49a519577d6c507ade8a296c0308d8c7d2"
+    },
+    {
+      "path": "EDITC.FIN",
+      "size": 511,
+      "sha256": "48df26c696609ebc6dc333b302e25ec8ea2fb0af00438fb8620dfb0b1d2c719f"
+    },
+    {
+      "path": "EEKWI.FIN",
+      "size": 503,
+      "sha256": "6377ac52d68bb84b4e514f2176e483b3cd785e7cc7d7a7023f63c48dfb8e2385"
+    },
+    {
+      "path": "EGE.FIN",
+      "size": 250,
+      "sha256": "4126d77ee5806de217e77c7b40890ccd111d08a0aa1cc5f9d4879f69caee50f3"
+    },
+    {
+      "path": "EHE.FIN",
+      "size": 419,
+      "sha256": "415fee022080e73e3caed4a8821a8a08db04fa7ef60bf7f728979e36cd85a926"
+    },
+    {
+      "path": "EIKITC.FIN",
+      "size": 248,
+      "sha256": "c4316d4125fd109f43da4b35db7604aefaeee14c729309c1d28826fbd4cf8282"
+    },
+    {
+      "path": "EK.FIN",
+      "size": 487,
+      "sha256": "e001a5c7beb3389e46508e1c7328a61bf98182d09e522224d4187d03d2ea117f"
+    },
+    {
+      "path": "ENE.FIN",
+      "size": 458,
+      "sha256": "8598f0acb6d476f51b107b0d9c68c4e13fd953c8374119f7bb8701741934920f"
+    },
+    {
+      "path": "ENNE.FIN",
+      "size": 1160,
+      "sha256": "df2111aa73b1be019f34f5f726598cfba90335bf603b6c8c9ee85c192d0df7d6"
+    },
+    {
+      "path": "EQ.FIN",
+      "size": 306,
+      "sha256": "67b16a3519b3a3e4e265442dcfbb91f720a44cb64326467ed3587e4ab08a0f38"
+    },
+    {
+      "path": "ESTIS.FIN",
+      "size": 368,
+      "sha256": "bd952db2af75107ecff6a3f2cd0b23ce3af8e8b4239f627a6bb1847b10f325d8"
+    },
+    {
+      "path": "ETCILI.FIN",
+      "size": 195,
+      "sha256": "4e39bf9acfff25752d2916470a887e599e163b9a0b993417eaba16050f1715f6"
+    },
+    {
+      "path": "EWI.FIN",
+      "size": 348,
+      "sha256": "27b28b9256f18adf62d0d9d2a6040e71dce89dfccb43bd0e815b490cb1107510"
+    },
+    {
+      "path": "EXEX.FIN",
+      "size": 385,
+      "sha256": "7164eae75656dc1e6282d66fb2a7be1b75765302b08e9f8c156fa8164db6990c"
+    },
+    {
+      "path": "G.FIN",
+      "size": 594,
+      "sha256": "84182753ed3f38526629f7962f73e792f51ea945584c6355fe3117b307b2a0b9"
+    },
+    {
+      "path": "G2.FIN",
+      "size": 1496,
+      "sha256": "dff29f3582e374456085f3b6b1b74600459f0036b5e9447e483cafd3ee626c0a"
+    },
+    {
+      "path": "G3.FIN",
+      "size": 1499,
+      "sha256": "162c9a6d4504e522d9678ce7517e3a50d453c991f989730988933ec90ce879cb"
+    },
+    {
+      "path": "G4.FIN",
+      "size": 2330,
+      "sha256": "f5461bf94190055baa281992bba968e91a74d2311aa85ee088450f2916054e87"
+    },
+    {
+      "path": "GA.FIN",
+      "size": 100,
+      "sha256": "7256e56c4f31d51fa15a10ef388f1902ffe481355008c142b2a28fd9a8ec9ac6"
+    },
+    {
+      "path": "GADIYA.FIN",
+      "size": 206,
+      "sha256": "339433ac4c37d246d1a92e56f869817e3e924d9630c791b14404347da1400ecc"
+    },
+    {
+      "path": "GADLI.FIN",
+      "size": 381,
+      "sha256": "baadeaa866af16449a1ea65754ff70570a5ea5c99ba099925b7a8afe69f9caf1"
+    },
+    {
+      "path": "GAHAIS.FIN",
+      "size": 662,
+      "sha256": "6311554e40fa638b69ba4089778e1e751c27fcbfc443b8a23d17f8bd8d2d315c"
+    },
+    {
+      "path": "GAHATIWA.FIN",
+      "size": 459,
+      "sha256": "0d4e440904d7f392295f3a4f5b5e77f9b71460f3f3851d5c75bac10c58f81bf4"
+    },
+    {
+      "path": "GAI.FIN",
+      "size": 296,
+      "sha256": "7e2d655edab4fb4e87a4ca5c484664df18fa91e7023c27e7b94f44738c16023e"
+    },
+    {
+      "path": "GAL.FIN",
+      "size": 859,
+      "sha256": "28fe4d5f4bab600e93b8f0cb02ea20c87aca1a28a5d6197ebc53999756906434"
+    },
+    {
+      "path": "GALADA.FIN",
+      "size": 178,
+      "sha256": "69dfe437e65c7dcf7af6a9b96e6f157972b944ed4079a1f2a68e5099cb546aad"
+    },
+    {
+      "path": "GALAGIS.FIN",
+      "size": 194,
+      "sha256": "aad250c0296aa8c1ede31faa1525a05cea360098138fbc768f7bb6eb8b3f6ed8"
+    },
+    {
+      "path": "GALAM.FIN",
+      "size": 2656,
+      "sha256": "dbb84f3c84ea09cb69799f136e4c447c3769fb2ebd74c4090f4208bdcd3a29ae"
+    },
+    {
+      "path": "GALATS.FIN",
+      "size": 700,
+      "sha256": "bb4e4093f06c2e69744fd90845237460c859db980fb1951b51068deb276aa1f1"
+    },
+    {
+      "path": "GALAYU.FIN",
+      "size": 447,
+      "sha256": "5006ba8011df90dfa59a7447dffc9d66ee0ffa71def2a758ad5acedc79a093e5"
+    },
+    {
+      "path": "GANIYA.FIN",
+      "size": 176,
+      "sha256": "54082a47000a23979b66f2d923fbe78b054cad489047062104787ffb824d4bfb"
+    },
+    {
+      "path": "GASIYA.FIN",
+      "size": 452,
+      "sha256": "ff2b473c36a5e65c4123f1b6a889aff6c353f235ff2aee7e93d0eb747cad5ed3"
+    },
+    {
+      "path": "GATQAI.FIN",
+      "size": 1037,
+      "sha256": "25b570094a7a3e2996f031bb657bc848439af1c963dc2d96179d5bb6b3005915"
+    },
+    {
+      "path": "GE.FIN",
+      "size": 559,
+      "sha256": "e8b2fb332acec89ac2132c90b1c5c53ec21999ce1beab83e9d5def905d9f6000"
+    },
+    {
+      "path": "GEDLEN.FIN",
+      "size": 321,
+      "sha256": "ba62cb5eddd3b76b2495e40fb5592e3204f711a5aa88ac4a2511db5cd2cf1c9f"
+    },
+    {
+      "path": "GEINE.FIN",
+      "size": 148,
+      "sha256": "309b22e90c10e4b7f0205175917b1d63fb0f0070c70de76690b955604a529f32"
+    },
+    {
+      "path": "GELEM.FIN",
+      "size": 307,
+      "sha256": "7bb2c5a31c11f89d0bb896c7fb3da340913f6f60ddf518ad21c11f7886b98c39"
+    },
+    {
+      "path": "GELTS.FIN",
+      "size": 144,
+      "sha256": "75fe6bcbb0e1788c3bea66cf1e3dd73523b8bec81d869233ba3eddb294a3ea1f"
+    },
+    {
+      "path": "GELU.FIN",
+      "size": 241,
+      "sha256": "31874b779544283fa159731e68803792fa3200bc635676aef3fcdb80351c3998"
+    },
+    {
+      "path": "GELYEQ.FIN",
+      "size": 318,
+      "sha256": "3115ba3de0edce45d2896b4dd97c74974b14d0ecd37b8a3008e2d1ca2faf644c"
+    },
+    {
+      "path": "GEM.FIN",
+      "size": 180,
+      "sha256": "7dfeefcc9b41034e18808f632d49ef0b4ca9a67e0f130a5f9e511fba28d382c2"
+    },
+    {
+      "path": "GENDJI.FIN",
+      "size": 463,
+      "sha256": "ee679b2741a5d222cc5c6e11b66af05463555426f78b1e8ae36403086a541c15"
+    },
+    {
+      "path": "GENETC.FIN",
+      "size": 360,
+      "sha256": "6444aca3109db6ee13ad83a94ea90fe48db657b1fcaa1448cb4c65138156b7bf"
+    },
+    {
+      "path": "GENTCIN.FIN",
+      "size": 1085,
+      "sha256": "a0d9c99b61551153675ad78b54c2a69922dc0b1012f8493d143804e7d8efcfc5"
+    },
+    {
+      "path": "GEQL.FIN",
+      "size": 571,
+      "sha256": "e03c297ec1748872fb9e170e3b8b9c267acd7b306398af16ea01c74caafcf22b"
+    },
+    {
+      "path": "GESDE.FIN",
+      "size": 174,
+      "sha256": "f011e22e5c10f0fe1d53976575da2c1ff52c9a1afe8d8ac8443db21bfb603028"
+    },
+    {
+      "path": "GETSGEI.FIN",
+      "size": 188,
+      "sha256": "29845ef89c8e553d9bc5d0403bae9895cb97a09d89583d921f338c5e24edf9a6"
+    },
+    {
+      "path": "GEWI.FIN",
+      "size": 176,
+      "sha256": "345398ba983a396e82c54a1f48267002e247cbdabc3c3b1478f48ad991345c27"
+    },
+    {
+      "path": "GIDIUDAT.FIN",
+      "size": 208,
+      "sha256": "a131cbc27a6dcd0c6dd9f7280793e9547f5ff109e65ee08d32bb729a4753d4bd"
+    },
+    {
+      "path": "GIGWA.FIN",
+      "size": 300,
+      "sha256": "9d7fa3d27a441142d3deeb51b6647a506928d26ea0e9236baa3516ac576ea291"
+    },
+    {
+      "path": "GIKDANU.FIN",
+      "size": 263,
+      "sha256": "7a40441527a604825d7b483ba0f8afd2cbd782ae80d88a671c9771719d1078ec"
+    },
+    {
+      "path": "GILA.FIN",
+      "size": 1301,
+      "sha256": "cd6f6f54b299379d31ff48389986ecf8f83a214a73bb084aa4d35324c7d6a899"
+    },
+    {
+      "path": "GILAU.FIN",
+      "size": 182,
+      "sha256": "c085103e6974ef4028be9595a91d6416c4d9dc1e1a3fbe4498d145303f85a4d5"
+    },
+    {
+      "path": "GILDITA.FIN",
+      "size": 218,
+      "sha256": "dacd4d7d272e3fb52bae81a628a3edb65ba9a15281c9d591db4dcafbfc85d0b4"
+    },
+    {
+      "path": "GITSKIAT.FIN",
+      "size": 288,
+      "sha256": "f48562c02423491a99fd9fddb53fe9b442b527d6dd35984f5b2451cde22aff3c"
+    },
+    {
+      "path": "GU.FIN",
+      "size": 145,
+      "sha256": "a0342471d204c34e36057da1c41df23a6a5b5b5d8ac09589dea215673e72b0f6"
+    },
+    {
+      "path": "GUGUM.FIN",
+      "size": 215,
+      "sha256": "9dd6bfb81d3d3ec8790e35f8e0d8d2ad50dd836a7dc7a89f87adb9ee4da604b8"
+    },
+    {
+      "path": "GUGWES.FIN",
+      "size": 210,
+      "sha256": "244e71f464d28ed18a22cf4f779e98c2fb589c759719f87b07c24a9bbd115913"
+    },
+    {
+      "path": "GUM.FIN",
+      "size": 1772,
+      "sha256": "23d3c54de2e72041bc5144991bad39d6f0446d3a1e56a39269b88ecc217dc602"
+    },
+    {
+      "path": "GUMTU.FIN",
+      "size": 220,
+      "sha256": "1ac41c60d29b16a2a20f67a84bc13be1a0f04efe1ca882ec42a5369cbb47f4c3"
+    },
+    {
+      "path": "GUS.FIN",
+      "size": 2265,
+      "sha256": "35f50eea5ba6c2c27f0c6366898de7f7cdb27a1f4ad4c2ca107263749e351fa0"
+    },
+    {
+      "path": "GWA.FIN",
+      "size": 817,
+      "sha256": "38a89bc4ab0e2af526dc187928f9c9d147f7485ef91440b4d9280a08ea448401"
+    },
+    {
+      "path": "GWALA.FIN",
+      "size": 196,
+      "sha256": "45afdc8f991db6d0b09f598579e68d9a99b3029d2892063b66210668f3756894"
+    },
+    {
+      "path": "GWALAQW.FIN",
+      "size": 249,
+      "sha256": "4b6f247495dcf8d122d49978f57d096f16e236e8fa9c3698282bfe355fb43ac7"
+    },
+    {
+      "path": "GWALGAS.FIN",
+      "size": 188,
+      "sha256": "af9ff1d2448043b17cee16323f28c9c7f0b478907c02304bd637c465f35d94ec"
+    },
+    {
+      "path": "GWALI.FIN",
+      "size": 359,
+      "sha256": "2bf3ca673e7f7652b38c4c021c458e93dae8d53ae89afd5af25e926f2170bd8f"
+    },
+    {
+      "path": "GWALIYA.FIN",
+      "size": 363,
+      "sha256": "1bf752b7aca04ef2f38acfe51927d5af05570878835745273d7ddd5e708892a8"
+    },
+    {
+      "path": "GWAN.FIN",
+      "size": 713,
+      "sha256": "c4f6e4d41e1bf14888d25493827f7ea0bb61765cc33f4151c0290d1127ba988d"
+    },
+    {
+      "path": "GWANA.FIN",
+      "size": 593,
+      "sha256": "379855cb22dc47e8f0f9c8278151f39ceefcf00e179dbb033fc8e6910929cbfb"
+    },
+    {
+      "path": "GWANANI.FIN",
+      "size": 189,
+      "sha256": "25522040c017b4b6824e5a3d6a4d516dbae73ce7d2db3a33bf2b1cc9e5acae0a"
+    },
+    {
+      "path": "GWASGWA.FIN",
+      "size": 479,
+      "sha256": "a0d508850733c08ced30725c7fa4e9b8218d10b9920a603be60c7e5ab4fca37b"
+    },
+    {
+      "path": "GWATCSAL.FIN",
+      "size": 484,
+      "sha256": "a530bb147d788b42d6810b677a441bb760ffd56260ad699ba390d049087e9ef7"
+    },
+    {
+      "path": "GWAUKWAU.FIN",
+      "size": 188,
+      "sha256": "98ce624a9ea333876749004a336a472f47fe0becfadcda2ca290ab57a22422da"
+    },
+    {
+      "path": "GWAYA.FIN",
+      "size": 454,
+      "sha256": "8a1f60f6efa91745c9f372187279224291f9b948956380a93779e6fc478fd60e"
+    },
+    {
+      "path": "GWAYUTC.FIN",
+      "size": 280,
+      "sha256": "811eff8611d9408b886b057516a2db2272865da44afdf035a66905bc29105713"
+    },
+    {
+      "path": "GWEEK.FIN",
+      "size": 206,
+      "sha256": "1bf0da081210506c5c0032b0f7b01da7b56a287ea361b738a623f7ce16b86304"
+    },
+    {
+      "path": "GWEIS.FIN",
+      "size": 1019,
+      "sha256": "f4f07c895caf1a61821cca13d409c03a764b419e3e6037299346b9ea93d84727"
+    },
+    {
+      "path": "GWELEES.FIN",
+      "size": 372,
+      "sha256": "77144981ff6559946d2444ded9d68e33405f8560b43976b60f7c4819614eb2f7"
+    },
+    {
+      "path": "GWENS.FIN",
+      "size": 265,
+      "sha256": "4bd7a5ef8e47d4bfc1e6d03e0ec65f5a0abe51fb06790e57ac2b62453b53ec88"
+    },
+    {
+      "path": "GWIDET.FIN",
+      "size": 161,
+      "sha256": "60d8b83647d814cf0402623557bc53966dfae2b0182260bfd694c6cc8df0c7e1"
+    },
+    {
+      "path": "GWUBABA.FIN",
+      "size": 284,
+      "sha256": "b567d1ae4a73548c7853fc3b0e1611df2056169e530987ea0ca78588b637ccac"
+    },
+    {
+      "path": "H1.FIN",
+      "size": 1911,
+      "sha256": "801256e7346045219d8a9a2fd8c34af2db657f35c2d9352465e882b7a8eca5d8"
+    },
+    {
+      "path": "H2.FIN",
+      "size": 1927,
+      "sha256": "fa6a82be2799b402728417f5573abf4f3809fc6e4ed595e605d50e2cf86f11fe"
+    },
+    {
+      "path": "H3.FIN",
+      "size": 2805,
+      "sha256": "7885a2204b52620bcd4a0a1e02515ee45b5365ee59c0643a1222c00a586a8282"
+    },
+    {
+      "path": "HADAIMIS.FIN",
+      "size": 861,
+      "sha256": "23eb57363f7d3cd19d7e22c8a927dade19ecc88d087aaffc3805d69687870938"
+    },
+    {
+      "path": "HADUWA.FIN",
+      "size": 138,
+      "sha256": "92a8d9b024c42b0f2c4220eb29a14bc90874c64cffcc257bb8318180623182f5"
+    },
+    {
+      "path": "HAGWIYU.FIN",
+      "size": 474,
+      "sha256": "898d9daf2ea9ac6fd1a202cfd56d89f74e746fd94363a251beb3d85466030b2e"
+    },
+    {
+      "path": "HAIHAYA.FIN",
+      "size": 348,
+      "sha256": "45957d93681604f93b18587f6dbb722427a4bab30ac4de223558d12f9bd2e421"
+    },
+    {
+      "path": "HAITCT.FIN",
+      "size": 462,
+      "sha256": "af2941f5e2a646ec3cb778acec4c32e1422828172df4cc18edebc0633278a3ae"
+    },
+    {
+      "path": "HAITS.FIN",
+      "size": 384,
+      "sha256": "c08bc9dfeb0e14bd5214d25ab77f84d1dbacf5c098078d1ea652e82402081bfb"
+    },
+    {
+      "path": "HAITSAM.FIN",
+      "size": 473,
+      "sha256": "50e3583607b3c2afa68bb64d7dbf0ae0b0eac9ddd40becaf8d1872a506da1121"
+    },
+    {
+      "path": "HAL.FIN",
+      "size": 480,
+      "sha256": "d95e0e3ffe188ac29ed02d5113903ebd971a5b3a3513e732171f3bed57be05fa"
+    },
+    {
+      "path": "HALMI.FIN",
+      "size": 587,
+      "sha256": "7b217c016d935970aaf23544a2649e16395cdbdeed265449508e0b5a2ce0597d"
+    },
+    {
+      "path": "HALQA.FIN",
+      "size": 737,
+      "sha256": "6978da728b835b4f9297797fa62c0e143c3871a5b089e7aa9acef919a811a8b6"
+    },
+    {
+      "path": "HALQW.FIN",
+      "size": 529,
+      "sha256": "3f679213a9e67444ebe4ceeb8065ec1c41b6dee3f7be17b9d7c6f1edd13913c2"
+    },
+    {
+      "path": "HAMA.FIN",
+      "size": 1354,
+      "sha256": "0fcc4e578256f91625fee8b573794d925460a51be292ffd01f0b6a548586722b"
+    },
+    {
+      "path": "HAMAQ.FIN",
+      "size": 1675,
+      "sha256": "7cf2501f040012d97d63b09eec8da2eb008836709002f1d1c52a722b1a0e2107"
+    },
+    {
+      "path": "HAMIS.FIN",
+      "size": 507,
+      "sha256": "a1ceabc47af84214af4e6009c44e57dd460c14fe9621af240f96f2252be08dad"
+    },
+    {
+      "path": "HANIC.FIN",
+      "size": 506,
+      "sha256": "2f3648ec33fe4c70f40c3e4396317ee5340ebcc949f5ad69e15cbd85453ca311"
+    },
+    {
+      "path": "HANIS.FIN",
+      "size": 564,
+      "sha256": "d129dd624ba09e3159c170d2cadb7410ab1913f4596997da72909a29ea684841"
+    },
+    {
+      "path": "HANTL.FIN",
+      "size": 2394,
+      "sha256": "a6d499bc67817d8d320eb60e1921a6190d0f82de6c771a76383216bcba4d134c"
+    },
+    {
+      "path": "HAP.FIN",
+      "size": 959,
+      "sha256": "606697d309a74c8be00cb0adec3ce08a6db8fa096ce72cdc639219f7397782ce"
+    },
+    {
+      "path": "HATAI.FIN",
+      "size": 610,
+      "sha256": "44007ce16c361218b12c305a69ff2ea265f2230548dde30f7e548adacddbe7a9"
+    },
+    {
+      "path": "HATLIYAD.FIN",
+      "size": 481,
+      "sha256": "f3cade58976930b0bd432130a13bc05fde5ab3849ee3ba93a0ccf1c3ed0697a5"
+    },
+    {
+      "path": "HAWIYA.FIN",
+      "size": 513,
+      "sha256": "b57ed51c5a19cc5b6ab24a7ffef35dd9f330882182434741f70e005c60d0111d"
+    },
+    {
+      "path": "HAYATC.FIN",
+      "size": 522,
+      "sha256": "57b17b8f9b4e06acecf8ffc122827598f109a93e9ba0c081a1180e2531c63713"
+    },
+    {
+      "path": "HEGWAN.FIN",
+      "size": 539,
+      "sha256": "c2ada2550f00d7d3d0c74427e481c8a202e7d218b816596b489e9fdfd72a2154"
+    },
+    {
+      "path": "HEI.FIN",
+      "size": 1950,
+      "sha256": "33765facacf9aed3d4d6769a5309a0c9c63573492cf4beac25b5f634845fc3e3"
+    },
+    {
+      "path": "HEL.FIN",
+      "size": 578,
+      "sha256": "12b0255ced3baff0e6d1803d72d8c311e50c94b9d0ac7acdb7f82f62b1c314ac"
+    },
+    {
+      "path": "HELEG.FIN",
+      "size": 177,
+      "sha256": "db37f1a0fea6730206c04d509073f24d7b45b87d8727c2ac62e32e4674a72122"
+    },
+    {
+      "path": "HELEQ.FIN",
+      "size": 496,
+      "sha256": "5422b80e3d7471620f45a4f23d7d88b1c907b558bebfcbbd83b03c7bf948dfdc"
+    },
+    {
+      "path": "HELEYU.FIN",
+      "size": 521,
+      "sha256": "c35f83f27c6b673403281cbfbf659122fcffb4ba2be10b119a61340855a0de04"
+    },
+    {
+      "path": "HELT.FIN",
+      "size": 774,
+      "sha256": "b6256371ce684b3729f71cdbaf101ccaae959dac588176fd053e13d6caf5c38a"
+    },
+    {
+      "path": "HEMELT.FIN",
+      "size": 971,
+      "sha256": "cf2adff33f757b030cc63b95f88ab948dfc246b0e29d433ffffee9593604c464"
+    },
+    {
+      "path": "HEMILTCU.FIN",
+      "size": 672,
+      "sha256": "9195143c2a1c666822bc8e3990cc0b604f2f611bfda1272ba047fc18765b4e2b"
+    },
+    {
+      "path": "HEN.FIN",
+      "size": 1252,
+      "sha256": "77864ea451654f2d8eef7a9b75974cc4aacc6c4dae48345e4748bbf8de3a5b8c"
+    },
+    {
+      "path": "HENDLIS.FIN",
+      "size": 544,
+      "sha256": "cde7f6510aff4aad99228aa6bfa432f7892797976ae1904fecb7a79bccfcb61b"
+    },
+    {
+      "path": "HENENU.FIN",
+      "size": 500,
+      "sha256": "53f02e9e1fe1c24bb1c699d6ecceae410b5bc0b66c2d9b41338011e530eca3c8"
+    },
+    {
+      "path": "HENUKWI.FIN",
+      "size": 506,
+      "sha256": "7f6706c4b6f4007a1b282209a2c753f410f1005d7d45263a6735fb5acae18a9c"
+    },
+    {
+      "path": "HETHEDE.FIN",
+      "size": 1100,
+      "sha256": "b1817d57ba84898a5f96da87fae3ce2e91430d67edf90eb7b071fbf10fbf6082"
+    },
+    {
+      "path": "HETLE.FIN",
+      "size": 512,
+      "sha256": "470441d541b1429de9cea6162e9879de4c9d759e38321a961ee8dcc5b1d8eabb"
+    },
+    {
+      "path": "HEWEL.FIN",
+      "size": 501,
+      "sha256": "e49ef9221e0ea36ad576730a9f37d1d22ca75e8fd853140f82cbbe55bc4b65dc"
+    },
+    {
+      "path": "HEWESENU.FIN",
+      "size": 851,
+      "sha256": "5c70f62eda7eb6253520c2386737a2d5cc838019c7b1825b533e5a2eecaa68d5"
+    },
+    {
+      "path": "HEWI.FIN",
+      "size": 1124,
+      "sha256": "9afa017bb3deea42e6184dcdd55792a639e9ec31083b5b31c337630ff43fa8f2"
+    },
+    {
+      "path": "HEWUDZEN.FIN",
+      "size": 496,
+      "sha256": "a994e296a1c90e3dccb0167b32abf9955d1d17bb9ad1032927bedfce62c83e69"
+    },
+    {
+      "path": "HEYE.FIN",
+      "size": 171,
+      "sha256": "ea22480f4e752681de762be7081ee3266c825e01528d7b611276e2820894c4d2"
+    },
+    {
+      "path": "HEYENU.FIN",
+      "size": 495,
+      "sha256": "d503359b59a69c02a840f7b9a624a07af9879e041f47a257059f75fa76e12b10"
+    },
+    {
+      "path": "HIDIME.FIN",
+      "size": 477,
+      "sha256": "27e798c9eaa29c2ed9fc0970d550ba909d1f0c457ba9bc01e2d076588baab704"
+    },
+    {
+      "path": "HIDJI.FIN",
+      "size": 976,
+      "sha256": "bf328b8b33e0e368ca1e73ed7064b10ff264ea1334dca528ec7acda7c0e2b239"
+    },
+    {
+      "path": "HIME.FIN",
+      "size": 1314,
+      "sha256": "e1d6242a07ce01bf972cd8c2d92f2a13edf43cae31828b94324b36f9fa21308d"
+    },
+    {
+      "path": "HIQAT.FIN",
+      "size": 529,
+      "sha256": "fcd9f4d76449c04e2001d1db4e25ecdf549304ddbaa39090f4f482d316f2fbfe"
+    },
+    {
+      "path": "HIS.FIN",
+      "size": 1374,
+      "sha256": "167145fc19af9e63050500d4d23b9000b6b288be5963e7674c7998e4a68213f5"
+    },
+    {
+      "path": "HITCHITC.FIN",
+      "size": 559,
+      "sha256": "fa4f2aeb539f209851d6a01417f73a00cccf6bc26daa190f504a0e7e0ad5646d"
+    },
+    {
+      "path": "HITCI.FIN",
+      "size": 1509,
+      "sha256": "60929f334504f6aa32b151a1d44dc6779797befb98f494ade41c6025cb469fcc"
+    },
+    {
+      "path": "HITCIAN.FIN",
+      "size": 439,
+      "sha256": "f4411d6feeafd45a5a3074946d1657c50afdb33a6e56ea91a1560c9eacc2fb04"
+    },
+    {
+      "path": "HITCUNUW.FIN",
+      "size": 864,
+      "sha256": "d8fad6f7c5039ea1098ae04c5aaa17484d26388e53899b5aa644f2ac8d1fa9c3"
+    },
+    {
+      "path": "HUDIDI.FIN",
+      "size": 906,
+      "sha256": "723f152d6e9cb7b9e16dfecd00eec2a6b2ea3c692f50ebb651843ba1a0fec941"
+    },
+    {
+      "path": "HUMEKE.FIN",
+      "size": 1031,
+      "sha256": "fa200357f7525ade1c8cd6c0ef29eb0e8fa630a2820b520ad8681ebd906cd6f7"
+    },
+    {
+      "path": "HUMIK.FIN",
+      "size": 1019,
+      "sha256": "b74fa25c014777ae4a707e7edc2b6395b5b07487d453e4f9f6759ec0ff9bba07"
+    },
+    {
+      "path": "HUMIS.FIN",
+      "size": 1557,
+      "sha256": "17dd1f664592a5451413b77db55e74cecfe8e5337d17d4deb2cabec0e6f27339"
+    },
+    {
+      "path": "HUTSEM.FIN",
+      "size": 570,
+      "sha256": "49c9efdf2c903faeb5b4c3a94c2488309584f9b1adf92e07c492040e7a540789"
+    },
+    {
+      "path": "HUTSUTEM.FIN",
+      "size": 597,
+      "sha256": "bd70e465ec7791d9f2e3331903c5be281aaeea241218fd1d1d89e846ff2eadaa"
+    },
+    {
+      "path": "HUTSUWA.FIN",
+      "size": 738,
+      "sha256": "7e0dbe6c64ba0d7c2a9b75cebfab63f8368d4a8727f78e907550945d7919aa05"
+    },
+    {
+      "path": "HUWA.FIN",
+      "size": 445,
+      "sha256": "a32c6d0c81f2f1efbd15e62c21cd5571fb984380ec62857f6d4fe52eeaecde63"
+    },
+    {
+      "path": "HUWE.FIN",
+      "size": 566,
+      "sha256": "c69b5f1fa2a9b3227e2e070f05489f95a27eab1772aa93eb7a2346b7d757ed6f"
+    },
+    {
+      "path": "HUWEETSA.FIN",
+      "size": 747,
+      "sha256": "75f4d733ff8278e2286f61898c8ac6e0882ae844ae61d7e6cfcf7d860579319a"
+    },
+    {
+      "path": "HUWETSAM.FIN",
+      "size": 811,
+      "sha256": "a53ac3c2a44814bd280bdba5b818f709c49ad169c5d3f82365ca50cb6b237858"
+    },
+    {
+      "path": "HWALDI.FIN",
+      "size": 1378,
+      "sha256": "8bb305ef0369680e5dc979e6a61f0a888d2dbf848b434191e930f4572cbd6ee2"
+    },
+    {
+      "path": "HWAYAS.FIN",
+      "size": 423,
+      "sha256": "c80d6e7a6b14ef1178497d0386a9263c5f791c041c3ed3ea9d4f2819bcf080eb"
+    },
+    {
+      "path": "HWIWAT.FIN",
+      "size": 417,
+      "sha256": "61380ae3e06b915dfd83e43cf5bc18aa3459bc6613e3a86321b016990a3f12d4"
+    },
+    {
+      "path": "HWIYET.FIN",
+      "size": 754,
+      "sha256": "6acec1719a82315c034ecca82c49433be9778875fd8498ddcaad45cfb8c8e692"
+    },
+    {
+      "path": "HWUT#HWI.FIN",
+      "size": 460,
+      "sha256": "ba4732b0b31a2db4e9c0be46ac900fa35ddddf90c9458cbb2f4323fc08fdc6f5"
+    },
+    {
+      "path": "I.FIN",
+      "size": 1989,
+      "sha256": "cda624ca454be1b32420c621501b4de4dafbce5d4648ae50eadd7a0fa92306c4"
+    },
+    {
+      "path": "IDA.FIN",
+      "size": 578,
+      "sha256": "643e28d53cf937e61b232198a9e1f9c2ae97babc5ab426a14373f946753eca27"
+    },
+    {
+      "path": "IDJAU.FIN",
+      "size": 1047,
+      "sha256": "cc099beec7039a716691002af5235622e104123ab5e06c0b8503c672646829d1"
+    },
+    {
+      "path": "IDJE`.FIN",
+      "size": 523,
+      "sha256": "5ecd7ad1c02b37ef0a99eb85a9868d28a5350f2c5ef577efbe0c8c22051e4a62"
+    },
+    {
+      "path": "IDLITLU.FIN",
+      "size": 545,
+      "sha256": "b0cdbe90beecf39889622e17f8ffaa5d918229da514f866bbca4542a523db904"
+    },
+    {
+      "path": "IDZE.FIN",
+      "size": 874,
+      "sha256": "9b33ad4c952d266b33698bacec9e847646dd7856eca3454ca537bcec7f4fa7e6"
+    },
+    {
+      "path": "IDZIMIS.FIN",
+      "size": 652,
+      "sha256": "7bea0598ab156aa7df7fe95e5828fb70e142f692799c50270be1d8feb0238b4b"
+    },
+    {
+      "path": "IGEI.FIN",
+      "size": 946,
+      "sha256": "c33d172b2832a491cf06a871fef10ffff452ff0979263d4e04dee8d135e619b1"
+    },
+    {
+      "path": "IGEK.FIN",
+      "size": 531,
+      "sha256": "6edb23c50a790d4e26c83f594211b0054d46fd303224f1a13bd6435bd45dbd7a"
+    },
+    {
+      "path": "IL.FIN",
+      "size": 1000,
+      "sha256": "b1dd4775ab0ae87171733c20e08550ef64733524be94b45cf552256b029a100c"
+    },
+    {
+      "path": "ILAXQAIN.FIN",
+      "size": 1002,
+      "sha256": "2d33eeb32c8c68c2ad1905790bd78af0470c64b6d5918b9e2dbf8e6439aca0b7"
+    },
+    {
+      "path": "ILDUWA.FIN",
+      "size": 3184,
+      "sha256": "327c96a0dc362dd4890a4d12f31e9a5850caa92195ce6cf61d72ce63994aad6c"
+    },
+    {
+      "path": "ILEQ.FIN",
+      "size": 465,
+      "sha256": "6db77fe21bd7a91cd511f6dafe9b2f2ebd845430566ec3a43ff78cd053624de5"
+    },
+    {
+      "path": "ISGA.FIN",
+      "size": 472,
+      "sha256": "d0f04df39654103f66488e27ed0fda85b6bc340bd0c73c7aa3d8ca7ac39087bd"
+    },
+    {
+      "path": "ITC.FIN",
+      "size": 582,
+      "sha256": "5c7ff20c138547ef7c282b72ab9b5b5ad1157edfcf16daa150f63d562863d1ab"
+    },
+    {
+      "path": "K.FIN",
+      "size": 3739,
+      "sha256": "4c639a36180ad1c526bbb152f96091903e1bfd0e787429ea2204f4f8c168e138"
+    },
+    {
+      "path": "KA.FIN",
+      "size": 3832,
+      "sha256": "2687f8b29f5aa114b3a55b4456fbf86d187aa0b2fb94638a5b96ff07f3004b0d"
+    },
+    {
+      "path": "KALA.FIN",
+      "size": 793,
+      "sha256": "26b0de6cdedcc7637400d9d955c381999126f587aae02819976966df1134f5c6"
+    },
+    {
+      "path": "KAYALIS.FIN",
+      "size": 441,
+      "sha256": "bcfc263652a1e5967ee4cedc6063149401bee01449c33b1fbe2dec398ad9a9d7"
+    },
+    {
+      "path": "KAYIM.FIN",
+      "size": 482,
+      "sha256": "89ff081f8fba7967a84e6a804ecfda97d7030baa0d8b87905bb1944050118527"
+    },
+    {
+      "path": "KELE.FIN",
+      "size": 1642,
+      "sha256": "3ed1b32151ab8ae9301d0dbb07e9b8e97aae70c813c978eeea7ec4a41904d003"
+    },
+    {
+      "path": "KHA.FIN",
+      "size": 474,
+      "sha256": "923e3fbadbbc562991f4db43a4917e07aa636857f19bcdf943aa6c7b0a76f821"
+    },
+    {
+      "path": "KIBINDJE.FIN",
+      "size": 729,
+      "sha256": "99e929a10d76292426383070a0326a6554c14ea92d688ce4488ad62792b36f85"
+    },
+    {
+      "path": "KILDWA.FIN",
+      "size": 947,
+      "sha256": "ba7715031bb14d7f8f661f78b4bc87e037badd3ca1aee1024f82dfa5018664ae"
+    },
+    {
+      "path": "KILGA.FIN",
+      "size": 1126,
+      "sha256": "6aac03c6593e5bb13017931de7036181860e3f586be71e5229dfc653b50eadb5"
+    },
+    {
+      "path": "KILMU.FIN",
+      "size": 416,
+      "sha256": "b7be55581562cb5a0b7c12e3786030be75cca358034904e7cb39155622949310"
+    },
+    {
+      "path": "KIMI.FIN",
+      "size": 682,
+      "sha256": "353586ccdf53be400732ad20c3918de92f8a7c2c5f1e30e9c6df499d6930d8ff"
+    },
+    {
+      "path": "KINAU.FIN",
+      "size": 656,
+      "sha256": "2581dddf08ea972e851195266df3be4a9dc092e1c44249aaf8bcb418cb7ec5c0"
+    },
+    {
+      "path": "KINKAN.FIN",
+      "size": 698,
+      "sha256": "72a6acc7b6870f0431b2dd576c99250266951870bdef03d4ce11efea321cd0dd"
+    },
+    {
+      "path": "KITS.FIN",
+      "size": 582,
+      "sha256": "9d7c03601ca7606cbf0fab2d99786bece42f68bbf5281f64a6d13c120e92041c"
+    },
+    {
+      "path": "KITSAS.FIN",
+      "size": 500,
+      "sha256": "4d168b33468272a7fc84e88e215ad3074ca7c97e649d20acd819f1005beb0b97"
+    },
+    {
+      "path": "KIYA.FIN",
+      "size": 679,
+      "sha256": "c9489aaea27bffa6ee41652c05f5e7db6e32768f482f1558537fa63069566d5a"
+    },
+    {
+      "path": "KIYU.FIN",
+      "size": 531,
+      "sha256": "260a09a8df06abd9658d58fbaf992c558c099f823d71952009a3da036b1c6324"
+    },
+    {
+      "path": "KLAWI.FIN",
+      "size": 1255,
+      "sha256": "9f9175b99b6dddd2ece665c0afe66e289531ecc23ef7f5a8fb3699eb978d386a"
+    },
+    {
+      "path": "KU.FIN",
+      "size": 1292,
+      "sha256": "e0c98fccb82162e2384f2f8d939bcdab2b279e9522df00099cc805d354b69980"
+    },
+    {
+      "path": "KULEXE.FIN",
+      "size": 519,
+      "sha256": "2ecda55fa34e8a20d5754232c1390cb66b518f1fa439e10d2d8976927845728a"
+    },
+    {
+      "path": "KUMI.FIN",
+      "size": 793,
+      "sha256": "66aca3842164f8da8b35b434105730cef604e7f6c9a4cb733b125322ffce0f71"
+    },
+    {
+      "path": "KUTAN.FIN",
+      "size": 475,
+      "sha256": "dee5dced67bca574155f2fdc1a128d46f705916268aab177304b6cf7fb5e7fd9"
+    },
+    {
+      "path": "KWANAYA.FIN",
+      "size": 700,
+      "sha256": "c6a7c5045335ed4a4337fb98b26a39b348a7cfe0bf0e707dffb9bdeb0022cb0a"
+    },
+    {
+      "path": "KWANIYA.FIN",
+      "size": 919,
+      "sha256": "05c1a32813d2984ddb5f86421250cbed31c37291ea8e2f3bb32326cbf58d68d4"
+    },
+    {
+      "path": "KWATC.FIN",
+      "size": 727,
+      "sha256": "10ab4add26c13feb4f0802f35c92bef40412fb29f0c50b50c01a20017e06b20e"
+    },
+    {
+      "path": "KWDLIYEN.FIN",
+      "size": 470,
+      "sha256": "c775f20cd929d1215e1944f6555a6bdf8c361050b4aa41b19ae0b69cdea872ac"
+    },
+    {
+      "path": "KWENE.FIN",
+      "size": 820,
+      "sha256": "0b2286d3af7f7ac87ce029c2554b4ade68b34e45e8f5fb3ccc59283229c75972"
+    },
+    {
+      "path": "KWENETL.FIN",
+      "size": 438,
+      "sha256": "891a36f043e124a489a5829468dc417a9cc3672d0342c76ee02937d2f8c7282a"
+    },
+    {
+      "path": "KWESIS.FIN",
+      "size": 493,
+      "sha256": "58b2b20e2e7e16fe35f5e004ebac8b0ad0913ca308c3fbbb911e4feb27430bd0"
+    },
+    {
+      "path": "KWHANAS.FIN",
+      "size": 541,
+      "sha256": "7d500cac099b04f174cec91abf1e95f24ee5ce764fc31fb1adf77d98c83d107d"
+    },
+    {
+      "path": "KWI.FIN",
+      "size": 6464,
+      "sha256": "524c49df1d64c8be5a234d5bba10a9af0f5b71adba226321f408f57f876e7865"
+    },
+    {
+      "path": "KWINAYA.FIN",
+      "size": 543,
+      "sha256": "0aafa342095cf2f78a3460b2e965ff7909939a7c84f21fedb193a2942dad2c6b"
+    },
+    {
+      "path": "KWISKWIS.FIN",
+      "size": 471,
+      "sha256": "1b27ef33e4c941561ad8d5c8d7c576aab796655dbd5215ceedef9c05fd7e3c71"
+    },
+    {
+      "path": "KWIYA.FIN",
+      "size": 754,
+      "sha256": "d77075687f11ed98bf8114d65ca17b793d966d0e9dfd265525b7c3a10b1561b7"
+    },
+    {
+      "path": "KWSI.FIN",
+      "size": 488,
+      "sha256": "3d13e85bb7b6a85903c756e5c9f5c46a248dbc476899abfc908b9319562a6371"
+    },
+    {
+      "path": "KXAI.FIN",
+      "size": 508,
+      "sha256": "402f9ae54a9eb05f7605b8d5e0cb4b35a0b28971568751d4146372f2162762d9"
+    },
+    {
+      "path": "KXUNA.FIN",
+      "size": 517,
+      "sha256": "cc9a3ba76a137048fbeb4aedbe6a0a280942ea1714beb53f3ae3976b785922cf"
+    },
+    {
+      "path": "KYCEWENU.FIN",
+      "size": 533,
+      "sha256": "dd8d2c12b46afe81329953f748dac2b100f9e805a224d17abcc63b759a24ad53"
+    },
+    {
+      "path": "KYILANU.FIN",
+      "size": 489,
+      "sha256": "88c2ae7bc1611873ca73af9ecba91233217600a5776bdba6bf0d9248d3159726"
+    },
+    {
+      "path": "KYLA.FIN",
+      "size": 629,
+      "sha256": "a402bba3e68935a41351ab8bea0c460b7133658aa3bccf149103f5da4e9e011a"
+    },
+    {
+      "path": "KYLA`.FIN",
+      "size": 471,
+      "sha256": "5f0e4a6e4e60c696933923aedd49d93c8cb86ed4482bc2dd83c46252021fd6de"
+    },
+    {
+      "path": "KYUI.FIN",
+      "size": 539,
+      "sha256": "b2dd47b3c5e3a44dc14da2331646f006ac8d3bd87ac61fb9d3d20ba37b3a9779"
+    },
+    {
+      "path": "KYXIYAYE.FIN",
+      "size": 954,
+      "sha256": "1d85cd572033ca8d25b3336bd5dbc16264a60d46f7571411c6fbf5add9b3d658"
+    },
+    {
+      "path": "L.FIN",
+      "size": 2547,
+      "sha256": "d15cabb7d7719bf14dca20a4807ac97effdf3423ee91359a81e96d14aadca995"
+    },
+    {
+      "path": "LA'MA.FIN",
+      "size": 452,
+      "sha256": "7d3048bf1bf29b7d97ec7782c2faf5b3e91c28f329f83f31e0eee86ba4d1f7d2"
+    },
+    {
+      "path": "LADZA.FIN",
+      "size": 446,
+      "sha256": "3ec8e3212a6e1c015ece428f51de016fa1dd5d21ff824c747677970418366e65"
+    },
+    {
+      "path": "LAGAWIDA.FIN",
+      "size": 880,
+      "sha256": "19714afd5566203dbae5449a4b74c1ad6623ba33d3f9fb0ed1cd1009e582083a"
+    },
+    {
+      "path": "LAHA.FIN",
+      "size": 484,
+      "sha256": "906ff8981e8835d2dde6a82f6dba3355e78521f1d94b2d7b35ea53dd19d319fe"
+    },
+    {
+      "path": "LALU.FIN",
+      "size": 424,
+      "sha256": "24a7c3b37f5db26138a165cd8f054d90b81c7c39d32d6efb87fa9a2f2da1fe43"
+    },
+    {
+      "path": "LAMA.FIN",
+      "size": 739,
+      "sha256": "4519d36c2d02109875adbc2744c1a41b984d9e141ec92c3f3ad7647d9b100a0e"
+    },
+    {
+      "path": "LAMAK.FIN",
+      "size": 531,
+      "sha256": "88be985869e8b0a42589c65aa2e0db4d139058ba9056620eddb23f1b6abd2bfb"
+    },
+    {
+      "path": "LATCIYA.FIN",
+      "size": 510,
+      "sha256": "329417337ff0c6356f26e5ee0bf4c7bbb94ab411ef08ceeeebe7e6b7085075ed"
+    },
+    {
+      "path": "LATSAT.FIN",
+      "size": 786,
+      "sha256": "4623f7eab9e09b29825a1e0a559958742d0c361ad038f6ad61dc5dbff8c9fc50"
+    },
+    {
+      "path": "LUDADAYA.FIN",
+      "size": 545,
+      "sha256": "89365a0e4767c4c683988a947a45e83bb9534543b3a6f81abd74c3a12f30bd9d"
+    },
+    {
+      "path": "LUWAKW.FIN",
+      "size": 457,
+      "sha256": "1cb42bc567441bb308b90eca6152a006c0f44a44ad1361b81bc24c83dd025fe9"
+    },
+    {
+      "path": "LUWE.FIN",
+      "size": 670,
+      "sha256": "b22efdabf17322f6882de32f42b5f71d414787c175fe453354ef6d2375856194"
+    },
+    {
+      "path": "M.FIN",
+      "size": 4340,
+      "sha256": "d30659ee75c698c2cc18554bb0d59d4c9a3a8e983c28554e75f2ed1eb3e455e8"
+    },
+    {
+      "path": "MA.FIN",
+      "size": 2624,
+      "sha256": "f268ab4fa5c1359c400f98d3bcab75b1e8359182befc9ae291d147dcd4911e1d"
+    },
+    {
+      "path": "MAGAN.FIN",
+      "size": 997,
+      "sha256": "d04f29e46213860fee2f9aebdde2ae6580e00d0757919c2d68bba60c004aa330"
+    },
+    {
+      "path": "MALQ.FIN",
+      "size": 464,
+      "sha256": "b4cc2d451d0b85beb476be983ee64a77d87b92d3bf78b7b02a5ff8514c51dab9"
+    },
+    {
+      "path": "MALUC.FIN",
+      "size": 550,
+      "sha256": "bc878a6ca208f310de5f6abbdc8bd5ebe3158cba9c82325a67e214239fbd13fd"
+    },
+    {
+      "path": "MAN.FIN",
+      "size": 510,
+      "sha256": "9caa6c8f49746c0fc6c836871f6d0ab42896c9dc1d38612b738af96c0f9b1811"
+    },
+    {
+      "path": "MANAT.FIN",
+      "size": 454,
+      "sha256": "268d5d9603d2036c1c1f5d2aaf8cabee40888d18ea046efe2b2efb7aa7662632"
+    },
+    {
+      "path": "MANIYAS.FIN",
+      "size": 939,
+      "sha256": "34857a54fd5b54bad3691ff1aaf148b71f2ed5163920cf0ba1e2abc6a5ca5a4c"
+    },
+    {
+      "path": "MANKT.FIN",
+      "size": 900,
+      "sha256": "960a2925f5424dd1ce94a3499b8c4b30756d7e1d16ec56503def7ec6727f75aa"
+    },
+    {
+      "path": "MANTCT.FIN",
+      "size": 424,
+      "sha256": "0001b04be0b408d9a8ce4473d048c3593387e7b53b6036b5f556590cd1b0b097"
+    },
+    {
+      "path": "MAQALT.FIN",
+      "size": 774,
+      "sha256": "627aeaef45c5bf69b0b97de103469965ac8e23fa9b8a1efdc4fcd220df9fed9f"
+    },
+    {
+      "path": "MAQMI.FIN",
+      "size": 541,
+      "sha256": "8def5a1f4010c0a1009c4eb8e9c8045d268c9e8530c95be041005540d9747604"
+    },
+    {
+      "path": "MAQTL.FIN",
+      "size": 493,
+      "sha256": "f329776a947f3e1218666f3364170cac10a94bb7e9ef940fc8b4f13fd9fc8508"
+    },
+    {
+      "path": "MATSI.FIN",
+      "size": 2454,
+      "sha256": "b471ae66c7f1723810d5b2bf950b374b1aac665ae90db17364a3634b6993bd7e"
+    },
+    {
+      "path": "ME.FIN",
+      "size": 785,
+      "sha256": "dd135da92fce577b39dbd7a37772c05559b23ca01251b5c1bb06d7ae37be2c48"
+    },
+    {
+      "path": "METC.FIN",
+      "size": 500,
+      "sha256": "fb9753aa0e483eed8d025070a9282ef74f4bc740ecddc2f50a912dbe3fb4340a"
+    },
+    {
+      "path": "MEXEYE.FIN",
+      "size": 467,
+      "sha256": "7edc5c48c7f58ddfc1725569d58c1229cc0c101141eb84cd990ec3a82e6546d4"
+    },
+    {
+      "path": "MIDISAMA.FIN",
+      "size": 770,
+      "sha256": "ac9b9c48a0cf3b76012cc962b4e06af90f9b02e4020cd63d07826550f15e9c91"
+    },
+    {
+      "path": "MILUG.FIN",
+      "size": 508,
+      "sha256": "ca1bdd7fc95c4bc011998c5bfac0c44bd10969ca17bada085ac0bab2ff73ea40"
+    },
+    {
+      "path": "MIMTC.FIN",
+      "size": 489,
+      "sha256": "8d9f741d965d3e646cea34222232a50fb2d923051971a3b68ec027aa537dbfec"
+    },
+    {
+      "path": "MIN.FIN",
+      "size": 1478,
+      "sha256": "70710224d854441f456bc518d62b436080dfde1552704302f07624f02eb029d9"
+    },
+    {
+      "path": "MINGATC.FIN",
+      "size": 539,
+      "sha256": "a394479ab8f3fd34020bbf2b120af1370ca26ef0271fd42349c96018c453c68f"
+    },
+    {
+      "path": "MINTCI.FIN",
+      "size": 857,
+      "sha256": "749c40e5b43fd21fbdc433625d8a1fde782ca03ebb6b59bfc6787a9ea12f3930"
+    },
+    {
+      "path": "MISA.FIN",
+      "size": 739,
+      "sha256": "a9fa5d6ad1eb2131dd675379ffec19ae15573d4f1f1883ad9f13c47966adf8a8"
+    },
+    {
+      "path": "MISXA.FIN",
+      "size": 482,
+      "sha256": "a1bbe338ae7b9a025fa84823843f8676b3bb5971ac3c13544653b79d31af2d45"
+    },
+    {
+      "path": "MITC#.FIN",
+      "size": 457,
+      "sha256": "133ce59bbc6ceb11b8d74749437c49f561c799c16fa6c63744b87f1110bb0360"
+    },
+    {
+      "path": "MITCI.FIN",
+      "size": 888,
+      "sha256": "9e68e74cf11752bf1cc0d3b83a724e3fdb31486419077d3f662cdd2167bcecdb"
+    },
+    {
+      "path": "MITCMINA.FIN",
+      "size": 497,
+      "sha256": "2d219427b113fefe52114ed9bc2c3d39e2d40cd34281825666cf48cb7050a7a5"
+    },
+    {
+      "path": "MITIYAD.FIN",
+      "size": 938,
+      "sha256": "57bd2382529b30154e6faa568282251e6306c3d8d21862bffb846385dad003c2"
+    },
+    {
+      "path": "MITLDAYA.FIN",
+      "size": 639,
+      "sha256": "b9a2c7cdad08be52d58f57fe0855e917eeef3be5434c4d5ca33bab18820f55f0"
+    },
+    {
+      "path": "MITSSIYA.FIN",
+      "size": 1076,
+      "sha256": "276942299d4826f9dcf180857ca64b5187d291556e38d4aeeec35614e38eb943"
+    },
+    {
+      "path": "MUWEL.FIN",
+      "size": 640,
+      "sha256": "f2df37948c81578d25014dbdbb8f457122a5cee8f338491d620a14e960aa531d"
+    },
+    {
+      "path": "MUYUS.FIN",
+      "size": 564,
+      "sha256": "9649fe8011755c208d632c7f9ec5178a853e15a8a0a114de0456768fb2ec16d1"
+    },
+    {
+      "path": "N.FIN",
+      "size": 2440,
+      "sha256": "35b21eaf0bc894efe3463decfc4a136281cef50210c90b268a2585b2d9803992"
+    },
+    {
+      "path": "NAIM.FIN",
+      "size": 1589,
+      "sha256": "369e09b557712adcd2246014aa429fbd313feb35023723a91d65561806c2c6bf"
+    },
+    {
+      "path": "NAQT.FIN",
+      "size": 586,
+      "sha256": "0dcab2f0a3ac882ca5f035e870bc26fa0712e248b68e7c8c59d87f2ce7dd5eb6"
+    },
+    {
+      "path": "NAU.FIN",
+      "size": 691,
+      "sha256": "70288da480a211f15524dde05a46b523b6e28f966e96f55ad9606b4364cc1ccd"
+    },
+    {
+      "path": "NAUHINI.FIN",
+      "size": 597,
+      "sha256": "0521cdb1dc981014df48aae354c673f03e88a2c8ccb656f3ce366782a029cfc0"
+    },
+    {
+      "path": "NAUT.FIN",
+      "size": 456,
+      "sha256": "8c0fdb57d56b190e60bbc593751289d5e6b2755e7b4b3c8bcb7fe6271570385c"
+    },
+    {
+      "path": "NAXDI.FIN",
+      "size": 514,
+      "sha256": "13a1efe7b568890d61532e997295fc15f73d4f20edf4e27c3a46aacda59954ca"
+    },
+    {
+      "path": "NE-.FIN",
+      "size": 989,
+      "sha256": "50532bc8fcd7d49ecb3dff0df837e713cd9326628d90fca27ece25c1ff2da52c"
+    },
+    {
+      "path": "NEBEHENE.FIN",
+      "size": 428,
+      "sha256": "b7868dc545c875e302958e20521e89e8db3bea448125e64a2ba9d7a3757a8b32"
+    },
+    {
+      "path": "NELTCUYE.FIN",
+      "size": 649,
+      "sha256": "ccbd344dd9ce480dbbea442192f606bdae3c5831631b3b4cf53e66eec33607cc"
+    },
+    {
+      "path": "NENI.FIN",
+      "size": 416,
+      "sha256": "621d62a320cc2cde131b37fc2cd4b0f6c4aa6819715532ca5fb34b17d622f0c9"
+    },
+    {
+      "path": "NEQE.FIN",
+      "size": 846,
+      "sha256": "d48981fc293adc3f5b3cf196014e448cf331e33ad3de8eb588f7318ef7d39514"
+    },
+    {
+      "path": "NETWETL.FIN",
+      "size": 1147,
+      "sha256": "9ebbc97cd2364b520bd7f294bbd5df382aa0c85f87ca8ebc2577398b41a8ad6e"
+    },
+    {
+      "path": "NEU.FIN",
+      "size": 713,
+      "sha256": "e6251dffa071800d6b8fc09528911dd51c407f3d514d3a28f988305eda080b75"
+    },
+    {
+      "path": "NICTC.FIN",
+      "size": 573,
+      "sha256": "969f692562b5c16c9571ad5dfc11490138d0d569f1e4760c6254ca73b6dd712a"
+    },
+    {
+      "path": "NIKA.FIN",
+      "size": 541,
+      "sha256": "7c200df19e5be2236fd895d81f9af6e580bd7e934b833ee0f0b9f3a831151c61"
+    },
+    {
+      "path": "NIKIN.FIN",
+      "size": 964,
+      "sha256": "e42855053262a22f1276aed858e50166c029c34d46ab2b76b980363d121cb0db"
+    },
+    {
+      "path": "NIKTAHAI.FIN",
+      "size": 551,
+      "sha256": "1468c8dce7cd81b894e3fb7ebf6e79f9eb9c3748a1d6648917c7ca94eb93de65"
+    },
+    {
+      "path": "NIYA.FIN",
+      "size": 1151,
+      "sha256": "f5388d3f7425a9a5a7f96ca20e45f56040563929622ad82b036ae2be3078fb3a"
+    },
+    {
+      "path": "NIYU.FIN",
+      "size": 469,
+      "sha256": "764344a7f24cd73b4efb230376e52404b26f9114aac7b9638baefd6ef80721eb"
+    },
+    {
+      "path": "NUKWI.FIN",
+      "size": 551,
+      "sha256": "8fbe622c7e244277c1b10d2d805e8b579f4e4f6f57ef436ab4636c2743a5f054"
+    },
+    {
+      "path": "NUSGILI.FIN",
+      "size": 529,
+      "sha256": "5a8cd9cb0f89e695b16b0ab67b77d4f0aab047a0008fd19e717bace9766eb5a9"
+    },
+    {
+      "path": "P.FIN",
+      "size": 1323,
+      "sha256": "6156cd95ff156a002ebdf8e7dd148c788ff760d479960e437de111a2ad97d7ba"
+    },
+    {
+      "path": "PACTALA.FIN",
+      "size": 498,
+      "sha256": "af68fbba679b6a7fa7d5faa3f3bcfc0024fa26ec107fb245c3f7d47a85bc4c61"
+    },
+    {
+      "path": "PAIXTS.FIN",
+      "size": 552,
+      "sha256": "52a56ca56bd29e56b9dbdd67f30ce28caff50ed2955d0475a772619c43c976f5"
+    },
+    {
+      "path": "PAQA.FIN",
+      "size": 473,
+      "sha256": "852971f6ffc249ff50c2b0c5ddc987ba35d1556df35dc966dfe172b03ade0d27"
+    },
+    {
+      "path": "PAU.FIN",
+      "size": 459,
+      "sha256": "bdcd85031e1c889a1acecc518c1dc2d461a6d4a2560decef20c7cc3e477989bb"
+    },
+    {
+      "path": "PCIU.FIN",
+      "size": 444,
+      "sha256": "5bfe66b2b8202b3270d616691e90515aadae4c671add81134d43b0909bb272fd"
+    },
+    {
+      "path": "PELEL.FIN",
+      "size": 510,
+      "sha256": "1d685112cd4a9b401bae7183fc27a00e3a3c91927ddaa9aea44195bd9e860520"
+    },
+    {
+      "path": "PGALIS.FIN",
+      "size": 503,
+      "sha256": "cb14f9626681a17804d4e08b5b1298a5267ef6dbb594f04fc0c3d4c0bbca2516"
+    },
+    {
+      "path": "PILKW.FIN",
+      "size": 533,
+      "sha256": "c0201376f9e896b4d29c332c01c744a589f70a716c27399c6b36248ef848153a"
+    },
+    {
+      "path": "PQAU.FIN",
+      "size": 439,
+      "sha256": "18c4240839dd6c8aab8967700ca2bd91df8d93700ba06713c7bf6cd97eb71376"
+    },
+    {
+      "path": "PSINL.FIN",
+      "size": 604,
+      "sha256": "6061e40c9761d8b57fb0affcc64f601bce471c8174a25cb821dee48f86f024fe"
+    },
+    {
+      "path": "PTLIS.FIN",
+      "size": 436,
+      "sha256": "db2a7ebc73d30f61d412ee49a1dd0aae3007cf8c78ff43074b2930b292978c18"
+    },
+    {
+      "path": "PUKWI.FIN",
+      "size": 652,
+      "sha256": "f4b9998d0017dd0b23570d58158953495229426f59b6e4413c45ff41e5447bb0"
+    },
+    {
+      "path": "Q.FIN",
+      "size": 2217,
+      "sha256": "325fe8a625a17040b2c5a7f11b5a350f50eebbeef63ad587238c24d8b4351169"
+    },
+    {
+      "path": "QAILAS.FIN",
+      "size": 498,
+      "sha256": "3528711f763a553ebc4e9e99ca3161f0bf47aee04966854c6961a936a590214f"
+    },
+    {
+      "path": "QAIMIS.FIN",
+      "size": 462,
+      "sha256": "bb9324ca4efe94aa7345480d5220cc9a48ce3f662ad4419329be10428e32efc3"
+    },
+    {
+      "path": "QAITSANA.FIN",
+      "size": 508,
+      "sha256": "11c9453cca4559f7d85725dda9c380854cfd86238354d2c6171f43dd6877f594"
+    },
+    {
+      "path": "QAL.FIN",
+      "size": 541,
+      "sha256": "77462fa652ade9ee10d5c437b8243e8ac2e301d5b9c3893559504cbeb0e619d3"
+    },
+    {
+      "path": "QALAU.FIN",
+      "size": 747,
+      "sha256": "e059cff46826c57b1c02614edf1630681c584cedcb54bcff30018ada19134b5a"
+    },
+    {
+      "path": "QALI.FIN",
+      "size": 438,
+      "sha256": "f1748d20f906fb3d247f90ac62ae286daa03b68e9db32ca1bd8b03d7ff40ec31"
+    },
+    {
+      "path": "QANU.FIN",
+      "size": 932,
+      "sha256": "b383c070de9d7c561596ef98bac079cee615f7f3b0e1adb33b21879a2f811448"
+    },
+    {
+      "path": "QAQTAM.FIN",
+      "size": 593,
+      "sha256": "357a8b1ec05f59a997ba9345257cdf973e29d535fb756541cc803ae215669280"
+    },
+    {
+      "path": "QAS.FIN",
+      "size": 589,
+      "sha256": "bffb02647c27147d90c3ea3a08d42e05ba9ad19d2b5094f528beeefd86e2d208"
+    },
+    {
+      "path": "QATLQAYU.FIN",
+      "size": 461,
+      "sha256": "f494ae4ed7b8af2f982ef11e8f1aea2c4db9b39c2471f0c69b2da22db8b11ec7"
+    },
+    {
+      "path": "QATSAMAS.FIN",
+      "size": 490,
+      "sha256": "bb6cb549fe43b9b884873b93769a50fe50babc305f2ab0fb4720688654070499"
+    },
+    {
+      "path": "QATSK.FIN",
+      "size": 729,
+      "sha256": "99674b4a971a34a97cecde2fc2ef0098a8c642fd38afff4fd05636f30a8facda"
+    },
+    {
+      "path": "QAULAT.FIN",
+      "size": 494,
+      "sha256": "7d03231cea162316d3df3ff6407a7345bfd4553054c6456be06eca7960f61427"
+    },
+    {
+      "path": "QAWAYA.FIN",
+      "size": 834,
+      "sha256": "d41c6f0fb3b73fe6dce0a004ca7300cfe6f1d52ee1bb8fc2c2416a7f68ef7dfa"
+    },
+    {
+      "path": "QAWI.FIN",
+      "size": 439,
+      "sha256": "2f1c06fa39e86104a1aff8f169151a52e158b5387f04f2f878e9c6f590815c53"
+    },
+    {
+      "path": "QAYAU.FIN",
+      "size": 1305,
+      "sha256": "ca8f90611a97f4ae0e6ec2ab65c856228559d727285d70cfb2bb84b0647d278d"
+    },
+    {
+      "path": "QAYAUTS.FIN",
+      "size": 581,
+      "sha256": "eea3bfce4999f8bbce9e5548f3cf35d171d2ab81efdd4799198d4b62ab6048f8"
+    },
+    {
+      "path": "QDAL.FIN",
+      "size": 686,
+      "sha256": "4807f745b66cb7e47cbbd39905a5bf118241cf4991f4ad4ebed515e74b3b72d1"
+    },
+    {
+      "path": "QDAN.FIN",
+      "size": 465,
+      "sha256": "62451d136bbf19b758e1f5dce47381d07016ab0313936773737e1d0ef6498369"
+    },
+    {
+      "path": "QDLA.FIN",
+      "size": 734,
+      "sha256": "87baab618810dea22acb2ffbd38f5db0fd458c1d0a45829ef5d47f64042af4b4"
+    },
+    {
+      "path": "QEICEC.FIN",
+      "size": 546,
+      "sha256": "7511a576e3e8438b4d5770d024c0c163489ffb16e3ab393e86ab23cdc9a30424"
+    },
+    {
+      "path": "QELIMIS.FIN",
+      "size": 722,
+      "sha256": "e15d6febc29a1139c051a6c91afbf5ded7448f55a003d83da6168de10e3032b6"
+    },
+    {
+      "path": "QEMQ.FIN",
+      "size": 447,
+      "sha256": "d2c255a98867cd5d531e57d256c4b2c32785a09e47eda18ddd33e1123601dfee"
+    },
+    {
+      "path": "QEWESIS.FIN",
+      "size": 486,
+      "sha256": "c7f45dc139e7c892c9976f12af00175e9de68760fd58317efb0f6890cb66e88b"
+    },
+    {
+      "path": "QLA.FIN",
+      "size": 515,
+      "sha256": "3424eda40d9a3954e6287e53d25b65f27f3156788014a1f9ffeca30eea4a34cd"
+    },
+    {
+      "path": "QLAMIN.FIN",
+      "size": 469,
+      "sha256": "6095737f2fc3f085443b8e103f8ea1ede8c661d2132a65b606434c0275bed333"
+    },
+    {
+      "path": "QLEM.FIN",
+      "size": 590,
+      "sha256": "f3f0a54e1c0c883f09e4c05cbb0fe8cd50efc43b8253d9364e1a558367eccc00"
+    },
+    {
+      "path": "QLIMNIYU.FIN",
+      "size": 1027,
+      "sha256": "0cf242613a0693c16d7d334a91a720226bd318a1cf7c9666fa45d397a0be5099"
+    },
+    {
+      "path": "QMIYAT.FIN",
+      "size": 915,
+      "sha256": "ac1c8fe819f4db1795f4a08daab50d83ada9b2887076a324b6492f3c0046759e"
+    },
+    {
+      "path": "QWAAS.FIN",
+      "size": 542,
+      "sha256": "ee85fb574c06d979a0eff8b24ca3fa76312edcec7bc1bed9fb659cb5db5c3c60"
+    },
+    {
+      "path": "QWALET.FIN",
+      "size": 445,
+      "sha256": "2c32ad8583c7785f97a5ac779fa8d229b918762ca6e10da97370f65126f9b5ec"
+    },
+    {
+      "path": "QWALEU.FIN",
+      "size": 467,
+      "sha256": "02d8312fbbb97eb2c93c538bab57e7c424de5cbe4ce7c564d5fb44febc5b781f"
+    },
+    {
+      "path": "QWANYAU.FIN",
+      "size": 1025,
+      "sha256": "f208550ece7c8865239f0374d5e72cf995420305d0fa8ac2a20dbc0233bb72f8"
+    },
+    {
+      "path": "QWCIDJE.FIN",
+      "size": 596,
+      "sha256": "8b29dba3fc770dfa1533c8677f9128e9609c73207a32ae09ffa1d34332b97c3a"
+    },
+    {
+      "path": "QWDLIS.FIN",
+      "size": 484,
+      "sha256": "da03dea70ebd830b8675c5d6af4ad67e1cfbd490a8e81fafc7a203776752ac74"
+    },
+    {
+      "path": "QWELEES.FIN",
+      "size": 612,
+      "sha256": "76d4b207abba464658bb021d357aeaf5d23f709a4e6dcb98100be8e80174d48f"
+    },
+    {
+      "path": "QWIMITS.FIN",
+      "size": 469,
+      "sha256": "700b4805cecfc597d284c53652f8cf8545a0c55c9444cfce7e9ceeb6a924184a"
+    },
+    {
+      "path": "QWIYE.FIN",
+      "size": 426,
+      "sha256": "4aba167564eb2019a7bbaf214c6ae339a54e3a8d558c832c9fee2d53a388c483"
+    },
+    {
+      "path": "QWLAI.FIN",
+      "size": 626,
+      "sha256": "e3985dc6c4a37e85620ba0f09b1805e9a550142e258358c541535774a7155b11"
+    },
+    {
+      "path": "QWLIYA.FIN",
+      "size": 558,
+      "sha256": "56e70573a808a981b5adb54677fb4dea13fd6c3c40da51fb22b361c234a1cb52"
+    },
+    {
+      "path": "QXA.FIN",
+      "size": 614,
+      "sha256": "eff1af9b1a4b7ab08928f36dde20a528e1575696549bd36d08bbf6e4fcabc226"
+    },
+    {
+      "path": "S.FIN",
+      "size": 1482,
+      "sha256": "3c6a2f5e76059da48692570b9a90def1345e7b779a7a11430651f9d2319a6890"
+    },
+    {
+      "path": "SADLAN.FIN",
+      "size": 893,
+      "sha256": "ee906afe61cd3e7baa87bc334c34cffd455c55785262aca69fb710f8018e9ea8"
+    },
+    {
+      "path": "SALA.FIN",
+      "size": 542,
+      "sha256": "62e854a679dcb3c8db047c64341dba7540c92bb3d2c0baa6823936dc2b434a2c"
+    },
+    {
+      "path": "SALT.FIN",
+      "size": 741,
+      "sha256": "e0178c4879e56d2d772e49f6d247b00bcda7b6fa1210d8c706ff8361ab5142ac"
+    },
+    {
+      "path": "SATL.FIN",
+      "size": 544,
+      "sha256": "9fc3121555b512a11b03d1f06b962fef17c7182336fb293f73c685afdaf862b6"
+    },
+    {
+      "path": "SBA.FIN",
+      "size": 491,
+      "sha256": "436a5e5d8945200d089f5dc06b81ea2521dbb81b4250134a6f8818a11640dcaf"
+    },
+    {
+      "path": "SDLAQ.FIN",
+      "size": 676,
+      "sha256": "e82f8826d1197c10e7f00e1d75be5a409e76a8a147159f8e28b25e9483115be5"
+    },
+    {
+      "path": "SDLIYAM.FIN",
+      "size": 563,
+      "sha256": "208ff91b61df8443adcc1957941c9c2122ea992edb8e2d12cf2d627a7f5bfc24"
+    },
+    {
+      "path": "SDUQ.FIN",
+      "size": 516,
+      "sha256": "fa34ac075ff5c9b634fc4d513d87204d0a63b79f0fb66b2f28caf5fb272b044c"
+    },
+    {
+      "path": "SEL.FIN",
+      "size": 587,
+      "sha256": "ad9e94c8922389b589976658e41cf9e0f636e4607e811da9c07cdf92b053fd35"
+    },
+    {
+      "path": "SEXSIMX.FIN",
+      "size": 485,
+      "sha256": "ae688b30a03eb6d1b1700f05825f4164cd059e542338f8fc215a9fdeea9e88ba"
+    },
+    {
+      "path": "SGU.FIN",
+      "size": 740,
+      "sha256": "2a161cd4d3a7121a455b8a065e492d3119f3980f6f58f32308f8d63b366235f7"
+    },
+    {
+      "path": "SGUL.FIN",
+      "size": 423,
+      "sha256": "18cf5f02fb1a7e70c9dfc54c5b67d26e66df2ab1b99bfa211457b3f7aba3a3ac"
+    },
+    {
+      "path": "SGUNAM.FIN",
+      "size": 458,
+      "sha256": "70064e1cfc2f8c152bae64697c81407a3507b0bcef8c5b3514865fadea447b0b"
+    },
+    {
+      "path": "SIKINEN.FIN",
+      "size": 506,
+      "sha256": "a9f8091a44a1c0e5d84d7b5da999a2e00e508d515c521a4d75bfe063fe217c69"
+    },
+    {
+      "path": "SINSANU.FIN",
+      "size": 713,
+      "sha256": "e83dea116cf62df659a67604443ae75d79b93ccc6b5cbc1027bb2718b583f40d"
+    },
+    {
+      "path": "SITDZA.FIN",
+      "size": 489,
+      "sha256": "6dcdb29079cc2876a7aef7e9e9cc15c402f737803b41aa1395b8bfcfa9ce9752"
+    },
+    {
+      "path": "SKA.FIN",
+      "size": 681,
+      "sha256": "065f339020a4362b805ddd7f765c4fd78297e6f26a2bd38b0b67c64a9097cc0f"
+    },
+    {
+      "path": "SKIN.FIN",
+      "size": 482,
+      "sha256": "4aa1bb838b6c83b35bda87d1dc044bf98ebd7ee73913976b8b873adf662bbc55"
+    },
+    {
+      "path": "SLA.FIN",
+      "size": 468,
+      "sha256": "910aa893cf8fac872f99632dfebe812acf882c819c73ec8abe49953b2aa5ea6c"
+    },
+    {
+      "path": "STLISI.FIN",
+      "size": 432,
+      "sha256": "df0a123a9b42b48df6d58b4bfd952eea42cac822a00587e768a2dfd4ca92ac82"
+    },
+    {
+      "path": "STUGWI.FIN",
+      "size": 474,
+      "sha256": "0b63e0c8d3eca474e9ae637cf29433e8223573a632818c6cade068d36918d912"
+    },
+    {
+      "path": "SUDET.FIN",
+      "size": 637,
+      "sha256": "da25254a9e45f62a3544e0533bba57ded736aea633176fa7d620e1c708411486"
+    },
+    {
+      "path": "SULI.FIN",
+      "size": 557,
+      "sha256": "2277ac4dcd3feff426c818c2db746abbaa0fdfe95228ea08a4ceb72bdc2a7461"
+    },
+    {
+      "path": "SYEIK.FIN",
+      "size": 538,
+      "sha256": "04b8401f7b03c921bd6809c8185f868d3df6a313ecc11e05ec1e6db9617f5978"
+    },
+    {
+      "path": "T.FIN",
+      "size": 6811,
+      "sha256": "21a139610e32874e86b0f45b6dea0d86bcb552be58e41ee32151b5f0a27ddec3"
+    },
+    {
+      "path": "TAIX.FIN",
+      "size": 454,
+      "sha256": "e45c2ef9d0207f017ea15f286163746549ce6a8b3161461767685a36482b2db8"
+    },
+    {
+      "path": "TALA.FIN",
+      "size": 497,
+      "sha256": "53d6cab0cba2badbff795b20aa7d5e7572a85dc8eeefc6fd2deab2736fb64550"
+    },
+    {
+      "path": "TAMA.FIN",
+      "size": 1171,
+      "sha256": "1abfa690faf8891f3463a7b2c342ee346db74a3e832bb9162f9b36a098607619"
+    },
+    {
+      "path": "TAMALIS.FIN",
+      "size": 498,
+      "sha256": "dd8a65e67f3f7e20faae5da623350a5f524e692a267f304a95ae69aa426240e3"
+    },
+    {
+      "path": "TAMETLE.FIN",
+      "size": 723,
+      "sha256": "6f2b97d6b01cf466a964f0df810f6c582340fec85e3982bd353976ed9ac9db1f"
+    },
+    {
+      "path": "TAMI.FIN",
+      "size": 1348,
+      "sha256": "0cca4d4613265e75a46448f72aa2856bedeba2908f38e335ddb3762b7805749a"
+    },
+    {
+      "path": "TATS.FIN",
+      "size": 1733,
+      "sha256": "9c3f32d0891805782533511b868c50803798d8a515676a937b8e789d473cc557"
+    },
+    {
+      "path": "TBAI.FIN",
+      "size": 545,
+      "sha256": "e3ca14e206dde34fa380e0c941397a1a07808aec9e695d00b9ea70287c7732ad"
+    },
+    {
+      "path": "TCA.FIN",
+      "size": 507,
+      "sha256": "db1ca4c7e5ac82cec9c6c67333c2ec281aa45d29c8e3c7b841de7977feb113af"
+    },
+    {
+      "path": "TCAL.FIN",
+      "size": 785,
+      "sha256": "c61a9a028d738d8992e9444c16fc35fcdc00b2ba45235ec1d7522f808b52e5d3"
+    },
+    {
+      "path": "TCANGA.FIN",
+      "size": 642,
+      "sha256": "d9d1ba045fd7221e77d4c792ec67ae3e3cedea6132b791dcb976af56427dc863"
+    },
+    {
+      "path": "TCATCAI.FIN",
+      "size": 657,
+      "sha256": "78c0668c0bb370fd8b882f120fcb7f27dec8163be646abe4ddb24143396c879a"
+    },
+    {
+      "path": "TCAXWTCA.FIN",
+      "size": 592,
+      "sha256": "2ba3631b96598656ea1dfd34a80acd3b5096a0f12c2a9ea86f87d4d0e4aed6c1"
+    },
+    {
+      "path": "TCBAI.FIN",
+      "size": 469,
+      "sha256": "caf0369c087c7b48c30693d9511caeba1774e842def702d1d420bba711c67665"
+    },
+    {
+      "path": "TCCIL.FIN",
+      "size": 534,
+      "sha256": "a435b2854bd38908c7ad9c75810b336e84ccb9a9a645e0f770841038555bd4f6"
+    },
+    {
+      "path": "TCCILIS.FIN",
+      "size": 553,
+      "sha256": "c2b356ee3a72dfe8089a64873912732f5d81f560dcb954119a278c0272ab306f"
+    },
+    {
+      "path": "TCCIMIL.FIN",
+      "size": 565,
+      "sha256": "0ee80dc254eb65331a7ed7ac0dc1063cacecb50637edce11054aea23d3702c8d"
+    },
+    {
+      "path": "TCDJA.FIN",
+      "size": 636,
+      "sha256": "eda16230c09cc984d94594d921a63ba6e1456d4fbb670c63bc3943c4685a9640"
+    },
+    {
+      "path": "TCEC.FIN",
+      "size": 411,
+      "sha256": "826afd14bc84fce95bd23771b1c76740f24e439dcc9edd3cb4c2a0859f70c887"
+    },
+    {
+      "path": "TCETI.FIN",
+      "size": 442,
+      "sha256": "d419630b79d7d74f17d43db7f3cddb470fec71a6c83b535f091c833ff28af312"
+    },
+    {
+      "path": "TCIC.FIN",
+      "size": 483,
+      "sha256": "917b3a06700c9b41382fe708b52bf201f7b3c83e3d9d19d6b1b634dc6ac40ace"
+    },
+    {
+      "path": "TCICIMIL.FIN",
+      "size": 529,
+      "sha256": "dfac72bfaebfaa69c95d8f7093bbc1aff50fa510d0e09d53742a043f23cb9e47"
+    },
+    {
+      "path": "TCILILI.FIN",
+      "size": 510,
+      "sha256": "c34e0d524ebfe3adc76d042c80eacf12cdccd078e894e1bb468c3dbbb7c06f3e"
+    },
+    {
+      "path": "TCLAT.FIN",
+      "size": 496,
+      "sha256": "694dd6b1b90100b69cdf233576e2bd0eef45dd16afa2d641741c63a84f47630c"
+    },
+    {
+      "path": "TCULAYA.FIN",
+      "size": 460,
+      "sha256": "a637dce0ecd052ab88ff9aa2e949af6ffef17e615e527e67d04e90b37988cb6d"
+    },
+    {
+      "path": "TCXANIK.FIN",
+      "size": 711,
+      "sha256": "eb7b71663adbb7f5ba9037612bb261ebe66cdc8fd4ac9576dc5b194e1694e8d1"
+    },
+    {
+      "path": "TCXUNI.FIN",
+      "size": 460,
+      "sha256": "4efc972dce4c72a923477862d850606460979733389d0e9ee5104b3901f95ef6"
+    },
+    {
+      "path": "TEIXEU.FIN",
+      "size": 691,
+      "sha256": "cb96364ec25094f30735e145644892b3e98756a635f406a08b92c7bc9d2a5274"
+    },
+    {
+      "path": "TET.FIN",
+      "size": 815,
+      "sha256": "7fe9277a1221965767ebefcad10856a9607bfec1763ee4f33686874b0417e3d8"
+    },
+    {
+      "path": "TETC.FIN",
+      "size": 1643,
+      "sha256": "5edf7a3809d0ba445e45b19cee7332be1615c3e7653b390a43b92f48d1cc8152"
+    },
+    {
+      "path": "TGA.FIN",
+      "size": 478,
+      "sha256": "cfb565e91264bebdfe3af13cf43c8c9d6899666fa5a933304dc3828a491c1477"
+    },
+    {
+      "path": "TGADZI.FIN",
+      "size": 542,
+      "sha256": "5ea2fb4045b567437dd58237752efe189626875ea27b00a4188ab5f838df2738"
+    },
+    {
+      "path": "TGAITL.FIN",
+      "size": 557,
+      "sha256": "4b119cf615d1eedf009db16d18ae791c5949478afb1ccc7cb6f0799490c7b3a5"
+    },
+    {
+      "path": "TGANTLTS.FIN",
+      "size": 575,
+      "sha256": "885be543b8f7a3275b260c8ee7c6fc58837cc7e3bed1b24a5a6b8949d19953b5"
+    },
+    {
+      "path": "TICDJI.FIN",
+      "size": 607,
+      "sha256": "e74cd72e6faab1adcb2d8ef3d6bdfeeedfd2ad78121b70f7d6017a37c70e0bbb"
+    },
+    {
+      "path": "TIM#.FIN",
+      "size": 892,
+      "sha256": "3e716bfeea205a269e8e6b17923e3a46731c947df93ac07c176884bd031ce5b1"
+    },
+    {
+      "path": "TIMI.FIN",
+      "size": 665,
+      "sha256": "4408222152b661f211c75f6e7dbe70a9b3ecc408bf2ff530c4f34fb25f0e1a90"
+    },
+    {
+      "path": "TINATSIS.FIN",
+      "size": 440,
+      "sha256": "65001923283dd8f4ff0d13d1663f40763fa797788f951733446120ca10eedd7e"
+    },
+    {
+      "path": "TIPTIPLI.FIN",
+      "size": 468,
+      "sha256": "45d3f1fd6fb1d7e5716aad5dfdcb477efa9bef2607a5d62e921fcacb5a6ad610"
+    },
+    {
+      "path": "TITSEWES.FIN",
+      "size": 585,
+      "sha256": "c5c2ac2985f91735affac980fdcbb249e1e7c03e182b125cbc68010f34591b4b"
+    },
+    {
+      "path": "TKWILST.FIN",
+      "size": 439,
+      "sha256": "1678cd6acd34890cd67bd5703e8a8534343f8bbbc3f36b7fb66e89bc81cc0aac"
+    },
+    {
+      "path": "TLAGIYA.FIN",
+      "size": 457,
+      "sha256": "5f45b22cb5bac9d0f21286b6b181605167702761448e3bc6b46539b07b3e4139"
+    },
+    {
+      "path": "TLAIS.FIN",
+      "size": 501,
+      "sha256": "adc6d0b38c56fdc8d0ffb9f74d4160e11fe65a47ad729d65d7931b4ea29ee79d"
+    },
+    {
+      "path": "TLALAL.FIN",
+      "size": 557,
+      "sha256": "cfbf6f85db3761858e90a980f21220dfcb804fd054f92d5f42e3c1551cc0357f"
+    },
+    {
+      "path": "TLALWE.FIN",
+      "size": 432,
+      "sha256": "72557b0609d28505970a4fc60ea41cdd43c9b8e0a96ed1fcd481741fe2e4275a"
+    },
+    {
+      "path": "TLAT.FIN",
+      "size": 433,
+      "sha256": "0c978dc36f83735965f6acd8183f60080289f36a8bec05716e8052f8f1dd2c42"
+    },
+    {
+      "path": "TLATC.FIN",
+      "size": 1143,
+      "sha256": "d6e70155762c3f6dedcbd144e2ea9ca59acb34e2696914ff0eb64e334b8e5d36"
+    },
+    {
+      "path": "TLAUWA.FIN",
+      "size": 438,
+      "sha256": "a38bffe4769a5c0fb44c73341378111bc9c747427e4df1fed26058d4e4e43bce"
+    },
+    {
+      "path": "TLAWI.FIN",
+      "size": 489,
+      "sha256": "d13e70eb07454bcf921bec2cd619d547b9040857ff0990993076e927c5e4008f"
+    },
+    {
+      "path": "TLAWIYAM.FIN",
+      "size": 784,
+      "sha256": "70127169ade5cc2aa32cc6e7aef34f441f19736d6e4960ac045ece5e021b76bb"
+    },
+    {
+      "path": "TLAXTLA.FIN",
+      "size": 528,
+      "sha256": "fef04d617499eef6387b6756128ddf08c9c170c546c87dd72f0fa01eb4ef11b1"
+    },
+    {
+      "path": "TLBEQ.FIN",
+      "size": 512,
+      "sha256": "54bc464c496147c79ff4309ee1388b2e60774675237e124b67346385dc1894dc"
+    },
+    {
+      "path": "TLBILYA.FIN",
+      "size": 495,
+      "sha256": "6c1fb77d57af27c34a0b81eb434780993d6e2698c2f850de12b0e7260ab6dae6"
+    },
+    {
+      "path": "TLDAYAS.FIN",
+      "size": 1163,
+      "sha256": "7cba7b8a3ffae6926cf6910b201fafee98aecef3c25d3e2c44d1153a6ed6a3dc"
+    },
+    {
+      "path": "TLDJI.FIN",
+      "size": 463,
+      "sha256": "d60d0ee6e4249e9ffe0549f3f213680652608313e703f5eba43875e3cf6fbb2b"
+    },
+    {
+      "path": "TLE.FIN",
+      "size": 593,
+      "sha256": "4ce1ceb1eb1d9185cf3bdda3d2bada4f6db85ae05efaea486afa3774e61c9034"
+    },
+    {
+      "path": "TLEHE.FIN",
+      "size": 501,
+      "sha256": "594e47268b38dae0d47971136dd76f288ec2258926c07569c1d33581045234e7"
+    },
+    {
+      "path": "TLESTLES.FIN",
+      "size": 463,
+      "sha256": "ed3b1af568262c9c0a3bca5ffadc66e5f62a7fff60e8e0c4429b25837e261d6f"
+    },
+    {
+      "path": "TLEWE.FIN",
+      "size": 440,
+      "sha256": "cd40ef8c18b8652f6fddefecf3f3aa27fdf572e72144e0c07dc3fa88fa3e5429"
+    },
+    {
+      "path": "TLGA.FIN",
+      "size": 413,
+      "sha256": "67ce6018927fb11d5acbc1c5e329bc2a640bf1f2c2618f27796ddba492554cbf"
+    },
+    {
+      "path": "TLGAI.FIN",
+      "size": 581,
+      "sha256": "6059bd57097c3cf4b14af60901bc97d26ae3a1e350826ca5a9f090e8f701bc0e"
+    },
+    {
+      "path": "TLGUS.FIN",
+      "size": 1011,
+      "sha256": "4b668bab2928ebe9e5eff0d32f5707ddf80a5ea54c23e47867b2ff4012696366"
+    },
+    {
+      "path": "TLHAI.FIN",
+      "size": 563,
+      "sha256": "5f2b741c0b6c6e5326609526e08ba196fc20c678b4faa3bb731a901fb8493419"
+    },
+    {
+      "path": "TLHATS.FIN",
+      "size": 784,
+      "sha256": "8374d07b3ff590aaffa126dfa915bc89edb6f1237f634f74509b51122759267b"
+    },
+    {
+      "path": "TLHAWAYA.FIN",
+      "size": 597,
+      "sha256": "a6644c353ee2e6d793359db0fda8e589eab5c442d21a9a74e98389b286cbe95e"
+    },
+    {
+      "path": "TLHINPYA.FIN",
+      "size": 480,
+      "sha256": "e7749ee55d18470407dc38c8ccdd76fba8d5d07f4adfd29db2a1f67845f372ed"
+    },
+    {
+      "path": "TLHWI.FIN",
+      "size": 560,
+      "sha256": "63b2859125d6ec7cb62f597d9d29fc0ef45846ea0f901f52bff80b5cc45212f6"
+    },
+    {
+      "path": "TLHWU.FIN",
+      "size": 441,
+      "sha256": "250830898e57f7fa9121366d8d43ed00ae2b92de773c276059c9e493af3a8428"
+    },
+    {
+      "path": "TLI.FIN",
+      "size": 703,
+      "sha256": "eaef54e3f0894703d3dd22816de00dd8c65af8434c79d22345070c02ca19e1a8"
+    },
+    {
+      "path": "TLINAT.FIN",
+      "size": 571,
+      "sha256": "178af5f5d6bf965051691bc9f1254a3014ab338c071470ddb2ffc0eba3332a8d"
+    },
+    {
+      "path": "TLQAL.FIN",
+      "size": 764,
+      "sha256": "eeabe1408c7ca501e89135840ae6b08eb7f42d633949ce5de8137d2f0575d63d"
+    },
+    {
+      "path": "TLQAYA.FIN",
+      "size": 718,
+      "sha256": "f91f0067d2b0e9708f6248aaebeeaba07744b4cd9efe416054375da87c9635cc"
+    },
+    {
+      "path": "TLU.FIN",
+      "size": 750,
+      "sha256": "f1c415312c8c9fbeb5601b276d7c1b366a2d60be9b97d720e04c28e170cc5a77"
+    },
+    {
+      "path": "TLUTLU.FIN",
+      "size": 656,
+      "sha256": "d44f8887c63b91aa5013c7503650839d9cb2e5fb1730242628303256834e318c"
+    },
+    {
+      "path": "TLUXTLU.FIN",
+      "size": 473,
+      "sha256": "65f74744ed3a45019314c3d3a51824742ab15a90ef452e66dbdecfcb62acbcfe"
+    },
+    {
+      "path": "TLWAHAS.FIN",
+      "size": 543,
+      "sha256": "50671d882669fd6e684254f101e222233c3e1fc07cd9c9f9aaa0d80cac179d4b"
+    },
+    {
+      "path": "TLWEX.FIN",
+      "size": 465,
+      "sha256": "fe65edabd4fe37b1df02ddc0aeefaeee786f7516e754e1112ae38045ba59ec5f"
+    },
+    {
+      "path": "TLXAINI.FIN",
+      "size": 591,
+      "sha256": "af86f654ec15d5dc3dfa56ae5240f305b3b8271d887cb262ffc9600aadef60bb"
+    },
+    {
+      "path": "TLXANXI.FIN",
+      "size": 536,
+      "sha256": "8fdedb731aa62e9ea68b8b417ff1ed63702871e78d7b383db7beefc548e20e09"
+    },
+    {
+      "path": "TLXU.FIN",
+      "size": 489,
+      "sha256": "44086cae9be44b4dd43ff9255c0dd9eda2c489d97a3a6a3f8a868bf5640371b6"
+    },
+    {
+      "path": "TQAYAU.FIN",
+      "size": 454,
+      "sha256": "d51451a928a4276e9e11eef8c620327c5193fa3a11e089441b032cb2ab6a8070"
+    },
+    {
+      "path": "TQWAIS.FIN",
+      "size": 465,
+      "sha256": "01cad60f755b05481922dbf480626a3f5e6e8d1c9f80c84123002e74d07ac6ae"
+    },
+    {
+      "path": "TSA.FIN",
+      "size": 459,
+      "sha256": "fc0b0c3d9d3e68eeaa29ee050671209b9413b0ffb0c86d7c3e40ebb2b17c368a"
+    },
+    {
+      "path": "TSAI.FIN",
+      "size": 570,
+      "sha256": "35797a4908c2ff3424c3486e34541e41563222522f97312f4d97c300a1c4a105"
+    },
+    {
+      "path": "TSAKAN.FIN",
+      "size": 778,
+      "sha256": "331ba7788cc15970bda0ca98d1c7db2bfec2c115ecf0102cee7a7023a37f1d79"
+    },
+    {
+      "path": "TSALBAN.FIN",
+      "size": 419,
+      "sha256": "6da7ccfb09767cc2116a5b319f8ffc018193539f8d4c74c48441106bcc74e0b1"
+    },
+    {
+      "path": "TSALDU.FIN",
+      "size": 638,
+      "sha256": "5778380db35f3fe32dbbf65020e16840527325f223f3407dd4e8f84a8a506d25"
+    },
+    {
+      "path": "TSAM.FIN",
+      "size": 492,
+      "sha256": "bb4fc61f3a199cb876f2ca4ccb51ad04eb47ff53873b1220e813ed13ebd0772e"
+    },
+    {
+      "path": "TSAN.FIN",
+      "size": 524,
+      "sha256": "67b15c24b4d22fcfcab3cd300d18e3a79b4064efbe566c1c8d98fb9cbb168704"
+    },
+    {
+      "path": "TSANIYA.FIN",
+      "size": 463,
+      "sha256": "c5b9b2b8dee3ec3c39e869397b0df5861543658a2044247ac3f3fd1637570844"
+    },
+    {
+      "path": "TSAU.FIN",
+      "size": 1099,
+      "sha256": "ea3ce07da415f6e45eb1e39d72a36641c20d96dcbcf1aaa968a969adb773f2a0"
+    },
+    {
+      "path": "TSEHEM.FIN",
+      "size": 559,
+      "sha256": "89cbfbcc72d6720735bb48a90b213210779f4bbf01610130a11fe6ac26d4fa23"
+    },
+    {
+      "path": "TSEHEYE.FIN",
+      "size": 573,
+      "sha256": "588bc352be4c884b25ddbefb0ebc3894ba5dda575ebadd5c43c017c55196c357"
+    },
+    {
+      "path": "TSGA.FIN",
+      "size": 494,
+      "sha256": "fcf83e57c1b5f1c2c54d96a925081b13ff818fbbe0bbcd48547f0660eff3064c"
+    },
+    {
+      "path": "TSGANATL.FIN",
+      "size": 442,
+      "sha256": "bb9ffabf2473ad9e4235f5f60b40e16980c254ffd26733fef9e0fab7364fc8d7"
+    },
+    {
+      "path": "TSGAYA.FIN",
+      "size": 614,
+      "sha256": "92c52a3d939c156af216680bb9a2fbdb290dbe911fd859d2b7cd48bd051870c9"
+    },
+    {
+      "path": "TSGWA.FIN",
+      "size": 531,
+      "sha256": "4078a340858e177b5238a7c0c8af0da414365f9db2a3aeba50685e9473291b25"
+    },
+    {
+      "path": "TSHAI.FIN",
+      "size": 409,
+      "sha256": "7598533154d91a092269d8fb1664bace0b9ab97f726d6eb66d807ab3cd3615d0"
+    },
+    {
+      "path": "TSIGAT.FIN",
+      "size": 456,
+      "sha256": "9a546ea33fd3e6fd7d643c68ac5e3b19ba90e16ccea6abe0815b4c61fcf74c97"
+    },
+    {
+      "path": "TSILKIN.FIN",
+      "size": 451,
+      "sha256": "734b1a9403b4f74345116dd178482e59f15007a53b12649330f49a9216d48fa9"
+    },
+    {
+      "path": "TSIM.FIN",
+      "size": 953,
+      "sha256": "e7474e295dafe1891ee138d92a16f39dc6f92eebc88b025a912508f962eaa1cc"
+    },
+    {
+      "path": "TSITSUT.FIN",
+      "size": 433,
+      "sha256": "56b1f9b7969c36a0b886ddf179c9281dac53af651c938fa7b9b6afe97ac68316"
+    },
+    {
+      "path": "TSLDZAMI.FIN",
+      "size": 691,
+      "sha256": "88df1f15e9d61f9c2b4931cbbd66569b061fd44add142d25b07bdf8ed8ae2bd6"
+    },
+    {
+      "path": "TSLENE.FIN",
+      "size": 797,
+      "sha256": "cfda24cac389949d2c9fc9c59478bfff414c9b993f23c335626175da19ea07af"
+    },
+    {
+      "path": "TSLIM.FIN",
+      "size": 522,
+      "sha256": "2a5179b5d27cbe95fd893cae2dd831b4af8df73c2e9dd04faec70ec6b7563993"
+    },
+    {
+      "path": "TSMIXWEN.FIN",
+      "size": 1066,
+      "sha256": "d2833c8ce956f473520c6d51d9662eac88518c4bad4081f5c5909d3c5c443403"
+    },
+    {
+      "path": "TSQELE.FIN",
+      "size": 438,
+      "sha256": "cb5cd5f4c9c94e2a8652e6b9c7abf357c42e27bee0db4706b2869f428764c887"
+    },
+    {
+      "path": "TSQULQWT.FIN",
+      "size": 582,
+      "sha256": "8d4323c9ec4ef3058f5111eaab9af6c0719edd099b11409e9fdd89ae9bdcf983"
+    },
+    {
+      "path": "TSUT.FIN",
+      "size": 424,
+      "sha256": "ce7b4f1c3a100360fa73a1c7350947cd3801d0ec32953969218c2e4acaf30011"
+    },
+    {
+      "path": "TSUW.FIN",
+      "size": 954,
+      "sha256": "1f96a3f9881122e787f1056ca16abb51c3107b6ad8bd096d28f6959e4e140fae"
+    },
+    {
+      "path": "TSUWIYA.FIN",
+      "size": 547,
+      "sha256": "ad173a0f6017315e83f109fd44c4a4de0401e222d0dab7258c51fb98168fe9fc"
+    },
+    {
+      "path": "TSWAL.FIN",
+      "size": 801,
+      "sha256": "63ce81fba83467db3c6d89a1234302347f5a1847cb80ac06cf2e365b630704d2"
+    },
+    {
+      "path": "TSXA.FIN",
+      "size": 658,
+      "sha256": "6e9ca74a8f5e69f972cc94281b7f7a7dbd8bbacf64c1a590b845845c84804e12"
+    },
+    {
+      "path": "TSXWINA.FIN",
+      "size": 485,
+      "sha256": "6248c88eabba76d21bcca339f399aa1fe3e926d4bb1fc74090f77bda9f838067"
+    },
+    {
+      "path": "TSYAM.FIN",
+      "size": 430,
+      "sha256": "eb5e4554ca0edd95d6f4b86410a083e30316828eeb20316651a8d59e9482941c"
+    },
+    {
+      "path": "TTCINA.FIN",
+      "size": 440,
+      "sha256": "871906a0d7f4863595cfcb395ef56b4ab19cd34290e7aa142c69fd5d96b60731"
+    },
+    {
+      "path": "TUMITL.FIN",
+      "size": 957,
+      "sha256": "44a224598c3c3e3ab87d10392351d8eeffdbee8ef63daadd0b220884c1f370c8"
+    },
+    {
+      "path": "TUXWSI.FIN",
+      "size": 477,
+      "sha256": "869145680dd7ea39023f21c6a177ad2a47f6a200980c2876c7f2a899307000f6"
+    },
+    {
+      "path": "TUYA.FIN",
+      "size": 936,
+      "sha256": "f520d33db79fda04f81ffa8398a3143680e182cb97f3791b3a4def93c6f2e29c"
+    },
+    {
+      "path": "TXWIYA.FIN",
+      "size": 548,
+      "sha256": "0f97e493fbdb2f1abea279bc05b64fb9fc6169276725eaf5871dd0b848b759db"
+    },
+    {
+      "path": "UBIDJAYA.FIN",
+      "size": 434,
+      "sha256": "d51317cb8cf9f8e92e8063d05c1eb94b710c771bb6329c723b41a8301638fd8d"
+    },
+    {
+      "path": "UBIYA.FIN",
+      "size": 439,
+      "sha256": "4c268964a54b3a6ec6de75702f6ff7000032e37eae3350587b69015a5a25a1b1"
+    },
+    {
+      "path": "UMATLI.FIN",
+      "size": 685,
+      "sha256": "3742f37b4e4a704e86146167164332193b9ba91ec83e8a429316024910c1bbcc"
+    },
+    {
+      "path": "UMIDUWA.FIN",
+      "size": 5011,
+      "sha256": "8c3cac3b0c4a4163f51409abe78662db4b5316655a63275d6b551f1bd6aef7b9"
+    },
+    {
+      "path": "UYU.FIN",
+      "size": 445,
+      "sha256": "3640b3cde805d5d8f637e6031c659cf0651c57b2a0002f53773130687f844e5e"
+    },
+    {
+      "path": "W.FIN",
+      "size": 2883,
+      "sha256": "75689cc84de73ff04edd0739219e14d5e5de3b46998da0fb53d1648b31661af1"
+    },
+    {
+      "path": "WA.FIN",
+      "size": 995,
+      "sha256": "2cf49addbfa5ff64f52a1fe58eb801e19f35f517aabdd860e543122a30c59ca1"
+    },
+    {
+      "path": "WAANU.FIN",
+      "size": 428,
+      "sha256": "542f7be1f51be3ca45dc177d3d686083a5cf787450187f0264aebfcfef8b67ff"
+    },
+    {
+      "path": "WAAS.FIN",
+      "size": 503,
+      "sha256": "dc0bc66c21b39f01f224c4c1252d9994cf9f33007e9f1f025f07835fd4b86c44"
+    },
+    {
+      "path": "WAATL.FIN",
+      "size": 447,
+      "sha256": "60eda6a5924637486e0e45760b2f32e5f4f268257d40db0b17bb509f931ea9d1"
+    },
+    {
+      "path": "WALAQAS.FIN",
+      "size": 443,
+      "sha256": "29d47fec3bda11b61d502ab6d21cb0519a78ab2dd81b0e437dd9118e17d9091c"
+    },
+    {
+      "path": "WALX.FIN",
+      "size": 651,
+      "sha256": "9bd7f673fd6f409034bc2234983322500793ec05c13f21b58146b14322f50008"
+    },
+    {
+      "path": "WALXWAL.FIN",
+      "size": 596,
+      "sha256": "1d73e50af1952c11e800c13b04bae8a363308c705e66d42e225e7c3d9f221947"
+    },
+    {
+      "path": "WAMSTS.FIN",
+      "size": 497,
+      "sha256": "5b20ca90d63c0a869b6bbb4b3c4a1d96312abca858288b4c541283b78d2e7c87"
+    },
+    {
+      "path": "WANGAQ.FIN",
+      "size": 540,
+      "sha256": "fb4d0ef68baa3104e13853b96040a38b85332b3a933aee521470ceb529079a39"
+    },
+    {
+      "path": "WANTDZA.FIN",
+      "size": 472,
+      "sha256": "bc57ff885fb9f13fbabcd9579d38b030bd09fdba553f67b6ca57ee487a91cbd4"
+    },
+    {
+      "path": "WANU.FIN",
+      "size": 608,
+      "sha256": "3d8fe600028c08f3fb4c11389fbc2e25aaaf422b1eb074fe6202d4443c7b38cc"
+    },
+    {
+      "path": "WASDADI.FIN",
+      "size": 789,
+      "sha256": "7a2e9388c162604875005b65ae626b6d1000277baf06108b353dccf887edde3b"
+    },
+    {
+      "path": "WASI.FIN",
+      "size": 2452,
+      "sha256": "a3dab4d5038f78252b3540f5a2147b58ac5211fd8f28c2377349af63e7c56e6e"
+    },
+    {
+      "path": "WATSAN.FIN",
+      "size": 891,
+      "sha256": "7e64721234039ea79dda389ebe3e747c5f3c61c3171ff55b6ce9ad9b17e8634d"
+    },
+    {
+      "path": "WAUPT.FIN",
+      "size": 417,
+      "sha256": "c6ad164fe429fb4d559e00ee2d55c74d67034ccf5932dbbbb4b2196d22ba3d5b"
+    },
+    {
+      "path": "WAWA.FIN",
+      "size": 805,
+      "sha256": "df3b2cc383c6a18236bf9ccf90e2a5f061940c839fa02b53cae5885d6f789360"
+    },
+    {
+      "path": "WELENU.FIN",
+      "size": 428,
+      "sha256": "d6c2913704770605a73efd6c469b1312710a64f3be853cd856adef66f3773a81"
+    },
+    {
+      "path": "WELX.FIN",
+      "size": 448,
+      "sha256": "a1126cd2c3df3e9e0ecb62050a35668ce589e05b4e4b841ea1dd23d93c964e0c"
+    },
+    {
+      "path": "WENN.FIN",
+      "size": 431,
+      "sha256": "e16292d1eb90eda18b5edb3672fb54b37b37822d903cfa32b2ac9430c9e8bf07"
+    },
+    {
+      "path": "WES.FIN",
+      "size": 737,
+      "sha256": "6a7cd3ae2893deeb9cb71a0ceab14fe1ef1efac93922958fccc72073e87b310e"
+    },
+    {
+      "path": "WETL.FIN",
+      "size": 439,
+      "sha256": "bfc36732ad007f6745ee1cf0840944b6c3a6148fa264512fdc23f6299ee8312e"
+    },
+    {
+      "path": "WIXWULAX.FIN",
+      "size": 467,
+      "sha256": "02a4f30b377f175b5af17ff3ff3082788e4260b043c10ebb49e88499293c4576"
+    },
+    {
+      "path": "WU.FIN",
+      "size": 856,
+      "sha256": "7b6cecfa1ddf3f23c1a13d02157c8300088453a527535dec5852ee57dae8ea7d"
+    },
+    {
+      "path": "WUCDJEU.FIN",
+      "size": 548,
+      "sha256": "2ef1a214a4a71a366caf2f5f0ec5dda31d0dce0fe4d54ff2f3190e478355d86b"
+    },
+    {
+      "path": "WUDIN.FIN",
+      "size": 577,
+      "sha256": "a51219699f4a5b649c3d1391eef2e489d80af7424bbc600c2feba5d63e24e7ce"
+    },
+    {
+      "path": "WUDLAMAQ.FIN",
+      "size": 835,
+      "sha256": "24b2e10a46547a56816115f1edaac00add27c2db2afb899546227bb1bef4262d"
+    },
+    {
+      "path": "WUHIYAU.FIN",
+      "size": 425,
+      "sha256": "c9de14a17fe3155d9c25fc8557838435a14fca1563770510fb65da6c185c740c"
+    },
+    {
+      "path": "WULE.FIN",
+      "size": 496,
+      "sha256": "7fc9e3e24f8c8606d0eac99f7d702957801234c815a5672ab3ca0b8f0cfb574a"
+    },
+    {
+      "path": "WULMEU.FIN",
+      "size": 648,
+      "sha256": "014d4f7b7d60b674c23e72446f65d687ce68895f0ad03a2ade0fcf0438c2f72c"
+    },
+    {
+      "path": "WULWAYA.FIN",
+      "size": 644,
+      "sha256": "c23037a6f435214aa890e726e52dc83641c74d87de0f5c730c502583b0348630"
+    },
+    {
+      "path": "WUSAYA.FIN",
+      "size": 481,
+      "sha256": "f8d882925c628752f095a71b98ad4925200380f0d6179cb4897c5a8cbc9c7499"
+    },
+    {
+      "path": "WUSBAYA.FIN",
+      "size": 527,
+      "sha256": "bc6d44473e96408cfee918a9ed3bf2a8c8a3f4389b17ef39cd6b300073b1bca6"
+    },
+    {
+      "path": "WUTL.FIN",
+      "size": 484,
+      "sha256": "8bfc9862b92041e7d2b4df232043727e7998721d995f57c0d231514c2d8db3ff"
+    },
+    {
+      "path": "WUTLATC.FIN",
+      "size": 420,
+      "sha256": "13fa69ea21d9fa88604487be1fd56238ba80fb9eed3571a76dbe195f83931fd7"
+    },
+    {
+      "path": "WUXAT.FIN",
+      "size": 533,
+      "sha256": "facb0e68003614662e81335d5e639de568de4b9f91a7fbcb1f6e676d3699b616"
+    },
+    {
+      "path": "WUXAXA.FIN",
+      "size": 504,
+      "sha256": "111abbb8b43900b3a0b9b75c94ab446838da90a8250c5006a7c02ab9b3fbe8eb"
+    },
+    {
+      "path": "WUXQAN.FIN",
+      "size": 446,
+      "sha256": "6cdab2ff4e73c7b171cd0bc2fab0b98e2dae9f4657855c5a58da22924ab1e82a"
+    },
+    {
+      "path": "X.FIN",
+      "size": 2467,
+      "sha256": "08bb609bcbf4e9de8308ba8e2a8d088f321c0fcedf1bad2237390045194f6841"
+    },
+    {
+      "path": "XAIXAI.FIN",
+      "size": 462,
+      "sha256": "c60e06b0bdf82eff65adf0a88514f903e674dfacb860ac0170c98e5c7911875a"
+    },
+    {
+      "path": "XAKI.FIN",
+      "size": 425,
+      "sha256": "a93b24719e947dff75c0fc10b2bb307df9101f5da7db5e33ecdc6fc4f7ec0b7c"
+    },
+    {
+      "path": "XALI.FIN",
+      "size": 927,
+      "sha256": "25a938946cf3170e0bec97ac519d5a4a7af420701e867f5330e0504bc257ad4a"
+    },
+    {
+      "path": "XALU.FIN",
+      "size": 448,
+      "sha256": "e657807477af7998a2eaf38163f2fc2f2fd5791f08d00e0e6a51784befb6e0e6"
+    },
+    {
+      "path": "XANWUNAM.FIN",
+      "size": 524,
+      "sha256": "3b6ef458031bd75ad5e1358b2940959f78a0a5aab97c3d558bb7fabf2c30b665"
+    },
+    {
+      "path": "XAQAYA.FIN",
+      "size": 506,
+      "sha256": "1e91bb0f9c7f961e6f0c89be5aae2297307462b340222fe8fe54be3b763fff03"
+    },
+    {
+      "path": "XELP.FIN",
+      "size": 443,
+      "sha256": "4fb13a5771a99bd8c6f8b089e9092a78ea92c136758ba7b11e49a9f5ca23e5dd"
+    },
+    {
+      "path": "XENEN.FIN",
+      "size": 448,
+      "sha256": "0a777aad2bdd76d0c6d36ff95719b103685419a86dcce383b08aeee584c36c58"
+    },
+    {
+      "path": "XENWES.FIN",
+      "size": 1073,
+      "sha256": "eb1c3727ba8f8ea8fa9332d1c8b63ef717d2c0db1f359e71c6dd56fdcf5f551d"
+    },
+    {
+      "path": "XGA.FIN",
+      "size": 593,
+      "sha256": "2d01a557af1015422c5f63587fdb767a22106e160f5f1dc45b39b267ab461df8"
+    },
+    {
+      "path": "XGAN.FIN",
+      "size": 514,
+      "sha256": "5d27b037812660c84b923f4b80ce5270c643f8378dcb3277274cf1a036dcce8b"
+    },
+    {
+      "path": "XGET.FIN",
+      "size": 807,
+      "sha256": "bd4d098d7d0ddf2bc6d8c88088cc04221228cd4715a975ff290c4cd3cbdd1be0"
+    },
+    {
+      "path": "XILA.FIN",
+      "size": 824,
+      "sha256": "4515101b9e49b9f157dee93c638d47638164d86ea5f782eda32eab81225d5865"
+    },
+    {
+      "path": "XINXIN.FIN",
+      "size": 793,
+      "sha256": "e33404253bb5803abd43c0dfac302d9b79fad7b41e80a89a33d732f21e7c6082"
+    },
+    {
+      "path": "XLAMA.FIN",
+      "size": 521,
+      "sha256": "c7bc1c3ef2d7bbdfe6cedffd7706e154af672ee334dcf5c646b989d51cda5cf4"
+    },
+    {
+      "path": "XQEL.FIN",
+      "size": 414,
+      "sha256": "279d242116602f728d1482752267f7fbfa6bda2d3fb6417cb7c9d67ba9160da0"
+    },
+    {
+      "path": "XTLAU.FIN",
+      "size": 546,
+      "sha256": "778fa870efe37a7cb0023d0127277705ef8b1d4987831e821fd2f284af5a04d1"
+    },
+    {
+      "path": "XUGU.FIN",
+      "size": 491,
+      "sha256": "57ee59ed788924f2f764fcca05f252d5f4175c3f23774dd860d461afed25a3a9"
+    },
+    {
+      "path": "XUKWAI.FIN",
+      "size": 599,
+      "sha256": "636a82d521390c199bfaee6fb1d17dec01cee877bba5d324862d5320134a5a8c"
+    },
+    {
+      "path": "XUKWEL.FIN",
+      "size": 468,
+      "sha256": "9f657a65632f699dd6f55a68e065d42539fcc4474dda961ef4c6f4932309d1fb"
+    },
+    {
+      "path": "XUKWINDA.FIN",
+      "size": 548,
+      "sha256": "c24652a4cbca9bea330d5371a2a55e2c7e826f24fb9f53b05cefee940dc5def5"
+    },
+    {
+      "path": "XUNIS.FIN",
+      "size": 440,
+      "sha256": "97b43c6607e44154c97f9256c38f98b366493aa35ac73b402fe2c3c70f7ae81f"
+    },
+    {
+      "path": "XUTLUC.FIN",
+      "size": 628,
+      "sha256": "058e41b45eebbe5d74c8f4fcc71d12a004f4fc13ac95215f678a50c2b9783a3a"
+    },
+    {
+      "path": "XUXU.FIN",
+      "size": 467,
+      "sha256": "99c9d9ad74c26bac4bfdf806da771d215fd7692efbbdbbc21c7a030c368d345b"
+    },
+    {
+      "path": "XUXWAL.FIN",
+      "size": 456,
+      "sha256": "991c388189ad956f12b09f990dc275164042062185d0ea5c18742e4902119d9f"
+    },
+    {
+      "path": "XWAILU.FIN",
+      "size": 504,
+      "sha256": "21c5b7c911224de998a34397f1c0f43fbb834632c39d29227c40e20450ca8288"
+    },
+    {
+      "path": "XWAL.FIN",
+      "size": 451,
+      "sha256": "b1ab70076669a718298abe31cfe8f87110c60a8c4485d9804fd2a6e333643969"
+    },
+    {
+      "path": "XWATLI.FIN",
+      "size": 534,
+      "sha256": "850012cf1ddccfb6148f0cc65154136c25b3b502d056c5ac971dcbe65a7257d9"
+    },
+    {
+      "path": "XWAYAS.FIN",
+      "size": 446,
+      "sha256": "871a27e931e643a0e4801f41788aa12042c5a47755ed4b6f771976c7ef447f13"
+    },
+    {
+      "path": "XWIS.FIN",
+      "size": 436,
+      "sha256": "0dcf4ea250fef39fcd9cf1bacbc548ca6a69a7501267108260889e34faedc977"
+    },
+    {
+      "path": "XWIXWUTL.FIN",
+      "size": 430,
+      "sha256": "967a03ac3fbde6843d3707551f45472c96694f55c57ad897e71a56563777fa4e"
+    },
+    {
+      "path": "XWUTSXW.FIN",
+      "size": 457,
+      "sha256": "4ad33117453f2ba3e6a66114c9083122dded6765753ba005ed53beac3cc82c0a"
+    },
+    {
+      "path": "XWUTXINU.FIN",
+      "size": 479,
+      "sha256": "24ccce13c9edfc344354d77c35baf8657965dfefe7d0a58494d09ac385f52664"
+    },
+    {
+      "path": "XWUTXWIN.FIN",
+      "size": 486,
+      "sha256": "08fb7ef0cd97f99884dd3985f4f7999e589be5235c8082ce4d873ce222dd6761"
+    },
+    {
+      "path": "Y.FIN",
+      "size": 1439,
+      "sha256": "643c8933ac9306ffc06cb986a6a9f0cf38ac0a8369d2b1844da3559583a0fc27"
+    },
+    {
+      "path": "YA.FIN",
+      "size": 1130,
+      "sha256": "74f89e557e5416c4051f24008be9807d9f75c662ed35a0c5fb481405338d992d"
+    },
+    {
+      "path": "YAGADA.FIN",
+      "size": 560,
+      "sha256": "f7f0d25ce32aaf2a65bd04a025bbca9ea067678fe87d0c4ff6af56c1277bf4ba"
+    },
+    {
+      "path": "YAGALS.FIN",
+      "size": 466,
+      "sha256": "1ed3024825ad87e2b161d3c58599c85a94dbc86d06639ad233aa0ece10e80d60"
+    },
+    {
+      "path": "YAHATC.FIN",
+      "size": 619,
+      "sha256": "d1e2825495cce2d85107fd87b22651e348dd9c3dece4f9d3ac02862201e79844"
+    },
+    {
+      "path": "YAHWI.FIN",
+      "size": 440,
+      "sha256": "39072bb5960270d716bfa1873afd2058ef4515a35b56d3de7cf34ad49a49940a"
+    },
+    {
+      "path": "YAITCT.FIN",
+      "size": 470,
+      "sha256": "9a7c637eaa58e2f43803b502de9d33e6a485c729836442f201f0bcfc05a086ea"
+    },
+    {
+      "path": "YAITST.FIN",
+      "size": 417,
+      "sha256": "11ce0af16827e63d033d3c74dcb561f40f31581caf712027be0f9fbcbd3a029d"
+    },
+    {
+      "path": "YALAQ.FIN",
+      "size": 419,
+      "sha256": "1319e649b114b9469203adab67d6b203e57c43bf1b0d67b0a88530ba54702ecc"
+    },
+    {
+      "path": "YAQAIM.FIN",
+      "size": 515,
+      "sha256": "453cc1fad5e5708159de2d4f58224f97bc2aca9285b305b41254ac26f74b41ea"
+    },
+    {
+      "path": "YAQDZA.FIN",
+      "size": 458,
+      "sha256": "8a66896c9aa38ce5c40fc8f812bd05f37a384c172edede7648635c057031365b"
+    },
+    {
+      "path": "YE.FIN",
+      "size": 681,
+      "sha256": "ba7d2cd385c8ed3a2bb57ae64a73e72142ad7dcdf68379c596ec0f3a82a1925c"
+    },
+    {
+      "path": "YEET.FIN",
+      "size": 451,
+      "sha256": "9ba1cc2446ff26af7a2c75d80143861071123cf9a34ac8146567c7d14c083e3d"
+    },
+    {
+      "path": "YEGEDIM.FIN",
+      "size": 480,
+      "sha256": "f8af713a5cbfa261fe8c4f472afc07ddb0786a118e475dad7b8a15ce969f1b92"
+    },
+    {
+      "path": "YEGWE.FIN",
+      "size": 485,
+      "sha256": "75d7ba798ea814bfe0557f6ef1c55255fe1d6ff373653de31364552722fc8755"
+    },
+    {
+      "path": "YEIKITC.FIN",
+      "size": 483,
+      "sha256": "1ce09b9f9a054d1b6872fb8e9f6e558c8b38830d1bde04475e8734fea98cb09a"
+    },
+    {
+      "path": "YEIS.FIN",
+      "size": 555,
+      "sha256": "799ec8cba56c99feaab71e13cf872ba95d2b194a53a76b4f8c63dc2e1eb4c07d"
+    },
+    {
+      "path": "YEKLU.FIN",
+      "size": 772,
+      "sha256": "b0031e3c734119fcc4e58ac18be75a1a9938544354b55e304eaf64bf596e9d59"
+    },
+    {
+      "path": "YELES.FIN",
+      "size": 502,
+      "sha256": "b3aa1913b0598cc33ac4a69b970b203f8a285c91a45345d26a571809600e96ae"
+    },
+    {
+      "path": "YELIS.FIN",
+      "size": 474,
+      "sha256": "7f228cdc0e0b1150ad02caae4fefcca6128abb4ce5f6650b762199ed0c472cab"
+    },
+    {
+      "path": "YETS.FIN",
+      "size": 805,
+      "sha256": "8fd1197b2c05a97995e7822107d853c219dc9be54a96a0006747daab7b4f9e1a"
+    },
+    {
+      "path": "YI.FIN",
+      "size": 636,
+      "sha256": "36b7cece8a2a729f56704c1f4c805ecd90b7dac01e922bb5a210b6970928dcb6"
+    },
+    {
+      "path": "YIGATSAS.FIN",
+      "size": 468,
+      "sha256": "0959b867142b9522bee25ded5bf664534c554c6bd62809ac97bc33263f1e1ae5"
+    },
+    {
+      "path": "YIML.FIN",
+      "size": 438,
+      "sha256": "ca1d058af6bb2d945ab16566e34de7253bec385bd432ccc5c981d92def06c74a"
+    },
+    {
+      "path": "YITYUWAT.FIN",
+      "size": 452,
+      "sha256": "8104ed781cfa3ebff3b943a8d9c18e38beff9421702ad50483701ea27a0dbd0e"
+    },
+    {
+      "path": "YU.FIN",
+      "size": 1184,
+      "sha256": "030fc5216b75934837aeb47fde9bc5583206328c28276b44786f53a93d4457a6"
+    },
+    {
+      "path": "YUBTA.FIN",
+      "size": 471,
+      "sha256": "4694d4db162d7062b6543bc19c9aae2e5cb8b560044cf2022c453548cffdd865"
+    },
+    {
+      "path": "YUGWA.FIN",
+      "size": 761,
+      "sha256": "e347a2782aa07d5f089373dc8ea7e608f2e64c75110f9d613c799c29b3e4d153"
+    },
+    {
+      "path": "YUKVW.FIN",
+      "size": 410,
+      "sha256": "cf8e39ac87da40a1a61282f29a68972c41a183285270480466926b436def5f49"
+    },
+    {
+      "path": "YUMI.FIN",
+      "size": 463,
+      "sha256": "dd98b1d4babe62928f56714f1914b5f4b8165cdf12301f3e1aa1a2b9d07135f1"
+    },
+    {
+      "path": "YUQWSIL.FIN",
+      "size": 547,
+      "sha256": "6c1c51415e087fb9b2058d7faea88fb19ad6c41e83a1879451c29c67b1801c37"
+    },
+    {
+      "path": "YUWUTS.FIN",
+      "size": 913,
+      "sha256": "f18cd0e946381f3e4e21c31ef11884c9b36af3f2c61ee433418c01c257e6def3"
+    },
+    {
+      "path": "YUXUWU.FIN",
+      "size": 550,
+      "sha256": "33eac5d8af01e4487ee78062f076bdf1d09d5f726a1aeb5614135a8bc8fc961b"
+    },
+    {
+      "path": "YUXWUME.FIN",
+      "size": 1333,
+      "sha256": "0f151f39d1471de49269ec4bb6997c68a8c1b090aaff86f1fc98c46b33097d30"
+    },
+    {
+      "path": "YUYU.FIN",
+      "size": 417,
+      "sha256": "587aa034352bcd8b6ce97b7a30e36c523c168a63730e45765ab0b2760c70eb55"
+    },
+    {
+      "path": "Z.FIN",
+      "size": 421,
+      "sha256": "e5d30ad24eace3cf3ef2bfb7ec9b22a56d75d2de69212f41abec438c723502e4"
+    }
+  ]
+}
