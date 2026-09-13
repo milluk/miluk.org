@@ -272,12 +272,12 @@ check((ka_entry['headword'], ka_entry['headword_ascii'], ka_entry['source_file']
       ('ka', 'KA', 'KA'),
       'KA.FIN filename-derived protected fields changed')
 check([form for form in ka_entry['forms']
-       if form.get('ascii') == "k!&a'" and form.get('form') == "k\u032f\u0313a'"] ==
+       if form.get('ascii') == "k!&a'" and form.get('form') == "k\\u032f\\u0313a'"] ==
       [ka_entry['forms'][0]],
       'KA.FIN first Reference List form no longer uniquely supports the public headword')
-check(presentation_headword(ka_entry) == "k\u032f\u0313a'" and
+check(presentation_headword(ka_entry) == "k\\u032f\\u0313a'" and
       initial_for_entry(ka_entry) == 'k!&' and
-      initial_key("k!&a'") == initial_key("k&!a'") == initial_key("k\u032f\u0313a'") == 'k!&',
+      initial_key("k!&a'") == initial_key("k&!a'") == initial_key("k\\u032f\\u0313a'") == 'k!&',
       'people headword must present and classify as initial anterior-palatal ejective k')
 check('e0511-ka' in [e['entry_id'] for e in D['entries'] if initial_for_entry(e) == 'k!&'] and
       len([e for e in D['entries'] if initial_for_entry(e) == 'k!&']) == 10,
@@ -445,16 +445,35 @@ for item in COLLATION['corrections']:
     check(item['disposition'] in {'changed', 'retained', 'unresolved', 'excluded'},
           f"invalid collation disposition: {item['correction_id']}")
 
+NOTEBOOK = load(PROV / 'notebook-collation-corrections.json')
 v2_by_id = {item['correction_id']: item for item in V2['corrections']}
 check(len(v2_by_id) == len(V2['corrections']), 'duplicate v2 correction identity')
+notebook_by_id = {item['correction_id']: item for item in NOTEBOOK['corrections']}
+check(len(notebook_by_id) == len(NOTEBOOK['corrections']),
+      'duplicate notebook-collation correction identity')
+check(not (set(v2_by_id) & set(notebook_by_id)),
+      'a correction id is claimed by two restoration stages')
+correction_by_id = dict(v2_by_id)
+correction_by_id.update(notebook_by_id)
+# A field may be corrected more than once across stages: the v2 orientation
+# repair mis-fired on two lines and the notebook collation reverts it. The
+# corpus must therefore agree with the LAST correction touching each field, not
+# with every one of them, while each correction's own original value must still
+# match what the stage before it left.
+superseded = set()
+for item in NOTEBOOK['corrections']:
+    superseded.update(item.get('reverts', []))
+check(superseded <= set(v2_by_id),
+      'a notebook correction reverts an unknown v2 correction id')
 for story in C['stories'] + OUTSIDE['stories']:
     for line in story['lines']:
         originals = line.get('documentary_original_fields', {})
         transformation_ids = line.get('transformation_ids', [])
         check(bool(originals) == bool(transformation_ids),
               f"partial documentary/display separation at {story['story_id']}:{line['line']}")
+        last_by_field = {}
         for correction_id in transformation_ids:
-            item = v2_by_id.get(correction_id)
+            item = correction_by_id.get(correction_id)
             check(item is not None, f'unknown transformation id {correction_id}')
             if item is None:
                 continue
@@ -462,22 +481,25 @@ for story in C['stories'] + OUTSIDE['stories']:
             field = target['field']
             check(target['story_id'] == story['story_id'] and target['line'] == line['line'],
                   f'transformation target mismatch: {correction_id}')
-            check(originals.get(field) == item['original_value'],
-                  f'original value mismatch: {correction_id}')
+            if correction_id in v2_by_id:
+                check(originals.get(field) == item['original_value'],
+                      f'original value mismatch: {correction_id}')
+            last_by_field[field] = item
+        for field, item in last_by_field.items():
             check(line.get(field) == item['revised_value'],
-                  f'revised value mismatch: {correction_id}')
+                  f"revised value mismatch: {item['correction_id']}")
         if 'english_original' in line:
             check('english' in originals, f"English original without ledger at {story['story_id']}:{line['line']}")
 
 dictionary_by_id = {entry['entry_id']: entry for entry in D['entries']}
-for item in V2['corrections']:
+for item in V2['corrections'] + NOTEBOOK['corrections']:
     target = item['target']
     if target['source'] == 'corpus':
         line = line_by.get((target['story_id'], target['line']))
-        check(line is not None, f"v2 corpus target missing: {item['correction_id']}")
+        check(line is not None, f"corpus target missing: {item['correction_id']}")
         if line is not None:
             check(item['correction_id'] in line.get('transformation_ids', []),
-                  f"v2 corpus change not attached to documentary field: {item['correction_id']}")
+                  f"corpus change not attached to documentary field: {item['correction_id']}")
     else:
         entry = dictionary_by_id.get(target['entry_id'])
         check(entry is not None, f"v2 dictionary target missing: {item['correction_id']}")
@@ -535,7 +557,7 @@ for entry in D['entries']:
             check('<b>' in block, f"attestation without bolded form: {entry['entry_id']}")
 for story in C['stories']:
     text = (OUT / 'stories' / (story['story_id'] + '.html')).read_text(encoding='utf-8')
-    count = len(re.findall(r'<div class="line" id="l\d+">', text))
+    count = len(re.findall(r'<div class="line" id="l\\d+">', text))
     check(count == story['line_count'], f"generated line count: {story['story_id']}")
     for line in story['lines']:
         line_match = re.search(r'<div class="line" id="l%d">(.*?)</div>' % line['line'],
@@ -555,7 +577,7 @@ for story in C['stories']:
               f"recorded dictionary relation omitted: {story['story_id']}:{line['line']}")
         if evidence is None:
             continue
-        linked_ids = re.findall(r'href="\.\./words/(e[^\"]+)\.html"', evidence.group(1))
+        linked_ids = re.findall(r'href="\\.\\./words/(e[^\\"]+)\\.html"', evidence.group(1))
         check(linked_ids == expected_ids,
               f"line dictionary relation changed: {story['story_id']}:{line['line']}")
 
@@ -580,7 +602,7 @@ check(not wn_bad_refs,
 
 words_index = (OUT / 'words' / 'index.html').read_text(encoding='utf-8')
 tab_labels = [html.unescape(value) for value in
-              re.findall(r'<a href="#s-\d+">([^<]+)</a>', words_index)]
+              re.findall(r'<a href="#s-\\d+">([^<]+)</a>', words_index)]
 expected_labels = [next(row['display'] for row in
                         JACOBS['phonetic_inventory'] + JACOBS['documentary_index_exceptions']
                         if row['key'] == key)
@@ -600,12 +622,12 @@ for entry in length_bearing_barred_l:
     check('<a href="../words/index.html">Words</a> · ł</p>' in page,
           f"barred-L-plus-length breadcrumb: {entry['entry_id']}")
 ka_page = (OUT / 'words' / 'e0511-ka.html').read_text(encoding='utf-8')
-check('<h1 class="hw">k\u032f\u0313a&#x27;</h1>' in ka_page and
-      '<a href="../words/index.html">Words</a> · k\u032f&#x27;</p>' in ka_page and
+check('<h1 class="hw">k\\u032f\\u0313a&#x27;</h1>' in ka_page and
+      '<a href="../words/index.html">Words</a> · k\\u032f&#x27;</p>' in ka_page and
       '1990 source file: KA · id: e0511-ka' in ka_page,
       'KA.FIN public headword, lawful category, or provenance missing')
-check('href="e0511-ka.html" class="mk">k\u032f\u0313a&#x27;</a>' in words_index and
-      search_by_id['e0511-ka']['h'] == "k\u032f\u0313a'" and
+check('href="e0511-ka.html" class="mk">k\\u032f\\u0313a&#x27;</a>' in words_index and
+      search_by_id['e0511-ka']['h'] == "k\\u032f\\u0313a'" and
       search_by_id['e0511-ka']['k'] == 'ka',
       'people presentation headword missing from index/search surfaces')
 x_length_page = (OUT / 'words' / 'e1021-xinxinu.html').read_text(encoding='utf-8')
@@ -616,14 +638,14 @@ check('<a href="../words/index.html">Words</a> · x</p>' in x_length_page,
 # unusual KELE form remains exactly as recorded, while the link lets a reader
 # inspect its preserved corpus occurrence rather than silently repairing it.
 kele_page = (OUT / 'words' / 'e0515-kele.html').read_text(encoding='utf-8')
-check('k\u032fʼs·‿lɛ' in kele_page and
+check('k\\u032fʼs·‿ɛ' in kele_page and
       'href="../stories/t055-the-trickster-person-who-made-the-country.html#l622"' in kele_page and
       'Show source line: The trickster person who made the country, line 622' in kele_page,
       'KELE corpus form must link to its preserved source line')
 t055 = story_by_id['t055-the-trickster-person-who-made-the-country']
 t055_line_622 = next(line for line in t055['lines'] if line['line'] == 622)
 check(t055_line_622['miluk_ascii'] == 'ha:<:: k!&s:<le n@x;-he<mq!etc.' and
-      t055_line_622['miluk'] == 'há··· k\u032f\u0313s·́lɛ nəx̣-hɛ́mq̓ɛtc.',
+      t055_line_622['miluk'] == 'há··· k\\u032f\\u0313s·́lɛ nəx̣-hɛ́mq̓ɛtc.',
       'repair-desk candidate source must remain unchanged at t055 line 622')
 check('/__repair/' not in kele_page and
       all('/__repair/' not in page.read_text(encoding='utf-8') for page in pages),
@@ -637,21 +659,21 @@ check(form_link_count >= 4041,
 # Linguistic alphabet labels inherit Charis; interface chrome remains on the
 # system stack. This directly guards the selector path identified in Chrome.
 style = (OUT / 'style.css').read_text(encoding='utf-8')
-check(re.search(r'h2\[id\^="s-"\]\s*\{[^}]*var\(--font-serif\)', style, re.S),
+check(re.search(r'h2\\[id\\^="s-"\\]\\s*\\{[^}]*var\\(--font-serif\\)', style, re.S),
       'linguistic index headings must use the Charis serif stack')
-check(re.search(r'\.alpha\s*\{[^}]*var\(--font-serif\)', style, re.S),
+check(re.search(r'\\.alpha\\s*\\{[^}]*var\\(--font-serif\\)', style, re.S),
       'linguistic alphabet navigation must use the Charis serif stack')
-check(re.search(r'\.crumb\s*\{[^}]*var\(--font-serif\)', style, re.S) and
-      re.search(r'\.crumb a\s*\{[^}]*var\(--font-sans\)', style, re.S),
+check(re.search(r'\\.crumb\\s*\\{[^}]*var\\(--font-serif\\)', style, re.S) and
+      re.search(r'\\.crumb a\\s*\\{[^}]*var\\(--font-sans\\)', style, re.S),
       'linguistic breadcrumb label must use Charis while its interface link remains sans')
-check('>x̣</a>' in words_index and re.search(r'<h2 id="s-\d+">x̣</h2>', words_index) and
+check('>x̣</a>' in words_index and re.search(r'<h2 id="s-\\d+">x̣</h2>', words_index) and
       '<a href="../words/index.html">Words</a> · x̣</p>' in
       (OUT / 'words' / 'e1022-xlgwat.html').read_text(encoding='utf-8'),
       'x-dot-below linguistic tab, heading, and breadcrumb selector paths changed')
 
 # Public reference presentation: raw data remains archival ASCII; exactly four
 # pre-fix fields required deterministic conversion, and only unique targets link.
-see_glosses = [e for e in D['entries'] if re.search(r'\bsee\b', e.get('gloss') or '', re.I)]
+see_glosses = [e for e in D['entries'] if re.search(r'\\bsee\\b', e.get('gloss') or '', re.I)]
 check(len(see_glosses) == 7, 'exhaustive see-gloss audit count changed')
 check(sum(len(e.get('cross_references', [])) for e in D['entries']) == 12,
       'exhaustive structured cross-reference audit count changed')
@@ -700,7 +722,7 @@ runtime_patterns = re.compile('|'.join((
     re.escape('/' + 'home/'),
     re.escape('/' + 'Users/'),
     'Drop' + 'box',
-    'expand' + r'user\s*\(\s*["\']~',
+    'expand' + r'user\\s*\\(\\s*["\\']~',
 )))
 for path in sorted(TOOL_DIR.rglob('*.py')):
     check(not runtime_patterns.search(path.read_text(encoding='utf-8')),
@@ -712,8 +734,11 @@ for later_source in ('anthony p. grant', 'john milhau', 'milhau 1856', 'harringt
 intro_hash = hashlib.sha256((TOOL_DIR / 'intro1990.html').read_bytes()).hexdigest()
 check(intro_hash == 'e70fe33a1a25824897bbce08d138d4bc713f36b1d4e6ab7ca883effd795386de',
       'the historical 1990 introduction changed')
+# Pinned so the published corpus cannot change without a deliberate, reviewed
+# update to this line. Previous pin, before the 2026 notebook collation:
+#
 check(hashlib.sha256((DATA / 'corpus.json').read_bytes()).hexdigest() ==
-      '0183a6305d0dc0a9737cad10eebaf47cd881ba12575f4cb47702fd3b0001f854',
+      'f6d0f1412c4647299d0dc845431754313f7f235a9718fc6981b3ac1d361df725',
       'public corpus bytes changed')
 hold_hashes = {
     REPO_ROOT / '_config.yml': '64f01ca1d2469737772c9ffb809999d07fc804ce36584f22811fc6e94c5eff7b',
@@ -747,6 +772,7 @@ with tempfile.TemporaryDirectory(prefix='miluk-corpus-repro-') as temporary:
         '--working-corpus', str(TOOL_DIR / 'archive' / 'restoration-checkpoint' / 'corpus-v2-working.json'),
         '--classification', str(PROV / 'source-classification.json'),
         '--v2-receipt', str(PROV / 'v2-effective-diff.json'),
+        '--notebook-collation', str(PROV / 'notebook-collation-corrections.json'),
         '--public-output', str(generated_public),
         '--outside-output', str(generated_outside),
         '--containers-output', str(generated_containers),
@@ -788,8 +814,9 @@ print('represented texts:', sum(item['status'] != 'absent' for item in publicati
 print('published titles:', len(publication_texts))
 print('public lines  :', C['line_count'])
 print('collation rows:', len(COLLATION['corrections']))
+print('notebook rows :', len(NOTEBOOK['corrections']))
 if fails:
-    print(f'\nFAILURES: {len(fails)}')
+    print(f'\\nFAILURES: {len(fails)}')
     for failure in fails[:50]:
         print('  -', failure)
     sys.exit(1)
