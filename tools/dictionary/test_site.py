@@ -272,12 +272,12 @@ check((ka_entry['headword'], ka_entry['headword_ascii'], ka_entry['source_file']
       ('ka', 'KA', 'KA'),
       'KA.FIN filename-derived protected fields changed')
 check([form for form in ka_entry['forms']
-       if form.get('ascii') == "k!&a'" and form.get('form') == "k\\u032f\\u0313a'"] ==
+       if form.get('ascii') == "k!&a'" and form.get('form') == "k̯̓a'"] ==
       [ka_entry['forms'][0]],
       'KA.FIN first Reference List form no longer uniquely supports the public headword')
-check(presentation_headword(ka_entry) == "k\\u032f\\u0313a'" and
+check(presentation_headword(ka_entry) == "k̯̓a'" and
       initial_for_entry(ka_entry) == 'k!&' and
-      initial_key("k!&a'") == initial_key("k&!a'") == initial_key("k\\u032f\\u0313a'") == 'k!&',
+      initial_key("k!&a'") == initial_key("k&!a'") == initial_key("k̯̓a'") == 'k!&',
       'people headword must present and classify as initial anterior-palatal ejective k')
 check('e0511-ka' in [e['entry_id'] for e in D['entries'] if initial_for_entry(e) == 'k!&'] and
       len([e for e in D['entries'] if initial_for_entry(e) == 'k!&']) == 10,
@@ -622,12 +622,12 @@ for entry in length_bearing_barred_l:
     check('<a href="../words/index.html">Words</a> · ł</p>' in page,
           f"barred-L-plus-length breadcrumb: {entry['entry_id']}")
 ka_page = (OUT / 'words' / 'e0511-ka.html').read_text(encoding='utf-8')
-check('<h1 class="hw">k\\u032f\\u0313a&#x27;</h1>' in ka_page and
-      '<a href="../words/index.html">Words</a> · k\\u032f&#x27;</p>' in ka_page and
+check('<h1 class="hw">k̯̓a&#x27;</h1>' in ka_page and
+      '<a href="../words/index.html">Words</a> · k̯&#x27;</p>' in ka_page and
       '1990 source file: KA · id: e0511-ka' in ka_page,
       'KA.FIN public headword, lawful category, or provenance missing')
-check('href="e0511-ka.html" class="mk">k\\u032f\\u0313a&#x27;</a>' in words_index and
-      search_by_id['e0511-ka']['h'] == "k\\u032f\\u0313a'" and
+check('href="e0511-ka.html" class="mk">k̯̓a&#x27;</a>' in words_index and
+      search_by_id['e0511-ka']['h'] == "k̯̓a'" and
       search_by_id['e0511-ka']['k'] == 'ka',
       'people presentation headword missing from index/search surfaces')
 x_length_page = (OUT / 'words' / 'e1021-xinxinu.html').read_text(encoding='utf-8')
@@ -638,14 +638,14 @@ check('<a href="../words/index.html">Words</a> · x</p>' in x_length_page,
 # unusual KELE form remains exactly as recorded, while the link lets a reader
 # inspect its preserved corpus occurrence rather than silently repairing it.
 kele_page = (OUT / 'words' / 'e0515-kele.html').read_text(encoding='utf-8')
-check('k\\u032fʼs·‿lɛ' in kele_page and
+check('k̯ʼs·‿lɛ' in kele_page and
       'href="../stories/t055-the-trickster-person-who-made-the-country.html#l622"' in kele_page and
       'Show source line: The trickster person who made the country, line 622' in kele_page,
       'KELE corpus form must link to its preserved source line')
 t055 = story_by_id['t055-the-trickster-person-who-made-the-country']
 t055_line_622 = next(line for line in t055['lines'] if line['line'] == 622)
 check(t055_line_622['miluk_ascii'] == 'ha:<:: k!&s:<le n@x;-he<mq!etc.' and
-      t055_line_622['miluk'] == 'há··· k\\u032f\\u0313s·́lɛ nəx̣-hɛ́mq̓ɛtc.',
+      t055_line_622['miluk'] == 'há··· k̯̓s·́lɛ nəx̣-hɛ́mq̓ɛtc.',
       'repair-desk candidate source must remain unchanged at t055 line 622')
 check('/__repair/' not in kele_page and
       all('/__repair/' not in page.read_text(encoding='utf-8') for page in pages),
