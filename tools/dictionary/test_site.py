@@ -445,16 +445,35 @@ for item in COLLATION['corrections']:
     check(item['disposition'] in {'changed', 'retained', 'unresolved', 'excluded'},
           f"invalid collation disposition: {item['correction_id']}")
 
+NOTEBOOK = load(PROV / 'notebook-collation-corrections.json')
 v2_by_id = {item['correction_id']: item for item in V2['corrections']}
 check(len(v2_by_id) == len(V2['corrections']), 'duplicate v2 correction identity')
+notebook_by_id = {item['correction_id']: item for item in NOTEBOOK['corrections']}
+check(len(notebook_by_id) == len(NOTEBOOK['corrections']),
+      'duplicate notebook-collation correction identity')
+check(not (set(v2_by_id) & set(notebook_by_id)),
+      'a correction id is claimed by two restoration stages')
+correction_by_id = dict(v2_by_id)
+correction_by_id.update(notebook_by_id)
+# A field may be corrected more than once across stages: the v2 orientation
+# repair mis-fired on two lines and the notebook collation reverts it. The
+# corpus must therefore agree with the LAST correction touching each field, not
+# with every one of them, while each correction's own original value must still
+# match what the stage before it left.
+superseded = set()
+for item in NOTEBOOK['corrections']:
+    superseded.update(item.get('reverts', []))
+check(superseded <= set(v2_by_id),
+      'a notebook correction reverts an unknown v2 correction id')
 for story in C['stories'] + OUTSIDE['stories']:
     for line in story['lines']:
         originals = line.get('documentary_original_fields', {})
         transformation_ids = line.get('transformation_ids', [])
         check(bool(originals) == bool(transformation_ids),
               f"partial documentary/display separation at {story['story_id']}:{line['line']}")
+        last_by_field = {}
         for correction_id in transformation_ids:
-            item = v2_by_id.get(correction_id)
+            item = correction_by_id.get(correction_id)
             check(item is not None, f'unknown transformation id {correction_id}')
             if item is None:
                 continue
@@ -462,22 +481,25 @@ for story in C['stories'] + OUTSIDE['stories']:
             field = target['field']
             check(target['story_id'] == story['story_id'] and target['line'] == line['line'],
                   f'transformation target mismatch: {correction_id}')
-            check(originals.get(field) == item['original_value'],
-                  f'original value mismatch: {correction_id}')
+            if correction_id in v2_by_id:
+                check(originals.get(field) == item['original_value'],
+                      f'original value mismatch: {correction_id}')
+            last_by_field[field] = item
+        for field, item in last_by_field.items():
             check(line.get(field) == item['revised_value'],
-                  f'revised value mismatch: {correction_id}')
+                  f"revised value mismatch: {item['correction_id']}")
         if 'english_original' in line:
             check('english' in originals, f"English original without ledger at {story['story_id']}:{line['line']}")
 
 dictionary_by_id = {entry['entry_id']: entry for entry in D['entries']}
-for item in V2['corrections']:
+for item in V2['corrections'] + NOTEBOOK['corrections']:
     target = item['target']
     if target['source'] == 'corpus':
         line = line_by.get((target['story_id'], target['line']))
-        check(line is not None, f"v2 corpus target missing: {item['correction_id']}")
+        check(line is not None, f"corpus target missing: {item['correction_id']}")
         if line is not None:
             check(item['correction_id'] in line.get('transformation_ids', []),
-                  f"v2 corpus change not attached to documentary field: {item['correction_id']}")
+                  f"corpus change not attached to documentary field: {item['correction_id']}")
     else:
         entry = dictionary_by_id.get(target['entry_id'])
         check(entry is not None, f"v2 dictionary target missing: {item['correction_id']}")
@@ -712,8 +734,11 @@ for later_source in ('anthony p. grant', 'john milhau', 'milhau 1856', 'harringt
 intro_hash = hashlib.sha256((TOOL_DIR / 'intro1990.html').read_bytes()).hexdigest()
 check(intro_hash == 'e70fe33a1a25824897bbce08d138d4bc713f36b1d4e6ab7ca883effd795386de',
       'the historical 1990 introduction changed')
+# Pinned so the published corpus cannot change without a deliberate, reviewed
+# update to this line. Previous pin, before the 2026 notebook collation:
+#
 check(hashlib.sha256((DATA / 'corpus.json').read_bytes()).hexdigest() ==
-      '0183a6305d0dc0a9737cad10eebaf47cd881ba12575f4cb47702fd3b0001f854',
+      'f6d0f1412c4647299d0dc845431754313f7f235a9718fc6981b3ac1d361df725',
       'public corpus bytes changed')
 hold_hashes = {
     REPO_ROOT / '_config.yml': '64f01ca1d2469737772c9ffb809999d07fc804ce36584f22811fc6e94c5eff7b',
@@ -747,6 +772,7 @@ with tempfile.TemporaryDirectory(prefix='miluk-corpus-repro-') as temporary:
         '--working-corpus', str(TOOL_DIR / 'archive' / 'restoration-checkpoint' / 'corpus-v2-working.json'),
         '--classification', str(PROV / 'source-classification.json'),
         '--v2-receipt', str(PROV / 'v2-effective-diff.json'),
+        '--notebook-collation', str(PROV / 'notebook-collation-corrections.json'),
         '--public-output', str(generated_public),
         '--outside-output', str(generated_outside),
         '--containers-output', str(generated_containers),
@@ -788,6 +814,7 @@ print('represented texts:', sum(item['status'] != 'absent' for item in publicati
 print('published titles:', len(publication_texts))
 print('public lines  :', C['line_count'])
 print('collation rows:', len(COLLATION['corrections']))
+print('notebook rows :', len(NOTEBOOK['corrections']))
 if fails:
     print(f'\nFAILURES: {len(fails)}')
     for failure in fails[:50]:
