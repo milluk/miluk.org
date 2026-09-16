@@ -3,8 +3,8 @@
   "description": "Corpus corrections evidenced by the Melville Jacobs field notebooks, or by a line’s own documentary record where a later restoration stage departed from it. Each record names the GitHub Issue that queued it.",
   "restoration_stage": "2026 notebook collation",
   "summary": {
-    "records": 10,
-    "lines_affected": 4,
+    "records": 15,
+    "lines_affected": 6,
     "reverted_transformations": [
       "v2-corpus-t039-l0076-english",
       "v2-corpus-t039-l0076-miluk",
@@ -232,11 +232,129 @@
       "considered_alternative": {
         "value": "Huh-'uhhh, hehhh. Huhhh-huh-huhhh, my children,",
         "basis": "Jacobs' interlinear gloss on Notebook 99 p. 37 reads \"my children  my children  its hand\" beneath t#@n@hi:<me t#@n@hi:<me t#@d@k'&i<#an, so his own gloss does cover the vocative that closes this line",
-        "rejected_because": "the 1990 edition divides those words across lines 76 and 77 and glosses them at 77; repeating the gloss at 76 would change the published line division. Directed by Troy, 2026-09-16"
+        "rejected_because": "the 1990 edition divides those words across lines 76 and 77 and glosses them at 77; repeating the gloss at 76 would change the published line division. Directed by Troy, 2026-09-16 Superseded in part: the line division was afterwards repaired instead, by moving the vocative down to line 77 rather than repeating its gloss on 76. See nbc-corpus-t039-l0076-miluk-redivide."
       },
       "github_issue": 18
+    },
+    {
+      "correction_id": "nbc-corpus-t039-l0076-miluk-ascii-redivide",
+      "target": {
+        "source": "corpus",
+        "story_id": "t039-black-bear-and-pack-basket-bear-grizzly",
+        "line": 76,
+        "field": "miluk_ascii"
+      },
+      "original_value": "h@'@:<:: he:<:. h@:<:h@h@:: t#@-'n@hi:<me,",
+      "revised_value": "h@'@:<:: he:<:. h@:<:h@h@::",
+      "disposition": "changed",
+      "change_kind": "repair-line-division",
+      "reason": "the vocative closing this line has no English against it here, because the edition glosses it on line 77. Moving it to 77 leaves line 76 as the untranslated cry alone, matching its English, and makes line 77 identical in shape to line 80 of this story. No word is added or lost; Directed by Troy, 2026-09-16",
+      "verification_source": "Melville Jacobs Notebook 99 p. 37, which carries the cry and then two vocatives; and line 80 of this same story, where the identical English already stands against two vocatives on one line",
+      "affects": "restoration-corpus",
+      "restoration_stage": "2026 notebook collation",
+      "moved_to": {
+        "line": 77,
+        "token": "t#@-'n@hi:<me"
+      },
+      "github_issue": 18
+    },
+    {
+      "correction_id": "nbc-corpus-t039-l0077-miluk-ascii",
+      "target": {
+        "source": "corpus",
+        "story_id": "t039-black-bear-and-pack-basket-bear-grizzly",
+        "line": 77,
+        "field": "miluk_ascii"
+      },
+      "original_value": "t#@-'n@hi:<me!",
+      "revised_value": "t#@-'n@hi:<me t#@-'n@hi:<me!",
+      "disposition": "changed",
+      "change_kind": "repair-line-division",
+      "reason": "this line reads \"My children, my children\" against a single vocative. The second is the one stranded at the end of line 76. After the move this line is byte-identical to line 80, which carries the same English against two vocatives; Directed by Troy, 2026-09-16",
+      "verification_source": "Melville Jacobs Notebook 99 p. 37, which carries the cry and then two vocatives; and line 80 of this same story, where the identical English already stands against two vocatives on one line",
+      "affects": "restoration-corpus",
+      "restoration_stage": "2026 notebook collation",
+      "moved_from": {
+        "line": 76,
+        "token": "t#@-'n@hi:<me"
+      },
+      "equals_line": 80,
+      "github_issue": 18
+    },
+    {
+      "correction_id": "nbc-corpus-t039-l0076-miluk-redivide",
+      "target": {
+        "source": "corpus",
+        "story_id": "t039-black-bear-and-pack-basket-bear-grizzly",
+        "line": 76,
+        "field": "miluk"
+      },
+      "original_value": "hə'ə́··· hɛ́··. hə́··həhə·· tłə-'nəhí·mɛ,",
+      "revised_value": "hə'ə́··· hɛ́··. hə́··həhə··",
+      "disposition": "changed",
+      "change_kind": "repair-line-division",
+      "reason": "the vocative closing this line has no English against it here, because the edition glosses it on line 77. Moving it to 77 leaves line 76 as the untranslated cry alone, matching its English, and makes line 77 identical in shape to line 80 of this story. No word is added or lost; Directed by Troy, 2026-09-16",
+      "verification_source": "Melville Jacobs Notebook 99 p. 37, which carries the cry and then two vocatives; and line 80 of this same story, where the identical English already stands against two vocatives on one line",
+      "affects": "restoration-corpus",
+      "restoration_stage": "2026 notebook collation",
+      "moved_to": {
+        "line": 77,
+        "token": "tłə-'nəhí·mɛ"
+      },
+      "github_issue": 18
+    },
+    {
+      "correction_id": "nbc-corpus-t039-l0077-miluk",
+      "target": {
+        "source": "corpus",
+        "story_id": "t039-black-bear-and-pack-basket-bear-grizzly",
+        "line": 77,
+        "field": "miluk"
+      },
+      "original_value": "tłə-'nəhí·mɛ̓",
+      "revised_value": "tłə-'nəhí·mɛ tłə-'nəhí·mɛ̓",
+      "disposition": "changed",
+      "change_kind": "repair-line-division",
+      "reason": "this line reads \"My children, my children\" against a single vocative. The second is the one stranded at the end of line 76. After the move this line is byte-identical to line 80, which carries the same English against two vocatives; Directed by Troy, 2026-09-16",
+      "verification_source": "Melville Jacobs Notebook 99 p. 37, which carries the cry and then two vocatives; and line 80 of this same story, where the identical English already stands against two vocatives on one line",
+      "affects": "restoration-corpus",
+      "restoration_stage": "2026 notebook collation",
+      "moved_from": {
+        "line": 76,
+        "token": "tłə-'nəhí·mɛ"
+      },
+      "equals_line": 80,
+      "github_issue": 18
+    },
+    {
+      "correction_id": "nbc-corpus-t055-l1308-english",
+      "target": {
+        "source": "corpus",
+        "story_id": "t055-the-trickster-person-who-made-the-country",
+        "line": 1308,
+        "field": "english"
+      },
+      "original_value": "For five days they gambled with thyes.",
+      "revised_value": "Now he took out the snail-shell eyes.",
+      "disposition": "changed",
+      "change_kind": "english-misattached",
+      "reason": "the English on this line glosses Notebook 98 p. 25, the following page: 'five days' and 'they gambled with their eyes' are that page's gloss, not this line's. Jacobs' gloss for this line's own Miluk, on p. 24, is 'Now he took out the snail shell eyes'. The printed text also carries a typo, 'thyes' for 'their eyes', which is what makes the misattachment visible without the notebook; Directed by Troy, 2026-09-16",
+      "verification_source": "Melville Jacobs Notebook 98 pp. 24-25; alignment matched this line confirmed against p. 24",
+      "affects": "restoration-corpus",
+      "restoration_stage": "2026 notebook collation",
+      "not_addressed_here": {
+        "field": "entries",
+        "value": [
+          "e0272-gahais",
+          "e0297-gent-cin"
+        ],
+        "why": "these are the 1990 dictionary's own citations of this line for 'day' and 'five', mirrored by attestations in dictionary.json. Severing one side would be the first disagreement between the two in all 7,149 lines. Check 8 now holds them level, so this has to be repaired on both sides at once, in its own pass."
+      },
+      "github_issue": 15
     }
   ],
   "applied_by": "tools/dictionary/pipeline/publish_corpus.py --notebook-collation; the published corpus reproduces from the restoration checkpoint, the v2 receipt and this file",
-  "note_on_supersession": "The six revert records below supersede v2 corrections that remain in provenance/v2-effective-diff.json. That receipt is a record of what commit dc186a2 did and is left intact; the corpus moves on. Each record here names the v2 correction it reverts, and test_site.py checks the last correction touching a field rather than assuming there is only one. The three t039 line 76 records added in the second round supersede v2 corrections in the same way, but only two of them restore a documentary value; the English field held no English in the documentary record either, and its record says so explicitly."
+  "note_on_supersession": "The six revert records below supersede v2 corrections that remain in provenance/v2-effective-diff.json. That receipt is a record of what commit dc186a2 did and is left intact; the corpus moves on. Each record here names the v2 correction it reverts, and test_site.py checks the last correction touching a field rather than assuming there is only one. The three t039 line 76 records added in the second round supersede v2 corrections in the same way, but only two of them restore a documentary value; the English field held no English in the documentary record either, and its record says so explicitly.",
+  "note_on_line_divisions": "Records with change_kind repair-line-division move Miluk words between two adjacent published lines so that each line matches the English printed beside it. They add, drop and alter nothing: check 7 holds the pair to the same words it held documentarily. They do change the 1990 line division, which the project otherwise leaves alone, so each is directed by Troy and the documentary division is kept in each line's documentary_original_fields.",
+  "note_on_multiple_records_per_field": "A field may carry more than one record here when a later pass builds on an earlier one -- t039 line 76 is first reverted to its documentary value and then redivided. Records apply in file order, and anything checking that a correction took effect must look at the last record touching that field, not every one."
 }

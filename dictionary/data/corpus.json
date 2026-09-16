@@ -20638,8 +20638,8 @@
         {
           "line": 76,
           "english": "Huh-'uhhh, hehhh. Huhhh-huh-huhhh,",
-          "miluk_ascii": "h@'@:<:: he:<:. h@:<:h@h@:: t#@-'n@hi:<me,",
-          "miluk": "hə'ə́··· hɛ́··. hə́··həhə·· tłə-'nəhí·mɛ,",
+          "miluk_ascii": "h@'@:<:: he:<:. h@:<:h@h@::",
+          "miluk": "hə'ə́··· hɛ́··. hə́··həhə··",
           "entries": [],
           "documentary_original_fields": {
             "english": "H@'@@/@@ he@/@@ h@@/@h@h@@@",
@@ -20652,16 +20652,26 @@
             "v2-corpus-t039-l0076-miluk-ascii",
             "nbc-corpus-t039-l0076-miluk-ascii",
             "nbc-corpus-t039-l0076-miluk",
-            "nbc-corpus-t039-l0076-english"
+            "nbc-corpus-t039-l0076-english",
+            "nbc-corpus-t039-l0076-miluk-ascii-redivide",
+            "nbc-corpus-t039-l0076-miluk-redivide"
           ],
           "english_original": "H@'@@/@@ he@/@@ h@@/@h@h@@@"
         },
         {
           "line": 77,
           "english": "My children, my children",
-          "miluk_ascii": "t#@-'n@hi:<me!",
-          "miluk": "tłə-'nəhí·mɛ̓",
-          "entries": []
+          "miluk_ascii": "t#@-'n@hi:<me t#@-'n@hi:<me!",
+          "miluk": "tłə-'nəhí·mɛ tłə-'nəhí·mɛ̓",
+          "entries": [],
+          "documentary_original_fields": {
+            "miluk_ascii": "t#@-'n@hi:<me!",
+            "miluk": "tłə-'nəhí·mɛ̓"
+          },
+          "transformation_ids": [
+            "nbc-corpus-t039-l0077-miluk-ascii",
+            "nbc-corpus-t039-l0077-miluk"
+          ]
         },
         {
           "line": 78,
@@ -45623,13 +45633,20 @@
         },
         {
           "line": 1308,
-          "english": "For five days they gambled with thyes.",
+          "english": "Now he took out the snail-shell eyes.",
           "miluk_ascii": "tsu<:q'a<lt tl@-bu:<lak&-d@ba<L x;wa<lx;wal.",
           "miluk": "tsú·q'ált tlə-bú·lak̯-dəbáʟ x̣wálx̣wal.",
           "entries": [
             "e0272-gahais",
             "e0297-gent-cin"
-          ]
+          ],
+          "documentary_original_fields": {
+            "english": "For five days they gambled with thyes."
+          },
+          "transformation_ids": [
+            "nbc-corpus-t055-l1308-english"
+          ],
+          "english_original": "For five days they gambled with thyes."
         },
         {
           "line": 1309,

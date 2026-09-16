@@ -103,14 +103,24 @@ for (story_id, number), line in sorted(LINES.items()):
                          % (story_id, number, field,
                             len(match.group(0)), match.group(1)))
 
-# 4. Every notebook-collation correction is applied, and applied exactly.
+# 4. Every notebook-collation correction is applied, and the last record
+#    touching a field is the value that field now carries. A field can
+#    carry more than one record -- t039 line 76 is reverted to its
+#    documentary value and then redivided -- so asserting every record's
+#    revised_value would fail on the earlier one. test_site.py already
+#    checks the last correction per field for the same reason.
+LAST_RECORD = {}
+for item in NOTEBOOK['corrections']:
+    target = item['target']
+    LAST_RECORD[(target['story_id'], target['line'], target['field'])] = item
 for item in NOTEBOOK['corrections']:
     target = item['target']
     line = LINES.get((target['story_id'], target['line']))
     if line is None:
         fails.append('%s: target line is missing from the corpus' % item['correction_id'])
         continue
-    if line.get(target['field']) != item['revised_value']:
+    key = (target['story_id'], target['line'], target['field'])
+    if LAST_RECORD[key] is item and line.get(target['field']) != item['revised_value']:
         fails.append('%s: %s is not the revised value'
                      % (item['correction_id'], target['field']))
     if item['correction_id'] not in (line.get('transformation_ids') or []):
@@ -130,17 +140,28 @@ REGRESSIONS = [
     # English field held a degraded ASCII duplicate of the cry rather than
     # English, so the repair had nothing correct to swap towards and
     # rotated the good transcription out of miluk_ascii instead. Restoring
-    # it recovers the vocative t#@-'n@hi:<me, which no visible field
-    # carried after v2. The English is an editorial rendering of
-    # untranslated vocables, not a Jacobs gloss; the correction record
-    # carries the unit-for-unit mapping. The rendered Miluk is not
+    # it recovered the vocative t#@-'n@hi:<me, which no visible field
+    # carried after v2. That vocative then moved to line 77, where the
+    # edition's own English for it already stood, so 76 and 77 are
+    # asserted together: the boundary between them is the repair. Line
+    # 77 must equal line 80, which carries the same English against the
+    # same two vocatives. The English on 76 is an editorial rendering of
+    # untranslated vocables, not a Jacobs gloss. Rendered Miluk is not
     # asserted literally here, because writing it into this file would
     # mean transcribing it by hand -- check 4 holds it against the
-    # correction record, which derives it from the v2 receipt.
+    # correction record, which derives it from the repository.
     ('t039-black-bear-and-pack-basket-bear-grizzly', 76, 'miluk_ascii',
-     "h@'@:<:: he:<:. h@:<:h@h@:: t#@-'n@hi:<me,"),
+     "h@'@:<:: he:<:. h@:<:h@h@::"),
     ('t039-black-bear-and-pack-basket-bear-grizzly', 76, 'english',
      "Huh-'uhhh, hehhh. Huhhh-huh-huhhh,"),
+    ('t039-black-bear-and-pack-basket-bear-grizzly', 77, 'miluk_ascii',
+     "t#@-'n@hi:<me t#@-'n@hi:<me!"),
+    # t055 1308's English glossed the following notebook page, typo and
+    # all ('thyes' for 'their eyes'). Its entries are still the 1990
+    # dictionary's own citations for 'day' and 'five', which belong to
+    # that same wrong gloss; check 8 is why they cannot be cut here.
+    ('t055-the-trickster-person-who-made-the-country', 1308, 'english',
+     "Now he took out the snail-shell eyes."),
 ]
 # A rule was drafted here and withdrawn: "no Miluk field may contain
 # U+002F", on the theory that the slashes in this line's v2 output were
@@ -167,6 +188,54 @@ for (story_id, number), line in sorted(LINES.items()):
     if documentary_miluk and line.get('english') == documentary_miluk:
         fails.append('%s line %d: english is verbatim the documentary miluk: %r'
                      % (story_id, number, documentary_miluk[:70]))
+
+# 7. A line-division repair moves words between two adjacent lines; it must
+#    never add or drop one. For each repaired pair the words across the two
+#    lines must still be the words the documentary record held across the
+#    same two lines. Sentence punctuation is allowed to move to the new end
+#    of a line, so it is stripped before comparing; nothing else is.
+REDIVIDED_PAIRS = [
+    ('t039-black-bear-and-pack-basket-bear-grizzly', 76, 77),
+]
+for story_id, first, second in REDIVIDED_PAIRS:
+    for field in ('miluk', 'miluk_ascii'):
+        now, before = [], []
+        for number in (first, second):
+            line = LINES.get((story_id, number))
+            if line is None:
+                continue
+            documentary = (line.get('documentary_original_fields') or {})
+            now += [w.strip(',.') for w in (line.get(field) or '').split()]
+            before += [w.strip(',.') for w in
+                       (documentary.get(field, line.get(field)) or '').split()]
+        if sorted(now) != sorted(before):
+            fails.append('%s lines %d-%d: %s words changed across the pair'
+                         % (story_id, first, second, field))
+
+# 8. Every corpus line's `entries` must be exactly the set of dictionary
+#    entries attested on that line, and the reverse. The two are one link
+#    set stored twice, and they agree on all 7,149 lines today. Nothing
+#    checked that before, which is what makes a half-repair possible:
+#    moving a word between two lines, or cutting a wrong entry link,
+#    fixes the corpus side and leaves dictionary.json pointing at a line
+#    that no longer holds the word. This is why t055 1220/1221 (#14) and
+#    the entries half of t055 1308 (#15) are not in this pass: they need
+#    a dictionary-side correction stage, which does not exist yet.
+DICTIONARY = load(DATA / 'dictionary.json')
+attested = {}
+for entry in DICTIONARY['entries']:
+    for attestation in entry.get('attestations') or []:
+        story_id = attestation.get('story_id')
+        number = attestation.get('line')
+        if story_id is None or number is None:
+            continue
+        attested.setdefault((story_id, number), set()).add(entry['entry_id'])
+for (story_id, number), line in sorted(LINES.items()):
+    here = set(line.get('entries') or [])
+    there = attested.get((story_id, number), set())
+    if here != there:
+        fails.append('%s line %d: entries %s but dictionary attests %s'
+                     % (story_id, number, sorted(here), sorted(there)))
 
 print('corpus records         :', CORPUS['story_count'])
 print('corpus lines           :', CORPUS['line_count'])
