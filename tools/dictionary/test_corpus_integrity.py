@@ -155,7 +155,7 @@ REGRESSIONS = [
     ('t039-black-bear-and-pack-basket-bear-grizzly', 76, 'english',
      "Huh-'uhhh, hehhh. Huhhh-huh-huhhh,"),
     ('t039-black-bear-and-pack-basket-bear-grizzly', 77, 'miluk_ascii',
-     "t#@-'n@hi:<me t#@-'n@hi:<me!"),
+     "t#@-'n@hi:<me, t#@-'n@hi:<me!"),
     # t055 1308's English glossed the following notebook page, typo and
     # all ('thyes' for 'their eyes'). Its entries are still the 1990
     # dictionary's own citations for 'day' and 'five', which belong to
@@ -191,9 +191,11 @@ for (story_id, number), line in sorted(LINES.items()):
 
 # 7. A line-division repair moves words between two adjacent lines; it must
 #    never add or drop one. For each repaired pair the words across the two
-#    lines must still be the words the documentary record held across the
-#    same two lines. Sentence punctuation is allowed to move to the new end
-#    of a line, so it is stripped before comparing; nothing else is.
+#    lines must still be exactly the tokens the documentary record held
+#    across the same two lines -- punctuation included. An earlier draft
+#    stripped commas before comparing, to let a moved vocative shed the
+#    comma it was carrying. The printed 1990 page shows the comma belongs
+#    where the word goes, so nothing needs forgiving and nothing is.
 REDIVIDED_PAIRS = [
     ('t039-black-bear-and-pack-basket-bear-grizzly', 76, 77),
 ]
@@ -205,11 +207,10 @@ for story_id, first, second in REDIVIDED_PAIRS:
             if line is None:
                 continue
             documentary = (line.get('documentary_original_fields') or {})
-            now += [w.strip(',.') for w in (line.get(field) or '').split()]
-            before += [w.strip(',.') for w in
-                       (documentary.get(field, line.get(field)) or '').split()]
+            now += (line.get(field) or '').split()
+            before += (documentary.get(field, line.get(field)) or '').split()
         if sorted(now) != sorted(before):
-            fails.append('%s lines %d-%d: %s words changed across the pair'
+            fails.append('%s lines %d-%d: %s tokens changed across the pair'
                          % (story_id, first, second, field))
 
 # 8. Every corpus line's `entries` must be exactly the set of dictionary

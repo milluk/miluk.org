@@ -743,11 +743,14 @@ check(intro_hash == 'e70fe33a1a25824897bbce08d138d4bc713f36b1d4e6ab7ca883effd795
 #       the collation's first three lines: t055 219, t039 86, t055 1251
 #   2f7e96984f310cbca603862260a7fd2a954c883f8de621c3d2a3dfc92675988e
 #       t039 line 76, before the line-division repair
+#   3d7ff81ae29fd3c7cc1d38d0eef5f8c46db81e76a74840831d7f49c2fac7a684
+#       the line-division repair, before the printed page restored
+#       the comma on line 77
 #
 # The first of those was dropped from this comment when PR #17 rebuilt the
 # file through CI; it is restored here from the base branch.
 check(hashlib.sha256((DATA / 'corpus.json').read_bytes()).hexdigest() ==
-      '3d7ff81ae29fd3c7cc1d38d0eef5f8c46db81e76a74840831d7f49c2fac7a684',
+      'ce4c397773763a60d8ad5d66d2556f1d015abe30b16e70c97b5bd4b59e79039f',
       'public corpus bytes changed')
 hold_hashes = {
     REPO_ROOT / '_config.yml': '64f01ca1d2469737772c9ffb809999d07fc804ce36584f22811fc6e94c5eff7b',

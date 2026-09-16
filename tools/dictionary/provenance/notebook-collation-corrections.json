@@ -248,13 +248,13 @@
       "revised_value": "h@'@:<:: he:<:. h@:<:h@h@::",
       "disposition": "changed",
       "change_kind": "repair-line-division",
-      "reason": "the vocative closing this line has no English against it here, because the edition glosses it on line 77. Moving it to 77 leaves line 76 as the untranslated cry alone, matching its English, and makes line 77 identical in shape to line 80 of this story. No word is added or lost; Directed by Troy, 2026-09-16",
-      "verification_source": "Melville Jacobs Notebook 99 p. 37, which carries the cry and then two vocatives; and line 80 of this same story, where the identical English already stands against two vocatives on one line",
+      "reason": "the vocative closing this line has no English against it here, because the edition glosses it on line 77, where the printed page sets it. Moving it there leaves line 76 as the untranslated cry alone, matching its English and matching the printed page, which sets the cry on a line of its own. No word and no mark is added or lost. Directed by Troy, 2026-09-16",
+      "verification_source": "the printed 1990 page, which sets the cry on one line and the two vocatives on the next with a comma between them; Melville Jacobs Notebook 99 p. 37",
       "affects": "restoration-corpus",
       "restoration_stage": "2026 notebook collation",
       "moved_to": {
         "line": 77,
-        "token": "t#@-'n@hi:<me"
+        "token": "t#@-'n@hi:<me,"
       },
       "github_issue": 18
     },
@@ -267,19 +267,19 @@
         "field": "miluk_ascii"
       },
       "original_value": "t#@-'n@hi:<me!",
-      "revised_value": "t#@-'n@hi:<me t#@-'n@hi:<me!",
+      "revised_value": "t#@-'n@hi:<me, t#@-'n@hi:<me!",
       "disposition": "changed",
       "change_kind": "repair-line-division",
-      "reason": "this line reads \"My children, my children\" against a single vocative. The second is the one stranded at the end of line 76. After the move this line is byte-identical to line 80, which carries the same English against two vocatives; Directed by Troy, 2026-09-16",
-      "verification_source": "Melville Jacobs Notebook 99 p. 37, which carries the cry and then two vocatives; and line 80 of this same story, where the identical English already stands against two vocatives on one line",
+      "reason": "this line reads \"My children, my children\" against a single vocative. The second is the one stranded at the end of line 76, and it is carried across verbatim, comma and all. The printed page sets these two vocatives with a comma between them; line 80 of this story prints the same two words without one, so the two lines are not identical and an earlier draft of this record was wrong to force them to be. Directed by Troy, 2026-09-16",
+      "verification_source": "the printed 1990 page, which sets the cry on one line and the two vocatives on the next with a comma between them; Melville Jacobs Notebook 99 p. 37",
       "affects": "restoration-corpus",
       "restoration_stage": "2026 notebook collation",
       "moved_from": {
         "line": 76,
-        "token": "t#@-'n@hi:<me"
+        "token": "t#@-'n@hi:<me,"
       },
-      "equals_line": 80,
-      "github_issue": 18
+      "github_issue": 18,
+      "differs_from_line_80_by": "a comma between the two vocatives, which the printed page sets on this line and not on line 80"
     },
     {
       "correction_id": "nbc-corpus-t039-l0076-miluk-redivide",
@@ -293,13 +293,13 @@
       "revised_value": "hə'ə́··· hɛ́··. hə́··həhə··",
       "disposition": "changed",
       "change_kind": "repair-line-division",
-      "reason": "the vocative closing this line has no English against it here, because the edition glosses it on line 77. Moving it to 77 leaves line 76 as the untranslated cry alone, matching its English, and makes line 77 identical in shape to line 80 of this story. No word is added or lost; Directed by Troy, 2026-09-16",
-      "verification_source": "Melville Jacobs Notebook 99 p. 37, which carries the cry and then two vocatives; and line 80 of this same story, where the identical English already stands against two vocatives on one line",
+      "reason": "the vocative closing this line has no English against it here, because the edition glosses it on line 77, where the printed page sets it. Moving it there leaves line 76 as the untranslated cry alone, matching its English and matching the printed page, which sets the cry on a line of its own. No word and no mark is added or lost. Directed by Troy, 2026-09-16",
+      "verification_source": "the printed 1990 page, which sets the cry on one line and the two vocatives on the next with a comma between them; Melville Jacobs Notebook 99 p. 37",
       "affects": "restoration-corpus",
       "restoration_stage": "2026 notebook collation",
       "moved_to": {
         "line": 77,
-        "token": "tłə-'nəhí·mɛ"
+        "token": "tłə-'nəhí·mɛ,"
       },
       "github_issue": 18
     },
@@ -312,19 +312,19 @@
         "field": "miluk"
       },
       "original_value": "tłə-'nəhí·mɛ̓",
-      "revised_value": "tłə-'nəhí·mɛ tłə-'nəhí·mɛ̓",
+      "revised_value": "tłə-'nəhí·mɛ, tłə-'nəhí·mɛ̓",
       "disposition": "changed",
       "change_kind": "repair-line-division",
-      "reason": "this line reads \"My children, my children\" against a single vocative. The second is the one stranded at the end of line 76. After the move this line is byte-identical to line 80, which carries the same English against two vocatives; Directed by Troy, 2026-09-16",
-      "verification_source": "Melville Jacobs Notebook 99 p. 37, which carries the cry and then two vocatives; and line 80 of this same story, where the identical English already stands against two vocatives on one line",
+      "reason": "this line reads \"My children, my children\" against a single vocative. The second is the one stranded at the end of line 76, and it is carried across verbatim, comma and all. The printed page sets these two vocatives with a comma between them; line 80 of this story prints the same two words without one, so the two lines are not identical and an earlier draft of this record was wrong to force them to be. Directed by Troy, 2026-09-16",
+      "verification_source": "the printed 1990 page, which sets the cry on one line and the two vocatives on the next with a comma between them; Melville Jacobs Notebook 99 p. 37",
       "affects": "restoration-corpus",
       "restoration_stage": "2026 notebook collation",
       "moved_from": {
         "line": 76,
-        "token": "tłə-'nəhí·mɛ"
+        "token": "tłə-'nəhí·mɛ,"
       },
-      "equals_line": 80,
-      "github_issue": 18
+      "github_issue": 18,
+      "differs_from_line_80_by": "a comma between the two vocatives, which the printed page sets on this line and not on line 80"
     },
     {
       "correction_id": "nbc-corpus-t055-l1308-english",
