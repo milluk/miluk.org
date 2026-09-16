@@ -3,9 +3,12 @@
   "description": "Corpus corrections evidenced by the Melville Jacobs field notebooks, or by a line’s own documentary record where a later restoration stage departed from it. Each record names the GitHub Issue that queued it.",
   "restoration_stage": "2026 notebook collation",
   "summary": {
-    "records": 7,
-    "lines_affected": 3,
+    "records": 10,
+    "lines_affected": 4,
     "reverted_transformations": [
+      "v2-corpus-t039-l0076-english",
+      "v2-corpus-t039-l0076-miluk",
+      "v2-corpus-t039-l0076-miluk-ascii",
       "v2-corpus-t039-l0086-english",
       "v2-corpus-t039-l0086-miluk",
       "v2-corpus-t039-l0086-miluk-ascii",
@@ -163,8 +166,77 @@
         "rejected_because": "changing the published wording goes beyond repairing a transport artifact; the fuller reading is carried in the notebook alignment layer instead"
       },
       "github_issue": 13
+    },
+    {
+      "correction_id": "nbc-corpus-t039-l0076-miluk-ascii",
+      "target": {
+        "source": "corpus",
+        "story_id": "t039-black-bear-and-pack-basket-bear-grizzly",
+        "line": 76,
+        "field": "miluk_ascii"
+      },
+      "original_value": "H@'@@/@@ he@/@@ h@@/@h@h@@@",
+      "revised_value": "h@'@:<:: he:<:. h@:<:h@h@:: t#@-'n@hi:<me,",
+      "disposition": "changed",
+      "change_kind": "revert-field-unswap",
+      "reason": "the v2 field-orientation repair moved this line's correct ASCII transcription out of the field and left a degraded duplicate of the cry in its place; the vocative t#@-'n@hi:<me, was lost with it and survived in no visible field. Notebook 99 p. 37 carries the full reading",
+      "verification_source": "Melville Jacobs Notebook 99 p. 37; the line's own documentary_original_fields",
+      "affects": "restoration-corpus",
+      "restoration_stage": "2026 notebook collation",
+      "reverts": [
+        "v2-corpus-t039-l0076-miluk-ascii"
+      ],
+      "github_issue": 18
+    },
+    {
+      "correction_id": "nbc-corpus-t039-l0076-miluk",
+      "target": {
+        "source": "corpus",
+        "story_id": "t039-black-bear-and-pack-basket-bear-grizzly",
+        "line": 76,
+        "field": "miluk"
+      },
+      "original_value": "Hə'əə/əə hɛə/əə həə/əhəhəəə",
+      "revised_value": "hə'ə́··· hɛ́··. hə́··həhə·· tłə-'nəhí·mɛ,",
+      "disposition": "changed",
+      "change_kind": "revert-field-unswap",
+      "reason": "the transliteration stage then ran over that degraded duplicate and produced Miluk-looking output from it, carrying the duplicate's U+002F characters into the rendered form",
+      "verification_source": "Melville Jacobs Notebook 99 p. 37; the line's own documentary_original_fields",
+      "affects": "restoration-corpus",
+      "restoration_stage": "2026 notebook collation",
+      "reverts": [
+        "v2-corpus-t039-l0076-miluk"
+      ],
+      "github_issue": 18
+    },
+    {
+      "correction_id": "nbc-corpus-t039-l0076-english",
+      "target": {
+        "source": "corpus",
+        "story_id": "t039-black-bear-and-pack-basket-bear-grizzly",
+        "line": 76,
+        "field": "english"
+      },
+      "original_value": "hə'ə́··· hɛ́··. hə́··həhə·· tłə-'nəhí·mɛ,",
+      "revised_value": "Huh-'uhhh, hehhh. Huhhh-huh-huhhh,",
+      "disposition": "changed",
+      "change_kind": "render-untranslated-vocables",
+      "reason": "this line is the mother's cry on finding she has eaten her own child, and it has no English gloss in any source: Jacobs wrote the vocables down and began glossing one word later, at the vocative. The documentary English field held a degraded ASCII duplicate of the cry rather than English, so unlike the other reverts in this file there is no documentary English to restore, and the v2 repair left rendered Miluk sitting in the English column. The vocables are rendered in English orthography, unit for unit against the transcription: h@'@:<:: -> Huh-'uhhh, he:<:. -> hehhh., h@:<:h@h@:: -> Huhhh-huh-huhhh",
+      "verification_source": "Melville Jacobs Notebook 99 p. 37; the line's own documentary_original_fields",
+      "affects": "restoration-corpus",
+      "restoration_stage": "2026 notebook collation",
+      "reverts": [
+        "v2-corpus-t039-l0076-english"
+      ],
+      "supersedes_without_restoring_documentary_value": true,
+      "considered_alternative": {
+        "value": "Huh-'uhhh, hehhh. Huhhh-huh-huhhh, my children,",
+        "basis": "Jacobs' interlinear gloss on Notebook 99 p. 37 reads \"my children  my children  its hand\" beneath t#@n@hi:<me t#@n@hi:<me t#@d@k'&i<#an, so his own gloss does cover the vocative that closes this line",
+        "rejected_because": "the 1990 edition divides those words across lines 76 and 77 and glosses them at 77; repeating the gloss at 76 would change the published line division. Directed by Troy, 2026-09-16"
+      },
+      "github_issue": 18
     }
   ],
   "applied_by": "tools/dictionary/pipeline/publish_corpus.py --notebook-collation; the published corpus reproduces from the restoration checkpoint, the v2 receipt and this file",
-  "note_on_supersession": "The six revert records below supersede v2 corrections that remain in provenance/v2-effective-diff.json. That receipt is a record of what commit dc186a2 did and is left intact; the corpus moves on. Each record here names the v2 correction it reverts, and test_site.py checks the last correction touching a field rather than assuming there is only one."
+  "note_on_supersession": "The six revert records below supersede v2 corrections that remain in provenance/v2-effective-diff.json. That receipt is a record of what commit dc186a2 did and is left intact; the corpus moves on. Each record here names the v2 correction it reverts, and test_site.py checks the last correction touching a field rather than assuming there is only one. The three t039 line 76 records added in the second round supersede v2 corrections in the same way, but only two of them restore a documentary value; the English field held no English in the documentary record either, and its record says so explicitly."
 }

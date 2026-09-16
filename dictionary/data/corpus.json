@@ -20637,9 +20637,9 @@
         },
         {
           "line": 76,
-          "english": "hə'ə́··· hɛ́··. hə́··həhə·· tłə-'nəhí·mɛ,",
-          "miluk_ascii": "H@'@@/@@ he@/@@ h@@/@h@h@@@",
-          "miluk": "Hə'əə/əə hɛə/əə həə/əhəhəəə",
+          "english": "Huh-'uhhh, hehhh. Huhhh-huh-huhhh,",
+          "miluk_ascii": "h@'@:<:: he:<:. h@:<:h@h@:: t#@-'n@hi:<me,",
+          "miluk": "hə'ə́··· hɛ́··. hə́··həhə·· tłə-'nəhí·mɛ,",
           "entries": [],
           "documentary_original_fields": {
             "english": "H@'@@/@@ he@/@@ h@@/@h@h@@@",
@@ -20649,7 +20649,10 @@
           "transformation_ids": [
             "v2-corpus-t039-l0076-english",
             "v2-corpus-t039-l0076-miluk",
-            "v2-corpus-t039-l0076-miluk-ascii"
+            "v2-corpus-t039-l0076-miluk-ascii",
+            "nbc-corpus-t039-l0076-miluk-ascii",
+            "nbc-corpus-t039-l0076-miluk",
+            "nbc-corpus-t039-l0076-english"
           ],
           "english_original": "H@'@@/@@ he@/@@ h@@/@h@h@@@"
         },

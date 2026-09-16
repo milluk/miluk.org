@@ -735,10 +735,17 @@ intro_hash = hashlib.sha256((TOOL_DIR / 'intro1990.html').read_bytes()).hexdiges
 check(intro_hash == 'e70fe33a1a25824897bbce08d138d4bc713f36b1d4e6ab7ca883effd795386de',
       'the historical 1990 introduction changed')
 # Pinned so the published corpus cannot change without a deliberate, reviewed
-# update to this line. Previous pin, before the 2026 notebook collation:
+# update to this line. Superseded pins, most recent last:
 #
+#   0183a6305d0dc0a9737cad10eebaf47cd881ba12575f4cb47702fd3b0001f854
+#       before the 2026 notebook collation (PR #17)
+#   f6d0f1412c4647299d0dc845431754313f7f235a9718fc6981b3ac1d361df725
+#       the collation's first three lines: t055 219, t039 86, t055 1251
+#
+# The first of those was dropped from this comment when PR #17 rebuilt the
+# file through CI; it is restored here from the base branch.
 check(hashlib.sha256((DATA / 'corpus.json').read_bytes()).hexdigest() ==
-      'f6d0f1412c4647299d0dc845431754313f7f235a9718fc6981b3ac1d361df725',
+      '2f7e96984f310cbca603862260a7fd2a954c883f8de621c3d2a3dfc92675988e',
       'public corpus bytes changed')
 hold_hashes = {
     REPO_ROOT / '_config.yml': '64f01ca1d2469737772c9ffb809999d07fc804ce36584f22811fc6e94c5eff7b',

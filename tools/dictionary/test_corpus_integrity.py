@@ -125,11 +125,48 @@ REGRESSIONS = [
     ('t039-black-bear-and-pack-basket-bear-grizzly', 86, 'miluk_ascii', 'h@:<:::u idja<u-is'),
     ('t039-black-bear-and-pack-basket-bear-grizzly', 86, 'english', 'H@@@@@u where are you?'),
     ('t055-the-trickster-person-who-made-the-country', 1251, 'english', 'And they laid sitting mats.'),
+    # t039 line 76 is the third line the v2 orientation repair mishandled,
+    # and the only one whose documentary record was itself wrong: its
+    # English field held a degraded ASCII duplicate of the cry rather than
+    # English, so the repair had nothing correct to swap towards and
+    # rotated the good transcription out of miluk_ascii instead. Restoring
+    # it recovers the vocative t#@-'n@hi:<me, which no visible field
+    # carried after v2. The English is an editorial rendering of
+    # untranslated vocables, not a Jacobs gloss; the correction record
+    # carries the unit-for-unit mapping. The rendered Miluk is not
+    # asserted literally here, because writing it into this file would
+    # mean transcribing it by hand -- check 4 holds it against the
+    # correction record, which derives it from the v2 receipt.
+    ('t039-black-bear-and-pack-basket-bear-grizzly', 76, 'miluk_ascii',
+     "h@'@:<:: he:<:. h@:<:h@h@:: t#@-'n@hi:<me,"),
+    ('t039-black-bear-and-pack-basket-bear-grizzly', 76, 'english',
+     "Huh-'uhhh, hehhh. Huhhh-huh-huhhh,"),
 ]
+# A rule was drafted here and withdrawn: "no Miluk field may contain
+# U+002F", on the theory that the slashes in this line's v2 output were
+# Word Cruncher damage. Run against the corpus it failed on eight lines of
+# t003 and t004 where the slash is ordinary Jacobs notation inside a word
+# (tsu<-ts#i<ntsim-d@/k!a). The slash is only damage in the company it
+# keeps on t039 line 76, which the assertions above already cover.
 for story_id, number, field, expected in REGRESSIONS:
     line = LINES.get((story_id, number))
     if line is None or line.get(field) != expected:
         fails.append('%s line %d: %s is not %r' % (story_id, number, field, expected))
+
+# 6. No line's visible English may be identical to the Miluk that the
+#    line's own documentary record preserves. That is the exact signature
+#    of a field-orientation repair that moved rendered Miluk into the
+#    English column, and it is the only general rule here that catches
+#    t039 line 76: checks 1 and 2 both pass on that defect, because the
+#    value sitting in its English field was rendered Miluk rather than
+#    ASCII transcription and so carried none of the marks check 2 looks
+#    for. Run against the corpus as it stood before that correction, this
+#    fires on line 76 and on nothing else; after it, on nothing.
+for (story_id, number), line in sorted(LINES.items()):
+    documentary_miluk = (line.get('documentary_original_fields') or {}).get('miluk')
+    if documentary_miluk and line.get('english') == documentary_miluk:
+        fails.append('%s line %d: english is verbatim the documentary miluk: %r'
+                     % (story_id, number, documentary_miluk[:70]))
 
 print('corpus records         :', CORPUS['story_count'])
 print('corpus lines           :', CORPUS['line_count'])
