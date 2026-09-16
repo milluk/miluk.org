@@ -12,6 +12,8 @@ name: one-shot-round2
 
 on:
   workflow_dispatch:
+  push:
+    branches: [corpus-repair-t039-l76-vocable-gloss]
 
 permissions:
   contents: write
