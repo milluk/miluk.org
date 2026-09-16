@@ -65,8 +65,8 @@ jobs:
       - name: Regenerate the site
         run: python3 tools/dictionary/gen.py
 
-      - name: Remove the applier
-        run: rm -f apply_round2.py
+      - name: Remove the applier and the trigger file
+        run: rm -f apply_round2.py apply_round2.py.trigger
 
       - name: Assert the changed-file set is exactly what was expected
         run: |
@@ -76,6 +76,7 @@ jobs:
           cat /tmp/changed.txt
           cat > /tmp/expected.txt <<'EOF'
           D	apply_round2.py
+          D	apply_round2.py.trigger
           M	dictionary/data/corpus.json
           M	dictionary/stories/t039-black-bear-and-pack-basket-bear-grizzly.html
           M	tools/dictionary/provenance/notebook-collation-corrections.json
