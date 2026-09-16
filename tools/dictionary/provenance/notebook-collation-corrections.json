@@ -1,0 +1,170 @@
+{
+  "schema": "miluk-notebook-collation/1",
+  "description": "Corpus corrections evidenced by the Melville Jacobs field notebooks, or by a line’s own documentary record where a later restoration stage departed from it. Each record names the GitHub Issue that queued it.",
+  "restoration_stage": "2026 notebook collation",
+  "summary": {
+    "records": 7,
+    "lines_affected": 3,
+    "reverted_transformations": [
+      "v2-corpus-t039-l0086-english",
+      "v2-corpus-t039-l0086-miluk",
+      "v2-corpus-t039-l0086-miluk-ascii",
+      "v2-corpus-t055-l0219-english",
+      "v2-corpus-t055-l0219-miluk",
+      "v2-corpus-t055-l0219-miluk-ascii"
+    ]
+  },
+  "corrections": [
+    {
+      "correction_id": "nbc-corpus-t055-l0219-miluk-ascii",
+      "target": {
+        "source": "corpus",
+        "story_id": "t055-the-trickster-person-who-made-the-country",
+        "line": 219,
+        "field": "miluk_ascii"
+      },
+      "original_value": "H@@/@@u (oh very well), nephew.",
+      "revised_value": "h@:<::u, de<u.",
+      "disposition": "changed",
+      "change_kind": "revert-field-unswap",
+      "reason": "the v2 field-orientation repair swapped a line that was already correctly oriented",
+      "verification_source": "Melville Jacobs Notebook 96 p. 153; the line's own documentary_original_fields",
+      "affects": "restoration-corpus",
+      "restoration_stage": "2026 notebook collation",
+      "reverts": [
+        "v2-corpus-t055-l0219-miluk-ascii"
+      ],
+      "github_issue": 11
+    },
+    {
+      "correction_id": "nbc-corpus-t055-l0219-miluk",
+      "target": {
+        "source": "corpus",
+        "story_id": "t055-the-trickster-person-who-made-the-country",
+        "line": 219,
+        "field": "miluk"
+      },
+      "original_value": "Həə/əəu (oh ᵉry wɛll), nɛphɛw.",
+      "revised_value": "hə́···u, dɛ́u.",
+      "disposition": "changed",
+      "change_kind": "revert-field-unswap",
+      "reason": "transliteration had been run over English prose; \"very\" appears as \"ᵉry\"",
+      "verification_source": "Melville Jacobs Notebook 96 p. 153; the line's own documentary_original_fields",
+      "affects": "restoration-corpus",
+      "restoration_stage": "2026 notebook collation",
+      "reverts": [
+        "v2-corpus-t055-l0219-miluk"
+      ],
+      "github_issue": 11
+    },
+    {
+      "correction_id": "nbc-corpus-t055-l0219-english",
+      "target": {
+        "source": "corpus",
+        "story_id": "t055-the-trickster-person-who-made-the-country",
+        "line": 219,
+        "field": "english"
+      },
+      "original_value": "hə́···u, dɛ́u.",
+      "revised_value": "H@@/@@u (oh very well), nephew.",
+      "disposition": "changed",
+      "change_kind": "revert-field-unswap",
+      "reason": "the English gloss opens with a transcribed interjection and was mistaken for Miluk",
+      "verification_source": "Melville Jacobs Notebook 96 p. 153; the line's own documentary_original_fields",
+      "affects": "restoration-corpus",
+      "restoration_stage": "2026 notebook collation",
+      "reverts": [
+        "v2-corpus-t055-l0219-english"
+      ],
+      "github_issue": 11
+    },
+    {
+      "correction_id": "nbc-corpus-t039-l0086-miluk-ascii",
+      "target": {
+        "source": "corpus",
+        "story_id": "t039-black-bear-and-pack-basket-bear-grizzly",
+        "line": 86,
+        "field": "miluk_ascii"
+      },
+      "original_value": "H@@@@@u where are you?",
+      "revised_value": "h@:<:::u idja<u-is",
+      "disposition": "changed",
+      "change_kind": "revert-field-unswap",
+      "reason": "the v2 field-orientation repair swapped a line that was already correctly oriented",
+      "verification_source": "the line's own documentary_original_fields and english_original",
+      "affects": "restoration-corpus",
+      "restoration_stage": "2026 notebook collation",
+      "reverts": [
+        "v2-corpus-t039-l0086-miluk-ascii"
+      ],
+      "github_issue": 12
+    },
+    {
+      "correction_id": "nbc-corpus-t039-l0086-miluk",
+      "target": {
+        "source": "corpus",
+        "story_id": "t039-black-bear-and-pack-basket-bear-grizzly",
+        "line": 86,
+        "field": "miluk"
+      },
+      "original_value": "Həəəəəu whɛrɛ arɛ you?",
+      "revised_value": "hə́····u idjáu-is",
+      "disposition": "changed",
+      "change_kind": "revert-field-unswap",
+      "reason": "transliteration had been run over English prose; \"where are\" appears as \"whɛrɛ arɛ\"",
+      "verification_source": "the line's own documentary_original_fields",
+      "affects": "restoration-corpus",
+      "restoration_stage": "2026 notebook collation",
+      "reverts": [
+        "v2-corpus-t039-l0086-miluk"
+      ],
+      "github_issue": 12
+    },
+    {
+      "correction_id": "nbc-corpus-t039-l0086-english",
+      "target": {
+        "source": "corpus",
+        "story_id": "t039-black-bear-and-pack-basket-bear-grizzly",
+        "line": 86,
+        "field": "english"
+      },
+      "original_value": "hə́····u idjáu-is",
+      "revised_value": "H@@@@@u where are you?",
+      "disposition": "changed",
+      "change_kind": "revert-field-unswap",
+      "reason": "the English gloss opens with a transcribed interjection and was mistaken for Miluk",
+      "verification_source": "the line's own documentary_original_fields and english_original",
+      "affects": "restoration-corpus",
+      "restoration_stage": "2026 notebook collation",
+      "reverts": [
+        "v2-corpus-t039-l0086-english"
+      ],
+      "github_issue": 12
+    },
+    {
+      "correction_id": "nbc-corpus-t055-l1251-english",
+      "target": {
+        "source": "corpus",
+        "story_id": "t055-the-trickster-person-who-made-the-country",
+        "line": 1251,
+        "field": "english"
+      },
+      "original_value": "And they laiÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒÒd sitting mats.",
+      "revised_value": "And they laid sitting mats.",
+      "disposition": "changed",
+      "change_kind": "remove-character-run",
+      "reason": "512 stray U+00D2 characters inside the English field; removing them leaves the edition text intact",
+      "verification_source": "Melville Jacobs Notebook 98 p. 11",
+      "affects": "restoration-corpus",
+      "restoration_stage": "2026 notebook collation",
+      "considered_alternative": {
+        "value": "And they laid down sitting mats.",
+        "basis": "Jacobs' interlinear gloss on Notebook 98 p. 11 reads 'Now mats / they lay down / sitting mats'",
+        "rejected_because": "changing the published wording goes beyond repairing a transport artifact; the fuller reading is carried in the notebook alignment layer instead"
+      },
+      "github_issue": 13
+    }
+  ],
+  "applied_by": "tools/dictionary/pipeline/publish_corpus.py --notebook-collation; the published corpus reproduces from the restoration checkpoint, the v2 receipt and this file",
+  "note_on_supersession": "The six revert records below supersede v2 corrections that remain in provenance/v2-effective-diff.json. That receipt is a record of what commit dc186a2 did and is left intact; the corpus moves on. Each record here names the v2 correction it reverts, and test_site.py checks the last correction touching a field rather than assuming there is only one."
+}
