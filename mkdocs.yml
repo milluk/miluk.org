@@ -1,0 +1,7 @@
+site_name: Miluk project operations
+docs_dir: docs/backstage
+nav:
+  - Overview: index.md
+  - Portability and recovery: portability.md
+plugins:
+  - techdocs-core

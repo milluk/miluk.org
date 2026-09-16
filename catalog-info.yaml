@@ -1,0 +1,50 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: miluk
+  title: Miluk language platform
+  description: Miluk language resources and dictionary restoration.
+spec:
+  owner: user:default/troy
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: miluk-org
+  title: miluk.org public website
+  description: Public Miluk language website. Dictionary publication is separately held pending source-integrity review.
+  annotations:
+    github.com/project-slug: milluk/miluk.org
+    backstage.io/source-location: url:https://github.com/milluk/miluk.org/tree/main/
+    backstage.io/techdocs-ref: dir:.
+  links:
+    - url: https://miluk.org/
+      title: Public website
+    - url: https://github.com/milluk/miluk.org
+      title: Source repository
+spec:
+  type: website
+  lifecycle: production
+  owner: user:default/troy
+  system: system:default/miluk
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: miluk-dictionary
+  title: Miluk dictionary restoration
+  description: Reproducible restoration of the 1990 dictionary and edition-bound corpus. Under review; not approved for public publication.
+  annotations:
+    github.com/project-slug: milluk/miluk.org
+    backstage.io/source-location: url:https://github.com/milluk/miluk.org/tree/dictionary-1990-reproducibility-repair/
+  links:
+    - url: https://github.com/milluk/miluk.org/pull/1
+      title: Restoration integration review
+    - url: https://github.com/milluk/miluk.org/blob/dictionary-1990-reproducibility-repair/tools/dictionary/PUBLICATION_HOLD.md
+      title: Publication hold
+spec:
+  type: website
+  lifecycle: experimental
+  owner: user:default/troy
+  system: system:default/miluk
+  subcomponentOf: component:default/miluk-org
