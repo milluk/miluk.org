@@ -1,0 +1,198 @@
+# One-shot rebuild: restore the comma on t039 line 77 (#18).
+# Deleted through the API once its run lands.
+name: one-shot-round4
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [corpus-repair-t039-l76-vocable-gloss]
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: corpus-repair-t039-l76-vocable-gloss
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Skip if the applier has already run
+        id: guard
+        run: |
+          if [ ! -f apply_round4.py ]; then
+            echo "applier absent; this rebuild has already landed"
+            echo "done=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "done=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Apply the correction
+        if: steps.guard.outputs.done == 'false'
+        run: python3 apply_round4.py
+
+      - name: Regenerate the public corpus
+        if: steps.guard.outputs.done == 'false'
+        run: |
+          set -euo pipefail
+          T=tools/dictionary
+          PYTHONDONTWRITEBYTECODE=1 python3 $T/pipeline/publish_corpus.py \
+            --working-corpus $T/archive/restoration-checkpoint/corpus-v2-working.json \
+            --classification $T/provenance/source-classification.json \
+            --v2-receipt $T/provenance/v2-effective-diff.json \
+            --notebook-collation $T/provenance/notebook-collation-corrections.json \
+            --public-output dictionary/data/corpus.json \
+            --outside-output $T/archive/outside-edition/slip-file-records.json \
+            --containers-output $T/archive/outside-edition/working-containers.json
+
+      - name: Pin the new corpus hash
+        if: steps.guard.outputs.done == 'false'
+        run: |
+          set -euo pipefail
+          SHA=$(python3 -c "import hashlib;print(hashlib.sha256(open('dictionary/data/corpus.json','rb').read()).hexdigest())")
+          echo "corpus sha256: $SHA"
+          test "$SHA" = "ce4c397773763a60d8ad5d66d2556f1d015abe30b16e70c97b5bd4b59e79039f"
+          python3 - "$SHA" <<'PY'
+          import sys
+          from pathlib import Path
+          p = Path('tools/dictionary/test_site.py')
+          t = p.read_text(encoding='utf-8')
+          assert t.count('CORPUS_SHA_PLACEHOLDER') == 1, 'placeholder not found exactly once'
+          p.write_text(t.replace('CORPUS_SHA_PLACEHOLDER', sys.argv[1]), encoding='utf-8')
+          PY
+
+      - name: Regenerate the site
+        if: steps.guard.outputs.done == 'false'
+        run: python3 tools/dictionary/gen.py
+
+      - name: Remove the applier
+        if: steps.guard.outputs.done == 'false'
+        run: rm -f apply_round4.py
+
+      - name: Assert the changed-file set is exactly what was expected
+        if: steps.guard.outputs.done == 'false'
+        run: |
+          set -euo pipefail
+          git add -A
+          git diff --cached --name-status | sort > /tmp/changed.txt
+          cat /tmp/changed.txt
+          cat > /tmp/expected.txt <<'EOF'
+          D	apply_round4.py
+          M	dictionary/data/corpus.json
+          M	dictionary/stories/t039-black-bear-and-pack-basket-bear-grizzly.html
+          M	tools/dictionary/provenance/notebook-collation-corrections.json
+          M	tools/dictionary/test_corpus_integrity.py
+          M	tools/dictionary/test_site.py
+          EOF
+          sort /tmp/expected.txt -o /tmp/expected.txt
+          diff /tmp/expected.txt /tmp/changed.txt
+
+      - name: Check every blob against the independent local build
+        if: steps.guard.outputs.done == 'false'
+        run: |
+          set -euo pipefail
+          check() {
+            actual=$(git hash-object "$2")
+            echo "$actual  $2"
+            test "$actual" = "$1" || { echo "MISMATCH: expected $1"; exit 1; }
+          }
+          check 8c466242f385d8f695a0c5ac8e31ebd7d2ba815b dictionary/data/corpus.json
+          check 1ec83e92211f6e6f45410996c6cdc3ec8c92841c dictionary/stories/t039-black-bear-and-pack-basket-bear-grizzly.html
+          check 47772f52e6894e6779cab34962f097483f27c5d5 tools/dictionary/provenance/notebook-collation-corrections.json
+          check c0c5a3fbe7da37817f9159b441c5277376dec162 tools/dictionary/test_site.py
+          check 214351a11b8ef1fb4788fb9b3d2f9eb48b9632d3 tools/dictionary/test_corpus_integrity.py
+
+      - name: Commit
+        if: steps.guard.outputs.done == 'false'
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git commit -q -F - <<'EOF'
+          Corpus: restore the comma the printed 1990 page carries on t039 line 77 [skip ci]
+
+          Troy supplied the printed page. It sets the cry on one line and the two
+          vocatives on the next, which confirms the redivision already on this
+          branch. It also corrects it in one detail.
+
+          The earlier record derived line 77 by asserting it equalled line 80 of
+          the same story, and stripped the comma off the moved vocative to make
+          that equality hold. The page shows the two lines are not identical: the
+          second line sets a comma between the vocatives and the fifth does not.
+          The comma was in line 76's own documentary value and travels with the
+          word. Stripping it was an inference dressed up as a check.
+
+          The two line-77 records are amended in place rather than a third record
+          being stacked on the same field; they are on an unmerged branch and have
+          not been reviewed. The equality claim against line 80 is replaced by
+          what is actually true - the moved token is carried across verbatim - and
+          by an explicit note of the one mark by which the two lines differ.
+
+          Check 7 is made exact as a result. It had been stripping commas before
+          comparing tokens across a redivided pair, to forgive exactly this move.
+          Nothing needs forgiving now, so nothing is: the tokens must match
+          including punctuation.
+
+          Lines 76-81 now read as the page prints them: the cry; my children, my
+          children; its hand; that must have been it; my children my children;
+          its foot.
+
+          Refs #18.
+
+          Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+          Claude-Session: https://claude.ai/code/session_01BgUQM2Gv4ccJzMCowJ1KMY
+          EOF
+
+      - name: Full test suite
+        if: steps.guard.outputs.done == 'false'
+        run: |
+          set -euo pipefail
+          python3 tools/dictionary/test_site.py
+          python3 tools/dictionary/test_corpus_integrity.py
+          python3 tools/dictionary/test_repair_desk.py
+
+      - name: Negative test - check 7 is exact about punctuation
+        if: steps.guard.outputs.done == 'false'
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import copy, json, subprocess, sys
+          from pathlib import Path
+          corpus = Path('dictionary/data/corpus.json')
+          backup = corpus.read_bytes()
+          good = json.loads(backup.decode('utf-8'))
+          try:
+              broken = copy.deepcopy(good)
+              for story in broken['stories']:
+                  if story['story_id'].startswith('t039'):
+                      for line in story['lines']:
+                          if line['line'] == 77:
+                              line['miluk'] = line['miluk'].replace(',', '', 1)
+                              line['miluk_ascii'] = line['miluk_ascii'].replace(',', '', 1)
+              corpus.write_text(json.dumps(broken, ensure_ascii=False, indent=2) + '\n',
+                                encoding='utf-8')
+              result = subprocess.run([sys.executable, 'tools/dictionary/test_corpus_integrity.py'],
+                                      capture_output=True, text=True)
+              print(result.stdout)
+              assert result.returncode == 1, 'check 7 did not fail on a dropped comma'
+              assert 'tokens changed across the pair' in result.stdout, 'check 7 did not fire'
+              print('negative test OK: check 7 catches the comma being dropped in the move')
+          finally:
+              corpus.write_bytes(backup)
+          result = subprocess.run([sys.executable, 'tools/dictionary/test_corpus_integrity.py'],
+                                  capture_output=True, text=True)
+          assert result.returncode == 0, 'the corpus was not restored'
+          print('corpus restored; integrity passes')
+          PY
+          git diff --exit-code
+
+      - name: Push
+        if: steps.guard.outputs.done == 'false'
+        run: git push origin HEAD:corpus-repair-t039-l76-vocable-gloss
